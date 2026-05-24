@@ -1,20 +1,20 @@
-Attribute VB_Name = "ƒ£øÈ1"
+'Attribute VB_Name = "Ê®°Âùó1"
 'Attribute VB_Name = "ModPropertyOA"
-' ◊¢“‚£∫»Áπ˚Õ®π˝"Œƒº˛>µº»ÎŒƒº˛"µº»Î£¨«Î»°œ˚…œ––◊¢ Õ≤¢…æ≥˝±æ––
-' »Áπ˚Õ®π˝∏¥÷∆’≥Ã˘∑Ω Ω π”√£¨«Î±£≥÷…œ––◊¢ Õ◊¥Ã¨
+' Ê≥®ÊÑèÔºöÂ¶ÇÊûúÈÄöËøá"Êñá‰ª∂>ÂØºÂÖ•Êñá‰ª∂"ÂØºÂÖ•ÔºåËØ∑ÂèñÊ∂à‰∏äË°åÊ≥®ÈáäÂπ∂Âà†Èô§Êú¨Ë°å
+' Â¶ÇÊûúÈÄöËøáÂ§çÂà∂Á≤òË¥¥ÊñπÂºè‰ΩøÁî®ÔºåËØ∑‰øùÊåÅ‰∏äË°åÊ≥®ÈáäÁä∂ÊÄÅ
 Option Explicit
 
 '==========================================================
-' ŒÔ“µπ´Àæ OA π‹¿ÌœµÕ≥ - µ«¬º◊¢≤·ƒ£øÈ
-'  π”√∑Ω∑®:
-'   1. ‘⁄Excel÷–∞¥ Alt+F11 ¥Úø™VBA±‡º≠∆˜
-'   2. ≤Àµ•: Œƒº˛ > µº»ÎŒƒº˛ > —°‘Ò±æŒƒº˛
-'   3. ‘À––∫Í SetupOASystem Ω¯––≥ı º∞≤◊∞
-'   4. ‘À––∫Í LaunchSystem ∆Ù∂ØœµÕ≥
+' Áâ©‰∏öÂÖ¨Âè∏ OA ÁÆ°ÁêÜÁ≥ªÁªü - ÁôªÂΩïÊ≥®ÂÜåÊ®°Âùó
+' ‰ΩøÁî®ÊñπÊ≥ï:
+'   1. Âú®Excel‰∏≠Êåâ Alt+F11 ÊâìÂºÄVBAÁºñËæëÂô®
+'   2. ËèúÂçï: Êñá‰ª∂ > ÂØºÂÖ•Êñá‰ª∂ > ÈÄâÊã©Êú¨Êñá‰ª∂
+'   3. ËøêË°åÂÆè SetupOASystem ËøõË°åÂàùÂßãÂÆâË£Ö
+'   4. ËøêË°åÂÆè LaunchSystem ÂêØÂä®Á≥ªÁªü
 '
-' «∞÷√Ãıº˛:
-'   Œƒº˛ > —°œÓ > –≈»Œ÷––ƒ > –≈»Œ÷––ƒ…Ë÷√ > ∫Í…Ë÷√
-'   π¥—°°æ–≈»Œ∂‘VBAπ§≥Ã∂‘œÛƒ£–Õµƒ∑√Œ °ø
+' ÂâçÁΩÆÊù°‰ª∂:
+'   Êñá‰ª∂ > ÈÄâÈ°π > ‰ø°‰ªª‰∏≠ÂøÉ > ‰ø°‰ªª‰∏≠ÂøÉËÆæÁΩÆ > ÂÆèËÆæÁΩÆ
+'   ÂãæÈÄâ„Äê‰ø°‰ªªÂØπVBAÂ∑•Á®ãÂØπË±°Ê®°ÂûãÁöÑËÆøÈóÆ„Äë
 '==========================================================
 
 Private Const CT_MSFORM As Long = 3
@@ -43,7 +43,7 @@ Public gEditPersonnelRow As Long
 Public gEditParkingRow As Long
 Public gViewParkingID As String
 
-' ---------- π§æﬂ∫Ø ˝ ----------
+' ---------- Â∑•ÂÖ∑ÂáΩÊï∞ ----------
 
 Public Function GetConfigProp(pName As String) As String
     On Error Resume Next
@@ -79,9 +79,9 @@ Public Function CheckVBAccess() As Boolean
     On Error Resume Next
     n = ThisWorkbook.VBProject.VBComponents.Count
     If Err.Number <> 0 Then
-        MsgBox "«Îœ»∆Ù”√VBAœÓƒø∑√Œ »®œﬁ£∫" & vbCrLf & _
-               "Œƒº˛ > —°œÓ > –≈»Œ÷––ƒ > –≈»Œ÷––ƒ…Ë÷√ > ∫Í…Ë÷√" & vbCrLf & _
-               "π¥—°°æ–≈»Œ∂‘VBAπ§≥Ã∂‘œÛƒ£–Õµƒ∑√Œ °ø", vbExclamation
+        MsgBox "ËØ∑ÂÖàÂêØÁî®VBAÈ°πÁõÆËÆøÈóÆÊùÉÈôêÔºö" & vbCrLf & _
+               "Êñá‰ª∂ > ÈÄâÈ°π > ‰ø°‰ªª‰∏≠ÂøÉ > ‰ø°‰ªª‰∏≠ÂøÉËÆæÁΩÆ > ÂÆèËÆæÁΩÆ" & vbCrLf & _
+               "ÂãæÈÄâ„Äê‰ø°‰ªªÂØπVBAÂ∑•Á®ãÂØπË±°Ê®°ÂûãÁöÑËÆøÈóÆ„Äë", vbExclamation
         CheckVBAccess = False
     Else
         CheckVBAccess = True
@@ -89,7 +89,7 @@ Public Function CheckVBAccess() As Boolean
     On Error GoTo 0
 End Function
 
-' ---------- ∞≤◊∞÷˜»Îø⁄ ----------
+' ---------- ÂÆâË£Ö‰∏ªÂÖ•Âè£ ----------
 
 Public Sub SetupOASystem()
     If Not CheckVBAccess() Then Exit Sub
@@ -148,43 +148,43 @@ Public Sub SetupOASystem()
     CreatePersonnelEditForm
     Application.ScreenUpdating = True
     ThisWorkbook.Save
-    MsgBox "ŒÔ“µOAœµÕ≥∞≤◊∞ÕÍ≥…£°" & vbCrLf & _
-           "«Î‘À––∫Í°æLaunchSystem°ø∆Ù∂ØœµÕ≥°£" & vbCrLf & _
-           "ƒ¨»œπ‹¿Ì‘±: admin / admin123", vbInformation
+    MsgBox "Áâ©‰∏öOAÁ≥ªÁªüÂÆâË£ÖÂÆåÊàêÔºÅ" & vbCrLf & _
+           "ËØ∑ËøêË°åÂÆè„ÄêLaunchSystem„ÄëÂêØÂä®Á≥ªÁªü„ÄÇ" & vbCrLf & _
+           "ÈªòËÆ§ÁÆ°ÁêÜÂëò: admin / admin123", vbInformation
 End Sub
 
-' ---------- ¥¥Ω®”√ªßπ‹¿Ì±Ì ----------
+' ---------- ÂàõÂª∫Áî®Êà∑ÁÆ°ÁêÜË°® ----------
 
 Private Sub CreateUserSheet()
     Dim ws As Worksheet
-    If SheetExists("”√ªßπ‹¿Ì") Then
-        Set ws = ThisWorkbook.Sheets("”√ªßπ‹¿Ì")
+    If SheetExists("Áî®Êà∑ÁÆ°ÁêÜ") Then
+        Set ws = ThisWorkbook.Sheets("Áî®Êà∑ÁÆ°ÁêÜ")
     Else
         Set ws = ThisWorkbook.Sheets.Add( _
             After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.Count))
-        ws.Name = "”√ªßπ‹¿Ì"
+        ws.Name = "Áî®Êà∑ÁÆ°ÁêÜ"
     End If
     With ws
-        .Range("A1").Value = "–’√˚"
-        .Range("B1").Value = "’À∫≈"
-        .Range("C1").Value = "√‹¬Î"
-        .Range("D1").Value = "Ω«…´"
-        .Range("E1").Value = "◊¢≤· ±º‰"
+        .Range("A1").Value = "ÂßìÂêç"
+        .Range("B1").Value = "Ë¥¶Âè∑"
+        .Range("C1").Value = "ÂØÜÁ†Å"
+        .Range("D1").Value = "ËßíËâ≤"
+        .Range("E1").Value = "Ê≥®ÂÜåÊó∂Èó¥"
         .Range("A1:E1").Font.Bold = True
         .Range("A1:E1").Interior.Color = RGB(70, 130, 180)
         .Range("A1:E1").Font.Color = RGB(255, 255, 255)
         If .Range("A2").Value = "" Then
-            .Range("A2").Value = "œµÕ≥π‹¿Ì‘±"
+            .Range("A2").Value = "Á≥ªÁªüÁÆ°ÁêÜÂëò"
             .Range("B2").Value = "admin"
             .Range("C2").Value = "admin123"
-            .Range("D2").Value = "π‹¿Ì‘±"
+            .Range("D2").Value = "ÁÆ°ÁêÜÂëò"
             .Range("E2").Value = Format(Now, "yyyy-mm-dd hh:mm:ss")
         End If
         .Columns("A:E").AutoFit
     End With
 End Sub
 
-' ---------- ¥¥Ω®”√ªßπ‹¿Ì¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫Áî®Êà∑ÁÆ°ÁêÜÁ™ó‰Ωì ----------
 
 Private Sub CreateUserManagerForm()
     Dim oldForm As String
@@ -200,7 +200,7 @@ Private Sub CreateUserManagerForm()
     actualName = vbc.Name
     SetConfigProp "UserManagerFormName", actualName
 
-    vbc.Properties("Caption") = "”√ªßπ‹¿Ì"
+    vbc.Properties("Caption") = "Áî®Êà∑ÁÆ°ÁêÜ"
     vbc.Properties("Width") = 470
     vbc.Properties("Height") = 320
     vbc.Properties("StartUpPosition") = 2
@@ -209,60 +209,60 @@ Private Sub CreateUserManagerForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' ”√ªß¡–±Ì
+    ' Áî®Êà∑ÂàóË°®
     Set ctl = dsg.Controls.Add("Forms.ListBox.1")
     ctl.Name = "lstUsers"
     ctl.Left = 12: ctl.Top = 12: ctl.Width = 200: ctl.Height = 300
 
-    ' –’√˚
+    ' ÂßìÂêç
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "Label1": ctl.Caption = "–’√˚£∫"
+    ctl.Name = "Label1": ctl.Caption = "ÂßìÂêçÔºö"
     ctl.Left = 224: ctl.Top = 24: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtName"
     ctl.Left = 294: ctl.Top = 24: ctl.Width = 150: ctl.Height = 24
 
-    ' ’À∫≈
+    ' Ë¥¶Âè∑
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "Label2": ctl.Caption = "’À∫≈£∫"
+    ctl.Name = "Label2": ctl.Caption = "Ë¥¶Âè∑Ôºö"
     ctl.Left = 224: ctl.Top = 54: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtAccount"
     ctl.Left = 294: ctl.Top = 54: ctl.Width = 150: ctl.Height = 24
 
-    ' √‹¬Î
+    ' ÂØÜÁ†Å
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "Label3": ctl.Caption = "√‹¬Î£∫"
+    ctl.Name = "Label3": ctl.Caption = "ÂØÜÁ†ÅÔºö"
     ctl.Left = 224: ctl.Top = 84: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtPassword"
     ctl.Left = 294: ctl.Top = 84: ctl.Width = 150: ctl.Height = 24
     ctl.PasswordChar = "*"
 
-    ' Ω«…´
+    ' ËßíËâ≤
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "Label4": ctl.Caption = "Ω«…´£∫"
+    ctl.Name = "Label4": ctl.Caption = "ËßíËâ≤Ôºö"
     ctl.Left = 224: ctl.Top = 114: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboRole"
     ctl.Left = 294: ctl.Top = 114: ctl.Width = 150: ctl.Height = 24
     ctl.Style = 2
 
-    ' ∞¥≈•
+    ' ÊåâÈíÆ
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdAddUser": ctl.Caption = "–¬‘ˆ"
+    ctl.Name = "cmdAddUser": ctl.Caption = "Êñ∞Â¢û"
     ctl.Left = 224: ctl.Top = 160: ctl.Width = 80: ctl.Height = 28
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdEditUser": ctl.Caption = "–ﬁ∏ƒ"
+    ctl.Name = "cmdEditUser": ctl.Caption = "‰øÆÊîπ"
     ctl.Left = 314: ctl.Top = 160: ctl.Width = 80: ctl.Height = 28
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdDeleteUser": ctl.Caption = "…æ≥˝”√ªß"
+    ctl.Name = "cmdDeleteUser": ctl.Caption = "Âà†Èô§Áî®Êà∑"
     ctl.Left = 224: ctl.Top = 200: ctl.Width = 170: ctl.Height = 28
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdClose": ctl.Caption = "πÿ±’"
+    ctl.Name = "cmdClose": ctl.Caption = "ÂÖ≥Èó≠"
     ctl.Left = 320: ctl.Top = 250: ctl.Width = 80: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -280,16 +280,16 @@ Private Sub CreateUserManagerForm()
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
 
-    ' --- LoadRoles: º”‘ÿΩ«…´œ¬¿≠£®‘§…Ë + π§◊˜±Ì÷–“—”–Ω«…´£© ---
+    ' --- LoadRoles: Âä†ËΩΩËßíËâ≤‰∏ãÊãâÔºàÈ¢ÑËÆæ + Â∑•‰ΩúË°®‰∏≠Â∑≤ÊúâËßíËâ≤Ôºâ ---
     c = c & "Private Sub LoadRoles()" & vbCrLf
     c = c & "    cboRole.Clear" & vbCrLf
     c = c & "    Dim dict As Object" & vbCrLf
     c = c & "    Set dict = CreateObject(" & q & "Scripting.Dictionary" & q & ")" & vbCrLf
-    c = c & "    dict.Add " & q & "∆’Õ®‘±π§" & q & ", 1" & vbCrLf
-    c = c & "    dict.Add " & q & "≤ø√≈÷˜π‹" & q & ", 1" & vbCrLf
-    c = c & "    dict.Add " & q & "π‹¿Ì‘±" & q & ", 1" & vbCrLf
+    c = c & "    dict.Add " & q & "ÊôÆÈÄöÂëòÂ∑•" & q & ", 1" & vbCrLf
+    c = c & "    dict.Add " & q & "ÈÉ®Èó®‰∏ªÁÆ°" & q & ", 1" & vbCrLf
+    c = c & "    dict.Add " & q & "ÁÆ°ÁêÜÂëò" & q & ", 1" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "”√ªßπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Áî®Êà∑ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -306,11 +306,11 @@ Private Sub CreateUserManagerForm()
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
 
-    ' --- LoadUserList: º”‘ÿÀ˘”–“—◊¢≤·”√ªßµΩ◊Û≤‡¡–±Ì ---
+    ' --- LoadUserList: Âä†ËΩΩÊâÄÊúâÂ∑≤Ê≥®ÂÜåÁî®Êà∑Âà∞Â∑¶‰æßÂàóË°® ---
     c = c & "Private Sub LoadUserList()" & vbCrLf
     c = c & "    lstUsers.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "”√ªßπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Áî®Êà∑ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -323,11 +323,11 @@ Private Sub CreateUserManagerForm()
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
 
-    ' --- lstUsers_Click: —°÷–”√ªß∫ÛÃÓ≥‰”“≤‡◊÷∂Œ ---
+    ' --- lstUsers_Click: ÈÄâ‰∏≠Áî®Êà∑ÂêéÂ°´ÂÖÖÂè≥‰æßÂ≠óÊÆµ ---
     c = c & "Private Sub lstUsers_Click()" & vbCrLf
     c = c & "    If lstUsers.ListIndex < 0 Then Exit Sub" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "”√ªßπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Áî®Êà∑ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim r As Long" & vbCrLf
     c = c & "    r = lstUsers.ListIndex + 2" & vbCrLf
     c = c & "    txtName.Text = CStr(ws.Cells(r, 1).Value)" & vbCrLf
@@ -356,25 +356,25 @@ Private Sub CreateUserManagerForm()
     ' --- cmdAddUser_Click ---
     c = c & "Private Sub cmdAddUser_Click()" & vbCrLf
     c = c & "    If Trim(txtName.Text) = " & q & q & " Or Trim(txtAccount.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "–’√˚∫Õ’À∫≈≤ªƒ‹Œ™ø’£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ÂßìÂêçÂíåË¥¶Âè∑‰∏çËÉΩ‰∏∫Á©∫ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If Trim(txtPassword.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "√‹¬Î≤ªƒ‹Œ™ø’£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ÂØÜÁ†Å‰∏çËÉΩ‰∏∫Á©∫ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If cboRole.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘ÒΩ«…´£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©ËßíËâ≤ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "”√ªßπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Áî®Êà∑ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
-    ' ºÏ≤È’À∫≈ «∑Ò÷ÿ∏¥
+    ' Ê£ÄÊü•Ë¥¶Âè∑ÊòØÂê¶ÈáçÂ§ç
     c = c & "    For i = 2 To lr" & vbCrLf
     c = c & "        If CStr(ws.Cells(i, 2).Value) = Trim(txtAccount.Text) Then" & vbCrLf
-    c = c & "            MsgBox " & q & "∏√’À∫≈“—¥Ê‘⁄£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "            MsgBox " & q & "ËØ•Ë¥¶Âè∑Â∑≤Â≠òÂú®ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "            Exit Sub" & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "    Next i" & vbCrLf
@@ -385,7 +385,7 @@ Private Sub CreateUserManagerForm()
     c = c & "    ws.Cells(nr, 3).Value = Trim(txtPassword.Text)" & vbCrLf
     c = c & "    ws.Cells(nr, 4).Value = cboRole.Text" & vbCrLf
     c = c & "    ws.Cells(nr, 5).Value = Format(Now, " & q & "yyyy-mm-dd hh:mm:ss" & q & ")" & vbCrLf
-    c = c & "    MsgBox " & q & "”√ªß–¬‘ˆ≥…π¶£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    MsgBox " & q & "Áî®Êà∑Êñ∞Â¢ûÊàêÂäüÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    ClearFields" & vbCrLf
     c = c & "    LoadRoles" & vbCrLf
     c = c & "    LoadUserList" & vbCrLf
@@ -395,27 +395,27 @@ Private Sub CreateUserManagerForm()
     ' --- cmdEditUser_Click ---
     c = c & "Private Sub cmdEditUser_Click()" & vbCrLf
     c = c & "    If lstUsers.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“™–ﬁ∏ƒµƒ”√ªß£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©Ë¶Å‰øÆÊîπÁöÑÁî®Êà∑ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If Trim(txtName.Text) = " & q & q & " Or Trim(txtAccount.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "–’√˚∫Õ’À∫≈≤ªƒ‹Œ™ø’£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ÂßìÂêçÂíåË¥¶Âè∑‰∏çËÉΩ‰∏∫Á©∫ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If cboRole.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘ÒΩ«…´£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©ËßíËâ≤ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "”√ªßπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Áî®Êà∑ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim r As Long" & vbCrLf
     c = c & "    r = lstUsers.ListIndex + 2" & vbCrLf
-    ' ºÏ≤È–ﬁ∏ƒ∫Ûµƒ’À∫≈ «∑Ò”Î∆‰À˚”√ªß÷ÿ∏¥
+    ' Ê£ÄÊü•‰øÆÊîπÂêéÁöÑË¥¶Âè∑ÊòØÂê¶‰∏éÂÖ∂‰ªñÁî®Êà∑ÈáçÂ§ç
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
     c = c & "        If i <> r And CStr(ws.Cells(i, 2).Value) = Trim(txtAccount.Text) Then" & vbCrLf
-    c = c & "            MsgBox " & q & "∏√’À∫≈“—±ª∆‰À˚”√ªß π”√£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "            MsgBox " & q & "ËØ•Ë¥¶Âè∑Â∑≤Ë¢´ÂÖ∂‰ªñÁî®Êà∑‰ΩøÁî®ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "            Exit Sub" & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "    Next i" & vbCrLf
@@ -425,7 +425,7 @@ Private Sub CreateUserManagerForm()
     c = c & "        ws.Cells(r, 3).Value = Trim(txtPassword.Text)" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    ws.Cells(r, 4).Value = cboRole.Text" & vbCrLf
-    c = c & "    MsgBox " & q & "”√ªß–≈œ¢“—–ﬁ∏ƒ£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    MsgBox " & q & "Áî®Êà∑‰ø°ÊÅØÂ∑≤‰øÆÊîπÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    LoadRoles" & vbCrLf
     c = c & "    LoadUserList" & vbCrLf
     c = c & "End Sub" & vbCrLf
@@ -434,28 +434,28 @@ Private Sub CreateUserManagerForm()
     ' --- cmdDeleteUser_Click ---
     c = c & "Private Sub cmdDeleteUser_Click()" & vbCrLf
     c = c & "    If lstUsers.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“™…æ≥˝µƒ”√ªß£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©Ë¶ÅÂà†Èô§ÁöÑÁî®Êà∑ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "”√ªßπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Áî®Êà∑ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim r As Long" & vbCrLf
     c = c & "    r = lstUsers.ListIndex + 2" & vbCrLf
     c = c & "    Dim uAcct As String" & vbCrLf
     c = c & "    uAcct = CStr(ws.Cells(r, 2).Value)" & vbCrLf
     c = c & "    If uAcct = " & q & "admin" & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "≤ªƒ‹…æ≥˝ƒ¨»œπ‹¿Ì‘±’À∫≈£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "‰∏çËÉΩÂà†Èô§ÈªòËÆ§ÁÆ°ÁêÜÂëòË¥¶Âè∑ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If uAcct = gCurrentUser Then" & vbCrLf
-    c = c & "        MsgBox " & q & "≤ªƒ‹…æ≥˝µ±«∞µ«¬º”√ªß£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "‰∏çËÉΩÂà†Èô§ÂΩìÂâçÁôªÂΩïÁî®Êà∑ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Dim ans As VbMsgBoxResult" & vbCrLf
-    c = c & "    ans = MsgBox(" & q & "»∑∂®“™…æ≥˝”√ªß°æ" & q & " & ws.Cells(r, 1).Value & " & q & "°ø£ø¥À≤Ÿ◊˜≤ªø…ª÷∏¥£°" & q & ", vbYesNo + vbExclamation)" & vbCrLf
+    c = c & "    ans = MsgBox(" & q & "Á°ÆÂÆöË¶ÅÂà†Èô§Áî®Êà∑„Äê" & q & " & ws.Cells(r, 1).Value & " & q & "„ÄëÔºüÊ≠§Êìç‰Ωú‰∏çÂèØÊÅ¢Â§çÔºÅ" & q & ", vbYesNo + vbExclamation)" & vbCrLf
     c = c & "    If ans = vbNo Then Exit Sub" & vbCrLf
     c = c & "    ws.Rows(r).Delete" & vbCrLf
-    c = c & "    MsgBox " & q & "”√ªß“—…æ≥˝£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    MsgBox " & q & "Áî®Êà∑Â∑≤Âà†Èô§ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    ClearFields" & vbCrLf
     c = c & "    LoadRoles" & vbCrLf
     c = c & "    LoadUserList" & vbCrLf
@@ -479,13 +479,13 @@ Private Sub CreateUserManagerForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- œ‘ æ”√ªßπ‹¿Ì¥∞ÃÂ ----------
+' ---------- ÊòæÁ§∫Áî®Êà∑ÁÆ°ÁêÜÁ™ó‰Ωì ----------
 
 Public Sub ShowUserManagerForm()
     Dim fName As String
     fName = GetConfigProp("UserManagerFormName")
     If fName = "" Or Not FormExists("UserManagerFormName") Then
-        MsgBox "”√ªßπ‹¿Ì¥∞ÃÂ≤ª¥Ê‘⁄£°«Îœ»‘À––SetupOASystem°£", vbExclamation
+        MsgBox "Áî®Êà∑ÁÆ°ÁêÜÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅËØ∑ÂÖàËøêË°åSetupOASystem„ÄÇ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -493,29 +493,29 @@ Public Sub ShowUserManagerForm()
     frm.Show
 End Sub
 
-' ---------- ¥¥Ω®π§◊˜π‹¿Ì±Ì ----------
+' ---------- ÂàõÂª∫Â∑•‰ΩúÁÆ°ÁêÜË°® ----------
 
 Private Sub CreateWorkSheet()
     Dim ws As Worksheet
-    If SheetExists("π§◊˜π‹¿Ì") Then
-        Set ws = ThisWorkbook.Sheets("π§◊˜π‹¿Ì")
+    If SheetExists("Â∑•‰ΩúÁÆ°ÁêÜ") Then
+        Set ws = ThisWorkbook.Sheets("Â∑•‰ΩúÁÆ°ÁêÜ")
     Else
         Set ws = ThisWorkbook.Sheets.Add( _
             After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.Count))
-        ws.Name = "π§◊˜π‹¿Ì"
+        ws.Name = "Â∑•‰ΩúÁÆ°ÁêÜ"
     End If
     With ws
-        .Range("A1").Value = "π§◊˜ID"
-        .Range("B1").Value = "π§◊˜±ÍÃ‚"
-        .Range("C1").Value = "π§◊˜√Ë ˆ"
-        .Range("D1").Value = "π§◊˜¿‡–Õ"
-        .Range("E1").Value = "”≈œ»º∂"
-        .Range("F1").Value = "∏∫‘»À"
-        .Range("G1").Value = "¥¥Ω®»À"
-        .Range("H1").Value = "◊¥Ã¨"
-        .Range("I1").Value = "¥¥Ω® ±º‰"
-        .Range("J1").Value = "Ωÿ÷π ±º‰"
-        .Range("K1").Value = "ÕÍ≥… ±º‰"
+        .Range("A1").Value = "Â∑•‰ΩúID"
+        .Range("B1").Value = "Â∑•‰ΩúÊ†áÈ¢ò"
+        .Range("C1").Value = "Â∑•‰ΩúÊèèËø∞"
+        .Range("D1").Value = "Â∑•‰ΩúÁ±ªÂûã"
+        .Range("E1").Value = "‰ºòÂÖàÁ∫ß"
+        .Range("F1").Value = "Ë¥üË¥£‰∫∫"
+        .Range("G1").Value = "ÂàõÂª∫‰∫∫"
+        .Range("H1").Value = "Áä∂ÊÄÅ"
+        .Range("I1").Value = "ÂàõÂª∫Êó∂Èó¥"
+        .Range("J1").Value = "Êà™Ê≠¢Êó∂Èó¥"
+        .Range("K1").Value = "ÂÆåÊàêÊó∂Èó¥"
         .Range("A1:K1").Font.Bold = True
         .Range("A1:K1").Interior.Color = RGB(70, 130, 180)
         .Range("A1:K1").Font.Color = RGB(255, 255, 255)
@@ -523,30 +523,30 @@ Private Sub CreateWorkSheet()
     End With
 End Sub
 
-' ---------- ¥¥Ω®–≈œ¢π‹¿Ì±Ì ----------
+' ---------- ÂàõÂª∫‰ø°ÊÅØÁÆ°ÁêÜË°® ----------
 
 Private Sub CreateNoticeSheet()
     Dim ws As Worksheet
-    If SheetExists("–≈œ¢π‹¿Ì") Then
-        Set ws = ThisWorkbook.Sheets("–≈œ¢π‹¿Ì")
+    If SheetExists("‰ø°ÊÅØÁÆ°ÁêÜ") Then
+        Set ws = ThisWorkbook.Sheets("‰ø°ÊÅØÁÆ°ÁêÜ")
     Else
         Set ws = ThisWorkbook.Sheets.Add( _
             After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.Count))
-        ws.Name = "–≈œ¢π‹¿Ì"
+        ws.Name = "‰ø°ÊÅØÁÆ°ÁêÜ"
     End If
     With ws
-        .Range("A1").Value = "π´∏ÊID"
-        .Range("B1").Value = "±ÍÃ‚"
-        .Range("C1").Value = "ƒ⁄»›"
-        .Range("D1").Value = "¿‡–Õ"
-        .Range("E1").Value = "∑¢≤º≤ø√≈"
-        .Range("F1").Value = "∑¢≤º»À"
-        .Range("G1").Value = "∂‘œÛ"
-        .Range("H1").Value = " «∑Ò÷√∂•"
-        .Range("I1").Value = "ΩÙº±≥Ã∂»"
-        .Range("J1").Value = "…˙–ß ±º‰"
-        .Range("K1").Value = "Ωÿ÷π ±º‰"
-        .Range("L1").Value = "∑¢≤º ±º‰"
+        .Range("A1").Value = "ÂÖ¨ÂëäID"
+        .Range("B1").Value = "Ê†áÈ¢ò"
+        .Range("C1").Value = "ÂÜÖÂÆπ"
+        .Range("D1").Value = "Á±ªÂûã"
+        .Range("E1").Value = "ÂèëÂ∏ÉÈÉ®Èó®"
+        .Range("F1").Value = "ÂèëÂ∏É‰∫∫"
+        .Range("G1").Value = "ÂØπË±°"
+        .Range("H1").Value = "ÊòØÂê¶ÁΩÆÈ°∂"
+        .Range("I1").Value = "Á¥ßÊÄ•Á®ãÂ∫¶"
+        .Range("J1").Value = "ÁîüÊïàÊó∂Èó¥"
+        .Range("K1").Value = "Êà™Ê≠¢Êó∂Èó¥"
+        .Range("L1").Value = "ÂèëÂ∏ÉÊó∂Èó¥"
         .Range("A1:L1").Font.Bold = True
         .Range("A1:L1").Interior.Color = RGB(70, 130, 180)
         .Range("A1:L1").Font.Color = RGB(255, 255, 255)
@@ -568,8 +568,8 @@ Private Sub CreateLoginForm()
     actualName = vbc.Name
     SetConfigProp "LoginFormName", actualName
 
-    ' …Ë÷√¥∞ÃÂ Ù–‘
-    vbc.Properties("Caption") = "ŒÔ“µOAœµÕ≥"
+    ' ËÆæÁΩÆÁ™ó‰ΩìÂ±ûÊÄß
+    vbc.Properties("Caption") = "Áâ©‰∏öOAÁ≥ªÁªü"
     vbc.Properties("Width") = 360
     vbc.Properties("Height") = 240
     vbc.Properties("StartUpPosition") = 2
@@ -577,20 +577,20 @@ Private Sub CreateLoginForm()
     Dim dsg As Object
     Set dsg = vbc.Designer
 
-    ' Label1 - ±ÍÃ‚
+    ' Label1 - Ê†áÈ¢ò
     Dim ctl As Object
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "Label1"
-    ctl.Caption = "ŒÔ“µ OA œµÕ≥ - µ«¬º"
+    ctl.Caption = "Áâ©‰∏ö OA Á≥ªÁªü - ÁôªÂΩï"
     ctl.Left = 48: ctl.Top = 36
     ctl.Width = 200: ctl.Height = 24
     ctl.Font.Size = 14
     ctl.Font.Bold = True
 
-    ' Label2 - ”√ªß√˚±Í«©
+    ' Label2 - Áî®Êà∑ÂêçÊ†áÁ≠æ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "Label2"
-    ctl.Caption = "”√ªß√˚£∫"
+    ctl.Caption = "Áî®Êà∑ÂêçÔºö"
     ctl.Left = 48: ctl.Top = 72
     ctl.Width = 60: ctl.Height = 18
 
@@ -600,10 +600,10 @@ Private Sub CreateLoginForm()
     ctl.Left = 120: ctl.Top = 72
     ctl.Width = 150: ctl.Height = 24
 
-    ' Label3 - √‹¬Î±Í«©
+    ' Label3 - ÂØÜÁ†ÅÊ†áÁ≠æ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "Label3"
-    ctl.Caption = "√‹¬Î£∫"
+    ctl.Caption = "ÂØÜÁ†ÅÔºö"
     ctl.Left = 48: ctl.Top = 108
     ctl.Width = 60: ctl.Height = 18
 
@@ -617,28 +617,28 @@ Private Sub CreateLoginForm()
     ' cmdLogin
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdLogin"
-    ctl.Caption = "µ«¬º"
+    ctl.Caption = "ÁôªÂΩï"
     ctl.Left = 80: ctl.Top = 156
     ctl.Width = 80: ctl.Height = 28
 
     ' cmdExit
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdExit"
-    ctl.Caption = "ÕÀ≥ˆ"
+    ctl.Caption = "ÈÄÄÂá∫"
     ctl.Left = 180: ctl.Top = 156
     ctl.Width = 80: ctl.Height = 28
 
-    ' lblRegister - ◊¢≤·¡¥Ω”
+    ' lblRegister - Ê≥®ÂÜåÈìæÊé•
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblRegister"
-    ctl.Caption = "√ª”–’À∫≈£øµ„ª˜◊¢≤·"
+    ctl.Caption = "Ê≤°ÊúâË¥¶Âè∑ÔºüÁÇπÂáªÊ≥®ÂÜå"
     ctl.Left = 110: ctl.Top = 195
     ctl.Width = 130: ctl.Height = 16
     ctl.ForeColor = RGB(0, 0, 255)
     ctl.Font.Underline = True
     ctl.Font.Size = 9
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -658,7 +658,7 @@ Private Sub CreateLoginForm()
     c = c & "    u = Trim(txtUser.Text)" & vbCrLf
     c = c & "    p = Trim(txtPass.Text)" & vbCrLf
     c = c & "    If u = " & q & q & " Or p = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î ‰»Î”√ªß√˚∫Õ√‹¬Î£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ËæìÂÖ•Áî®Êà∑ÂêçÂíåÂØÜÁ†ÅÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If AuthenticateUser(u, p) Then" & vbCrLf
@@ -668,13 +668,13 @@ Private Sub CreateLoginForm()
     c = c & "    Else" & vbCrLf
     c = c & "        loginAttempts = loginAttempts + 1" & vbCrLf
     c = c & "        If loginAttempts >= 3 Then" & vbCrLf
-    c = c & "            MsgBox " & q & "µ«¬º ß∞‹¥Œ ˝π˝∂‡£¨œµÕ≥ÕÀ≥ˆ£°" & q & ", vbCritical" & vbCrLf
+    c = c & "            MsgBox " & q & "ÁôªÂΩïÂ§±Ë¥•Ê¨°Êï∞ËøáÂ§öÔºåÁ≥ªÁªüÈÄÄÂá∫ÔºÅ" & q & ", vbCritical" & vbCrLf
     c = c & "            Unload Me" & vbCrLf
     c = c & "        Else" & vbCrLf
     c = c & "            Dim remain As Integer" & vbCrLf
     c = c & "            remain = 3 - loginAttempts" & vbCrLf
-    c = c & "            MsgBox " & q & "”√ªß√˚ªÚ√‹¬Î¥ÌŒÛ£° £”‡" & q
-    c = c & " & remain & " & q & "¥Œª˙ª·" & q & ", vbWarning" & vbCrLf
+    c = c & "            MsgBox " & q & "Áî®Êà∑ÂêçÊàñÂØÜÁ†ÅÈîôËØØÔºÅÂâ©‰Ωô" & q
+    c = c & " & remain & " & q & "Ê¨°Êú∫‰ºö" & q & ", vbWarning" & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "End Sub" & vbCrLf
@@ -705,7 +705,7 @@ Private Sub CreateLoginForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®◊¢≤·¥∞ÃÂ (’ºŒª) ----------
+' ---------- ÂàõÂª∫Ê≥®ÂÜåÁ™ó‰Ωì (Âç†‰Ωç) ----------
 
 Private Sub CreateRegisterForm()
     Dim oldForm As String
@@ -721,7 +721,7 @@ Private Sub CreateRegisterForm()
     actualName = vbc.Name
     SetConfigProp "RegisterFormName", actualName
 
-    vbc.Properties("Caption") = "”√ªß◊¢≤·"
+    vbc.Properties("Caption") = "Áî®Êà∑Ê≥®ÂÜå"
     vbc.Properties("Width") = 280
     vbc.Properties("Height") = 320
     vbc.Properties("StartUpPosition") = 2
@@ -733,7 +733,7 @@ Private Sub CreateRegisterForm()
     ' lblName
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblName"
-    ctl.Caption = "–’√˚£∫"
+    ctl.Caption = "ÂßìÂêçÔºö"
     ctl.Left = 20: ctl.Top = 20
     ctl.Width = 70: ctl.Height = 18
 
@@ -746,7 +746,7 @@ Private Sub CreateRegisterForm()
     ' lblAccount
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblAccount"
-    ctl.Caption = "’À∫≈£∫"
+    ctl.Caption = "Ë¥¶Âè∑Ôºö"
     ctl.Left = 20: ctl.Top = 60
     ctl.Width = 70: ctl.Height = 18
 
@@ -759,7 +759,7 @@ Private Sub CreateRegisterForm()
     ' lblPwd
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblPwd"
-    ctl.Caption = "√‹¬Î£∫"
+    ctl.Caption = "ÂØÜÁ†ÅÔºö"
     ctl.Left = 20: ctl.Top = 95
     ctl.Width = 70: ctl.Height = 18
 
@@ -773,7 +773,7 @@ Private Sub CreateRegisterForm()
     ' lblConfirmPwd
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblConfirmPwd"
-    ctl.Caption = "»∑»œ√‹¬Î£∫"
+    ctl.Caption = "Á°ÆËÆ§ÂØÜÁ†ÅÔºö"
     ctl.Left = 20: ctl.Top = 130
     ctl.Width = 70: ctl.Height = 18
 
@@ -787,7 +787,7 @@ Private Sub CreateRegisterForm()
     ' lblRole
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblRole"
-    ctl.Caption = "Ω«…´£∫"
+    ctl.Caption = "ËßíËâ≤Ôºö"
     ctl.Left = 20: ctl.Top = 165
     ctl.Width = 70: ctl.Height = 18
 
@@ -801,18 +801,18 @@ Private Sub CreateRegisterForm()
     ' cmdSave
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdSave"
-    ctl.Caption = "±£¥Ê"
+    ctl.Caption = "‰øùÂ≠ò"
     ctl.Left = 60: ctl.Top = 220
     ctl.Width = 60: ctl.Height = 24
 
     ' cmdCancel
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdCancel"
-    ctl.Caption = "»°œ˚"
+    ctl.Caption = "ÂèñÊ∂à"
     ctl.Left = 160: ctl.Top = 220
     ctl.Width = 60: ctl.Height = 24
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -824,15 +824,15 @@ Private Sub CreateRegisterForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
     c = c & "    With cboRole" & vbCrLf
-    c = c & "        .AddItem " & q & "π‹¿Ì‘±" & q & vbCrLf
-    c = c & "        .AddItem " & q & "≤ø√≈÷˜π‹" & q & vbCrLf
-    c = c & "        .AddItem " & q & "––’˛≤ø" & q & vbCrLf
-    c = c & "        .AddItem " & q & "≤∆ŒÒ≤ø" & q & vbCrLf
-    c = c & "        .AddItem " & q & "œ˙ €≤ø" & q & vbCrLf
-    c = c & "        .AddItem " & q & "π§≥Ã≤ø" & q & vbCrLf
-    c = c & "        .AddItem " & q & "øÕ∑˛≤ø" & q & vbCrLf
-    c = c & "        .AddItem " & q & "±£∞≤≤ø" & q & vbCrLf
-    c = c & "        .AddItem " & q & "±£Ω‡≤ø" & q & vbCrLf
+    c = c & "        .AddItem " & q & "ÁÆ°ÁêÜÂëò" & q & vbCrLf
+    c = c & "        .AddItem " & q & "ÈÉ®Èó®‰∏ªÁÆ°" & q & vbCrLf
+    c = c & "        .AddItem " & q & "Ë°åÊîøÈÉ®" & q & vbCrLf
+    c = c & "        .AddItem " & q & "Ë¥¢Âä°ÈÉ®" & q & vbCrLf
+    c = c & "        .AddItem " & q & "ÈîÄÂîÆÈÉ®" & q & vbCrLf
+    c = c & "        .AddItem " & q & "Â∑•Á®ãÈÉ®" & q & vbCrLf
+    c = c & "        .AddItem " & q & "ÂÆ¢ÊúçÈÉ®" & q & vbCrLf
+    c = c & "        .AddItem " & q & "‰øùÂÆâÈÉ®" & q & vbCrLf
+    c = c & "        .AddItem " & q & "‰øùÊ¥ÅÈÉ®" & q & vbCrLf
     c = c & "        .ListIndex = -1" & vbCrLf
     c = c & "    End With" & vbCrLf
     c = c & "End Sub" & vbCrLf
@@ -851,27 +851,27 @@ Private Sub CreateRegisterForm()
     c = c & "    End If" & vbCrLf
     c = c & "    If sName = " & q & q & " Or sAcct = " & q & q
     c = c & " Or sPwd = " & q & q & " Or sRole = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«ÎÃÓ–¥À˘”–±ÿÃÓœÓ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑Â°´ÂÜôÊâÄÊúâÂøÖÂ°´È°πÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If sPwd <> sConf Then" & vbCrLf
-    c = c & "        MsgBox " & q & "¡Ω¥Œ ‰»Îµƒ√‹¬Î≤ª“ª÷¬£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "‰∏§Ê¨°ËæìÂÖ•ÁöÑÂØÜÁ†Å‰∏ç‰∏ÄËá¥ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If Len(sPwd) < 6 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "√‹¬Î≥§∂»≤ªƒ‹…Ÿ”⁄6Œª£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ÂØÜÁ†ÅÈïøÂ∫¶‰∏çËÉΩÂ∞ë‰∫é6‰ΩçÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If AccountExists(sAcct) Then" & vbCrLf
-    c = c & "        MsgBox " & q & "∏√’À∫≈“—¥Ê‘⁄£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ•Ë¥¶Âè∑Â∑≤Â≠òÂú®ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
-    c = c & "    If sRole = " & q & "π‹¿Ì‘±" & q & " And AdminExists() Then" & vbCrLf
-    c = c & "        MsgBox " & q & "œµÕ≥Ωˆ‘ –Ì“ª∏ˆπ‹¿Ì‘±’À∫≈£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "    If sRole = " & q & "ÁÆ°ÁêÜÂëò" & q & " And AdminExists() Then" & vbCrLf
+    c = c & "        MsgBox " & q & "Á≥ªÁªü‰ªÖÂÖÅËÆ∏‰∏Ä‰∏™ÁÆ°ÁêÜÂëòË¥¶Âè∑ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    RegisterNewUser sName, sAcct, sPwd, sRole" & vbCrLf
-    c = c & "    MsgBox " & q & "◊¢≤·≥…π¶£°«Î∑µªÿµ«¬º°£" & q & ", vbInformation" & vbCrLf
+    c = c & "    MsgBox " & q & "Ê≥®ÂÜåÊàêÂäüÔºÅËØ∑ËøîÂõûÁôªÂΩï„ÄÇ" & q & ", vbInformation" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
@@ -882,7 +882,7 @@ Private Sub CreateRegisterForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®“«±Ì≈Ã¥∞ÃÂ (’ºŒª) ----------
+' ---------- ÂàõÂª∫‰ª™Ë°®ÁõòÁ™ó‰Ωì (Âç†‰Ωç) ----------
 
 Private Sub CreateDashboardForm()
     Dim oldForm As String
@@ -898,7 +898,7 @@ Private Sub CreateDashboardForm()
     actualName = vbc.Name
     SetConfigProp "DashboardFormName", actualName
 
-    vbc.Properties("Caption") = "ŒÔ“µOAœµÕ≥ - “«±Ì≈Ã"
+    vbc.Properties("Caption") = "Áâ©‰∏öOAÁ≥ªÁªü - ‰ª™Ë°®Áõò"
     vbc.Properties("Width") = 1000
     vbc.Properties("Height") = 600
     vbc.Properties("StartUpPosition") = 2
@@ -907,16 +907,16 @@ Private Sub CreateDashboardForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' ª∂”≠±Í«©
+    ' Ê¨¢ËøéÊ†áÁ≠æ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblWelcome"
-    ctl.Caption = "ª∂”≠£¨"
+    ctl.Caption = "Ê¨¢ËøéÔºå"
     ctl.Left = 24: ctl.Top = 24
     ctl.Width = 300: ctl.Height = 24
     ctl.Font.Size = 14
     ctl.Font.Bold = True
 
-    ' Ω«…´»®œﬁ±Í«©
+    ' ËßíËâ≤ÊùÉÈôêÊ†áÁ≠æ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblRoleInfo"
     ctl.Caption = ""
@@ -925,10 +925,10 @@ Private Sub CreateDashboardForm()
     ctl.ForeColor = RGB(70, 130, 180)
     ctl.Font.Size = 9
 
-    ' ===== «¯”Ú1: Õ≥º∆ ˝æ› =====
+    ' ===== Âå∫Âüü1: ÁªüËÆ°Êï∞ÊçÆ =====
     Set ctl = dsg.Controls.Add("Forms.Frame.1")
     ctl.Name = "fraStats"
-    ctl.Caption = "Õ≥º∆ ˝æ›"
+    ctl.Caption = "ÁªüËÆ°Êï∞ÊçÆ"
     ctl.Left = 24: ctl.Top = 78
     ctl.Width = 940: ctl.Height = 70
     ctl.Font.Bold = True
@@ -936,17 +936,17 @@ Private Sub CreateDashboardForm()
     Dim statsFrame As Object
     Set statsFrame = ctl
 
-    Call AddDashStatLabel(dsg, statsFrame, "lblStatUsers", "◊¢≤·”√ªß: 0", 20, 22, 140, 30)
-    Call AddDashStatLabel(dsg, statsFrame, "lblStatPending", "¥˝∞Ïπ§◊˜: 0", 170, 22, 140, 30)
-    Call AddDashStatLabel(dsg, statsFrame, "lblStatDoing", "∞Ï¿Ì÷–: 0", 320, 22, 140, 30)
-    Call AddDashStatLabel(dsg, statsFrame, "lblStatDone", "“—ÕÍ≥…: 0", 470, 22, 140, 30)
-    Call AddDashStatLabel(dsg, statsFrame, "lblStatApproval", "¥˝…Û≈˙: 0", 620, 22, 140, 30)
-    Call AddDashStatLabel(dsg, statsFrame, "lblStatRepair", "¥˝±®–ﬁ: 0", 770, 22, 140, 30)
+    Call AddDashStatLabel(dsg, statsFrame, "lblStatUsers", "Ê≥®ÂÜåÁî®Êà∑: 0", 20, 22, 140, 30)
+    Call AddDashStatLabel(dsg, statsFrame, "lblStatPending", "ÂæÖÂäûÂ∑•‰Ωú: 0", 170, 22, 140, 30)
+    Call AddDashStatLabel(dsg, statsFrame, "lblStatDoing", "ÂäûÁêÜ‰∏≠: 0", 320, 22, 140, 30)
+    Call AddDashStatLabel(dsg, statsFrame, "lblStatDone", "Â∑≤ÂÆåÊàê: 0", 470, 22, 140, 30)
+    Call AddDashStatLabel(dsg, statsFrame, "lblStatApproval", "ÂæÖÂÆ°Êâπ: 0", 620, 22, 140, 30)
+    Call AddDashStatLabel(dsg, statsFrame, "lblStatRepair", "ÂæÖÊä•‰øÆ: 0", 770, 22, 140, 30)
 
-    ' ===== «¯”Ú2: “µŒÒƒ£øÈ∞¥≈• =====
+    ' ===== Âå∫Âüü2: ‰∏öÂä°Ê®°ÂùóÊåâÈíÆ =====
     Set ctl = dsg.Controls.Add("Forms.Frame.1")
     ctl.Name = "fraModules"
-    ctl.Caption = "“µŒÒƒ£øÈ"
+    ctl.Caption = "‰∏öÂä°Ê®°Âùó"
     ctl.Left = 24: ctl.Top = 156
     ctl.Width = 940: ctl.Height = 200
     ctl.Font.Bold = True
@@ -954,22 +954,22 @@ Private Sub CreateDashboardForm()
     Dim modFrame As Object
     Set modFrame = ctl
 
-    ' 13∏ˆƒ£øÈ∞¥≈•, 5¡– x 3––≤ºæ÷
+    ' 13‰∏™Ê®°ÂùóÊåâÈíÆ, 5Âàó x 3Ë°åÂ∏ÉÂ±Ä
     Dim btnNames(1 To 13) As String
     Dim btnCaptions(1 To 13) As String
-    btnNames(1) = "cmdTrip": btnCaptions(1) = "∏ˆ»À––≥Ã"
-    btnNames(2) = "cmdAttend": btnCaptions(2) = "∏ˆ»Àøº«⁄"
-    btnNames(3) = "cmdInfo": btnCaptions(3) = "–≈œ¢π‹¿Ì"
-    btnNames(4) = "cmdWork": btnCaptions(4) = "π§◊˜π‹¿Ì"
-    btnNames(5) = "cmdInspect": btnCaptions(5) = "—≤ºÏπ‹¿Ì"
-    btnNames(6) = "cmdHygiene": btnCaptions(6) = "Œ¿…˙π‹¿Ì"
-    btnNames(7) = "cmdFee": btnCaptions(7) = "∑—”√π‹¿Ì"
-    btnNames(8) = "cmdApproval": btnCaptions(8) = "…Û≈˙π‹¿Ì"
-    btnNames(9) = "cmdRepair": btnCaptions(9) = "±®–ﬁπ‹¿Ì"
-    btnNames(10) = "cmdComplaint": btnCaptions(10) = "Õ∂ÀﬂΩ®“È"
-    btnNames(11) = "cmdParking": btnCaptions(11) = "Õ£≥µπ‹¿Ì"
-    btnNames(12) = "cmdHR": btnCaptions(12) = "»À¡¶◊ ‘¥"
-    btnNames(13) = "cmdUserMgr": btnCaptions(13) = "”√ªßπ‹¿Ì"
+    btnNames(1) = "cmdTrip": btnCaptions(1) = "‰∏™‰∫∫Ë°åÁ®ã"
+    btnNames(2) = "cmdAttend": btnCaptions(2) = "‰∏™‰∫∫ËÄÉÂã§"
+    btnNames(3) = "cmdInfo": btnCaptions(3) = "‰ø°ÊÅØÁÆ°ÁêÜ"
+    btnNames(4) = "cmdWork": btnCaptions(4) = "Â∑•‰ΩúÁÆ°ÁêÜ"
+    btnNames(5) = "cmdInspect": btnCaptions(5) = "Â∑°Ê£ÄÁÆ°ÁêÜ"
+    btnNames(6) = "cmdHygiene": btnCaptions(6) = "Âç´ÁîüÁÆ°ÁêÜ"
+    btnNames(7) = "cmdFee": btnCaptions(7) = "Ë¥πÁî®ÁÆ°ÁêÜ"
+    btnNames(8) = "cmdApproval": btnCaptions(8) = "ÂÆ°ÊâπÁÆ°ÁêÜ"
+    btnNames(9) = "cmdRepair": btnCaptions(9) = "Êä•‰øÆÁÆ°ÁêÜ"
+    btnNames(10) = "cmdComplaint": btnCaptions(10) = "ÊäïËØâÂª∫ËÆÆ"
+    btnNames(11) = "cmdParking": btnCaptions(11) = "ÂÅúËΩ¶ÁÆ°ÁêÜ"
+    btnNames(12) = "cmdHR": btnCaptions(12) = "‰∫∫ÂäõËµÑÊ∫ê"
+    btnNames(13) = "cmdUserMgr": btnCaptions(13) = "Áî®Êà∑ÁÆ°ÁêÜ"
 
     Dim bIdx As Long
     Dim bRow As Long, bCol As Long
@@ -990,10 +990,10 @@ Private Sub CreateDashboardForm()
         ctl.Font.Size = 10
     Next bIdx
 
-    ' ===== «¯”Ú3: ¥˝…Û≈˙/¥˝¥¶¿Ì ¬œÓ =====
+    ' ===== Âå∫Âüü3: ÂæÖÂÆ°Êâπ/ÂæÖÂ§ÑÁêÜ‰∫ãÈ°π =====
     Set ctl = dsg.Controls.Add("Forms.Frame.1")
     ctl.Name = "fraPending"
-    ctl.Caption = "¥˝∞Ï ¬œÓ"
+    ctl.Caption = "ÂæÖÂäû‰∫ãÈ°π"
     ctl.Left = 24: ctl.Top = 366
     ctl.Width = 450: ctl.Height = 170
     ctl.Font.Bold = True
@@ -1003,7 +1003,7 @@ Private Sub CreateDashboardForm()
 
     Set ctl = pendFrame.Controls.Add("Forms.Label.1")
     ctl.Name = "lblPendTitle"
-    ctl.Caption = "¥˝¥¶¿Ìπ§◊˜£∫"
+    ctl.Caption = "ÂæÖÂ§ÑÁêÜÂ∑•‰ΩúÔºö"
     ctl.Left = 12: ctl.Top = 20
     ctl.Width = 120: ctl.Height = 16
     ctl.Font.Bold = True
@@ -1013,10 +1013,10 @@ Private Sub CreateDashboardForm()
     ctl.Left = 12: ctl.Top = 40
     ctl.Width = 420: ctl.Height = 110
 
-    ' ¥˝…Û≈˙«¯”Ú
+    ' ÂæÖÂÆ°ÊâπÂå∫Âüü
     Set ctl = dsg.Controls.Add("Forms.Frame.1")
     ctl.Name = "fraApproval"
-    ctl.Caption = "¥˝…Û≈˙ ¬œÓ"
+    ctl.Caption = "ÂæÖÂÆ°Êâπ‰∫ãÈ°π"
     ctl.Left = 490: ctl.Top = 366
     ctl.Width = 474: ctl.Height = 170
     ctl.Font.Bold = True
@@ -1026,7 +1026,7 @@ Private Sub CreateDashboardForm()
 
     Set ctl = apprvFrame.Controls.Add("Forms.Label.1")
     ctl.Name = "lblApprvTitle"
-    ctl.Caption = "¥˝…Û≈˙¡–±Ì£∫"
+    ctl.Caption = "ÂæÖÂÆ°ÊâπÂàóË°®Ôºö"
     ctl.Left = 12: ctl.Top = 20
     ctl.Width = 120: ctl.Height = 16
     ctl.Font.Bold = True
@@ -1036,14 +1036,14 @@ Private Sub CreateDashboardForm()
     ctl.Left = 12: ctl.Top = 40
     ctl.Width = 444: ctl.Height = 110
 
-    ' µ◊≤ø◊¢œ˙∞¥≈•
+    ' Â∫ïÈÉ®Ê≥®ÈîÄÊåâÈíÆ
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdLogout"
-    ctl.Caption = "◊¢œ˙µ«¬º"
+    ctl.Caption = "Ê≥®ÈîÄÁôªÂΩï"
     ctl.Left = 880: ctl.Top = 546
     ctl.Width = 90: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -1054,15 +1054,15 @@ Private Sub CreateDashboardForm()
     c = "Option Explicit" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
-    c = c & "    lblWelcome.Caption = " & q & "ª∂”≠£¨" & q & " & gCurrentUser" & vbCrLf
+    c = c & "    lblWelcome.Caption = " & q & "Ê¨¢ËøéÔºå" & q & " & gCurrentUser" & vbCrLf
     c = c & "    Dim isHigh As Boolean" & vbCrLf
     c = c & "    isHigh = IsHighPrivilege(gCurrentRole)" & vbCrLf
     c = c & "    If isHigh Then" & vbCrLf
-    c = c & "        lblRoleInfo.Caption = " & q & "Ω«…´: " & q
-    c = c & " & gCurrentRole & " & q & " | »®œﬁ: ◊Ó∏ﬂ»®œﬁ(‘ˆ…æ∏ƒ≤È)" & q & vbCrLf
+    c = c & "        lblRoleInfo.Caption = " & q & "ËßíËâ≤: " & q
+    c = c & " & gCurrentRole & " & q & " | ÊùÉÈôê: ÊúÄÈ´òÊùÉÈôê(Â¢ûÂà†ÊîπÊü•)" & q & vbCrLf
     c = c & "    Else" & vbCrLf
-    c = c & "        lblRoleInfo.Caption = " & q & "Ω«…´: " & q
-    c = c & " & gCurrentRole & " & q & " | »®œﬁ: ∆’Õ®”√ªß(Ωˆ≤Èø¥)" & q & vbCrLf
+    c = c & "        lblRoleInfo.Caption = " & q & "ËßíËâ≤: " & q
+    c = c & " & gCurrentRole & " & q & " | ÊùÉÈôê: ÊôÆÈÄöÁî®Êà∑(‰ªÖÊü•Áúã)" & q & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    cmdUserMgr.Enabled = isHigh" & vbCrLf
     c = c & "    LoadStats" & vbCrLf
@@ -1072,11 +1072,11 @@ Private Sub CreateDashboardForm()
     c = c & "Private Sub LoadStats()" & vbCrLf
     c = c & "    Dim wsU As Worksheet, wsW As Worksheet" & vbCrLf
     c = c & "    Dim uCnt As Long, pCnt As Long, dCnt As Long, fCnt As Long" & vbCrLf
-    c = c & "    Set wsU = ThisWorkbook.Sheets(" & q & "”√ªßπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set wsU = ThisWorkbook.Sheets(" & q & "Áî®Êà∑ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    uCnt = Application.Max(wsU.Cells(wsU.Rows.Count, 1).End(xlUp).Row - 1, 0)" & vbCrLf
-    c = c & "    lblStatUsers.Caption = " & q & "◊¢≤·”√ªß: " & q & " & uCnt" & vbCrLf
+    c = c & "    lblStatUsers.Caption = " & q & "Ê≥®ÂÜåÁî®Êà∑: " & q & " & uCnt" & vbCrLf
     c = c & "    On Error Resume Next" & vbCrLf
-    c = c & "    Set wsW = ThisWorkbook.Sheets(" & q & "π§◊˜π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set wsW = ThisWorkbook.Sheets(" & q & "Â∑•‰ΩúÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    On Error GoTo 0" & vbCrLf
     c = c & "    If wsW Is Nothing Then Exit Sub" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
@@ -1084,14 +1084,14 @@ Private Sub CreateDashboardForm()
     c = c & "    pCnt = 0: dCnt = 0: fCnt = 0" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
     c = c & "        Select Case wsW.Cells(i, 8).Value" & vbCrLf
-    c = c & "            Case " & q & "¥˝∞Ï" & q & ": pCnt = pCnt + 1" & vbCrLf
-    c = c & "            Case " & q & "∞Ï¿Ì÷–" & q & ": dCnt = dCnt + 1" & vbCrLf
-    c = c & "            Case " & q & "“—ÕÍ≥…" & q & ": fCnt = fCnt + 1" & vbCrLf
+    c = c & "            Case " & q & "ÂæÖÂäû" & q & ": pCnt = pCnt + 1" & vbCrLf
+    c = c & "            Case " & q & "ÂäûÁêÜ‰∏≠" & q & ": dCnt = dCnt + 1" & vbCrLf
+    c = c & "            Case " & q & "Â∑≤ÂÆåÊàê" & q & ": fCnt = fCnt + 1" & vbCrLf
     c = c & "        End Select" & vbCrLf
     c = c & "    Next i" & vbCrLf
-    c = c & "    lblStatPending.Caption = " & q & "¥˝∞Ïπ§◊˜: " & q & " & pCnt" & vbCrLf
-    c = c & "    lblStatDoing.Caption = " & q & "∞Ï¿Ì÷–: " & q & " & dCnt" & vbCrLf
-    c = c & "    lblStatDone.Caption = " & q & "“—ÕÍ≥…: " & q & " & fCnt" & vbCrLf
+    c = c & "    lblStatPending.Caption = " & q & "ÂæÖÂäûÂ∑•‰Ωú: " & q & " & pCnt" & vbCrLf
+    c = c & "    lblStatDoing.Caption = " & q & "ÂäûÁêÜ‰∏≠: " & q & " & dCnt" & vbCrLf
+    c = c & "    lblStatDone.Caption = " & q & "Â∑≤ÂÆåÊàê: " & q & " & fCnt" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub LoadPendingItems()" & vbCrLf
@@ -1099,7 +1099,7 @@ Private Sub CreateDashboardForm()
     c = c & "    lstApprovalItems.Clear" & vbCrLf
     c = c & "    Dim wsW As Worksheet" & vbCrLf
     c = c & "    On Error Resume Next" & vbCrLf
-    c = c & "    Set wsW = ThisWorkbook.Sheets(" & q & "π§◊˜π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set wsW = ThisWorkbook.Sheets(" & q & "Â∑•‰ΩúÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    On Error GoTo 0" & vbCrLf
     c = c & "    If wsW Is Nothing Then Exit Sub" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
@@ -1110,7 +1110,7 @@ Private Sub CreateDashboardForm()
     c = c & "        Dim st As String, assignee As String" & vbCrLf
     c = c & "        st = wsW.Cells(i, 8).Value" & vbCrLf
     c = c & "        assignee = wsW.Cells(i, 6).Value" & vbCrLf
-    c = c & "        If st = " & q & "¥˝∞Ï" & q & " Or st = " & q & "∞Ï¿Ì÷–" & q & " Then" & vbCrLf
+    c = c & "        If st = " & q & "ÂæÖÂäû" & q & " Or st = " & q & "ÂäûÁêÜ‰∏≠" & q & " Then" & vbCrLf
     c = c & "            If isHigh Or assignee = gCurrentUser Then" & vbCrLf
     c = c & "                Dim info As String" & vbCrLf
     c = c & "                info = wsW.Cells(i, 2).Value & " & q & " | " & q
@@ -1129,7 +1129,7 @@ Private Sub CreateDashboardForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdUserMgr_Click()" & vbCrLf
     c = c & "    If Not IsHighPrivilege(gCurrentRole) Then" & vbCrLf
-    c = c & "        MsgBox " & q & "ƒ˙√ª”–”√ªßπ‹¿Ì»®œﬁ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ÊÇ®Ê≤°ÊúâÁî®Êà∑ÁÆ°ÁêÜÊùÉÈôêÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Me.Hide" & vbCrLf
@@ -1222,7 +1222,7 @@ Private Sub AddDashStatLabel(dsg As Object, frm As Object, sName As String, sCap
     ctl.ForeColor = RGB(50, 50, 120)
 End Sub
 
-' ---------- ¥¥Ω®π§◊˜π‹¿Ì¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫Â∑•‰ΩúÁÆ°ÁêÜÁ™ó‰Ωì ----------
 
 Private Sub CreateWorkManagerForm()
     Dim oldForm As String
@@ -1238,7 +1238,7 @@ Private Sub CreateWorkManagerForm()
     actualName = vbc.Name
     SetConfigProp "WorkManagerFormName", actualName
 
-    vbc.Properties("Caption") = "π§◊˜π‹¿Ì"
+    vbc.Properties("Caption") = "Â∑•‰ΩúÁÆ°ÁêÜ"
     vbc.Properties("Width") = 560
     vbc.Properties("Height") = 480
     vbc.Properties("StartUpPosition") = 2
@@ -1247,10 +1247,10 @@ Private Sub CreateWorkManagerForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' «–ªªø®∆¨: Œ“µƒπ§◊˜ / À˘”–π§◊˜
+    ' ÂàáÊç¢Âç°Áâá: ÊàëÁöÑÂ∑•‰Ωú / ÊâÄÊúâÂ∑•‰Ωú
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdMyWork"
-    ctl.Caption = "Œ“µƒπ§◊˜"
+    ctl.Caption = "ÊàëÁöÑÂ∑•‰Ωú"
     ctl.Left = 12: ctl.Top = 6
     ctl.Width = 90: ctl.Height = 26
     ctl.BackColor = RGB(70, 130, 180)
@@ -1258,7 +1258,7 @@ Private Sub CreateWorkManagerForm()
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdAllWork"
-    ctl.Caption = "À˘”–π§◊˜"
+    ctl.Caption = "ÊâÄÊúâÂ∑•‰Ωú"
     ctl.Left = 110: ctl.Top = 6
     ctl.Width = 90: ctl.Height = 26
 
@@ -1270,13 +1270,13 @@ Private Sub CreateWorkManagerForm()
 
     Dim mp As Object
     Set mp = ctl
-    mp.Pages(0).Caption = "¥˝∞Ïπ§◊˜"
+    mp.Pages(0).Caption = "ÂæÖÂäûÂ∑•‰Ωú"
     mp.Pages.Add
-    mp.Pages(1).Caption = "∞Ï¿Ì÷–"
+    mp.Pages(1).Caption = "ÂäûÁêÜ‰∏≠"
     mp.Pages.Add
-    mp.Pages(2).Caption = "“—ÕÍ≥…"
+    mp.Pages(2).Caption = "Â∑≤ÂÆåÊàê"
 
-    ' Page 0 - ¥˝∞Ï¡–±Ì
+    ' Page 0 - ÂæÖÂäûÂàóË°®
     Dim pg0 As Object
     Set pg0 = mp.Pages(0)
 
@@ -1289,7 +1289,7 @@ Private Sub CreateWorkManagerForm()
 
     Set ctl = pg0.Controls.Add("Forms.Label.1")
     ctl.Name = "lblPendHdr"
-    ctl.Caption = "ID | ±ÍÃ‚ | ¿‡–Õ | ”≈œ»º∂ | ∏∫‘»À | Ωÿ÷π ±º‰"
+    ctl.Caption = "ID | Ê†áÈ¢ò | Á±ªÂûã | ‰ºòÂÖàÁ∫ß | Ë¥üË¥£‰∫∫ | Êà™Ê≠¢Êó∂Èó¥"
     ctl.Left = 12: ctl.Top = 244
     ctl.Width = 498: ctl.Height = 14
     ctl.Font.Size = 8
@@ -1297,29 +1297,29 @@ Private Sub CreateWorkManagerForm()
 
     Set ctl = pg0.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdNewTask"
-    ctl.Caption = "–¬Ω®π§◊˜"
+    ctl.Caption = "Êñ∞Âª∫Â∑•‰Ωú"
     ctl.Left = 12: ctl.Top = 264
     ctl.Width = 80: ctl.Height = 28
 
     Set ctl = pg0.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdViewTask"
-    ctl.Caption = "≤Èø¥"
+    ctl.Caption = "Êü•Áúã"
     ctl.Left = 102: ctl.Top = 264
     ctl.Width = 70: ctl.Height = 28
 
     Set ctl = pg0.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdEditTask"
-    ctl.Caption = "±‡º≠"
+    ctl.Caption = "ÁºñËæë"
     ctl.Left = 182: ctl.Top = 264
     ctl.Width = 70: ctl.Height = 28
 
     Set ctl = pg0.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdDeleteTask"
-    ctl.Caption = "…æ≥˝"
+    ctl.Caption = "Âà†Èô§"
     ctl.Left = 262: ctl.Top = 264
     ctl.Width = 70: ctl.Height = 28
 
-    ' Page 1 - ∞Ï¿Ì÷–¡–±Ì
+    ' Page 1 - ÂäûÁêÜ‰∏≠ÂàóË°®
     Dim pg1 As Object
     Set pg1 = mp.Pages(1)
 
@@ -1332,11 +1332,11 @@ Private Sub CreateWorkManagerForm()
 
     Set ctl = pg1.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdViewDoing"
-    ctl.Caption = "≤Èø¥"
+    ctl.Caption = "Êü•Áúã"
     ctl.Left = 12: ctl.Top = 280
     ctl.Width = 70: ctl.Height = 28
 
-    ' Page 2 - “—ÕÍ≥…¡–±Ì
+    ' Page 2 - Â∑≤ÂÆåÊàêÂàóË°®
     Dim pg2 As Object
     Set pg2 = mp.Pages(2)
 
@@ -1349,18 +1349,18 @@ Private Sub CreateWorkManagerForm()
 
     Set ctl = pg2.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdViewDone"
-    ctl.Caption = "≤Èø¥"
+    ctl.Caption = "Êü•Áúã"
     ctl.Left = 12: ctl.Top = 280
     ctl.Width = 70: ctl.Height = 28
 
-    ' ∑µªÿ∞¥≈•
+    ' ËøîÂõûÊåâÈíÆ
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdBack"
-    ctl.Caption = "∑µªÿ"
+    ctl.Caption = "ËøîÂõû"
     ctl.Left = 460: ctl.Top = 416
     ctl.Width = 80: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -1403,16 +1403,16 @@ Private Sub CreateWorkManagerForm()
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub RefreshAllLists()" & vbCrLf
-    c = c & "    LoadWorkList lstPending, " & q & "¥˝∞Ï" & q & vbCrLf
-    c = c & "    LoadWorkList lstDoing, " & q & "∞Ï¿Ì÷–" & q & vbCrLf
-    c = c & "    LoadWorkList lstDone, " & q & "“—ÕÍ≥…" & q & vbCrLf
+    c = c & "    LoadWorkList lstPending, " & q & "ÂæÖÂäû" & q & vbCrLf
+    c = c & "    LoadWorkList lstDoing, " & q & "ÂäûÁêÜ‰∏≠" & q & vbCrLf
+    c = c & "    LoadWorkList lstDone, " & q & "Â∑≤ÂÆåÊàê" & q & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub LoadWorkList(lst As MSForms.ListBox, filterStatus As String)" & vbCrLf
     c = c & "    lst.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
     c = c & "    On Error Resume Next" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "π§◊˜π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Â∑•‰ΩúÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    On Error GoTo 0" & vbCrLf
     c = c & "    If ws Is Nothing Then Exit Sub" & vbCrLf
     c = c & "    Dim lr As Long, i As Long, idx As Long" & vbCrLf
@@ -1450,7 +1450,7 @@ Private Sub CreateWorkManagerForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdNewTask_Click()" & vbCrLf
     c = c & "    If Not IsHighPrivilege(gCurrentRole) Then" & vbCrLf
-    c = c & "        MsgBox " & q & "ƒ˙√ª”––¬Ω®π§◊˜µƒ»®œﬁ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ÊÇ®Ê≤°ÊúâÊñ∞Âª∫Â∑•‰ΩúÁöÑÊùÉÈôêÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gEditWorkID = " & q & q & vbCrLf
@@ -1462,7 +1462,7 @@ Private Sub CreateWorkManagerForm()
     c = c & "    Dim wid As String" & vbCrLf
     c = c & "    wid = GetSelectedWorkID(lstPending)" & vbCrLf
     c = c & "    If wid = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Ò“ªÃıπ§◊˜º«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©‰∏ÄÊù°Â∑•‰ΩúËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gViewWorkID = wid" & vbCrLf
@@ -1472,13 +1472,13 @@ Private Sub CreateWorkManagerForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdEditTask_Click()" & vbCrLf
     c = c & "    If Not IsHighPrivilege(gCurrentRole) Then" & vbCrLf
-    c = c & "        MsgBox " & q & "ƒ˙√ª”–±‡º≠»®œﬁ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ÊÇ®Ê≤°ÊúâÁºñËæëÊùÉÈôêÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Dim wid As String" & vbCrLf
     c = c & "    wid = GetSelectedWorkID(lstPending)" & vbCrLf
     c = c & "    If wid = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Ò“ªÃıπ§◊˜º«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©‰∏ÄÊù°Â∑•‰ΩúËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gEditWorkID = wid" & vbCrLf
@@ -1488,16 +1488,16 @@ Private Sub CreateWorkManagerForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdDeleteTask_Click()" & vbCrLf
     c = c & "    If Not IsHighPrivilege(gCurrentRole) Then" & vbCrLf
-    c = c & "        MsgBox " & q & "ƒ˙√ª”–…æ≥˝»®œﬁ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ÊÇ®Ê≤°ÊúâÂà†Èô§ÊùÉÈôêÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Dim wid As String" & vbCrLf
     c = c & "    wid = GetSelectedWorkID(lstPending)" & vbCrLf
     c = c & "    If wid = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Ò“ªÃıπ§◊˜º«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©‰∏ÄÊù°Â∑•‰ΩúËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
-    c = c & "    If MsgBox(" & q & "»∑»œ…æ≥˝∏√π§◊˜£ø" & q & ", vbQuestion + vbYesNo) = vbYes Then" & vbCrLf
+    c = c & "    If MsgBox(" & q & "Á°ÆËÆ§Âà†Èô§ËØ•Â∑•‰ΩúÔºü" & q & ", vbQuestion + vbYesNo) = vbYes Then" & vbCrLf
     c = c & "        DeleteWorkByID wid" & vbCrLf
     c = c & "        RefreshAllLists" & vbCrLf
     c = c & "    End If" & vbCrLf
@@ -1507,7 +1507,7 @@ Private Sub CreateWorkManagerForm()
     c = c & "    Dim wid As String" & vbCrLf
     c = c & "    wid = GetSelectedWorkID(lstDoing)" & vbCrLf
     c = c & "    If wid = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Ò“ªÃıπ§◊˜º«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©‰∏ÄÊù°Â∑•‰ΩúËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gViewWorkID = wid" & vbCrLf
@@ -1519,7 +1519,7 @@ Private Sub CreateWorkManagerForm()
     c = c & "    Dim wid As String" & vbCrLf
     c = c & "    wid = GetSelectedWorkID(lstDone)" & vbCrLf
     c = c & "    If wid = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Ò“ªÃıπ§◊˜º«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©‰∏ÄÊù°Â∑•‰ΩúËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gViewWorkID = wid" & vbCrLf
@@ -1533,7 +1533,7 @@ Private Sub CreateWorkManagerForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®π§◊˜±‡º≠¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫Â∑•‰ΩúÁºñËæëÁ™ó‰Ωì ----------
 
 Private Sub CreateWorkEditForm()
     Dim oldForm As String
@@ -1549,7 +1549,7 @@ Private Sub CreateWorkEditForm()
     actualName = vbc.Name
     SetConfigProp "WorkEditFormName", actualName
 
-    vbc.Properties("Caption") = "»ŒŒÒ/π§µ•±‡º≠"
+    vbc.Properties("Caption") = "‰ªªÂä°/Â∑•ÂçïÁºñËæë"
     vbc.Properties("Width") = 460
     vbc.Properties("Height") = 380
     vbc.Properties("StartUpPosition") = 2
@@ -1558,10 +1558,10 @@ Private Sub CreateWorkEditForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' ¿‡–ÕøÚº‹
+    ' Á±ªÂûãÊ°ÜÊû∂
     Set ctl = dsg.Controls.Add("Forms.Frame.1")
     ctl.Name = "fraType"
-    ctl.Caption = "—°‘Ò¿‡–Õ"
+    ctl.Caption = "ÈÄâÊã©Á±ªÂûã"
     ctl.Left = 24: ctl.Top = 10
     ctl.Width = 400: ctl.Height = 48
 
@@ -1570,21 +1570,21 @@ Private Sub CreateWorkEditForm()
 
     Set ctl = typeFrame.Controls.Add("Forms.OptionButton.1")
     ctl.Name = "optTask"
-    ctl.Caption = "»ŒŒÒ"
+    ctl.Caption = "‰ªªÂä°"
     ctl.Left = 20: ctl.Top = 18
     ctl.Width = 80: ctl.Height = 18
     ctl.Value = True
 
     Set ctl = typeFrame.Controls.Add("Forms.OptionButton.1")
     ctl.Name = "optWorkOrder"
-    ctl.Caption = "π§µ•"
+    ctl.Caption = "Â∑•Âçï"
     ctl.Left = 120: ctl.Top = 18
     ctl.Width = 80: ctl.Height = 18
 
-    ' ±ÍÃ‚
+    ' Ê†áÈ¢ò
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "Label1"
-    ctl.Caption = "±ÍÃ‚£∫"
+    ctl.Caption = "Ê†áÈ¢òÔºö"
     ctl.Left = 24: ctl.Top = 70
     ctl.Width = 60: ctl.Height = 18
 
@@ -1593,10 +1593,10 @@ Private Sub CreateWorkEditForm()
     ctl.Left = 84: ctl.Top = 70
     ctl.Width = 340: ctl.Height = 24
 
-    ' √Ë ˆ
+    ' ÊèèËø∞
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "Label2"
-    ctl.Caption = "√Ë ˆ£∫"
+    ctl.Caption = "ÊèèËø∞Ôºö"
     ctl.Left = 24: ctl.Top = 102
     ctl.Width = 60: ctl.Height = 18
 
@@ -1607,10 +1607,10 @@ Private Sub CreateWorkEditForm()
     ctl.MultiLine = True
     ctl.ScrollBars = 2
 
-    ' π§◊˜¿‡–Õ
+    ' Â∑•‰ΩúÁ±ªÂûã
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblWorkType"
-    ctl.Caption = "π§◊˜¿‡–Õ£∫"
+    ctl.Caption = "Â∑•‰ΩúÁ±ªÂûãÔºö"
     ctl.Left = 24: ctl.Top = 174
     ctl.Width = 60: ctl.Height = 18
 
@@ -1620,10 +1620,10 @@ Private Sub CreateWorkEditForm()
     ctl.Width = 130: ctl.Height = 22
     ctl.Style = 2
 
-    ' ”≈œ»º∂
+    ' ‰ºòÂÖàÁ∫ß
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblPriority"
-    ctl.Caption = "”≈œ»º∂£∫"
+    ctl.Caption = "‰ºòÂÖàÁ∫ßÔºö"
     ctl.Left = 230: ctl.Top = 174
     ctl.Width = 60: ctl.Height = 18
 
@@ -1633,10 +1633,10 @@ Private Sub CreateWorkEditForm()
     ctl.Width = 130: ctl.Height = 22
     ctl.Style = 2
 
-    ' ∏∫‘»À
+    ' Ë¥üË¥£‰∫∫
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "Label3"
-    ctl.Caption = "∏∫‘»À£∫"
+    ctl.Caption = "Ë¥üË¥£‰∫∫Ôºö"
     ctl.Left = 24: ctl.Top = 208
     ctl.Width = 60: ctl.Height = 18
 
@@ -1646,10 +1646,10 @@ Private Sub CreateWorkEditForm()
     ctl.Width = 150: ctl.Height = 24
     ctl.Style = 0
 
-    ' Ωÿ÷π»’∆⁄
+    ' Êà™Ê≠¢Êó•Êúü
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "Label4"
-    ctl.Caption = "Ωÿ÷π»’∆⁄£∫"
+    ctl.Caption = "Êà™Ê≠¢Êó•ÊúüÔºö"
     ctl.Left = 24: ctl.Top = 244
     ctl.Width = 60: ctl.Height = 18
 
@@ -1661,26 +1661,26 @@ Private Sub CreateWorkEditForm()
 
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblDateHint"
-    ctl.Caption = "(∏Ò Ω: yyyy-mm-dd)"
+    ctl.Caption = "(Ê†ºÂºè: yyyy-mm-dd)"
     ctl.Left = 240: ctl.Top = 248
     ctl.Width = 120: ctl.Height = 14
     ctl.ForeColor = RGB(150, 150, 150)
     ctl.Font.Size = 8
 
-    ' ±£¥Ê/»°œ˚
+    ' ‰øùÂ≠ò/ÂèñÊ∂à
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdSave"
-    ctl.Caption = "±£¥Ê"
+    ctl.Caption = "‰øùÂ≠ò"
     ctl.Left = 120: ctl.Top = 290
     ctl.Width = 80: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdCancel"
-    ctl.Caption = "»°œ˚"
+    ctl.Caption = "ÂèñÊ∂à"
     ctl.Left = 240: ctl.Top = 290
     ctl.Width = 80: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -1691,13 +1691,13 @@ Private Sub CreateWorkEditForm()
     c = "Option Explicit" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
-    c = c & "    cboWorkType.AddItem " & q & "Œ¨–ﬁ" & q & vbCrLf
-    c = c & "    cboWorkType.AddItem " & q & "±£Ω‡" & q & vbCrLf
-    c = c & "    cboWorkType.AddItem " & q & "ºÏ≤È" & q & vbCrLf
-    c = c & "    cboWorkType.AddItem " & q & "∆‰À˚" & q & vbCrLf
-    c = c & "    cboPriority.AddItem " & q & "∏ﬂ" & q & vbCrLf
-    c = c & "    cboPriority.AddItem " & q & "÷–" & q & vbCrLf
-    c = c & "    cboPriority.AddItem " & q & "µÕ" & q & vbCrLf
+    c = c & "    cboWorkType.AddItem " & q & "Áª¥‰øÆ" & q & vbCrLf
+    c = c & "    cboWorkType.AddItem " & q & "‰øùÊ¥Å" & q & vbCrLf
+    c = c & "    cboWorkType.AddItem " & q & "Ê£ÄÊü•" & q & vbCrLf
+    c = c & "    cboWorkType.AddItem " & q & "ÂÖ∂‰ªñ" & q & vbCrLf
+    c = c & "    cboPriority.AddItem " & q & "È´ò" & q & vbCrLf
+    c = c & "    cboPriority.AddItem " & q & "‰∏≠" & q & vbCrLf
+    c = c & "    cboPriority.AddItem " & q & "‰Ωé" & q & vbCrLf
     c = c & "    cboPriority.ListIndex = 1" & vbCrLf
     c = c & "    LoadUserList" & vbCrLf
     c = c & "    txtDueDate.Text = Format(Date + 7, " & q & "yyyy-mm-dd" & q & ")" & vbCrLf
@@ -1706,7 +1706,7 @@ Private Sub CreateWorkEditForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub LoadUserList()" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "”√ªßπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Áî®Êà∑ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 2).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -1716,7 +1716,7 @@ Private Sub CreateWorkEditForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub LoadWorkData()" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "π§◊˜π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Â∑•‰ΩúÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -1743,23 +1743,23 @@ Private Sub CreateWorkEditForm()
     c = c & "    sAssignee = Trim(cboAssignee.Text)" & vbCrLf
     c = c & "    sDue = Trim(txtDueDate.Text)" & vbCrLf
     c = c & "    If sTitle = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î ‰»Îπ§◊˜±ÍÃ‚£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ËæìÂÖ•Â∑•‰ΩúÊ†áÈ¢òÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If sType = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Òπ§◊˜¿‡–Õ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©Â∑•‰ΩúÁ±ªÂûãÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If sAssignee = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Ò∏∫‘»À£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©Ë¥üË¥£‰∫∫ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If gEditWorkID <> " & q & q & " Then" & vbCrLf
     c = c & "        UpdateWorkRecord gEditWorkID, sTitle, sDesc, sType, sPri, sAssignee, sDue" & vbCrLf
-    c = c & "        MsgBox " & q & "π§◊˜–≈œ¢“—∏¸–¬£°" & q & ", vbInformation" & vbCrLf
+    c = c & "        MsgBox " & q & "Â∑•‰Ωú‰ø°ÊÅØÂ∑≤Êõ¥Êñ∞ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Else" & vbCrLf
     c = c & "        AddWorkRecord sTitle, sDesc, sType, sPri, sAssignee, sDue" & vbCrLf
-    c = c & "        MsgBox " & q & "π§◊˜“—¥¥Ω®≤¢≈…∑¢£°" & q & ", vbInformation" & vbCrLf
+    c = c & "        MsgBox " & q & "Â∑•‰ΩúÂ∑≤ÂàõÂª∫Âπ∂Ê¥æÂèëÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
@@ -1771,7 +1771,7 @@ Private Sub CreateWorkEditForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®π§◊˜≤Èø¥¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫Â∑•‰ΩúÊü•ÁúãÁ™ó‰Ωì ----------
 
 Private Sub CreateWorkViewForm()
     Dim oldForm As String
@@ -1787,7 +1787,7 @@ Private Sub CreateWorkViewForm()
     actualName = vbc.Name
     SetConfigProp "WorkViewFormName", actualName
 
-    vbc.Properties("Caption") = "π§◊˜œÍ«È"
+    vbc.Properties("Caption") = "Â∑•‰ΩúËØ¶ÊÉÖ"
     vbc.Properties("Width") = 440
     vbc.Properties("Height") = 380
     vbc.Properties("StartUpPosition") = 2
@@ -1798,10 +1798,10 @@ Private Sub CreateWorkViewForm()
     Dim yPos As Long
     yPos = 20
 
-    ' π§◊˜±ÍÃ‚
+    ' Â∑•‰ΩúÊ†áÈ¢ò
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblTitleCap"
-    ctl.Caption = "π§◊˜±ÍÃ‚£∫"
+    ctl.Caption = "Â∑•‰ΩúÊ†áÈ¢òÔºö"
     ctl.Left = 20: ctl.Top = yPos
     ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
@@ -1815,7 +1815,7 @@ Private Sub CreateWorkViewForm()
     yPos = yPos + 30
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblTypeCap"
-    ctl.Caption = "π§◊˜¿‡–Õ£∫"
+    ctl.Caption = "Â∑•‰ΩúÁ±ªÂûãÔºö"
     ctl.Left = 20: ctl.Top = yPos
     ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
@@ -1828,7 +1828,7 @@ Private Sub CreateWorkViewForm()
 
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblPriCap"
-    ctl.Caption = "”≈œ»º∂£∫"
+    ctl.Caption = "‰ºòÂÖàÁ∫ßÔºö"
     ctl.Left = 220: ctl.Top = yPos
     ctl.Width = 60: ctl.Height = 18
     ctl.Font.Bold = True
@@ -1842,7 +1842,7 @@ Private Sub CreateWorkViewForm()
     yPos = yPos + 30
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblDescCap"
-    ctl.Caption = "π§◊˜√Ë ˆ£∫"
+    ctl.Caption = "Â∑•‰ΩúÊèèËø∞Ôºö"
     ctl.Left = 20: ctl.Top = yPos
     ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
@@ -1858,7 +1858,7 @@ Private Sub CreateWorkViewForm()
     yPos = yPos + 70
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblAssigneeCap"
-    ctl.Caption = "∏∫‘»À£∫"
+    ctl.Caption = "Ë¥üË¥£‰∫∫Ôºö"
     ctl.Left = 20: ctl.Top = yPos
     ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
@@ -1871,7 +1871,7 @@ Private Sub CreateWorkViewForm()
 
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblCreatorCap"
-    ctl.Caption = "¥¥Ω®»À£∫"
+    ctl.Caption = "ÂàõÂª∫‰∫∫Ôºö"
     ctl.Left = 220: ctl.Top = yPos
     ctl.Width = 60: ctl.Height = 18
     ctl.Font.Bold = True
@@ -1885,7 +1885,7 @@ Private Sub CreateWorkViewForm()
     yPos = yPos + 30
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblStatusCap"
-    ctl.Caption = "µ±«∞◊¥Ã¨£∫"
+    ctl.Caption = "ÂΩìÂâçÁä∂ÊÄÅÔºö"
     ctl.Left = 20: ctl.Top = yPos
     ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
@@ -1900,7 +1900,7 @@ Private Sub CreateWorkViewForm()
 
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblDueCap"
-    ctl.Caption = "Ωÿ÷π ±º‰£∫"
+    ctl.Caption = "Êà™Ê≠¢Êó∂Èó¥Ôºö"
     ctl.Left = 220: ctl.Top = yPos
     ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
@@ -1912,28 +1912,28 @@ Private Sub CreateWorkViewForm()
     ctl.Width = 120: ctl.Height = 18
 
     yPos = yPos + 40
-    ' ≤Ÿ◊˜∞¥≈•
+    ' Êìç‰ΩúÊåâÈíÆ
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdSetDoing"
-    ctl.Caption = "∞Ï¿Ì÷–"
+    ctl.Caption = "ÂäûÁêÜ‰∏≠"
     ctl.Left = 40: ctl.Top = yPos
     ctl.Width = 100: ctl.Height = 30
     ctl.BackColor = RGB(255, 165, 0)
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdSetDone"
-    ctl.Caption = "“—ÕÍ≥…"
+    ctl.Caption = "Â∑≤ÂÆåÊàê"
     ctl.Left = 170: ctl.Top = yPos
     ctl.Width = 100: ctl.Height = 30
     ctl.BackColor = RGB(60, 179, 113)
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdClose"
-    ctl.Caption = "πÿ±’"
+    ctl.Caption = "ÂÖ≥Èó≠"
     ctl.Left = 300: ctl.Top = yPos
     ctl.Width = 100: ctl.Height = 30
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -1949,7 +1949,7 @@ Private Sub CreateWorkViewForm()
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "π§◊˜π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Â∑•‰ΩúÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -1964,11 +1964,11 @@ Private Sub CreateWorkViewForm()
     c = c & "            lblDueVal.Caption = CStr(ws.Cells(i, 10).Value)" & vbCrLf
     c = c & "            Dim st As String" & vbCrLf
     c = c & "            st = ws.Cells(i, 8).Value" & vbCrLf
-    c = c & "            If st = " & q & "¥˝∞Ï" & q & " Then" & vbCrLf
+    c = c & "            If st = " & q & "ÂæÖÂäû" & q & " Then" & vbCrLf
     c = c & "                lblStatusVal.ForeColor = RGB(255, 140, 0)" & vbCrLf
     c = c & "                cmdSetDoing.Enabled = True" & vbCrLf
     c = c & "                cmdSetDone.Enabled = True" & vbCrLf
-    c = c & "            ElseIf st = " & q & "∞Ï¿Ì÷–" & q & " Then" & vbCrLf
+    c = c & "            ElseIf st = " & q & "ÂäûÁêÜ‰∏≠" & q & " Then" & vbCrLf
     c = c & "                lblStatusVal.ForeColor = RGB(30, 144, 255)" & vbCrLf
     c = c & "                cmdSetDoing.Enabled = False" & vbCrLf
     c = c & "                cmdSetDone.Enabled = True" & vbCrLf
@@ -1983,14 +1983,14 @@ Private Sub CreateWorkViewForm()
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdSetDoing_Click()" & vbCrLf
-    c = c & "    UpdateWorkStatus gViewWorkID, " & q & "∞Ï¿Ì÷–" & q & vbCrLf
-    c = c & "    MsgBox " & q & "“—±Íº«Œ™∞Ï¿Ì÷–£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    UpdateWorkStatus gViewWorkID, " & q & "ÂäûÁêÜ‰∏≠" & q & vbCrLf
+    c = c & "    MsgBox " & q & "Â∑≤Ê†áËÆ∞‰∏∫ÂäûÁêÜ‰∏≠ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdSetDone_Click()" & vbCrLf
-    c = c & "    UpdateWorkStatus gViewWorkID, " & q & "“—ÕÍ≥…" & q & vbCrLf
-    c = c & "    MsgBox " & q & "“—±Íº«Œ™“—ÕÍ≥…£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    UpdateWorkStatus gViewWorkID, " & q & "Â∑≤ÂÆåÊàê" & q & vbCrLf
+    c = c & "    MsgBox " & q & "Â∑≤Ê†áËÆ∞‰∏∫Â∑≤ÂÆåÊàêÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
@@ -2001,7 +2001,7 @@ Private Sub CreateWorkViewForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®π´∏Ê¡–±Ì¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫ÂÖ¨ÂëäÂàóË°®Á™ó‰Ωì ----------
 
 Private Sub CreateNoticesForm()
     Dim oldForm As String
@@ -2017,7 +2017,7 @@ Private Sub CreateNoticesForm()
     actualName = vbc.Name
     SetConfigProp "NoticesFormName", actualName
 
-    vbc.Properties("Caption") = "–≈œ¢π‹¿Ì - π´∏Ê¡–±Ì"
+    vbc.Properties("Caption") = "‰ø°ÊÅØÁÆ°ÁêÜ - ÂÖ¨ÂëäÂàóË°®"
     vbc.Properties("Width") = 520
     vbc.Properties("Height") = 420
     vbc.Properties("StartUpPosition") = 2
@@ -2026,7 +2026,7 @@ Private Sub CreateNoticesForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' π´∏Ê¡–±Ì
+    ' ÂÖ¨ÂëäÂàóË°®
     Set ctl = dsg.Controls.Add("Forms.ListBox.1")
     ctl.Name = "lstNotices"
     ctl.Left = 12: ctl.Top = 12
@@ -2034,41 +2034,41 @@ Private Sub CreateNoticesForm()
     ctl.ColumnCount = 7
     ctl.ColumnWidths = "50;140;60;60;70;50;50"
 
-    ' ¡–Õ∑±Í«©
+    ' ÂàóÂ§¥Ê†áÁ≠æ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblHdr"
-    ctl.Caption = "ID | ±ÍÃ‚ | ¿‡–Õ | ≤ø√≈ | ∂‘œÛ | ÷√∂• | ΩÙº±"
+    ctl.Caption = "ID | Ê†áÈ¢ò | Á±ªÂûã | ÈÉ®Èó® | ÂØπË±° | ÁΩÆÈ°∂ | Á¥ßÊÄ•"
     ctl.Left = 12: ctl.Top = 334
     ctl.Width = 490: ctl.Height = 14
     ctl.Font.Size = 8
     ctl.ForeColor = RGB(120, 120, 120)
 
-    ' ∞¥≈•
+    ' ÊåâÈíÆ
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdNewNotice"
-    ctl.Caption = "–¬Ω®π´∏Ê"
+    ctl.Caption = "Êñ∞Âª∫ÂÖ¨Âëä"
     ctl.Left = 12: ctl.Top = 354
     ctl.Width = 100: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdViewNotice"
-    ctl.Caption = "≤Èø¥/±‡º≠"
+    ctl.Caption = "Êü•Áúã/ÁºñËæë"
     ctl.Left = 120: ctl.Top = 354
     ctl.Width = 100: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdDeleteNotice"
-    ctl.Caption = "…æ≥˝"
+    ctl.Caption = "Âà†Èô§"
     ctl.Left = 228: ctl.Top = 354
     ctl.Width = 100: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdBack"
-    ctl.Caption = "∑µªÿ"
+    ctl.Caption = "ËøîÂõû"
     ctl.Left = 420: ctl.Top = 354
     ctl.Width = 80: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -2091,7 +2091,7 @@ Private Sub CreateNoticesForm()
     c = c & "    lstNotices.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
     c = c & "    On Error Resume Next" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "–≈œ¢π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "‰ø°ÊÅØÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    On Error GoTo 0" & vbCrLf
     c = c & "    If ws Is Nothing Then Exit Sub" & vbCrLf
     c = c & "    Dim lr As Long, i As Long, idx As Long" & vbCrLf
@@ -2106,7 +2106,7 @@ Private Sub CreateNoticesForm()
     c = c & "        canSee = False" & vbCrLf
     c = c & "        If isHigh Then" & vbCrLf
     c = c & "            canSee = True" & vbCrLf
-    c = c & "        ElseIf target = " & q & "À˘”–»À" & q & " Then" & vbCrLf
+    c = c & "        ElseIf target = " & q & "ÊâÄÊúâ‰∫∫" & q & " Then" & vbCrLf
     c = c & "            canSee = True" & vbCrLf
     c = c & "        ElseIf InStr(target, gCurrentUser) > 0 Then" & vbCrLf
     c = c & "            canSee = True" & vbCrLf
@@ -2117,8 +2117,8 @@ Private Sub CreateNoticesForm()
     c = c & "            lstNotices.List(idx, 2) = ws.Cells(i, 4).Value" & vbCrLf
     c = c & "            lstNotices.List(idx, 3) = ws.Cells(i, 5).Value" & vbCrLf
     c = c & "            lstNotices.List(idx, 4) = ws.Cells(i, 7).Value" & vbCrLf
-    c = c & "            If ws.Cells(i, 8).Value = " & q & " «" & q & " Then" & vbCrLf
-    c = c & "                lstNotices.List(idx, 5) = " & q & "[÷√∂•]" & q & vbCrLf
+    c = c & "            If ws.Cells(i, 8).Value = " & q & "ÊòØ" & q & " Then" & vbCrLf
+    c = c & "                lstNotices.List(idx, 5) = " & q & "[ÁΩÆÈ°∂]" & q & vbCrLf
     c = c & "            Else" & vbCrLf
     c = c & "                lstNotices.List(idx, 5) = " & q & q & vbCrLf
     c = c & "            End If" & vbCrLf
@@ -2130,7 +2130,7 @@ Private Sub CreateNoticesForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdNewNotice_Click()" & vbCrLf
     c = c & "    If Not IsHighPrivilege(gCurrentRole) Then" & vbCrLf
-    c = c & "        MsgBox " & q & "ƒ˙√ª”––¬Ω®π´∏Êµƒ»®œﬁ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ÊÇ®Ê≤°ÊúâÊñ∞Âª∫ÂÖ¨ÂëäÁöÑÊùÉÈôêÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gEditNoticeID = " & q & q & vbCrLf
@@ -2140,7 +2140,7 @@ Private Sub CreateNoticesForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdViewNotice_Click()" & vbCrLf
     c = c & "    If lstNotices.ListIndex = -1 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Ò“ªÃıπ´∏Ê£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©‰∏ÄÊù°ÂÖ¨ÂëäÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gEditNoticeID = lstNotices.List(lstNotices.ListIndex, 0)" & vbCrLf
@@ -2150,16 +2150,16 @@ Private Sub CreateNoticesForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdDeleteNotice_Click()" & vbCrLf
     c = c & "    If Not IsHighPrivilege(gCurrentRole) Then" & vbCrLf
-    c = c & "        MsgBox " & q & "ƒ˙√ª”–…æ≥˝»®œﬁ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ÊÇ®Ê≤°ÊúâÂà†Èô§ÊùÉÈôêÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If lstNotices.ListIndex = -1 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Ò“ªÃıπ´∏Ê£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©‰∏ÄÊù°ÂÖ¨ÂëäÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Dim nid As String" & vbCrLf
     c = c & "    nid = lstNotices.List(lstNotices.ListIndex, 0)" & vbCrLf
-    c = c & "    If MsgBox(" & q & "»∑»œ…æ≥˝∏√π´∏Ê£ø" & q & ", vbQuestion + vbYesNo) = vbYes Then" & vbCrLf
+    c = c & "    If MsgBox(" & q & "Á°ÆËÆ§Âà†Èô§ËØ•ÂÖ¨ÂëäÔºü" & q & ", vbQuestion + vbYesNo) = vbYes Then" & vbCrLf
     c = c & "        DeleteNoticeByID nid" & vbCrLf
     c = c & "        RefreshList" & vbCrLf
     c = c & "    End If" & vbCrLf
@@ -2172,7 +2172,7 @@ Private Sub CreateNoticesForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®π´∏Ê±‡º≠¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫ÂÖ¨ÂëäÁºñËæëÁ™ó‰Ωì ----------
 
 Private Sub CreateNoticeEditForm()
     Dim oldForm As String
@@ -2188,7 +2188,7 @@ Private Sub CreateNoticeEditForm()
     actualName = vbc.Name
     SetConfigProp "NoticeEditFormName", actualName
 
-    vbc.Properties("Caption") = "π´∏Ê±‡º≠"
+    vbc.Properties("Caption") = "ÂÖ¨ÂëäÁºñËæë"
     vbc.Properties("Width") = 440
     vbc.Properties("Height") = 420
     vbc.Properties("StartUpPosition") = 2
@@ -2197,10 +2197,10 @@ Private Sub CreateNoticeEditForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' ±ÍÃ‚
+    ' Ê†áÈ¢ò
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "Label1"
-    ctl.Caption = "±ÍÃ‚£∫"
+    ctl.Caption = "Ê†áÈ¢òÔºö"
     ctl.Left = 24: ctl.Top = 24
     ctl.Width = 60: ctl.Height = 18
 
@@ -2209,10 +2209,10 @@ Private Sub CreateNoticeEditForm()
     ctl.Left = 84: ctl.Top = 24
     ctl.Width = 320: ctl.Height = 24
 
-    ' ƒ⁄»›
+    ' ÂÜÖÂÆπ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "Label2"
-    ctl.Caption = "ƒ⁄»›£∫"
+    ctl.Caption = "ÂÜÖÂÆπÔºö"
     ctl.Left = 24: ctl.Top = 54
     ctl.Width = 60: ctl.Height = 18
 
@@ -2223,10 +2223,10 @@ Private Sub CreateNoticeEditForm()
     ctl.MultiLine = True
     ctl.ScrollBars = 2
 
-    ' ¿‡–Õ
+    ' Á±ªÂûã
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblType"
-    ctl.Caption = "¿‡–Õ£∫"
+    ctl.Caption = "Á±ªÂûãÔºö"
     ctl.Left = 24: ctl.Top = 144
     ctl.Width = 60: ctl.Height = 18
 
@@ -2236,10 +2236,10 @@ Private Sub CreateNoticeEditForm()
     ctl.Width = 130: ctl.Height = 22
     ctl.Style = 2
 
-    ' ∑¢≤º≤ø√≈
+    ' ÂèëÂ∏ÉÈÉ®Èó®
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "Label3"
-    ctl.Caption = "∑¢≤º≤ø√≈£∫"
+    ctl.Caption = "ÂèëÂ∏ÉÈÉ®Èó®Ôºö"
     ctl.Left = 230: ctl.Top = 144
     ctl.Width = 60: ctl.Height = 18
 
@@ -2249,10 +2249,10 @@ Private Sub CreateNoticeEditForm()
     ctl.Width = 108: ctl.Height = 22
     ctl.Style = 2
 
-    ' ∑¢≤º»À
+    ' ÂèëÂ∏É‰∫∫
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "Label4"
-    ctl.Caption = "∑¢≤º»À£∫"
+    ctl.Caption = "ÂèëÂ∏É‰∫∫Ôºö"
     ctl.Left = 24: ctl.Top = 176
     ctl.Width = 60: ctl.Height = 18
 
@@ -2262,10 +2262,10 @@ Private Sub CreateNoticeEditForm()
     ctl.Width = 130: ctl.Height = 22
     ctl.Enabled = False
 
-    ' ∂‘œÛ
+    ' ÂØπË±°
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblTarget"
-    ctl.Caption = "∂‘œÛ£∫"
+    ctl.Caption = "ÂØπË±°Ôºö"
     ctl.Left = 230: ctl.Top = 176
     ctl.Width = 60: ctl.Height = 18
 
@@ -2275,24 +2275,24 @@ Private Sub CreateNoticeEditForm()
     ctl.Width = 108: ctl.Height = 22
     ctl.Style = 0
 
-    ' ΩÙº±π´∏Ê
+    ' Á¥ßÊÄ•ÂÖ¨Âëä
     Set ctl = dsg.Controls.Add("Forms.CheckBox.1")
     ctl.Name = "chkUrgent"
-    ctl.Caption = "ΩÙº±π´∏Ê"
+    ctl.Caption = "Á¥ßÊÄ•ÂÖ¨Âëä"
     ctl.Left = 24: ctl.Top = 210
     ctl.Width = 100: ctl.Height = 18
 
-    ' ÷√∂•
+    ' ÁΩÆÈ°∂
     Set ctl = dsg.Controls.Add("Forms.CheckBox.1")
     ctl.Name = "chkTop"
-    ctl.Caption = "÷√∂•œ‘ æ"
+    ctl.Caption = "ÁΩÆÈ°∂ÊòæÁ§∫"
     ctl.Left = 140: ctl.Top = 210
     ctl.Width = 100: ctl.Height = 18
 
-    ' ΩÙº±≥Ã∂»
+    ' Á¥ßÊÄ•Á®ãÂ∫¶
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblUrgLevel"
-    ctl.Caption = "ΩÙº±≥Ã∂»£∫"
+    ctl.Caption = "Á¥ßÊÄ•Á®ãÂ∫¶Ôºö"
     ctl.Left = 260: ctl.Top = 210
     ctl.Width = 60: ctl.Height = 18
 
@@ -2302,10 +2302,10 @@ Private Sub CreateNoticeEditForm()
     ctl.Width = 78: ctl.Height = 22
     ctl.Style = 2
 
-    ' …˙–ß ±º‰
+    ' ÁîüÊïàÊó∂Èó¥
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "Label5"
-    ctl.Caption = "…˙–ß ±º‰£∫"
+    ctl.Caption = "ÁîüÊïàÊó∂Èó¥Ôºö"
     ctl.Left = 24: ctl.Top = 244
     ctl.Width = 60: ctl.Height = 18
 
@@ -2314,10 +2314,10 @@ Private Sub CreateNoticeEditForm()
     ctl.Left = 84: ctl.Top = 244
     ctl.Width = 120: ctl.Height = 24
 
-    ' Ωÿ÷π ±º‰
+    ' Êà™Ê≠¢Êó∂Èó¥
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "Label6"
-    ctl.Caption = "Ωÿ÷π ±º‰£∫"
+    ctl.Caption = "Êà™Ê≠¢Êó∂Èó¥Ôºö"
     ctl.Left = 230: ctl.Top = 244
     ctl.Width = 60: ctl.Height = 18
 
@@ -2326,29 +2326,29 @@ Private Sub CreateNoticeEditForm()
     ctl.Left = 296: ctl.Top = 244
     ctl.Width = 120: ctl.Height = 24
 
-    ' »’∆⁄∏Ò ΩÃ· æ
+    ' Êó•ÊúüÊ†ºÂºèÊèêÁ§∫
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblDateFmt"
-    ctl.Caption = "(»’∆⁄∏Ò Ω: yyyy-mm-dd)"
+    ctl.Caption = "(Êó•ÊúüÊ†ºÂºè: yyyy-mm-dd)"
     ctl.Left = 84: ctl.Top = 272
     ctl.Width = 200: ctl.Height = 14
     ctl.ForeColor = RGB(150, 150, 150)
     ctl.Font.Size = 8
 
-    ' ±£¥Ê/»°œ˚
+    ' ‰øùÂ≠ò/ÂèñÊ∂à
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdSave"
-    ctl.Caption = "±£¥Ê"
+    ctl.Caption = "‰øùÂ≠ò"
     ctl.Left = 100: ctl.Top = 300
     ctl.Width = 80: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdCancel"
-    ctl.Caption = "»°œ˚"
+    ctl.Caption = "ÂèñÊ∂à"
     ctl.Left = 240: ctl.Top = 300
     ctl.Width = 80: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -2359,21 +2359,21 @@ Private Sub CreateNoticeEditForm()
     c = "Option Explicit" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
-    c = c & "    cboType.AddItem " & q & "Õ®÷™" & q & vbCrLf
-    c = c & "    cboType.AddItem " & q & "π´∏Ê" & q & vbCrLf
-    c = c & "    cboType.AddItem " & q & "ΩÙº±Õ®÷™" & q & vbCrLf
+    c = c & "    cboType.AddItem " & q & "ÈÄöÁü•" & q & vbCrLf
+    c = c & "    cboType.AddItem " & q & "ÂÖ¨Âëä" & q & vbCrLf
+    c = c & "    cboType.AddItem " & q & "Á¥ßÊÄ•ÈÄöÁü•" & q & vbCrLf
     c = c & "    cboType.ListIndex = 0" & vbCrLf
-    c = c & "    cboDept.AddItem " & q & "øÕ∑˛≤ø" & q & vbCrLf
-    c = c & "    cboDept.AddItem " & q & "π§≥Ã≤ø" & q & vbCrLf
-    c = c & "    cboDept.AddItem " & q & "∞≤±£≤ø" & q & vbCrLf
-    c = c & "    cboDept.AddItem " & q & "±£Ω‡≤ø" & q & vbCrLf
-    c = c & "    cboDept.AddItem " & q & "◊€∫œ≤ø" & q & vbCrLf
-    c = c & "    cboDept.AddItem " & q & "––’˛≤ø" & q & vbCrLf
-    c = c & "    cboDept.AddItem " & q & "≤∆ŒÒ≤ø" & q & vbCrLf
-    c = c & "    cboDept.AddItem " & q & "œ˙ €≤ø" & q & vbCrLf
-    c = c & "    cboUrgLevel.AddItem " & q & "∆’Õ®" & q & vbCrLf
-    c = c & "    cboUrgLevel.AddItem " & q & "÷ÿ“™" & q & vbCrLf
-    c = c & "    cboUrgLevel.AddItem " & q & "ΩÙº±" & q & vbCrLf
+    c = c & "    cboDept.AddItem " & q & "ÂÆ¢ÊúçÈÉ®" & q & vbCrLf
+    c = c & "    cboDept.AddItem " & q & "Â∑•Á®ãÈÉ®" & q & vbCrLf
+    c = c & "    cboDept.AddItem " & q & "ÂÆâ‰øùÈÉ®" & q & vbCrLf
+    c = c & "    cboDept.AddItem " & q & "‰øùÊ¥ÅÈÉ®" & q & vbCrLf
+    c = c & "    cboDept.AddItem " & q & "ÁªºÂêàÈÉ®" & q & vbCrLf
+    c = c & "    cboDept.AddItem " & q & "Ë°åÊîøÈÉ®" & q & vbCrLf
+    c = c & "    cboDept.AddItem " & q & "Ë¥¢Âä°ÈÉ®" & q & vbCrLf
+    c = c & "    cboDept.AddItem " & q & "ÈîÄÂîÆÈÉ®" & q & vbCrLf
+    c = c & "    cboUrgLevel.AddItem " & q & "ÊôÆÈÄö" & q & vbCrLf
+    c = c & "    cboUrgLevel.AddItem " & q & "ÈáçË¶Å" & q & vbCrLf
+    c = c & "    cboUrgLevel.AddItem " & q & "Á¥ßÊÄ•" & q & vbCrLf
     c = c & "    cboUrgLevel.ListIndex = 0" & vbCrLf
     c = c & "    LoadTargetList" & vbCrLf
     c = c & "    txtAuthor.Text = gCurrentUser" & vbCrLf
@@ -2393,15 +2393,15 @@ Private Sub CreateNoticeEditForm()
     c = c & "            txtStart.Locked = True" & vbCrLf
     c = c & "            txtEnd.Locked = True" & vbCrLf
     c = c & "            cmdSave.Enabled = False" & vbCrLf
-    c = c & "            Me.Caption = " & q & "π´∏Ê≤Èø¥£®÷ª∂¡£©" & q & vbCrLf
+    c = c & "            Me.Caption = " & q & "ÂÖ¨ÂëäÊü•ÁúãÔºàÂè™ËØªÔºâ" & q & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub LoadTargetList()" & vbCrLf
-    c = c & "    cboTarget.AddItem " & q & "À˘”–»À" & q & vbCrLf
+    c = c & "    cboTarget.AddItem " & q & "ÊâÄÊúâ‰∫∫" & q & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "”√ªßπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Áî®Êà∑ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 2).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -2415,7 +2415,7 @@ Private Sub CreateNoticeEditForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub LoadNoticeData()" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "–≈œ¢π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "‰ø°ÊÅØÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -2426,9 +2426,9 @@ Private Sub CreateNoticeEditForm()
     c = c & "            cboDept.Text = ws.Cells(i, 5).Value" & vbCrLf
     c = c & "            txtAuthor.Text = ws.Cells(i, 6).Value" & vbCrLf
     c = c & "            cboTarget.Text = ws.Cells(i, 7).Value" & vbCrLf
-    c = c & "            chkTop.Value = (ws.Cells(i, 8).Value = " & q & " «" & q & ")" & vbCrLf
+    c = c & "            chkTop.Value = (ws.Cells(i, 8).Value = " & q & "ÊòØ" & q & ")" & vbCrLf
     c = c & "            cboUrgLevel.Text = ws.Cells(i, 9).Value" & vbCrLf
-    c = c & "            chkUrgent.Value = (ws.Cells(i, 9).Value = " & q & "ΩÙº±" & q & ")" & vbCrLf
+    c = c & "            chkUrgent.Value = (ws.Cells(i, 9).Value = " & q & "Á¥ßÊÄ•" & q & ")" & vbCrLf
     c = c & "            txtStart.Text = CStr(ws.Cells(i, 10).Value)" & vbCrLf
     c = c & "            txtEnd.Text = CStr(ws.Cells(i, 11).Value)" & vbCrLf
     c = c & "            Exit For" & vbCrLf
@@ -2438,9 +2438,9 @@ Private Sub CreateNoticeEditForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub chkUrgent_Click()" & vbCrLf
     c = c & "    If chkUrgent.Value Then" & vbCrLf
-    c = c & "        cboUrgLevel.Text = " & q & "ΩÙº±" & q & vbCrLf
+    c = c & "        cboUrgLevel.Text = " & q & "Á¥ßÊÄ•" & q & vbCrLf
     c = c & "    Else" & vbCrLf
-    c = c & "        cboUrgLevel.Text = " & q & "∆’Õ®" & q & vbCrLf
+    c = c & "        cboUrgLevel.Text = " & q & "ÊôÆÈÄö" & q & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
@@ -2458,26 +2458,26 @@ Private Sub CreateNoticeEditForm()
     c = c & "    sUrg = cboUrgLevel.Text" & vbCrLf
     c = c & "    sStart = Trim(txtStart.Text)" & vbCrLf
     c = c & "    sEnd2 = Trim(txtEnd.Text)" & vbCrLf
-    c = c & "    If chkTop.Value Then stopp = " & q & " «" & q
-    c = c & " Else stopp = " & q & "∑Ò" & q & vbCrLf
+    c = c & "    If chkTop.Value Then stopp = " & q & "ÊòØ" & q
+    c = c & " Else stopp = " & q & "Âê¶" & q & vbCrLf
     c = c & "    If sTitle = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î ‰»Îπ´∏Ê±ÍÃ‚£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ËæìÂÖ•ÂÖ¨ÂëäÊ†áÈ¢òÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If sContent = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î ‰»Îπ´∏Êƒ⁄»›£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ËæìÂÖ•ÂÖ¨ÂëäÂÜÖÂÆπÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If sDept = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Ò∑¢≤º≤ø√≈£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©ÂèëÂ∏ÉÈÉ®Èó®ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If gEditNoticeID <> " & q & q & " Then" & vbCrLf
     c = c & "        UpdateNoticeRecord gEditNoticeID, sTitle, sContent, sType, sDept, sTarget, stopp, sUrg, sStart, sEnd2" & vbCrLf
-    c = c & "        MsgBox " & q & "π´∏Ê“—∏¸–¬£°" & q & ", vbInformation" & vbCrLf
+    c = c & "        MsgBox " & q & "ÂÖ¨ÂëäÂ∑≤Êõ¥Êñ∞ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Else" & vbCrLf
     c = c & "        AddNoticeRecord sTitle, sContent, sType, sDept, sTarget, stopp, sUrg, sStart, sEnd2" & vbCrLf
-    c = c & "        MsgBox " & q & "π´∏Ê“—∑¢≤º£°" & q & ", vbInformation" & vbCrLf
+    c = c & "        MsgBox " & q & "ÂÖ¨ÂëäÂ∑≤ÂèëÂ∏ÉÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
@@ -2489,33 +2489,33 @@ Private Sub CreateNoticeEditForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®…Û≈˙π‹¿Ì±Ì ----------
+' ---------- ÂàõÂª∫ÂÆ°ÊâπÁÆ°ÁêÜË°® ----------
 
 Private Sub CreateApprovalSheet()
     Dim ws As Worksheet
-    If SheetExists("…Û≈˙π‹¿Ì") Then
-        Set ws = ThisWorkbook.Sheets("…Û≈˙π‹¿Ì")
+    If SheetExists("ÂÆ°ÊâπÁÆ°ÁêÜ") Then
+        Set ws = ThisWorkbook.Sheets("ÂÆ°ÊâπÁÆ°ÁêÜ")
     Else
         Set ws = ThisWorkbook.Sheets.Add( _
             After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.Count))
-        ws.Name = "…Û≈˙π‹¿Ì"
+        ws.Name = "ÂÆ°ÊâπÁÆ°ÁêÜ"
     End If
     With ws
-        .Range("A1").Value = "…Í«ÎID"
-        .Range("B1").Value = "…Í«Î¿‡–Õ"
-        .Range("C1").Value = "◊”¿‡–Õ"
-        .Range("D1").Value = "…Í«Î»À"
-        .Range("E1").Value = "…Û≈˙»À"
-        .Range("F1").Value = " ¬”…"
-        .Range("G1").Value = "ø™ º»’∆⁄"
-        .Range("H1").Value = "Ω· ¯»’∆⁄"
-        .Range("I1").Value = "ÃÏ ˝"
-        .Range("J1").Value = "Ω∂Ó"
-        .Range("K1").Value = "ŒÔ∆∑/œÓƒø"
-        .Range("L1").Value = "◊¥Ã¨"
-        .Range("M1").Value = "…Û≈˙“‚º˚"
-        .Range("N1").Value = "…Í«Î ±º‰"
-        .Range("O1").Value = "…Û≈˙ ±º‰"
+        .Range("A1").Value = "Áî≥ËØ∑ID"
+        .Range("B1").Value = "Áî≥ËØ∑Á±ªÂûã"
+        .Range("C1").Value = "Â≠êÁ±ªÂûã"
+        .Range("D1").Value = "Áî≥ËØ∑‰∫∫"
+        .Range("E1").Value = "ÂÆ°Êâπ‰∫∫"
+        .Range("F1").Value = "‰∫ãÁî±"
+        .Range("G1").Value = "ÂºÄÂßãÊó•Êúü"
+        .Range("H1").Value = "ÁªìÊùüÊó•Êúü"
+        .Range("I1").Value = "Â§©Êï∞"
+        .Range("J1").Value = "ÈáëÈ¢ù"
+        .Range("K1").Value = "Áâ©ÂìÅ/È°πÁõÆ"
+        .Range("L1").Value = "Áä∂ÊÄÅ"
+        .Range("M1").Value = "ÂÆ°ÊâπÊÑèËßÅ"
+        .Range("N1").Value = "Áî≥ËØ∑Êó∂Èó¥"
+        .Range("O1").Value = "ÂÆ°ÊâπÊó∂Èó¥"
         .Range("A1:O1").Font.Bold = True
         .Range("A1:O1").Interior.Color = RGB(70, 130, 180)
         .Range("A1:O1").Font.Color = RGB(255, 255, 255)
@@ -2523,7 +2523,7 @@ Private Sub CreateApprovalSheet()
     End With
 End Sub
 
-' ---------- ¥¥Ω®…Û≈˙÷––ƒ¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫ÂÆ°Êâπ‰∏≠ÂøÉÁ™ó‰Ωì ----------
 
 Private Sub CreateApprovalsForm()
     Dim oldForm As String
@@ -2539,7 +2539,7 @@ Private Sub CreateApprovalsForm()
     actualName = vbc.Name
     SetConfigProp "ApprovalsFormName", actualName
 
-    vbc.Properties("Caption") = "…Û≈˙π‹¿Ì"
+    vbc.Properties("Caption") = "ÂÆ°ÊâπÁÆ°ÁêÜ"
     vbc.Properties("Width") = 560
     vbc.Properties("Height") = 500
     vbc.Properties("StartUpPosition") = 2
@@ -2548,10 +2548,10 @@ Private Sub CreateApprovalsForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' «–ªªø®∆¨
+    ' ÂàáÊç¢Âç°Áâá
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdMyApply"
-    ctl.Caption = "Œ“µƒ…Í«Î"
+    ctl.Caption = "ÊàëÁöÑÁî≥ËØ∑"
     ctl.Left = 12: ctl.Top = 6
     ctl.Width = 90: ctl.Height = 26
     ctl.BackColor = RGB(70, 130, 180)
@@ -2559,7 +2559,7 @@ Private Sub CreateApprovalsForm()
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdPendApproval"
-    ctl.Caption = "¥˝…Û≈˙"
+    ctl.Caption = "ÂæÖÂÆ°Êâπ"
     ctl.Left = 110: ctl.Top = 6
     ctl.Width = 90: ctl.Height = 26
 
@@ -2571,13 +2571,13 @@ Private Sub CreateApprovalsForm()
 
     Dim mp As Object
     Set mp = ctl
-    mp.Pages(0).Caption = "¥˝…Û≈˙"
+    mp.Pages(0).Caption = "ÂæÖÂÆ°Êâπ"
     mp.Pages.Add
-    mp.Pages(1).Caption = "“—Õ¨“‚"
+    mp.Pages(1).Caption = "Â∑≤ÂêåÊÑè"
     mp.Pages.Add
-    mp.Pages(2).Caption = "“—æ‹æ¯"
+    mp.Pages(2).Caption = "Â∑≤ÊãíÁªù"
 
-    ' Page 0 - ¥˝…Û≈˙¡–±Ì
+    ' Page 0 - ÂæÖÂÆ°ÊâπÂàóË°®
     Dim pg0 As Object
     Set pg0 = mp.Pages(0)
 
@@ -2590,7 +2590,7 @@ Private Sub CreateApprovalsForm()
 
     Set ctl = pg0.Controls.Add("Forms.Label.1")
     ctl.Name = "lblHdr0"
-    ctl.Caption = "ID | ¿‡–Õ | ◊”¿‡–Õ | …Í«Î»À | …Û≈˙»À | ◊¥Ã¨"
+    ctl.Caption = "ID | Á±ªÂûã | Â≠êÁ±ªÂûã | Áî≥ËØ∑‰∫∫ | ÂÆ°Êâπ‰∫∫ | Áä∂ÊÄÅ"
     ctl.Left = 12: ctl.Top = 244
     ctl.Width = 498: ctl.Height = 14
     ctl.Font.Size = 8
@@ -2598,29 +2598,29 @@ Private Sub CreateApprovalsForm()
 
     Set ctl = pg0.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdNewApply"
-    ctl.Caption = "–¬Ω®…Í«Î"
+    ctl.Caption = "Êñ∞Âª∫Áî≥ËØ∑"
     ctl.Left = 12: ctl.Top = 264
     ctl.Width = 80: ctl.Height = 28
 
     Set ctl = pg0.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdViewApply"
-    ctl.Caption = "≤Èø¥"
+    ctl.Caption = "Êü•Áúã"
     ctl.Left = 102: ctl.Top = 264
     ctl.Width = 70: ctl.Height = 28
 
     Set ctl = pg0.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdEditApply"
-    ctl.Caption = "±‡º≠"
+    ctl.Caption = "ÁºñËæë"
     ctl.Left = 182: ctl.Top = 264
     ctl.Width = 70: ctl.Height = 28
 
     Set ctl = pg0.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdDeleteApply"
-    ctl.Caption = "…æ≥˝"
+    ctl.Caption = "Âà†Èô§"
     ctl.Left = 262: ctl.Top = 264
     ctl.Width = 70: ctl.Height = 28
 
-    ' Page 1 - “—Õ¨“‚
+    ' Page 1 - Â∑≤ÂêåÊÑè
     Dim pg1 As Object
     Set pg1 = mp.Pages(1)
 
@@ -2633,11 +2633,11 @@ Private Sub CreateApprovalsForm()
 
     Set ctl = pg1.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdViewApproved"
-    ctl.Caption = "≤Èø¥"
+    ctl.Caption = "Êü•Áúã"
     ctl.Left = 12: ctl.Top = 286
     ctl.Width = 70: ctl.Height = 28
 
-    ' Page 2 - “—æ‹æ¯
+    ' Page 2 - Â∑≤ÊãíÁªù
     Dim pg2 As Object
     Set pg2 = mp.Pages(2)
 
@@ -2650,18 +2650,18 @@ Private Sub CreateApprovalsForm()
 
     Set ctl = pg2.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdViewRejected"
-    ctl.Caption = "≤Èø¥"
+    ctl.Caption = "Êü•Áúã"
     ctl.Left = 12: ctl.Top = 286
     ctl.Width = 70: ctl.Height = 28
 
-    ' ∑µªÿ∞¥≈•
+    ' ËøîÂõûÊåâÈíÆ
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdBack"
-    ctl.Caption = "∑µªÿ"
+    ctl.Caption = "ËøîÂõû"
     ctl.Left = 460: ctl.Top = 420
     ctl.Width = 80: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -2701,16 +2701,16 @@ Private Sub CreateApprovalsForm()
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub RefreshAllLists()" & vbCrLf
-    c = c & "    LoadApprovalList lstPending, " & q & "¥˝…Û≈˙" & q & vbCrLf
-    c = c & "    LoadApprovalList lstApproved, " & q & "“—Õ¨“‚" & q & vbCrLf
-    c = c & "    LoadApprovalList lstRejected, " & q & "“—æ‹æ¯" & q & vbCrLf
+    c = c & "    LoadApprovalList lstPending, " & q & "ÂæÖÂÆ°Êâπ" & q & vbCrLf
+    c = c & "    LoadApprovalList lstApproved, " & q & "Â∑≤ÂêåÊÑè" & q & vbCrLf
+    c = c & "    LoadApprovalList lstRejected, " & q & "Â∑≤ÊãíÁªù" & q & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub LoadApprovalList(lst As MSForms.ListBox, filterSt As String)" & vbCrLf
     c = c & "    lst.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
     c = c & "    On Error Resume Next" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "…Û≈˙π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "ÂÆ°ÊâπÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    On Error GoTo 0" & vbCrLf
     c = c & "    If ws Is Nothing Then Exit Sub" & vbCrLf
     c = c & "    Dim lr As Long, i As Long, idx As Long" & vbCrLf
@@ -2754,7 +2754,7 @@ Private Sub CreateApprovalsForm()
     c = c & "    Dim aid As String" & vbCrLf
     c = c & "    aid = GetSelID(lstPending)" & vbCrLf
     c = c & "    If aid = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Ò“ªÃıº«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©‰∏ÄÊù°ËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gViewApprovalID = aid" & vbCrLf
@@ -2764,13 +2764,13 @@ Private Sub CreateApprovalsForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdEditApply_Click()" & vbCrLf
     c = c & "    If Not IsHighPrivilege(gCurrentRole) Then" & vbCrLf
-    c = c & "        MsgBox " & q & "ƒ˙√ª”–±‡º≠»®œﬁ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ÊÇ®Ê≤°ÊúâÁºñËæëÊùÉÈôêÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Dim aid As String" & vbCrLf
     c = c & "    aid = GetSelID(lstPending)" & vbCrLf
     c = c & "    If aid = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Ò“ªÃıº«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©‰∏ÄÊù°ËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gEditApprovalID = aid" & vbCrLf
@@ -2780,16 +2780,16 @@ Private Sub CreateApprovalsForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdDeleteApply_Click()" & vbCrLf
     c = c & "    If Not IsHighPrivilege(gCurrentRole) Then" & vbCrLf
-    c = c & "        MsgBox " & q & "ƒ˙√ª”–…æ≥˝»®œﬁ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ÊÇ®Ê≤°ÊúâÂà†Èô§ÊùÉÈôêÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Dim aid As String" & vbCrLf
     c = c & "    aid = GetSelID(lstPending)" & vbCrLf
     c = c & "    If aid = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Ò“ªÃıº«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©‰∏ÄÊù°ËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
-    c = c & "    If MsgBox(" & q & "»∑»œ…æ≥˝£ø" & q & ", vbQuestion + vbYesNo) = vbYes Then" & vbCrLf
+    c = c & "    If MsgBox(" & q & "Á°ÆËÆ§Âà†Èô§Ôºü" & q & ", vbQuestion + vbYesNo) = vbYes Then" & vbCrLf
     c = c & "        DeleteApprovalByID aid" & vbCrLf
     c = c & "        RefreshAllLists" & vbCrLf
     c = c & "    End If" & vbCrLf
@@ -2818,7 +2818,7 @@ Private Sub CreateApprovalsForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®…Û≈˙…Í«Î/±‡º≠¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫ÂÆ°ÊâπÁî≥ËØ∑/ÁºñËæëÁ™ó‰Ωì ----------
 
 Private Sub CreateApprovalEditForm()
     Dim oldForm As String
@@ -2834,7 +2834,7 @@ Private Sub CreateApprovalEditForm()
     actualName = vbc.Name
     SetConfigProp "ApprovalEditFormName", actualName
 
-    vbc.Properties("Caption") = "…Û≈˙…Í«Î/±‡º≠"
+    vbc.Properties("Caption") = "ÂÆ°ÊâπÁî≥ËØ∑/ÁºñËæë"
     vbc.Properties("Width") = 500
     vbc.Properties("Height") = 400
     vbc.Properties("StartUpPosition") = 2
@@ -2843,10 +2843,10 @@ Private Sub CreateApprovalEditForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' …Í«Î¿‡–Õ
+    ' Áî≥ËØ∑Á±ªÂûã
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "Label1"
-    ctl.Caption = "…Í«Î¿‡–Õ£∫"
+    ctl.Caption = "Áî≥ËØ∑Á±ªÂûãÔºö"
     ctl.Left = 24: ctl.Top = 24
     ctl.Width = 70: ctl.Height = 18
 
@@ -2856,10 +2856,10 @@ Private Sub CreateApprovalEditForm()
     ctl.Width = 150: ctl.Height = 24
     ctl.Style = 2
 
-    ' ◊”¿‡–Õ
+    ' Â≠êÁ±ªÂûã
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblSubType"
-    ctl.Caption = "◊”¿‡–Õ£∫"
+    ctl.Caption = "Â≠êÁ±ªÂûãÔºö"
     ctl.Left = 270: ctl.Top = 24
     ctl.Width = 60: ctl.Height = 18
 
@@ -2869,20 +2869,20 @@ Private Sub CreateApprovalEditForm()
     ctl.Width = 130: ctl.Height = 24
     ctl.Style = 2
 
-    ' …Í«ÎœÍ«ÈøÚº‹
+    ' Áî≥ËØ∑ËØ¶ÊÉÖÊ°ÜÊû∂
     Set ctl = dsg.Controls.Add("Forms.Frame.1")
     ctl.Name = "fraDynamic"
-    ctl.Caption = "…Í«ÎœÍ«È"
+    ctl.Caption = "Áî≥ËØ∑ËØ¶ÊÉÖ"
     ctl.Left = 24: ctl.Top = 58
     ctl.Width = 452: ctl.Height = 220
 
     Dim fra As Object
     Set fra = ctl
 
-    ' ø™ º ±º‰
+    ' ÂºÄÂßãÊó∂Èó¥
     Set ctl = fra.Controls.Add("Forms.Label.1")
     ctl.Name = "lblStart"
-    ctl.Caption = "ø™ º ±º‰£∫"
+    ctl.Caption = "ÂºÄÂßãÊó∂Èó¥Ôºö"
     ctl.Left = 16: ctl.Top = 24
     ctl.Width = 70: ctl.Height = 18
 
@@ -2891,10 +2891,10 @@ Private Sub CreateApprovalEditForm()
     ctl.Left = 90: ctl.Top = 24
     ctl.Width = 110: ctl.Height = 22
 
-    ' Ω· ¯ ±º‰
+    ' ÁªìÊùüÊó∂Èó¥
     Set ctl = fra.Controls.Add("Forms.Label.1")
     ctl.Name = "lblEnd"
-    ctl.Caption = "Ω· ¯ ±º‰£∫"
+    ctl.Caption = "ÁªìÊùüÊó∂Èó¥Ôºö"
     ctl.Left = 220: ctl.Top = 24
     ctl.Width = 70: ctl.Height = 18
 
@@ -2903,10 +2903,10 @@ Private Sub CreateApprovalEditForm()
     ctl.Left = 294: ctl.Top = 24
     ctl.Width = 110: ctl.Height = 22
 
-    ' ÃÏ ˝
+    ' Â§©Êï∞
     Set ctl = fra.Controls.Add("Forms.Label.1")
     ctl.Name = "lblDays"
-    ctl.Caption = "ÃÏ ˝£∫"
+    ctl.Caption = "Â§©Êï∞Ôºö"
     ctl.Left = 16: ctl.Top = 54
     ctl.Width = 50: ctl.Height = 18
 
@@ -2916,10 +2916,10 @@ Private Sub CreateApprovalEditForm()
     ctl.Width = 60: ctl.Height = 22
     ctl.Enabled = False
 
-    '  ¬”…
+    ' ‰∫ãÁî±
     Set ctl = fra.Controls.Add("Forms.Label.1")
     ctl.Name = "lblReason"
-    ctl.Caption = " ¬”…£∫"
+    ctl.Caption = "‰∫ãÁî±Ôºö"
     ctl.Left = 16: ctl.Top = 84
     ctl.Width = 50: ctl.Height = 18
 
@@ -2930,10 +2930,10 @@ Private Sub CreateApprovalEditForm()
     ctl.MultiLine = True
     ctl.ScrollBars = 2
 
-    ' Ω∂Ó
+    ' ÈáëÈ¢ù
     Set ctl = fra.Controls.Add("Forms.Label.1")
     ctl.Name = "lblAmount"
-    ctl.Caption = "Ω∂Ó£∫"
+    ctl.Caption = "ÈáëÈ¢ùÔºö"
     ctl.Left = 16: ctl.Top = 150
     ctl.Width = 50: ctl.Height = 18
 
@@ -2942,10 +2942,10 @@ Private Sub CreateApprovalEditForm()
     ctl.Left = 90: ctl.Top = 150
     ctl.Width = 110: ctl.Height = 22
 
-    ' ŒÔ∆∑/œÓƒø
+    ' Áâ©ÂìÅ/È°πÁõÆ
     Set ctl = fra.Controls.Add("Forms.Label.1")
     ctl.Name = "lblItem"
-    ctl.Caption = "ŒÔ∆∑/œÓƒø£∫"
+    ctl.Caption = "Áâ©ÂìÅ/È°πÁõÆÔºö"
     ctl.Left = 220: ctl.Top = 150
     ctl.Width = 70: ctl.Height = 18
 
@@ -2954,10 +2954,10 @@ Private Sub CreateApprovalEditForm()
     ctl.Left = 294: ctl.Top = 150
     ctl.Width = 136: ctl.Height = 22
 
-    ' …Í«Î»À
+    ' Áî≥ËØ∑‰∫∫
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblApplicant"
-    ctl.Caption = "…Í«Î»À£∫"
+    ctl.Caption = "Áî≥ËØ∑‰∫∫Ôºö"
     ctl.Left = 24: ctl.Top = 288
     ctl.Width = 60: ctl.Height = 18
 
@@ -2967,10 +2967,10 @@ Private Sub CreateApprovalEditForm()
     ctl.Width = 110: ctl.Height = 22
     ctl.Enabled = False
 
-    ' …Û≈˙»À
+    ' ÂÆ°Êâπ‰∫∫
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblApprover"
-    ctl.Caption = "…Û≈˙»À£∫"
+    ctl.Caption = "ÂÆ°Êâπ‰∫∫Ôºö"
     ctl.Left = 220: ctl.Top = 288
     ctl.Width = 60: ctl.Height = 18
 
@@ -2980,20 +2980,20 @@ Private Sub CreateApprovalEditForm()
     ctl.Width = 110: ctl.Height = 22
     ctl.Enabled = False
 
-    ' ±£¥Ê/»°œ˚
+    ' ‰øùÂ≠ò/ÂèñÊ∂à
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdSave"
-    ctl.Caption = "±£¥Ê"
+    ctl.Caption = "‰øùÂ≠ò"
     ctl.Left = 140: ctl.Top = 330
     ctl.Width = 80: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdCancel"
-    ctl.Caption = "»°œ˚"
+    ctl.Caption = "ÂèñÊ∂à"
     ctl.Left = 260: ctl.Top = 330
     ctl.Width = 80: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -3004,11 +3004,11 @@ Private Sub CreateApprovalEditForm()
     c = "Option Explicit" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
-    c = c & "    cboType.AddItem " & q & "«ÎºŸ…Í«Î" & q & vbCrLf
-    c = c & "    cboType.AddItem " & q & "±®œ˙…Í«Î" & q & vbCrLf
-    c = c & "    cboType.AddItem " & q & "≤…π∫…Í«Î" & q & vbCrLf
-    c = c & "    cboType.AddItem " & q & "”√’¬…Í«Î" & q & vbCrLf
-    c = c & "    cboType.AddItem " & q & "∆‰À˚" & q & vbCrLf
+    c = c & "    cboType.AddItem " & q & "ËØ∑ÂÅáÁî≥ËØ∑" & q & vbCrLf
+    c = c & "    cboType.AddItem " & q & "Êä•ÈîÄÁî≥ËØ∑" & q & vbCrLf
+    c = c & "    cboType.AddItem " & q & "ÈááË¥≠Áî≥ËØ∑" & q & vbCrLf
+    c = c & "    cboType.AddItem " & q & "Áî®Á´†Áî≥ËØ∑" & q & vbCrLf
+    c = c & "    cboType.AddItem " & q & "ÂÖ∂‰ªñ" & q & vbCrLf
     c = c & "    cboType.ListIndex = 0" & vbCrLf
     c = c & "    txtApplicant.Text = gCurrentUser" & vbCrLf
     c = c & "    txtApprover.Text = GetDefaultApprover()" & vbCrLf
@@ -3028,24 +3028,24 @@ Private Sub CreateApprovalEditForm()
     c = c & "Private Sub UpdateSubType()" & vbCrLf
     c = c & "    cboSubType.Clear" & vbCrLf
     c = c & "    Select Case cboType.Text" & vbCrLf
-    c = c & "        Case " & q & "«ÎºŸ…Í«Î" & q & vbCrLf
-    c = c & "            cboSubType.AddItem " & q & "Õ‚≥ˆ" & q & vbCrLf
-    c = c & "            cboSubType.AddItem " & q & " ¬ºŸ" & q & vbCrLf
-    c = c & "            cboSubType.AddItem " & q & "ƒÍºŸ" & q & vbCrLf
-    c = c & "            cboSubType.AddItem " & q & "≤°ºŸ" & q & vbCrLf
-    c = c & "            cboSubType.AddItem " & q & "ªÈºŸ" & q & vbCrLf
-    c = c & "            cboSubType.AddItem " & q & "≤˙ºŸ" & q & vbCrLf
-    c = c & "            cboSubType.AddItem " & q & "…•ºŸ" & q & vbCrLf
-    c = c & "        Case " & q & "±®œ˙…Í«Î" & q & vbCrLf
-    c = c & "            cboSubType.AddItem " & q & "≤Ó¬√" & q & vbCrLf
-    c = c & "            cboSubType.AddItem " & q & "∞Ïπ´" & q & vbCrLf
-    c = c & "            cboSubType.AddItem " & q & "∆‰À˚" & q & vbCrLf
-    c = c & "        Case " & q & "”√’¬…Í«Î" & q & vbCrLf
-    c = c & "            cboSubType.AddItem " & q & "π´’¬" & q & vbCrLf
-    c = c & "            cboSubType.AddItem " & q & "∫œÕ¨’¬" & q & vbCrLf
-    c = c & "            cboSubType.AddItem " & q & "≤∆ŒÒ’¬" & q & vbCrLf
+    c = c & "        Case " & q & "ËØ∑ÂÅáÁî≥ËØ∑" & q & vbCrLf
+    c = c & "            cboSubType.AddItem " & q & "Â§ñÂá∫" & q & vbCrLf
+    c = c & "            cboSubType.AddItem " & q & "‰∫ãÂÅá" & q & vbCrLf
+    c = c & "            cboSubType.AddItem " & q & "Âπ¥ÂÅá" & q & vbCrLf
+    c = c & "            cboSubType.AddItem " & q & "ÁóÖÂÅá" & q & vbCrLf
+    c = c & "            cboSubType.AddItem " & q & "Â©öÂÅá" & q & vbCrLf
+    c = c & "            cboSubType.AddItem " & q & "‰∫ßÂÅá" & q & vbCrLf
+    c = c & "            cboSubType.AddItem " & q & "‰∏ßÂÅá" & q & vbCrLf
+    c = c & "        Case " & q & "Êä•ÈîÄÁî≥ËØ∑" & q & vbCrLf
+    c = c & "            cboSubType.AddItem " & q & "Â∑ÆÊóÖ" & q & vbCrLf
+    c = c & "            cboSubType.AddItem " & q & "ÂäûÂÖ¨" & q & vbCrLf
+    c = c & "            cboSubType.AddItem " & q & "ÂÖ∂‰ªñ" & q & vbCrLf
+    c = c & "        Case " & q & "Áî®Á´†Áî≥ËØ∑" & q & vbCrLf
+    c = c & "            cboSubType.AddItem " & q & "ÂÖ¨Á´†" & q & vbCrLf
+    c = c & "            cboSubType.AddItem " & q & "ÂêàÂêåÁ´†" & q & vbCrLf
+    c = c & "            cboSubType.AddItem " & q & "Ë¥¢Âä°Á´†" & q & vbCrLf
     c = c & "        Case Else" & vbCrLf
-    c = c & "            cboSubType.AddItem " & q & "∆‰À˚" & q & vbCrLf
+    c = c & "            cboSubType.AddItem " & q & "ÂÖ∂‰ªñ" & q & vbCrLf
     c = c & "    End Select" & vbCrLf
     c = c & "    If cboSubType.ListCount > 0 Then cboSubType.ListIndex = 0" & vbCrLf
     c = c & "End Sub" & vbCrLf
@@ -3054,14 +3054,14 @@ Private Sub CreateApprovalEditForm()
     c = c & "    Dim t As String" & vbCrLf
     c = c & "    t = cboType.Text" & vbCrLf
     c = c & "    Dim showDate As Boolean, showMoney As Boolean" & vbCrLf
-    c = c & "    showDate = (t = " & q & "«ÎºŸ…Í«Î" & q & " Or t = " & q & "”√’¬…Í«Î" & q & ")" & vbCrLf
-    c = c & "    showMoney = (t = " & q & "±®œ˙…Í«Î" & q & " Or t = " & q & "≤…π∫…Í«Î" & q & ")" & vbCrLf
+    c = c & "    showDate = (t = " & q & "ËØ∑ÂÅáÁî≥ËØ∑" & q & " Or t = " & q & "Áî®Á´†Áî≥ËØ∑" & q & ")" & vbCrLf
+    c = c & "    showMoney = (t = " & q & "Êä•ÈîÄÁî≥ËØ∑" & q & " Or t = " & q & "ÈááË¥≠Áî≥ËØ∑" & q & ")" & vbCrLf
     c = c & "    lblStart.Visible = showDate" & vbCrLf
     c = c & "    txtStart.Visible = showDate" & vbCrLf
-    c = c & "    lblEnd.Visible = (t = " & q & "«ÎºŸ…Í«Î" & q & ")" & vbCrLf
-    c = c & "    txtEnd2.Visible = (t = " & q & "«ÎºŸ…Í«Î" & q & ")" & vbCrLf
-    c = c & "    lblDays.Visible = (t = " & q & "«ÎºŸ…Í«Î" & q & ")" & vbCrLf
-    c = c & "    txtDays.Visible = (t = " & q & "«ÎºŸ…Í«Î" & q & ")" & vbCrLf
+    c = c & "    lblEnd.Visible = (t = " & q & "ËØ∑ÂÅáÁî≥ËØ∑" & q & ")" & vbCrLf
+    c = c & "    txtEnd2.Visible = (t = " & q & "ËØ∑ÂÅáÁî≥ËØ∑" & q & ")" & vbCrLf
+    c = c & "    lblDays.Visible = (t = " & q & "ËØ∑ÂÅáÁî≥ËØ∑" & q & ")" & vbCrLf
+    c = c & "    txtDays.Visible = (t = " & q & "ËØ∑ÂÅáÁî≥ËØ∑" & q & ")" & vbCrLf
     c = c & "    lblAmount.Visible = showMoney" & vbCrLf
     c = c & "    txtAmount.Visible = showMoney" & vbCrLf
     c = c & "    lblItem.Visible = showMoney" & vbCrLf
@@ -3091,7 +3091,7 @@ Private Sub CreateApprovalEditForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub LoadData()" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "…Û≈˙π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "ÂÆ°ÊâπÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -3115,19 +3115,19 @@ Private Sub CreateApprovalEditForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdSave_Click()" & vbCrLf
     c = c & "    If cboType.Text = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Ò…Í«Î¿‡–Õ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©Áî≥ËØ∑Á±ªÂûãÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If Trim(txtReason.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«ÎÃÓ–¥ ¬”…£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑Â°´ÂÜô‰∫ãÁî±ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If gEditApprovalID <> " & q & q & " Then" & vbCrLf
     c = c & "        UpdateApprovalRecord gEditApprovalID, cboType.Text, cboSubType.Text, txtReason.Text, txtStart.Text, txtEnd2.Text, txtDays.Text, txtAmount.Text, txtItem.Text" & vbCrLf
-    c = c & "        MsgBox " & q & "…Í«Î“—∏¸–¬£°" & q & ", vbInformation" & vbCrLf
+    c = c & "        MsgBox " & q & "Áî≥ËØ∑Â∑≤Êõ¥Êñ∞ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Else" & vbCrLf
     c = c & "        AddApprovalRecord cboType.Text, cboSubType.Text, txtApplicant.Text, txtApprover.Text, txtReason.Text, txtStart.Text, txtEnd2.Text, txtDays.Text, txtAmount.Text, txtItem.Text" & vbCrLf
-    c = c & "        MsgBox " & q & "…Í«Î“—Ã·Ωª£°" & q & ", vbInformation" & vbCrLf
+    c = c & "        MsgBox " & q & "Áî≥ËØ∑Â∑≤Êèê‰∫§ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
@@ -3139,7 +3139,7 @@ Private Sub CreateApprovalEditForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®…Û≈˙≤Èø¥¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫ÂÆ°ÊâπÊü•ÁúãÁ™ó‰Ωì ----------
 
 Private Sub CreateApprovalViewForm()
     Dim oldForm As String
@@ -3155,7 +3155,7 @@ Private Sub CreateApprovalViewForm()
     actualName = vbc.Name
     SetConfigProp "ApprovalViewFormName", actualName
 
-    vbc.Properties("Caption") = "…Û≈˙œÍ«È"
+    vbc.Properties("Caption") = "ÂÆ°ÊâπËØ¶ÊÉÖ"
     vbc.Properties("Width") = 440
     vbc.Properties("Height") = 380
     vbc.Properties("StartUpPosition") = 2
@@ -3167,14 +3167,14 @@ Private Sub CreateApprovalViewForm()
     yy = 20
 
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblTypeCap": ctl.Caption = "…Í«Î¿‡–Õ£∫"
+    ctl.Name = "lblTypeCap": ctl.Caption = "Áî≥ËØ∑Á±ªÂûãÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblTypeVal": ctl.Caption = ""
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 100: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblSubCap": ctl.Caption = "◊”¿‡–Õ£∫"
+    ctl.Name = "lblSubCap": ctl.Caption = "Â≠êÁ±ªÂûãÔºö"
     ctl.Left = 220: ctl.Top = yy: ctl.Width = 60: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -3183,14 +3183,14 @@ Private Sub CreateApprovalViewForm()
 
     yy = yy + 28
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblAppCap": ctl.Caption = "…Í«Î»À£∫"
+    ctl.Name = "lblAppCap": ctl.Caption = "Áî≥ËØ∑‰∫∫Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblAppVal": ctl.Caption = ""
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 100: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblApprvCap": ctl.Caption = "…Û≈˙»À£∫"
+    ctl.Name = "lblApprvCap": ctl.Caption = "ÂÆ°Êâπ‰∫∫Ôºö"
     ctl.Left = 220: ctl.Top = yy: ctl.Width = 60: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -3199,7 +3199,7 @@ Private Sub CreateApprovalViewForm()
 
     yy = yy + 28
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblReasonCap": ctl.Caption = " ¬”…£∫"
+    ctl.Name = "lblReasonCap": ctl.Caption = "‰∫ãÁî±Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 50: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
@@ -3209,7 +3209,7 @@ Private Sub CreateApprovalViewForm()
 
     yy = yy + 62
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblDateCap": ctl.Caption = "»’∆⁄£∫"
+    ctl.Name = "lblDateCap": ctl.Caption = "Êó•ÊúüÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 50: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -3218,14 +3218,14 @@ Private Sub CreateApprovalViewForm()
 
     yy = yy + 26
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblAmtCap": ctl.Caption = "Ω∂Ó£∫"
+    ctl.Name = "lblAmtCap": ctl.Caption = "ÈáëÈ¢ùÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 50: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblAmtVal": ctl.Caption = ""
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 100: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblItemCap": ctl.Caption = "ŒÔ∆∑/œÓƒø£∫"
+    ctl.Name = "lblItemCap": ctl.Caption = "Áâ©ÂìÅ/È°πÁõÆÔºö"
     ctl.Left = 220: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -3234,7 +3234,7 @@ Private Sub CreateApprovalViewForm()
 
     yy = yy + 28
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblStCap": ctl.Caption = "◊¥Ã¨£∫"
+    ctl.Name = "lblStCap": ctl.Caption = "Áä∂ÊÄÅÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 50: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -3245,25 +3245,25 @@ Private Sub CreateApprovalViewForm()
     yy = yy + 36
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdApprove"
-    ctl.Caption = "Õ¨“‚"
+    ctl.Caption = "ÂêåÊÑè"
     ctl.Left = 40: ctl.Top = yy
     ctl.Width = 100: ctl.Height = 30
     ctl.BackColor = RGB(60, 179, 113)
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdReject"
-    ctl.Caption = "æ‹æ¯"
+    ctl.Caption = "ÊãíÁªù"
     ctl.Left = 170: ctl.Top = yy
     ctl.Width = 100: ctl.Height = 30
     ctl.BackColor = RGB(220, 80, 80)
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdClose"
-    ctl.Caption = "πÿ±’"
+    ctl.Caption = "ÂÖ≥Èó≠"
     ctl.Left = 300: ctl.Top = yy
     ctl.Width = 100: ctl.Height = 30
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -3276,7 +3276,7 @@ Private Sub CreateApprovalViewForm()
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
     c = c & "    If gViewApprovalID = " & q & q & " Then Unload Me: Exit Sub" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "…Û≈˙π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "ÂÆ°ÊâπÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -3292,13 +3292,13 @@ Private Sub CreateApprovalViewForm()
     c = c & "            lblStVal.Caption = ws.Cells(i, 12).Value" & vbCrLf
     c = c & "            Dim st As String" & vbCrLf
     c = c & "            st = ws.Cells(i, 12).Value" & vbCrLf
-    c = c & "            If st = " & q & "¥˝…Û≈˙" & q & " Then" & vbCrLf
+    c = c & "            If st = " & q & "ÂæÖÂÆ°Êâπ" & q & " Then" & vbCrLf
     c = c & "                lblStVal.ForeColor = RGB(255, 140, 0)" & vbCrLf
     c = c & "                Dim canApprove As Boolean" & vbCrLf
     c = c & "                canApprove = IsHighPrivilege(gCurrentRole)" & vbCrLf
     c = c & "                cmdApprove.Enabled = canApprove" & vbCrLf
     c = c & "                cmdReject.Enabled = canApprove" & vbCrLf
-    c = c & "            ElseIf st = " & q & "“—Õ¨“‚" & q & " Then" & vbCrLf
+    c = c & "            ElseIf st = " & q & "Â∑≤ÂêåÊÑè" & q & " Then" & vbCrLf
     c = c & "                lblStVal.ForeColor = RGB(60, 179, 113)" & vbCrLf
     c = c & "                cmdApprove.Enabled = False" & vbCrLf
     c = c & "                cmdReject.Enabled = False" & vbCrLf
@@ -3313,14 +3313,14 @@ Private Sub CreateApprovalViewForm()
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdApprove_Click()" & vbCrLf
-    c = c & "    UpdateApprovalStatus gViewApprovalID, " & q & "“—Õ¨“‚" & q & vbCrLf
-    c = c & "    MsgBox " & q & "“—Õ¨“‚∏√…Í«Î£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    UpdateApprovalStatus gViewApprovalID, " & q & "Â∑≤ÂêåÊÑè" & q & vbCrLf
+    c = c & "    MsgBox " & q & "Â∑≤ÂêåÊÑèËØ•Áî≥ËØ∑ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdReject_Click()" & vbCrLf
-    c = c & "    UpdateApprovalStatus gViewApprovalID, " & q & "“—æ‹æ¯" & q & vbCrLf
-    c = c & "    MsgBox " & q & "“—æ‹æ¯∏√…Í«Î£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    UpdateApprovalStatus gViewApprovalID, " & q & "Â∑≤ÊãíÁªù" & q & vbCrLf
+    c = c & "    MsgBox " & q & "Â∑≤ÊãíÁªùËØ•Áî≥ËØ∑ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
@@ -3331,32 +3331,32 @@ Private Sub CreateApprovalViewForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®—≤ºÏπ‹¿Ì±Ì ----------
+' ---------- ÂàõÂª∫Â∑°Ê£ÄÁÆ°ÁêÜË°® ----------
 
 Private Sub CreateInspectSheet()
     Dim ws As Worksheet
-    If SheetExists("—≤ºÏπ‹¿Ì") Then
-        Set ws = ThisWorkbook.Sheets("—≤ºÏπ‹¿Ì")
+    If SheetExists("Â∑°Ê£ÄÁÆ°ÁêÜ") Then
+        Set ws = ThisWorkbook.Sheets("Â∑°Ê£ÄÁÆ°ÁêÜ")
     Else
         Set ws = ThisWorkbook.Sheets.Add( _
             After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.Count))
-        ws.Name = "—≤ºÏπ‹¿Ì"
+        ws.Name = "Â∑°Ê£ÄÁÆ°ÁêÜ"
     End If
     With ws
-        .Range("A1").Value = "—≤ºÏ±‡∫≈"
-        .Range("B1").Value = "—≤ºÏ‘±"
-        .Range("C1").Value = "—≤ºÏ«¯”Ú"
-        .Range("D1").Value = "—≤ºÏ ±º‰"
-        .Range("E1").Value = "—≤ºÏ◊¥Ã¨"
-        .Range("F1").Value = "—≤ºÏ±∏◊¢"
-        .Range("G1").Value = "Õº∆¨¬∑æ∂"
-        .Range("H1").Value = "¥¥Ω® ±º‰"
+        .Range("A1").Value = "Â∑°Ê£ÄÁºñÂè∑"
+        .Range("B1").Value = "Â∑°Ê£ÄÂëò"
+        .Range("C1").Value = "Â∑°Ê£ÄÂå∫Âüü"
+        .Range("D1").Value = "Â∑°Ê£ÄÊó∂Èó¥"
+        .Range("E1").Value = "Â∑°Ê£ÄÁä∂ÊÄÅ"
+        .Range("F1").Value = "Â∑°Ê£ÄÂ§áÊ≥®"
+        .Range("G1").Value = "ÂõæÁâáË∑ØÂæÑ"
+        .Range("H1").Value = "ÂàõÂª∫Êó∂Èó¥"
         .Range("A1:H1").Font.Bold = True
         .Columns("A:H").AutoFit
     End With
 End Sub
 
-' ---------- ¥¥Ω®—≤ºÏπ‹¿Ì¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫Â∑°Ê£ÄÁÆ°ÁêÜÁ™ó‰Ωì ----------
 
 Private Sub CreateInspectManagerForm()
     Dim oldForm As String
@@ -3372,7 +3372,7 @@ Private Sub CreateInspectManagerForm()
     actualName = vbc.Name
     SetConfigProp "InspectManagerFormName", actualName
 
-    vbc.Properties("Caption") = "—≤ºÏπ‹¿Ì"
+    vbc.Properties("Caption") = "Â∑°Ê£ÄÁÆ°ÁêÜ"
     vbc.Properties("Width") = 680
     vbc.Properties("Height") = 500
     vbc.Properties("StartUpPosition") = 2
@@ -3381,13 +3381,13 @@ Private Sub CreateInspectManagerForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' ◊¥Ã¨Õ≥º∆±Í«©
+    ' Áä∂ÊÄÅÁªüËÆ°Ê†áÁ≠æ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblStats": ctl.Caption = "◊¥Ã¨Õ≥º∆: º”‘ÿ÷–..."
+    ctl.Name = "lblStats": ctl.Caption = "Áä∂ÊÄÅÁªüËÆ°: Âä†ËΩΩ‰∏≠..."
     ctl.Left = 20: ctl.Top = 10: ctl.Width = 500: ctl.Height = 18
     ctl.Font.Size = 10: ctl.Font.Bold = True
 
-    ' —≤ºÏ»ŒŒÒ¡–±Ì
+    ' Â∑°Ê£Ä‰ªªÂä°ÂàóË°®
     Set ctl = dsg.Controls.Add("Forms.ListBox.1")
     ctl.Name = "lstInspect"
     ctl.Left = 20: ctl.Top = 35: ctl.Width = 630: ctl.Height = 350
@@ -3395,9 +3395,9 @@ Private Sub CreateInspectManagerForm()
     ctl.ColumnWidths = "60;70;100;110;70;200"
     ctl.ColumnHeads = False
 
-    ' ¡–Õ∑±Í«©
+    ' ÂàóÂ§¥Ê†áÁ≠æ
     Dim headers As Variant
-    headers = Array("±‡∫≈", "—≤ºÏ‘±", "—≤ºÏ«¯”Ú", "—≤ºÏ ±º‰", "◊¥Ã¨", "±∏◊¢")
+    headers = Array("ÁºñÂè∑", "Â∑°Ê£ÄÂëò", "Â∑°Ê£ÄÂå∫Âüü", "Â∑°Ê£ÄÊó∂Èó¥", "Áä∂ÊÄÅ", "Â§áÊ≥®")
     Dim hLeft As Variant
     hLeft = Array(20, 80, 150, 250, 360, 430)
     Dim hWid As Variant
@@ -3411,28 +3411,28 @@ Private Sub CreateInspectManagerForm()
         ctl.Font.Bold = True: ctl.Font.Size = 8
     Next hi
 
-    ' ∞¥≈•
+    ' ÊåâÈíÆ
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdNew": ctl.Caption = "–¬Ω®—≤ºÏ"
+    ctl.Name = "cmdNew": ctl.Caption = "Êñ∞Âª∫Â∑°Ê£Ä"
     ctl.Left = 20: ctl.Top = 400: ctl.Width = 90: ctl.Height = 30
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdEdit": ctl.Caption = "±‡º≠"
+    ctl.Name = "cmdEdit": ctl.Caption = "ÁºñËæë"
     ctl.Left = 120: ctl.Top = 400: ctl.Width = 70: ctl.Height = 30
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdDelete": ctl.Caption = "…æ≥˝"
+    ctl.Name = "cmdDelete": ctl.Caption = "Âà†Èô§"
     ctl.Left = 200: ctl.Top = 400: ctl.Width = 70: ctl.Height = 30
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdRefresh": ctl.Caption = "À¢–¬"
+    ctl.Name = "cmdRefresh": ctl.Caption = "Âà∑Êñ∞"
     ctl.Left = 280: ctl.Top = 400: ctl.Width = 70: ctl.Height = 30
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdClose": ctl.Caption = "πÿ±’"
+    ctl.Name = "cmdClose": ctl.Caption = "ÂÖ≥Èó≠"
     ctl.Left = 560: ctl.Top = 400: ctl.Width = 90: ctl.Height = 30
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -3449,7 +3449,7 @@ Private Sub CreateInspectManagerForm()
     c = c & "Private Sub LoadData()" & vbCrLf
     c = c & "    lstInspect.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "—≤ºÏπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Â∑°Ê£ÄÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    Dim cNormal As Long, cAbnormal As Long, cPending As Long" & vbCrLf
@@ -3463,11 +3463,11 @@ Private Sub CreateInspectManagerForm()
     c = c & "        lstInspect.List(lstInspect.ListCount - 1, 5) = ws.Cells(i, 6).Value" & vbCrLf
     c = c & "        Dim st As String" & vbCrLf
     c = c & "        st = CStr(ws.Cells(i, 5).Value)" & vbCrLf
-    c = c & "        If st = " & q & "’˝≥£" & q & " Then cNormal = cNormal + 1" & vbCrLf
-    c = c & "        If st = " & q & "“Ï≥£" & q & " Then cAbnormal = cAbnormal + 1" & vbCrLf
-    c = c & "        If st = " & q & "¥˝—≤ºÏ" & q & " Then cPending = cPending + 1" & vbCrLf
+    c = c & "        If st = " & q & "Ê≠£Â∏∏" & q & " Then cNormal = cNormal + 1" & vbCrLf
+    c = c & "        If st = " & q & "ÂºÇÂ∏∏" & q & " Then cAbnormal = cAbnormal + 1" & vbCrLf
+    c = c & "        If st = " & q & "ÂæÖÂ∑°Ê£Ä" & q & " Then cPending = cPending + 1" & vbCrLf
     c = c & "    Next i" & vbCrLf
-    c = c & "    lblStats.Caption = " & q & "◊¥Ã¨Õ≥º∆:  ’˝≥£: " & q & " & cNormal & " & q & "  |  “Ï≥£: " & q & " & cAbnormal & " & q & "  |  ¥˝—≤ºÏ: " & q & " & cPending & " & q & "  |  ◊‹º∆: " & q & " & (cNormal + cAbnormal + cPending)" & vbCrLf
+    c = c & "    lblStats.Caption = " & q & "Áä∂ÊÄÅÁªüËÆ°:  Ê≠£Â∏∏: " & q & " & cNormal & " & q & "  |  ÂºÇÂ∏∏: " & q & " & cAbnormal & " & q & "  |  ÂæÖÂ∑°Ê£Ä: " & q & " & cPending & " & q & "  |  ÊÄªËÆ°: " & q & " & (cNormal + cAbnormal + cPending)" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdNew_Click()" & vbCrLf
@@ -3478,7 +3478,7 @@ Private Sub CreateInspectManagerForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdEdit_Click()" & vbCrLf
     c = c & "    If lstInspect.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃı—≤ºÏº«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°Â∑°Ê£ÄËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Dim selID As String" & vbCrLf
@@ -3487,7 +3487,7 @@ Private Sub CreateInspectManagerForm()
     c = c & "        Dim creator As String" & vbCrLf
     c = c & "        creator = lstInspect.List(lstInspect.ListIndex, 1)" & vbCrLf
     c = c & "        If creator <> gCurrentUser Then" & vbCrLf
-    c = c & "            MsgBox " & q & "÷ªƒ‹±‡º≠◊‘º∫¥¥Ω®µƒ—≤ºÏ»ŒŒÒ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "            MsgBox " & q & "Âè™ËÉΩÁºñËæëËá™Â∑±ÂàõÂª∫ÁöÑÂ∑°Ê£Ä‰ªªÂä°ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "            Exit Sub" & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "    End If" & vbCrLf
@@ -3498,18 +3498,18 @@ Private Sub CreateInspectManagerForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdDelete_Click()" & vbCrLf
     c = c & "    If lstInspect.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃı—≤ºÏº«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°Â∑°Ê£ÄËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If Not IsHighPrivilege(gCurrentRole) Then" & vbCrLf
     c = c & "        Dim creator As String" & vbCrLf
     c = c & "        creator = lstInspect.List(lstInspect.ListIndex, 1)" & vbCrLf
     c = c & "        If creator <> gCurrentUser Then" & vbCrLf
-    c = c & "            MsgBox " & q & "÷ªƒ‹…æ≥˝◊‘º∫¥¥Ω®µƒ—≤ºÏ»ŒŒÒ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "            MsgBox " & q & "Âè™ËÉΩÂà†Èô§Ëá™Â∑±ÂàõÂª∫ÁöÑÂ∑°Ê£Ä‰ªªÂä°ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "            Exit Sub" & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "    End If" & vbCrLf
-    c = c & "    If MsgBox(" & q & "»∑∂®…æ≥˝∏√—≤ºÏº«¬º£ø" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
+    c = c & "    If MsgBox(" & q & "Á°ÆÂÆöÂà†Èô§ËØ•Â∑°Ê£ÄËÆ∞ÂΩïÔºü" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
     c = c & "        DeleteInspectByID lstInspect.List(lstInspect.ListIndex, 0)" & vbCrLf
     c = c & "        LoadData" & vbCrLf
     c = c & "    End If" & vbCrLf
@@ -3526,7 +3526,7 @@ Private Sub CreateInspectManagerForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®—≤ºÏ±‡º≠¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫Â∑°Ê£ÄÁºñËæëÁ™ó‰Ωì ----------
 
 Private Sub CreateInspectEditForm()
     Dim oldForm As String
@@ -3542,7 +3542,7 @@ Private Sub CreateInspectEditForm()
     actualName = vbc.Name
     SetConfigProp "InspectEditFormName", actualName
 
-    vbc.Properties("Caption") = "—≤ºÏ»ŒŒÒ±‡º≠"
+    vbc.Properties("Caption") = "Â∑°Ê£Ä‰ªªÂä°ÁºñËæë"
     vbc.Properties("Width") = 420
     vbc.Properties("Height") = 380
     vbc.Properties("StartUpPosition") = 2
@@ -3553,9 +3553,9 @@ Private Sub CreateInspectEditForm()
     Dim yy As Long
     yy = 20
 
-    ' —≤ºÏ‘±
+    ' Â∑°Ê£ÄÂëò
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblInspector": ctl.Caption = "—≤ºÏ‘±£∫"
+    ctl.Name = "lblInspector": ctl.Caption = "Â∑°Ê£ÄÂëòÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtInspector"
@@ -3563,9 +3563,9 @@ Private Sub CreateInspectEditForm()
     ctl.Locked = True
 
     yy = yy + 32
-    ' —≤ºÏ«¯”Ú
+    ' Â∑°Ê£ÄÂå∫Âüü
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblArea": ctl.Caption = "—≤ºÏ«¯”Ú£∫"
+    ctl.Name = "lblArea": ctl.Caption = "Â∑°Ê£ÄÂå∫ÂüüÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboArea"
@@ -3573,18 +3573,18 @@ Private Sub CreateInspectEditForm()
     ctl.Style = 0
 
     yy = yy + 32
-    ' —≤ºÏ ±º‰
+    ' Â∑°Ê£ÄÊó∂Èó¥
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblTime": ctl.Caption = "—≤ºÏ ±º‰£∫"
+    ctl.Name = "lblTime": ctl.Caption = "Â∑°Ê£ÄÊó∂Èó¥Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtTime"
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 280: ctl.Height = 20
 
     yy = yy + 32
-    ' —≤ºÏ◊¥Ã¨
+    ' Â∑°Ê£ÄÁä∂ÊÄÅ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblStatus": ctl.Caption = "—≤ºÏ◊¥Ã¨£∫"
+    ctl.Name = "lblStatus": ctl.Caption = "Â∑°Ê£ÄÁä∂ÊÄÅÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboStatus"
@@ -3592,9 +3592,9 @@ Private Sub CreateInspectEditForm()
     ctl.Style = 2
 
     yy = yy + 32
-    ' —≤ºÏ±∏◊¢
+    ' Â∑°Ê£ÄÂ§áÊ≥®
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblRemark": ctl.Caption = "—≤ºÏ±∏◊¢£∫"
+    ctl.Name = "lblRemark": ctl.Caption = "Â∑°Ê£ÄÂ§áÊ≥®Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtRemark"
@@ -3602,29 +3602,29 @@ Private Sub CreateInspectEditForm()
     ctl.MultiLine = True: ctl.ScrollBars = 2
 
     yy = yy + 80
-    ' Õº∆¨¬∑æ∂
+    ' ÂõæÁâáË∑ØÂæÑ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblImage": ctl.Caption = "Õº∆¨…œ¥´£∫"
+    ctl.Name = "lblImage": ctl.Caption = "ÂõæÁâá‰∏ä‰º†Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtImagePath"
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 200: ctl.Height = 20
     ctl.Locked = True
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdBrowse": ctl.Caption = "‰Ø¿¿..."
+    ctl.Name = "cmdBrowse": ctl.Caption = "ÊµèËßà..."
     ctl.Left = 310: ctl.Top = yy: ctl.Width = 70: ctl.Height = 20
 
     yy = yy + 42
-    ' ±£¥Ê/»°œ˚∞¥≈•
+    ' ‰øùÂ≠ò/ÂèñÊ∂àÊåâÈíÆ
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdSave": ctl.Caption = "±£¥Ê"
+    ctl.Name = "cmdSave": ctl.Caption = "‰øùÂ≠ò"
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 100: ctl.Height = 30
     ctl.BackColor = RGB(60, 120, 216)
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdCancel": ctl.Caption = "»°œ˚"
+    ctl.Name = "cmdCancel": ctl.Caption = "ÂèñÊ∂à"
     ctl.Left = 220: ctl.Top = yy: ctl.Width = 100: ctl.Height = 30
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -3635,31 +3635,31 @@ Private Sub CreateInspectEditForm()
     c = "Option Explicit" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
-    c = c & "    cboArea.AddItem " & q & "A∂∞¥ÛÃ√" & q & vbCrLf
-    c = c & "    cboArea.AddItem " & q & "B∂∞¥ÛÃ√" & q & vbCrLf
-    c = c & "    cboArea.AddItem " & q & "µÿœ¬≥µø‚" & q & vbCrLf
-    c = c & "    cboArea.AddItem " & q & "‘∞¡÷¬ÃªØ" & q & vbCrLf
-    c = c & "    cboArea.AddItem " & q & "œ˚∑¿Õ®µ¿" & q & vbCrLf
-    c = c & "    cboArea.AddItem " & q & "…Ë±∏ª˙∑ø" & q & vbCrLf
-    c = c & "    cboArea.AddItem " & q & "Õ‚ŒßŒß«Ω" & q & vbCrLf
-    c = c & "    cboArea.AddItem " & q & "µÁÃ›º‰" & q & vbCrLf
-    c = c & "    cboStatus.AddItem " & q & "¥˝—≤ºÏ" & q & vbCrLf
-    c = c & "    cboStatus.AddItem " & q & "’˝≥£" & q & vbCrLf
-    c = c & "    cboStatus.AddItem " & q & "“Ï≥£" & q & vbCrLf
+    c = c & "    cboArea.AddItem " & q & "AÊ†ãÂ§ßÂ†Ç" & q & vbCrLf
+    c = c & "    cboArea.AddItem " & q & "BÊ†ãÂ§ßÂ†Ç" & q & vbCrLf
+    c = c & "    cboArea.AddItem " & q & "Âú∞‰∏ãËΩ¶Â∫ì" & q & vbCrLf
+    c = c & "    cboArea.AddItem " & q & "Âõ≠ÊûóÁªøÂåñ" & q & vbCrLf
+    c = c & "    cboArea.AddItem " & q & "Ê∂àÈò≤ÈÄöÈÅì" & q & vbCrLf
+    c = c & "    cboArea.AddItem " & q & "ËÆæÂ§áÊú∫Êàø" & q & vbCrLf
+    c = c & "    cboArea.AddItem " & q & "Â§ñÂõ¥Âõ¥Â¢ô" & q & vbCrLf
+    c = c & "    cboArea.AddItem " & q & "ÁîµÊ¢ØÈó¥" & q & vbCrLf
+    c = c & "    cboStatus.AddItem " & q & "ÂæÖÂ∑°Ê£Ä" & q & vbCrLf
+    c = c & "    cboStatus.AddItem " & q & "Ê≠£Â∏∏" & q & vbCrLf
+    c = c & "    cboStatus.AddItem " & q & "ÂºÇÂ∏∏" & q & vbCrLf
     c = c & "    txtInspector.Text = gCurrentUser" & vbCrLf
     c = c & "    txtTime.Text = Format(Now, " & q & "yyyy-mm-dd hh:mm" & q & ")" & vbCrLf
     c = c & "    cboStatus.ListIndex = 0" & vbCrLf
     c = c & "    If gEditInspectID <> " & q & q & " Then" & vbCrLf
-    c = c & "        Me.Caption = " & q & "±‡º≠—≤ºÏ»ŒŒÒ" & q & vbCrLf
+    c = c & "        Me.Caption = " & q & "ÁºñËæëÂ∑°Ê£Ä‰ªªÂä°" & q & vbCrLf
     c = c & "        LoadData" & vbCrLf
     c = c & "    Else" & vbCrLf
-    c = c & "        Me.Caption = " & q & "–¬Ω®—≤ºÏ»ŒŒÒ" & q & vbCrLf
+    c = c & "        Me.Caption = " & q & "Êñ∞Âª∫Â∑°Ê£Ä‰ªªÂä°" & q & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub LoadData()" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "—≤ºÏπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Â∑°Ê£ÄÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -3678,9 +3678,9 @@ Private Sub CreateInspectEditForm()
     c = c & "Private Sub cmdBrowse_Click()" & vbCrLf
     c = c & "    Dim fd As Object" & vbCrLf
     c = c & "    Set fd = Application.FileDialog(1)" & vbCrLf
-    c = c & "    fd.Title = " & q & "—°‘Ò—≤ºÏÕº∆¨" & q & vbCrLf
+    c = c & "    fd.Title = " & q & "ÈÄâÊã©Â∑°Ê£ÄÂõæÁâá" & q & vbCrLf
     c = c & "    fd.Filters.Clear" & vbCrLf
-    c = c & "    fd.Filters.Add " & q & "Õº∆¨Œƒº˛" & q & ", " & q & "*.jpg;*.jpeg;*.png;*.bmp;*.gif" & q & vbCrLf
+    c = c & "    fd.Filters.Add " & q & "ÂõæÁâáÊñá‰ª∂" & q & ", " & q & "*.jpg;*.jpeg;*.png;*.bmp;*.gif" & q & vbCrLf
     c = c & "    If fd.Show = -1 Then" & vbCrLf
     c = c & "        txtImagePath.Text = fd.SelectedItems(1)" & vbCrLf
     c = c & "    End If" & vbCrLf
@@ -3688,19 +3688,19 @@ Private Sub CreateInspectEditForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdSave_Click()" & vbCrLf
     c = c & "    If Trim(cboArea.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘ÒªÚ ‰»Î—≤ºÏ«¯”Ú£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©ÊàñËæìÂÖ•Â∑°Ê£ÄÂå∫ÂüüÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If Trim(txtTime.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«ÎÃÓ–¥—≤ºÏ ±º‰£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑Â°´ÂÜôÂ∑°Ê£ÄÊó∂Èó¥ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If gEditInspectID <> " & q & q & " Then" & vbCrLf
     c = c & "        UpdateInspectRecord gEditInspectID, txtInspector.Text, cboArea.Text, txtTime.Text, cboStatus.Text, txtRemark.Text, txtImagePath.Text" & vbCrLf
-    c = c & "        MsgBox " & q & "—≤ºÏº«¬º“—∏¸–¬£°" & q & ", vbInformation" & vbCrLf
+    c = c & "        MsgBox " & q & "Â∑°Ê£ÄËÆ∞ÂΩïÂ∑≤Êõ¥Êñ∞ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Else" & vbCrLf
     c = c & "        AddInspectRecord txtInspector.Text, cboArea.Text, txtTime.Text, cboStatus.Text, txtRemark.Text, txtImagePath.Text" & vbCrLf
-    c = c & "        MsgBox " & q & "—≤ºÏ»ŒŒÒ“—¥¥Ω®£°" & q & ", vbInformation" & vbCrLf
+    c = c & "        MsgBox " & q & "Â∑°Ê£Ä‰ªªÂä°Â∑≤ÂàõÂª∫ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
@@ -3712,13 +3712,13 @@ Private Sub CreateInspectEditForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- —≤ºÏπ‹¿Ì¥∞ÃÂœ‘ æ ----------
+' ---------- Â∑°Ê£ÄÁÆ°ÁêÜÁ™ó‰ΩìÊòæÁ§∫ ----------
 
 Public Sub ShowInspectManagerForm()
     Dim fName As String
     fName = GetConfigProp("InspectManagerFormName")
     If fName = "" Or Not FormExists("InspectManagerFormName") Then
-        MsgBox "—≤ºÏπ‹¿Ì¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "Â∑°Ê£ÄÁÆ°ÁêÜÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -3730,7 +3730,7 @@ Public Sub ShowInspectEditForm()
     Dim fName As String
     fName = GetConfigProp("InspectEditFormName")
     If fName = "" Or Not FormExists("InspectEditFormName") Then
-        MsgBox "—≤ºÏ±‡º≠¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "Â∑°Ê£ÄÁºñËæëÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -3738,11 +3738,11 @@ Public Sub ShowInspectEditForm()
     frm.Show
 End Sub
 
-' ---------- —≤ºÏπ‹¿Ì ˝æ›≤Ÿ◊˜∫Ø ˝ ----------
+' ---------- Â∑°Ê£ÄÁÆ°ÁêÜÊï∞ÊçÆÊìç‰ΩúÂáΩÊï∞ ----------
 
 Private Function GenerateInspectID() As String
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("—≤ºÏπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Â∑°Ê£ÄÁÆ°ÁêÜ")
     Dim lr As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     Dim maxID As Long
@@ -3762,7 +3762,7 @@ End Function
 
 Public Sub AddInspectRecord(sInspector As String, sArea As String, sTime As String, sStatus As String, sRemark As String, sImage As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("—≤ºÏπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Â∑°Ê£ÄÁÆ°ÁêÜ")
     Dim newRow As Long
     newRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row + 1
     ws.Cells(newRow, 1).Value = GenerateInspectID()
@@ -3778,7 +3778,7 @@ End Sub
 
 Public Sub UpdateInspectRecord(iID As String, sInspector As String, sArea As String, sTime As String, sStatus As String, sRemark As String, sImage As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("—≤ºÏπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Â∑°Ê£ÄÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -3797,7 +3797,7 @@ End Sub
 
 Public Sub DeleteInspectByID(iID As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("—≤ºÏπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Â∑°Ê£ÄÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -3808,34 +3808,34 @@ Public Sub DeleteInspectByID(iID As String)
     Next i
 End Sub
 
-' ---------- ¥¥Ω®Œ¿…˙π‹¿Ì±Ì ----------
+' ---------- ÂàõÂª∫Âç´ÁîüÁÆ°ÁêÜË°® ----------
 
 Private Sub CreateHygieneSheet()
     Dim ws As Worksheet
-    If SheetExists("Œ¿…˙π‹¿Ì") Then
-        Set ws = ThisWorkbook.Sheets("Œ¿…˙π‹¿Ì")
+    If SheetExists("Âç´ÁîüÁÆ°ÁêÜ") Then
+        Set ws = ThisWorkbook.Sheets("Âç´ÁîüÁÆ°ÁêÜ")
     Else
         Set ws = ThisWorkbook.Sheets.Add( _
             After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.Count))
-        ws.Name = "Œ¿…˙π‹¿Ì"
+        ws.Name = "Âç´ÁîüÁÆ°ÁêÜ"
     End If
     With ws
-        .Range("A1").Value = "»ŒŒÒ±‡∫≈"
-        .Range("B1").Value = "±£Ω‡»ŒŒÒ"
-        .Range("C1").Value = "±£Ω‡«¯”Ú"
-        .Range("D1").Value = "±£Ω‡‘±"
-        .Range("E1").Value = "±£Ω‡ ±º‰"
-        .Range("F1").Value = "»ŒŒÒ◊¥Ã¨"
-        .Range("G1").Value = "±∏◊¢"
-        .Range("H1").Value = "Õº∆¨¬∑æ∂"
-        .Range("I1").Value = "¥¥Ω® ±º‰"
-        .Range("J1").Value = "ÕÍ≥… ±º‰"
+        .Range("A1").Value = "‰ªªÂä°ÁºñÂè∑"
+        .Range("B1").Value = "‰øùÊ¥Å‰ªªÂä°"
+        .Range("C1").Value = "‰øùÊ¥ÅÂå∫Âüü"
+        .Range("D1").Value = "‰øùÊ¥ÅÂëò"
+        .Range("E1").Value = "‰øùÊ¥ÅÊó∂Èó¥"
+        .Range("F1").Value = "‰ªªÂä°Áä∂ÊÄÅ"
+        .Range("G1").Value = "Â§áÊ≥®"
+        .Range("H1").Value = "ÂõæÁâáË∑ØÂæÑ"
+        .Range("I1").Value = "ÂàõÂª∫Êó∂Èó¥"
+        .Range("J1").Value = "ÂÆåÊàêÊó∂Èó¥"
         .Range("A1:J1").Font.Bold = True
         .Columns("A:J").AutoFit
     End With
 End Sub
 
-' ---------- ¥¥Ω®Œ¿…˙π‹¿Ì¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫Âç´ÁîüÁÆ°ÁêÜÁ™ó‰Ωì ----------
 
 Private Sub CreateHygieneManagerForm()
     Dim oldForm As String
@@ -3851,7 +3851,7 @@ Private Sub CreateHygieneManagerForm()
     actualName = vbc.Name
     SetConfigProp "HygieneManagerFormName", actualName
 
-    vbc.Properties("Caption") = "Œ¿…˙π‹¿Ì"
+    vbc.Properties("Caption") = "Âç´ÁîüÁÆ°ÁêÜ"
     vbc.Properties("Width") = 700
     vbc.Properties("Height") = 520
     vbc.Properties("StartUpPosition") = 2
@@ -3860,13 +3860,13 @@ Private Sub CreateHygieneManagerForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' ◊¥Ã¨Õ≥º∆±Í«©
+    ' Áä∂ÊÄÅÁªüËÆ°Ê†áÁ≠æ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblStats": ctl.Caption = "◊¥Ã¨Õ≥º∆: º”‘ÿ÷–..."
+    ctl.Name = "lblStats": ctl.Caption = "Áä∂ÊÄÅÁªüËÆ°: Âä†ËΩΩ‰∏≠..."
     ctl.Left = 20: ctl.Top = 10: ctl.Width = 550: ctl.Height = 18
     ctl.Font.Size = 10: ctl.Font.Bold = True
 
-    ' ±£Ω‡»ŒŒÒ¡–±Ì
+    ' ‰øùÊ¥Å‰ªªÂä°ÂàóË°®
     Set ctl = dsg.Controls.Add("Forms.ListBox.1")
     ctl.Name = "lstHygiene"
     ctl.Left = 20: ctl.Top = 35: ctl.Width = 650: ctl.Height = 370
@@ -3874,32 +3874,32 @@ Private Sub CreateHygieneManagerForm()
     ctl.ColumnWidths = "60;110;90;70;100;60;130"
     ctl.ColumnHeads = False
 
-    ' ∞¥≈•––
+    ' ÊåâÈíÆË°å
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdNew": ctl.Caption = "–¬Ω®»ŒŒÒ"
+    ctl.Name = "cmdNew": ctl.Caption = "Êñ∞Âª∫‰ªªÂä°"
     ctl.Left = 20: ctl.Top = 420: ctl.Width = 90: ctl.Height = 30
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdView": ctl.Caption = "≤Èø¥"
+    ctl.Name = "cmdView": ctl.Caption = "Êü•Áúã"
     ctl.Left = 120: ctl.Top = 420: ctl.Width = 70: ctl.Height = 30
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdEdit": ctl.Caption = "±‡º≠"
+    ctl.Name = "cmdEdit": ctl.Caption = "ÁºñËæë"
     ctl.Left = 200: ctl.Top = 420: ctl.Width = 70: ctl.Height = 30
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdDelete": ctl.Caption = "…æ≥˝"
+    ctl.Name = "cmdDelete": ctl.Caption = "Âà†Èô§"
     ctl.Left = 280: ctl.Top = 420: ctl.Width = 70: ctl.Height = 30
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdRefresh": ctl.Caption = "À¢–¬"
+    ctl.Name = "cmdRefresh": ctl.Caption = "Âà∑Êñ∞"
     ctl.Left = 360: ctl.Top = 420: ctl.Width = 70: ctl.Height = 30
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdClose": ctl.Caption = "πÿ±’"
+    ctl.Name = "cmdClose": ctl.Caption = "ÂÖ≥Èó≠"
     ctl.Left = 580: ctl.Top = 420: ctl.Width = 90: ctl.Height = 30
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -3916,7 +3916,7 @@ Private Sub CreateHygieneManagerForm()
     c = c & "Private Sub LoadData()" & vbCrLf
     c = c & "    lstHygiene.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Œ¿…˙π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Âç´ÁîüÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    Dim cDone As Long, cUndone As Long, cPending As Long" & vbCrLf
@@ -3931,11 +3931,11 @@ Private Sub CreateHygieneManagerForm()
     c = c & "        lstHygiene.List(lstHygiene.ListCount - 1, 6) = ws.Cells(i, 7).Value" & vbCrLf
     c = c & "        Dim st As String" & vbCrLf
     c = c & "        st = CStr(ws.Cells(i, 6).Value)" & vbCrLf
-    c = c & "        If st = " & q & "“—ÕÍ≥…" & q & " Then cDone = cDone + 1" & vbCrLf
-    c = c & "        If st = " & q & "Œ¥ÕÍ≥…" & q & " Then cUndone = cUndone + 1" & vbCrLf
-    c = c & "        If st = " & q & "¥˝ÕÍ≥…" & q & " Then cPending = cPending + 1" & vbCrLf
+    c = c & "        If st = " & q & "Â∑≤ÂÆåÊàê" & q & " Then cDone = cDone + 1" & vbCrLf
+    c = c & "        If st = " & q & "Êú™ÂÆåÊàê" & q & " Then cUndone = cUndone + 1" & vbCrLf
+    c = c & "        If st = " & q & "ÂæÖÂÆåÊàê" & q & " Then cPending = cPending + 1" & vbCrLf
     c = c & "    Next i" & vbCrLf
-    c = c & "    lblStats.Caption = " & q & "◊¥Ã¨Õ≥º∆:  “—ÕÍ≥…: " & q & " & cDone & " & q & "  |  Œ¥ÕÍ≥…: " & q & " & cUndone & " & q & "  |  ¥˝ÕÍ≥…: " & q & " & cPending & " & q & "  |  ◊‹º∆: " & q & " & (cDone + cUndone + cPending)" & vbCrLf
+    c = c & "    lblStats.Caption = " & q & "Áä∂ÊÄÅÁªüËÆ°:  Â∑≤ÂÆåÊàê: " & q & " & cDone & " & q & "  |  Êú™ÂÆåÊàê: " & q & " & cUndone & " & q & "  |  ÂæÖÂÆåÊàê: " & q & " & cPending & " & q & "  |  ÊÄªËÆ°: " & q & " & (cDone + cUndone + cPending)" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdNew_Click()" & vbCrLf
@@ -3946,7 +3946,7 @@ Private Sub CreateHygieneManagerForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdView_Click()" & vbCrLf
     c = c & "    If lstHygiene.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃı±£Ω‡º«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°‰øùÊ¥ÅËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gViewHygieneID = lstHygiene.List(lstHygiene.ListIndex, 0)" & vbCrLf
@@ -3956,7 +3956,7 @@ Private Sub CreateHygieneManagerForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdEdit_Click()" & vbCrLf
     c = c & "    If lstHygiene.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃı±£Ω‡º«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°‰øùÊ¥ÅËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Dim selID As String" & vbCrLf
@@ -3965,7 +3965,7 @@ Private Sub CreateHygieneManagerForm()
     c = c & "        Dim creator As String" & vbCrLf
     c = c & "        creator = lstHygiene.List(lstHygiene.ListIndex, 3)" & vbCrLf
     c = c & "        If creator <> gCurrentUser Then" & vbCrLf
-    c = c & "            MsgBox " & q & "÷ªƒ‹±‡º≠◊‘º∫¥¥Ω®µƒ±£Ω‡»ŒŒÒ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "            MsgBox " & q & "Âè™ËÉΩÁºñËæëËá™Â∑±ÂàõÂª∫ÁöÑ‰øùÊ¥Å‰ªªÂä°ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "            Exit Sub" & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "    End If" & vbCrLf
@@ -3976,18 +3976,18 @@ Private Sub CreateHygieneManagerForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdDelete_Click()" & vbCrLf
     c = c & "    If lstHygiene.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃı±£Ω‡º«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°‰øùÊ¥ÅËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If Not IsHighPrivilege(gCurrentRole) Then" & vbCrLf
     c = c & "        Dim creator As String" & vbCrLf
     c = c & "        creator = lstHygiene.List(lstHygiene.ListIndex, 3)" & vbCrLf
     c = c & "        If creator <> gCurrentUser Then" & vbCrLf
-    c = c & "            MsgBox " & q & "÷ªƒ‹…æ≥˝◊‘º∫¥¥Ω®µƒ±£Ω‡»ŒŒÒ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "            MsgBox " & q & "Âè™ËÉΩÂà†Èô§Ëá™Â∑±ÂàõÂª∫ÁöÑ‰øùÊ¥Å‰ªªÂä°ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "            Exit Sub" & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "    End If" & vbCrLf
-    c = c & "    If MsgBox(" & q & "»∑∂®…æ≥˝∏√±£Ω‡º«¬º£ø" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
+    c = c & "    If MsgBox(" & q & "Á°ÆÂÆöÂà†Èô§ËØ•‰øùÊ¥ÅËÆ∞ÂΩïÔºü" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
     c = c & "        DeleteHygieneByID lstHygiene.List(lstHygiene.ListIndex, 0)" & vbCrLf
     c = c & "        LoadData" & vbCrLf
     c = c & "    End If" & vbCrLf
@@ -4004,7 +4004,7 @@ Private Sub CreateHygieneManagerForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®Œ¿…˙±‡º≠¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫Âç´ÁîüÁºñËæëÁ™ó‰Ωì ----------
 
 Private Sub CreateHygieneEditForm()
     Dim oldForm As String
@@ -4020,7 +4020,7 @@ Private Sub CreateHygieneEditForm()
     actualName = vbc.Name
     SetConfigProp "HygieneEditFormName", actualName
 
-    vbc.Properties("Caption") = "±£Ω‡»ŒŒÒ±‡º≠"
+    vbc.Properties("Caption") = "‰øùÊ¥Å‰ªªÂä°ÁºñËæë"
     vbc.Properties("Width") = 420
     vbc.Properties("Height") = 400
     vbc.Properties("StartUpPosition") = 2
@@ -4031,18 +4031,18 @@ Private Sub CreateHygieneEditForm()
     Dim yy As Long
     yy = 20
 
-    ' ±£Ω‡»ŒŒÒ
+    ' ‰øùÊ¥Å‰ªªÂä°
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblTask": ctl.Caption = "±£Ω‡»ŒŒÒ£∫"
+    ctl.Name = "lblTask": ctl.Caption = "‰øùÊ¥Å‰ªªÂä°Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtTask"
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 280: ctl.Height = 20
 
     yy = yy + 32
-    ' ±£Ω‡«¯”Ú
+    ' ‰øùÊ¥ÅÂå∫Âüü
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblArea": ctl.Caption = "±£Ω‡«¯”Ú£∫"
+    ctl.Name = "lblArea": ctl.Caption = "‰øùÊ¥ÅÂå∫ÂüüÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboArea"
@@ -4050,9 +4050,9 @@ Private Sub CreateHygieneEditForm()
     ctl.Style = 0
 
     yy = yy + 32
-    ' ±£Ω‡‘±
+    ' ‰øùÊ¥ÅÂëò
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblCleaner": ctl.Caption = "±£Ω‡‘±£∫"
+    ctl.Name = "lblCleaner": ctl.Caption = "‰øùÊ¥ÅÂëòÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtCleaner"
@@ -4060,18 +4060,18 @@ Private Sub CreateHygieneEditForm()
     ctl.Locked = True
 
     yy = yy + 32
-    ' ±£Ω‡ ±º‰
+    ' ‰øùÊ¥ÅÊó∂Èó¥
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblTime": ctl.Caption = "±£Ω‡ ±º‰£∫"
+    ctl.Name = "lblTime": ctl.Caption = "‰øùÊ¥ÅÊó∂Èó¥Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtTime"
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 280: ctl.Height = 20
 
     yy = yy + 32
-    ' »ŒŒÒ◊¥Ã¨
+    ' ‰ªªÂä°Áä∂ÊÄÅ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblStatus": ctl.Caption = "»ŒŒÒ◊¥Ã¨£∫"
+    ctl.Name = "lblStatus": ctl.Caption = "‰ªªÂä°Áä∂ÊÄÅÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboStatus"
@@ -4079,9 +4079,9 @@ Private Sub CreateHygieneEditForm()
     ctl.Style = 2
 
     yy = yy + 32
-    ' ±∏◊¢
+    ' Â§áÊ≥®
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblRemark": ctl.Caption = "±∏◊¢£∫"
+    ctl.Name = "lblRemark": ctl.Caption = "Â§áÊ≥®Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtRemark"
@@ -4089,29 +4089,29 @@ Private Sub CreateHygieneEditForm()
     ctl.MultiLine = True: ctl.ScrollBars = 2
 
     yy = yy + 70
-    ' Õº∆¨¬∑æ∂
+    ' ÂõæÁâáË∑ØÂæÑ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblImage": ctl.Caption = "Õº∆¨…œ¥´£∫"
+    ctl.Name = "lblImage": ctl.Caption = "ÂõæÁâá‰∏ä‰º†Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtImagePath"
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 200: ctl.Height = 20
     ctl.Locked = True
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdBrowse": ctl.Caption = "‰Ø¿¿..."
+    ctl.Name = "cmdBrowse": ctl.Caption = "ÊµèËßà..."
     ctl.Left = 310: ctl.Top = yy: ctl.Width = 70: ctl.Height = 20
 
     yy = yy + 40
-    ' ±£¥Ê/»°œ˚
+    ' ‰øùÂ≠ò/ÂèñÊ∂à
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdSave": ctl.Caption = "±£¥Ê"
+    ctl.Name = "cmdSave": ctl.Caption = "‰øùÂ≠ò"
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 100: ctl.Height = 30
     ctl.BackColor = RGB(60, 120, 216)
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdCancel": ctl.Caption = "»°œ˚"
+    ctl.Name = "cmdCancel": ctl.Caption = "ÂèñÊ∂à"
     ctl.Left = 220: ctl.Top = yy: ctl.Width = 100: ctl.Height = 30
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -4122,31 +4122,31 @@ Private Sub CreateHygieneEditForm()
     c = "Option Explicit" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
-    c = c & "    cboArea.AddItem " & q & "A∂∞¥ÛÃ√" & q & vbCrLf
-    c = c & "    cboArea.AddItem " & q & "B∂∞¥ÛÃ√" & q & vbCrLf
-    c = c & "    cboArea.AddItem " & q & "µÿœ¬≥µø‚" & q & vbCrLf
-    c = c & "    cboArea.AddItem " & q & "‘∞¡÷¬ÃªØ«¯" & q & vbCrLf
-    c = c & "    cboArea.AddItem " & q & "¬•µ¿◊ﬂ¿»" & q & vbCrLf
-    c = c & "    cboArea.AddItem " & q & "π´π≤Œ¿…˙º‰" & q & vbCrLf
-    c = c & "    cboArea.AddItem " & q & "µÁÃ›º‰" & q & vbCrLf
-    c = c & "    cboArea.AddItem " & q & "∞Ïπ´«¯”Ú" & q & vbCrLf
-    c = c & "    cboStatus.AddItem " & q & "¥˝ÕÍ≥…" & q & vbCrLf
-    c = c & "    cboStatus.AddItem " & q & "Œ¥ÕÍ≥…" & q & vbCrLf
-    c = c & "    cboStatus.AddItem " & q & "“—ÕÍ≥…" & q & vbCrLf
+    c = c & "    cboArea.AddItem " & q & "AÊ†ãÂ§ßÂ†Ç" & q & vbCrLf
+    c = c & "    cboArea.AddItem " & q & "BÊ†ãÂ§ßÂ†Ç" & q & vbCrLf
+    c = c & "    cboArea.AddItem " & q & "Âú∞‰∏ãËΩ¶Â∫ì" & q & vbCrLf
+    c = c & "    cboArea.AddItem " & q & "Âõ≠ÊûóÁªøÂåñÂå∫" & q & vbCrLf
+    c = c & "    cboArea.AddItem " & q & "Ê•ºÈÅìËµ∞Âªä" & q & vbCrLf
+    c = c & "    cboArea.AddItem " & q & "ÂÖ¨ÂÖ±Âç´ÁîüÈó¥" & q & vbCrLf
+    c = c & "    cboArea.AddItem " & q & "ÁîµÊ¢ØÈó¥" & q & vbCrLf
+    c = c & "    cboArea.AddItem " & q & "ÂäûÂÖ¨Âå∫Âüü" & q & vbCrLf
+    c = c & "    cboStatus.AddItem " & q & "ÂæÖÂÆåÊàê" & q & vbCrLf
+    c = c & "    cboStatus.AddItem " & q & "Êú™ÂÆåÊàê" & q & vbCrLf
+    c = c & "    cboStatus.AddItem " & q & "Â∑≤ÂÆåÊàê" & q & vbCrLf
     c = c & "    txtCleaner.Text = gCurrentUser" & vbCrLf
     c = c & "    txtTime.Text = Format(Now, " & q & "yyyy-mm-dd hh:mm" & q & ")" & vbCrLf
     c = c & "    cboStatus.ListIndex = 0" & vbCrLf
     c = c & "    If gEditHygieneID <> " & q & q & " Then" & vbCrLf
-    c = c & "        Me.Caption = " & q & "±‡º≠±£Ω‡»ŒŒÒ" & q & vbCrLf
+    c = c & "        Me.Caption = " & q & "ÁºñËæë‰øùÊ¥Å‰ªªÂä°" & q & vbCrLf
     c = c & "        LoadData" & vbCrLf
     c = c & "    Else" & vbCrLf
-    c = c & "        Me.Caption = " & q & "–¬Ω®±£Ω‡»ŒŒÒ" & q & vbCrLf
+    c = c & "        Me.Caption = " & q & "Êñ∞Âª∫‰øùÊ¥Å‰ªªÂä°" & q & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub LoadData()" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Œ¿…˙π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Âç´ÁîüÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -4166,9 +4166,9 @@ Private Sub CreateHygieneEditForm()
     c = c & "Private Sub cmdBrowse_Click()" & vbCrLf
     c = c & "    Dim fd As Object" & vbCrLf
     c = c & "    Set fd = Application.FileDialog(1)" & vbCrLf
-    c = c & "    fd.Title = " & q & "—°‘Ò±£Ω‡Õº∆¨" & q & vbCrLf
+    c = c & "    fd.Title = " & q & "ÈÄâÊã©‰øùÊ¥ÅÂõæÁâá" & q & vbCrLf
     c = c & "    fd.Filters.Clear" & vbCrLf
-    c = c & "    fd.Filters.Add " & q & "Õº∆¨Œƒº˛" & q & ", " & q & "*.jpg;*.jpeg;*.png;*.bmp;*.gif" & q & vbCrLf
+    c = c & "    fd.Filters.Add " & q & "ÂõæÁâáÊñá‰ª∂" & q & ", " & q & "*.jpg;*.jpeg;*.png;*.bmp;*.gif" & q & vbCrLf
     c = c & "    If fd.Show = -1 Then" & vbCrLf
     c = c & "        txtImagePath.Text = fd.SelectedItems(1)" & vbCrLf
     c = c & "    End If" & vbCrLf
@@ -4176,19 +4176,19 @@ Private Sub CreateHygieneEditForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdSave_Click()" & vbCrLf
     c = c & "    If Trim(txtTask.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«ÎÃÓ–¥±£Ω‡»ŒŒÒ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑Â°´ÂÜô‰øùÊ¥Å‰ªªÂä°ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If Trim(cboArea.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘ÒªÚ ‰»Î±£Ω‡«¯”Ú£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©ÊàñËæìÂÖ•‰øùÊ¥ÅÂå∫ÂüüÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If gEditHygieneID <> " & q & q & " Then" & vbCrLf
     c = c & "        UpdateHygieneRecord gEditHygieneID, txtTask.Text, cboArea.Text, txtCleaner.Text, txtTime.Text, cboStatus.Text, txtRemark.Text, txtImagePath.Text" & vbCrLf
-    c = c & "        MsgBox " & q & "±£Ω‡»ŒŒÒ“—∏¸–¬£°" & q & ", vbInformation" & vbCrLf
+    c = c & "        MsgBox " & q & "‰øùÊ¥Å‰ªªÂä°Â∑≤Êõ¥Êñ∞ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Else" & vbCrLf
     c = c & "        AddHygieneRecord txtTask.Text, cboArea.Text, txtCleaner.Text, txtTime.Text, cboStatus.Text, txtRemark.Text, txtImagePath.Text" & vbCrLf
-    c = c & "        MsgBox " & q & "±£Ω‡»ŒŒÒ“—¥¥Ω®£°" & q & ", vbInformation" & vbCrLf
+    c = c & "        MsgBox " & q & "‰øùÊ¥Å‰ªªÂä°Â∑≤ÂàõÂª∫ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
@@ -4200,7 +4200,7 @@ Private Sub CreateHygieneEditForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®Œ¿…˙≤Èø¥¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫Âç´ÁîüÊü•ÁúãÁ™ó‰Ωì ----------
 
 Private Sub CreateHygieneViewForm()
     Dim oldForm As String
@@ -4216,7 +4216,7 @@ Private Sub CreateHygieneViewForm()
     actualName = vbc.Name
     SetConfigProp "HygieneViewFormName", actualName
 
-    vbc.Properties("Caption") = "±£Ω‡»ŒŒÒœÍ«È"
+    vbc.Properties("Caption") = "‰øùÊ¥Å‰ªªÂä°ËØ¶ÊÉÖ"
     vbc.Properties("Width") = 420
     vbc.Properties("Height") = 360
     vbc.Properties("StartUpPosition") = 2
@@ -4227,9 +4227,9 @@ Private Sub CreateHygieneViewForm()
     Dim yy As Long
     yy = 20
 
-    ' »ŒŒÒ√˚≥∆
+    ' ‰ªªÂä°ÂêçÁß∞
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblTaskCap": ctl.Caption = "±£Ω‡»ŒŒÒ£∫"
+    ctl.Name = "lblTaskCap": ctl.Caption = "‰øùÊ¥Å‰ªªÂä°Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -4238,7 +4238,7 @@ Private Sub CreateHygieneViewForm()
 
     yy = yy + 26
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblAreaCap": ctl.Caption = "±£Ω‡«¯”Ú£∫"
+    ctl.Name = "lblAreaCap": ctl.Caption = "‰øùÊ¥ÅÂå∫ÂüüÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -4247,7 +4247,7 @@ Private Sub CreateHygieneViewForm()
 
     yy = yy + 26
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblCleanerCap": ctl.Caption = "±£Ω‡‘±£∫"
+    ctl.Name = "lblCleanerCap": ctl.Caption = "‰øùÊ¥ÅÂëòÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -4256,7 +4256,7 @@ Private Sub CreateHygieneViewForm()
 
     yy = yy + 26
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblTimeCap": ctl.Caption = "±£Ω‡ ±º‰£∫"
+    ctl.Name = "lblTimeCap": ctl.Caption = "‰øùÊ¥ÅÊó∂Èó¥Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -4265,7 +4265,7 @@ Private Sub CreateHygieneViewForm()
 
     yy = yy + 26
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblStCap": ctl.Caption = "µ±«∞◊¥Ã¨£∫"
+    ctl.Name = "lblStCap": ctl.Caption = "ÂΩìÂâçÁä∂ÊÄÅÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -4275,7 +4275,7 @@ Private Sub CreateHygieneViewForm()
 
     yy = yy + 28
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblRemarkCap": ctl.Caption = "±∏◊¢£∫"
+    ctl.Name = "lblRemarkCap": ctl.Caption = "Â§áÊ≥®Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
@@ -4285,7 +4285,7 @@ Private Sub CreateHygieneViewForm()
 
     yy = yy + 60
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblImgCap": ctl.Caption = "Õº∆¨¬∑æ∂£∫"
+    ctl.Name = "lblImgCap": ctl.Caption = "ÂõæÁâáË∑ØÂæÑÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -4293,25 +4293,25 @@ Private Sub CreateHygieneViewForm()
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 290: ctl.Height = 18
 
     yy = yy + 36
-    ' ≤Ÿ◊˜∞¥≈•: Ω¯––÷–°¢“—ÕÍ≥…°¢πÿ±’
+    ' Êìç‰ΩúÊåâÈíÆ: ËøõË°å‰∏≠„ÄÅÂ∑≤ÂÆåÊàê„ÄÅÂÖ≥Èó≠
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdInProgress"
-    ctl.Caption = "Ω¯––÷–"
+    ctl.Caption = "ËøõË°å‰∏≠"
     ctl.Left = 30: ctl.Top = yy: ctl.Width = 100: ctl.Height = 30
     ctl.BackColor = RGB(255, 165, 0)
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdComplete"
-    ctl.Caption = "“—ÕÍ≥…"
+    ctl.Caption = "Â∑≤ÂÆåÊàê"
     ctl.Left = 150: ctl.Top = yy: ctl.Width = 100: ctl.Height = 30
     ctl.BackColor = RGB(60, 179, 113)
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdClose"
-    ctl.Caption = "πÿ±’"
+    ctl.Caption = "ÂÖ≥Èó≠"
     ctl.Left = 270: ctl.Top = yy: ctl.Width = 100: ctl.Height = 30
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -4324,7 +4324,7 @@ Private Sub CreateHygieneViewForm()
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
     c = c & "    If gViewHygieneID = " & q & q & " Then Unload Me: Exit Sub" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Œ¿…˙π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Âç´ÁîüÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -4338,11 +4338,11 @@ Private Sub CreateHygieneViewForm()
     c = c & "            lblImgVal.Caption = ws.Cells(i, 8).Value" & vbCrLf
     c = c & "            Dim st As String" & vbCrLf
     c = c & "            st = ws.Cells(i, 6).Value" & vbCrLf
-    c = c & "            If st = " & q & "“—ÕÍ≥…" & q & " Then" & vbCrLf
+    c = c & "            If st = " & q & "Â∑≤ÂÆåÊàê" & q & " Then" & vbCrLf
     c = c & "                lblStVal.ForeColor = RGB(60, 179, 113)" & vbCrLf
     c = c & "                cmdInProgress.Enabled = False" & vbCrLf
     c = c & "                cmdComplete.Enabled = False" & vbCrLf
-    c = c & "            ElseIf st = " & q & "Œ¥ÕÍ≥…" & q & " Then" & vbCrLf
+    c = c & "            ElseIf st = " & q & "Êú™ÂÆåÊàê" & q & " Then" & vbCrLf
     c = c & "                lblStVal.ForeColor = RGB(220, 80, 80)" & vbCrLf
     c = c & "            Else" & vbCrLf
     c = c & "                lblStVal.ForeColor = RGB(255, 140, 0)" & vbCrLf
@@ -4353,14 +4353,14 @@ Private Sub CreateHygieneViewForm()
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdInProgress_Click()" & vbCrLf
-    c = c & "    UpdateHygieneStatus gViewHygieneID, " & q & "Œ¥ÕÍ≥…" & q & vbCrLf
-    c = c & "    MsgBox " & q & "◊¥Ã¨“—∏¸–¬Œ™°æΩ¯––÷–/Œ¥ÕÍ≥…°ø£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    UpdateHygieneStatus gViewHygieneID, " & q & "Êú™ÂÆåÊàê" & q & vbCrLf
+    c = c & "    MsgBox " & q & "Áä∂ÊÄÅÂ∑≤Êõ¥Êñ∞‰∏∫„ÄêËøõË°å‰∏≠/Êú™ÂÆåÊàê„ÄëÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdComplete_Click()" & vbCrLf
-    c = c & "    UpdateHygieneStatus gViewHygieneID, " & q & "“—ÕÍ≥…" & q & vbCrLf
-    c = c & "    MsgBox " & q & "»ŒŒÒ“—±Íº«Œ™°æ“—ÕÍ≥…°ø£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    UpdateHygieneStatus gViewHygieneID, " & q & "Â∑≤ÂÆåÊàê" & q & vbCrLf
+    c = c & "    MsgBox " & q & "‰ªªÂä°Â∑≤Ê†áËÆ∞‰∏∫„ÄêÂ∑≤ÂÆåÊàê„ÄëÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
@@ -4371,13 +4371,13 @@ Private Sub CreateHygieneViewForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- Œ¿…˙π‹¿Ì¥∞ÃÂœ‘ æ ----------
+' ---------- Âç´ÁîüÁÆ°ÁêÜÁ™ó‰ΩìÊòæÁ§∫ ----------
 
 Public Sub ShowHygieneManagerForm()
     Dim fName As String
     fName = GetConfigProp("HygieneManagerFormName")
     If fName = "" Or Not FormExists("HygieneManagerFormName") Then
-        MsgBox "Œ¿…˙π‹¿Ì¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "Âç´ÁîüÁÆ°ÁêÜÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -4389,7 +4389,7 @@ Public Sub ShowHygieneEditForm()
     Dim fName As String
     fName = GetConfigProp("HygieneEditFormName")
     If fName = "" Or Not FormExists("HygieneEditFormName") Then
-        MsgBox "±£Ω‡±‡º≠¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "‰øùÊ¥ÅÁºñËæëÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -4401,7 +4401,7 @@ Public Sub ShowHygieneViewForm()
     Dim fName As String
     fName = GetConfigProp("HygieneViewFormName")
     If fName = "" Or Not FormExists("HygieneViewFormName") Then
-        MsgBox "±£Ω‡≤Èø¥¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "‰øùÊ¥ÅÊü•ÁúãÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -4409,11 +4409,11 @@ Public Sub ShowHygieneViewForm()
     frm.Show
 End Sub
 
-' ---------- Œ¿…˙π‹¿Ì ˝æ›≤Ÿ◊˜∫Ø ˝ ----------
+' ---------- Âç´ÁîüÁÆ°ÁêÜÊï∞ÊçÆÊìç‰ΩúÂáΩÊï∞ ----------
 
 Private Function GenerateHygieneID() As String
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("Œ¿…˙π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Âç´ÁîüÁÆ°ÁêÜ")
     Dim lr As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     Dim maxID As Long
@@ -4433,7 +4433,7 @@ End Function
 
 Public Sub AddHygieneRecord(sTask As String, sArea As String, sCleaner As String, sTime As String, sStatus As String, sRemark As String, sImage As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("Œ¿…˙π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Âç´ÁîüÁÆ°ÁêÜ")
     Dim newRow As Long
     newRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row + 1
     ws.Cells(newRow, 1).Value = GenerateHygieneID()
@@ -4451,7 +4451,7 @@ End Sub
 
 Public Sub UpdateHygieneRecord(hID As String, sTask As String, sArea As String, sCleaner As String, sTime As String, sStatus As String, sRemark As String, sImage As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("Œ¿…˙π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Âç´ÁîüÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -4471,13 +4471,13 @@ End Sub
 
 Public Sub UpdateHygieneStatus(hID As String, newStatus As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("Œ¿…˙π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Âç´ÁîüÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
         If CStr(ws.Cells(i, 1).Value) = hID Then
             ws.Cells(i, 6).Value = newStatus
-            If newStatus = "“—ÕÍ≥…" Then
+            If newStatus = "Â∑≤ÂÆåÊàê" Then
                 ws.Cells(i, 10).Value = Format(Now, "yyyy-mm-dd hh:mm:ss")
             End If
             Exit For
@@ -4487,7 +4487,7 @@ End Sub
 
 Public Sub DeleteHygieneByID(hID As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("Œ¿…˙π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Âç´ÁîüÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -4498,33 +4498,33 @@ Public Sub DeleteHygieneByID(hID As String)
     Next i
 End Sub
 
-' ---------- ¥¥Ω®∏ˆ»À––≥Ã±Ì ----------
+' ---------- ÂàõÂª∫‰∏™‰∫∫Ë°åÁ®ãË°® ----------
 
 Private Sub CreateTripSheet()
     Dim ws As Worksheet
-    If SheetExists("∏ˆ»À––≥Ã") Then
-        Set ws = ThisWorkbook.Sheets("∏ˆ»À––≥Ã")
+    If SheetExists("‰∏™‰∫∫Ë°åÁ®ã") Then
+        Set ws = ThisWorkbook.Sheets("‰∏™‰∫∫Ë°åÁ®ã")
     Else
         Set ws = ThisWorkbook.Sheets.Add( _
             After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.Count))
-        ws.Name = "∏ˆ»À––≥Ã"
+        ws.Name = "‰∏™‰∫∫Ë°åÁ®ã"
     End If
     With ws
-        .Range("A1").Value = "––≥Ã±‡∫≈"
-        .Range("B1").Value = "”√ªß"
-        .Range("C1").Value = "––≥Ã±ÍÃ‚"
-        .Range("D1").Value = "––≥Ãƒ⁄»›"
-        .Range("E1").Value = "ø™ º ±º‰"
-        .Range("F1").Value = "Ω· ¯ ±º‰"
-        .Range("G1").Value = "––≥Ã◊¥Ã¨"
-        .Range("H1").Value = "¥¥Ω® ±º‰"
-        .Range("I1").Value = "ÕÍ≥… ±º‰"
+        .Range("A1").Value = "Ë°åÁ®ãÁºñÂè∑"
+        .Range("B1").Value = "Áî®Êà∑"
+        .Range("C1").Value = "Ë°åÁ®ãÊ†áÈ¢ò"
+        .Range("D1").Value = "Ë°åÁ®ãÂÜÖÂÆπ"
+        .Range("E1").Value = "ÂºÄÂßãÊó∂Èó¥"
+        .Range("F1").Value = "ÁªìÊùüÊó∂Èó¥"
+        .Range("G1").Value = "Ë°åÁ®ãÁä∂ÊÄÅ"
+        .Range("H1").Value = "ÂàõÂª∫Êó∂Èó¥"
+        .Range("I1").Value = "ÂÆåÊàêÊó∂Èó¥"
         .Range("A1:I1").Font.Bold = True
         .Columns("A:I").AutoFit
     End With
 End Sub
 
-' ---------- ¥¥Ω®∏ˆ»À––≥Ãπ‹¿Ì¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫‰∏™‰∫∫Ë°åÁ®ãÁÆ°ÁêÜÁ™ó‰Ωì ----------
 
 Private Sub CreateTripManagerForm()
     Dim oldForm As String
@@ -4540,7 +4540,7 @@ Private Sub CreateTripManagerForm()
     actualName = vbc.Name
     SetConfigProp "TripManagerFormName", actualName
 
-    vbc.Properties("Caption") = "∏ˆ»À––≥Ã"
+    vbc.Properties("Caption") = "‰∏™‰∫∫Ë°åÁ®ã"
     vbc.Properties("Width") = 680
     vbc.Properties("Height") = 520
     vbc.Properties("StartUpPosition") = 2
@@ -4549,21 +4549,21 @@ Private Sub CreateTripManagerForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' MultiPageøÿº˛ - ¡Ω∏ˆ±Í«©“≥
+    ' MultiPageÊéß‰ª∂ - ‰∏§‰∏™Ê†áÁ≠æÈ°µ
     Set ctl = dsg.Controls.Add("Forms.MultiPage.1")
     ctl.Name = "mpTrip"
     ctl.Left = 10: ctl.Top = 10: ctl.Width = 650: ctl.Height = 440
-    ctl.Pages(0).Caption = "Œ“µƒ––≥Ã"
+    ctl.Pages(0).Caption = "ÊàëÁöÑË°åÁ®ã"
     ctl.Pages.Add
-    ctl.Pages(1).Caption = "––≥Ã≤È—Ø"
+    ctl.Pages(1).Caption = "Ë°åÁ®ãÊü•ËØ¢"
 
-    ' --- µ⁄“ª“≥: Œ“µƒ––≥Ã (¥˝∞Ï/∞Ï¿Ì÷–) ---
+    ' --- Á¨¨‰∏ÄÈ°µ: ÊàëÁöÑË°åÁ®ã (ÂæÖÂäû/ÂäûÁêÜ‰∏≠) ---
     Dim pg As Object
     Set pg = ctl.Pages(0)
 
     Dim subCtl As Object
     Set subCtl = pg.Controls.Add("Forms.Label.1")
-    subCtl.Name = "lblMyTitle": subCtl.Caption = "¥˝∞Ï––≥Ã¡–±Ì"
+    subCtl.Name = "lblMyTitle": subCtl.Caption = "ÂæÖÂäûË°åÁ®ãÂàóË°®"
     subCtl.Left = 10: subCtl.Top = 8: subCtl.Width = 200: subCtl.Height = 16
     subCtl.Font.Bold = True
 
@@ -4574,26 +4574,26 @@ Private Sub CreateTripManagerForm()
     subCtl.ColumnWidths = "60;120;120;80;80;120"
 
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdNew": subCtl.Caption = "ÃÌº”––≥Ã"
+    subCtl.Name = "cmdNew": subCtl.Caption = "Ê∑ªÂä†Ë°åÁ®ã"
     subCtl.Left = 10: subCtl.Top = 340: subCtl.Width = 90: subCtl.Height = 28
 
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdView": subCtl.Caption = "≤Èø¥"
+    subCtl.Name = "cmdView": subCtl.Caption = "Êü•Áúã"
     subCtl.Left = 110: subCtl.Top = 340: subCtl.Width = 70: subCtl.Height = 28
 
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdEdit": subCtl.Caption = "±‡º≠"
+    subCtl.Name = "cmdEdit": subCtl.Caption = "ÁºñËæë"
     subCtl.Left = 190: subCtl.Top = 340: subCtl.Width = 70: subCtl.Height = 28
 
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdDelete": subCtl.Caption = "…æ≥˝"
+    subCtl.Name = "cmdDelete": subCtl.Caption = "Âà†Èô§"
     subCtl.Left = 270: subCtl.Top = 340: subCtl.Width = 70: subCtl.Height = 28
 
-    ' --- µ⁄∂˛“≥: ––≥Ã≤È—Ø (À˘”–––≥Ã) ---
+    ' --- Á¨¨‰∫åÈ°µ: Ë°åÁ®ãÊü•ËØ¢ (ÊâÄÊúâË°åÁ®ã) ---
     Set pg = ctl.Pages(1)
 
     Set subCtl = pg.Controls.Add("Forms.Label.1")
-    subCtl.Name = "lblAllTitle": subCtl.Caption = "»´≤ø––≥Ãº«¬º£®∫¨“—ÕÍ≥…£©"
+    subCtl.Name = "lblAllTitle": subCtl.Caption = "ÂÖ®ÈÉ®Ë°åÁ®ãËÆ∞ÂΩïÔºàÂê´Â∑≤ÂÆåÊàêÔºâ"
     subCtl.Left = 10: subCtl.Top = 8: subCtl.Width = 300: subCtl.Height = 16
     subCtl.Font.Bold = True
 
@@ -4603,12 +4603,12 @@ Private Sub CreateTripManagerForm()
     subCtl.ColumnCount = 6
     subCtl.ColumnWidths = "60;120;120;80;80;120"
 
-    ' πÿ±’∞¥≈•£®÷˜¥∞ÃÂ£©
+    ' ÂÖ≥Èó≠ÊåâÈíÆÔºà‰∏ªÁ™ó‰ΩìÔºâ
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdClose": ctl.Caption = "πÿ±’"
+    ctl.Name = "cmdClose": ctl.Caption = "ÂÖ≥Èó≠"
     ctl.Left = 570: ctl.Top = 460: ctl.Width = 90: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -4626,14 +4626,14 @@ Private Sub CreateTripManagerForm()
     c = c & "Private Sub LoadMyTrips()" & vbCrLf
     c = c & "    lstMyTrips.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "∏ˆ»À––≥Ã" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "‰∏™‰∫∫Ë°åÁ®ã" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
     c = c & "        If CStr(ws.Cells(i, 2).Value) = gCurrentUser Then" & vbCrLf
     c = c & "            Dim st As String" & vbCrLf
     c = c & "            st = CStr(ws.Cells(i, 7).Value)" & vbCrLf
-    c = c & "            If st = " & q & "¥˝∞Ï" & q & " Or st = " & q & "∞Ï¿Ì÷–" & q & " Then" & vbCrLf
+    c = c & "            If st = " & q & "ÂæÖÂäû" & q & " Or st = " & q & "ÂäûÁêÜ‰∏≠" & q & " Then" & vbCrLf
     c = c & "                lstMyTrips.AddItem ws.Cells(i, 1).Value" & vbCrLf
     c = c & "                lstMyTrips.List(lstMyTrips.ListCount - 1, 1) = ws.Cells(i, 3).Value" & vbCrLf
     c = c & "                lstMyTrips.List(lstMyTrips.ListCount - 1, 2) = ws.Cells(i, 5).Value" & vbCrLf
@@ -4648,7 +4648,7 @@ Private Sub CreateTripManagerForm()
     c = c & "Private Sub LoadAllTrips()" & vbCrLf
     c = c & "    lstAllTrips.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "∏ˆ»À––≥Ã" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "‰∏™‰∫∫Ë°åÁ®ã" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -4672,7 +4672,7 @@ Private Sub CreateTripManagerForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdView_Click()" & vbCrLf
     c = c & "    If lstMyTrips.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃı––≥Ã£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°Ë°åÁ®ãÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gViewTripID = lstMyTrips.List(lstMyTrips.ListIndex, 0)" & vbCrLf
@@ -4683,7 +4683,7 @@ Private Sub CreateTripManagerForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdEdit_Click()" & vbCrLf
     c = c & "    If lstMyTrips.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃı––≥Ã£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°Ë°åÁ®ãÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gEditTripID = lstMyTrips.List(lstMyTrips.ListIndex, 0)" & vbCrLf
@@ -4694,10 +4694,10 @@ Private Sub CreateTripManagerForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdDelete_Click()" & vbCrLf
     c = c & "    If lstMyTrips.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃı––≥Ã£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°Ë°åÁ®ãÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
-    c = c & "    If MsgBox(" & q & "»∑∂®…æ≥˝∏√––≥Ã£ø" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
+    c = c & "    If MsgBox(" & q & "Á°ÆÂÆöÂà†Èô§ËØ•Ë°åÁ®ãÔºü" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
     c = c & "        DeleteTripByID lstMyTrips.List(lstMyTrips.ListIndex, 0)" & vbCrLf
     c = c & "        LoadMyTrips" & vbCrLf
     c = c & "        LoadAllTrips" & vbCrLf
@@ -4711,7 +4711,7 @@ Private Sub CreateTripManagerForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®––≥Ã±‡º≠¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫Ë°åÁ®ãÁºñËæëÁ™ó‰Ωì ----------
 
 Private Sub CreateTripEditForm()
     Dim oldForm As String
@@ -4727,7 +4727,7 @@ Private Sub CreateTripEditForm()
     actualName = vbc.Name
     SetConfigProp "TripEditFormName", actualName
 
-    vbc.Properties("Caption") = "––≥Ã±‡º≠"
+    vbc.Properties("Caption") = "Ë°åÁ®ãÁºñËæë"
     vbc.Properties("Width") = 420
     vbc.Properties("Height") = 320
     vbc.Properties("StartUpPosition") = 2
@@ -4738,18 +4738,18 @@ Private Sub CreateTripEditForm()
     Dim yy As Long
     yy = 20
 
-    ' ––≥Ã±ÍÃ‚
+    ' Ë°åÁ®ãÊ†áÈ¢ò
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblTitle": ctl.Caption = "––≥Ã±ÍÃ‚£∫"
+    ctl.Name = "lblTitle": ctl.Caption = "Ë°åÁ®ãÊ†áÈ¢òÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtTitle"
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 280: ctl.Height = 20
 
     yy = yy + 32
-    ' ––≥Ãƒ⁄»›
+    ' Ë°åÁ®ãÂÜÖÂÆπ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblContent": ctl.Caption = "––≥Ãƒ⁄»›£∫"
+    ctl.Name = "lblContent": ctl.Caption = "Ë°åÁ®ãÂÜÖÂÆπÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtContent"
@@ -4757,34 +4757,34 @@ Private Sub CreateTripEditForm()
     ctl.MultiLine = True: ctl.ScrollBars = 2
 
     yy = yy + 70
-    ' ø™ º ±º‰
+    ' ÂºÄÂßãÊó∂Èó¥
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblStart": ctl.Caption = "ø™ º ±º‰£∫"
+    ctl.Name = "lblStart": ctl.Caption = "ÂºÄÂßãÊó∂Èó¥Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtStart"
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 280: ctl.Height = 20
 
     yy = yy + 32
-    ' Ω· ¯ ±º‰
+    ' ÁªìÊùüÊó∂Èó¥
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblEnd": ctl.Caption = "Ω· ¯ ±º‰£∫"
+    ctl.Name = "lblEnd": ctl.Caption = "ÁªìÊùüÊó∂Èó¥Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtEnd2"
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 280: ctl.Height = 20
 
     yy = yy + 40
-    ' ±£¥Ê/»°œ˚
+    ' ‰øùÂ≠ò/ÂèñÊ∂à
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdSave": ctl.Caption = "±£¥Ê"
+    ctl.Name = "cmdSave": ctl.Caption = "‰øùÂ≠ò"
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 100: ctl.Height = 30
     ctl.BackColor = RGB(60, 120, 216)
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdCancel": ctl.Caption = "»°œ˚"
+    ctl.Name = "cmdCancel": ctl.Caption = "ÂèñÊ∂à"
     ctl.Left = 220: ctl.Top = yy: ctl.Width = 100: ctl.Height = 30
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -4798,16 +4798,16 @@ Private Sub CreateTripEditForm()
     c = c & "    txtStart.Text = Format(Now, " & q & "yyyy-mm-dd hh:mm" & q & ")" & vbCrLf
     c = c & "    txtEnd2.Text = Format(Now + 1, " & q & "yyyy-mm-dd hh:mm" & q & ")" & vbCrLf
     c = c & "    If gEditTripID <> " & q & q & " Then" & vbCrLf
-    c = c & "        Me.Caption = " & q & "±‡º≠––≥Ã" & q & vbCrLf
+    c = c & "        Me.Caption = " & q & "ÁºñËæëË°åÁ®ã" & q & vbCrLf
     c = c & "        LoadData" & vbCrLf
     c = c & "    Else" & vbCrLf
-    c = c & "        Me.Caption = " & q & "ÃÌº”––≥Ã" & q & vbCrLf
+    c = c & "        Me.Caption = " & q & "Ê∑ªÂä†Ë°åÁ®ã" & q & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub LoadData()" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "∏ˆ»À––≥Ã" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "‰∏™‰∫∫Ë°åÁ®ã" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -4823,15 +4823,15 @@ Private Sub CreateTripEditForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdSave_Click()" & vbCrLf
     c = c & "    If Trim(txtTitle.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«ÎÃÓ–¥––≥Ã±ÍÃ‚£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑Â°´ÂÜôË°åÁ®ãÊ†áÈ¢òÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If gEditTripID <> " & q & q & " Then" & vbCrLf
     c = c & "        UpdateTripRecord gEditTripID, txtTitle.Text, txtContent.Text, txtStart.Text, txtEnd2.Text" & vbCrLf
-    c = c & "        MsgBox " & q & "––≥Ã“—∏¸–¬£°" & q & ", vbInformation" & vbCrLf
+    c = c & "        MsgBox " & q & "Ë°åÁ®ãÂ∑≤Êõ¥Êñ∞ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Else" & vbCrLf
     c = c & "        AddTripRecord gCurrentUser, txtTitle.Text, txtContent.Text, txtStart.Text, txtEnd2.Text" & vbCrLf
-    c = c & "        MsgBox " & q & "––≥Ã“—ÃÌº”£°" & q & ", vbInformation" & vbCrLf
+    c = c & "        MsgBox " & q & "Ë°åÁ®ãÂ∑≤Ê∑ªÂä†ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
@@ -4843,7 +4843,7 @@ Private Sub CreateTripEditForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®––≥Ã≤Èø¥¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫Ë°åÁ®ãÊü•ÁúãÁ™ó‰Ωì ----------
 
 Private Sub CreateTripViewForm()
     Dim oldForm As String
@@ -4859,7 +4859,7 @@ Private Sub CreateTripViewForm()
     actualName = vbc.Name
     SetConfigProp "TripViewFormName", actualName
 
-    vbc.Properties("Caption") = "––≥ÃœÍ«È"
+    vbc.Properties("Caption") = "Ë°åÁ®ãËØ¶ÊÉÖ"
     vbc.Properties("Width") = 420
     vbc.Properties("Height") = 320
     vbc.Properties("StartUpPosition") = 2
@@ -4871,7 +4871,7 @@ Private Sub CreateTripViewForm()
     yy = 20
 
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblTitleCap": ctl.Caption = "––≥Ã±ÍÃ‚£∫"
+    ctl.Name = "lblTitleCap": ctl.Caption = "Ë°åÁ®ãÊ†áÈ¢òÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -4880,7 +4880,7 @@ Private Sub CreateTripViewForm()
 
     yy = yy + 26
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblContentCap": ctl.Caption = "––≥Ãƒ⁄»›£∫"
+    ctl.Name = "lblContentCap": ctl.Caption = "Ë°åÁ®ãÂÜÖÂÆπÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
@@ -4890,7 +4890,7 @@ Private Sub CreateTripViewForm()
 
     yy = yy + 62
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblTimeCap": ctl.Caption = " ±º‰£∫"
+    ctl.Name = "lblTimeCap": ctl.Caption = "Êó∂Èó¥Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -4899,7 +4899,7 @@ Private Sub CreateTripViewForm()
 
     yy = yy + 26
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblStCap": ctl.Caption = "µ±«∞◊¥Ã¨£∫"
+    ctl.Name = "lblStCap": ctl.Caption = "ÂΩìÂâçÁä∂ÊÄÅÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -4910,22 +4910,22 @@ Private Sub CreateTripViewForm()
     yy = yy + 40
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdInProgress"
-    ctl.Caption = "∞Ï¿Ì÷–"
+    ctl.Caption = "ÂäûÁêÜ‰∏≠"
     ctl.Left = 30: ctl.Top = yy: ctl.Width = 100: ctl.Height = 30
     ctl.BackColor = RGB(255, 165, 0)
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdComplete"
-    ctl.Caption = "“—ÕÍ≥…"
+    ctl.Caption = "Â∑≤ÂÆåÊàê"
     ctl.Left = 150: ctl.Top = yy: ctl.Width = 100: ctl.Height = 30
     ctl.BackColor = RGB(60, 179, 113)
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdClose"
-    ctl.Caption = "πÿ±’"
+    ctl.Caption = "ÂÖ≥Èó≠"
     ctl.Left = 270: ctl.Top = yy: ctl.Width = 100: ctl.Height = 30
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -4938,7 +4938,7 @@ Private Sub CreateTripViewForm()
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
     c = c & "    If gViewTripID = " & q & q & " Then Unload Me: Exit Sub" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "∏ˆ»À––≥Ã" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "‰∏™‰∫∫Ë°åÁ®ã" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -4949,11 +4949,11 @@ Private Sub CreateTripViewForm()
     c = c & "            lblStVal.Caption = ws.Cells(i, 7).Value" & vbCrLf
     c = c & "            Dim st As String" & vbCrLf
     c = c & "            st = ws.Cells(i, 7).Value" & vbCrLf
-    c = c & "            If st = " & q & "“—ÕÍ≥…" & q & " Then" & vbCrLf
+    c = c & "            If st = " & q & "Â∑≤ÂÆåÊàê" & q & " Then" & vbCrLf
     c = c & "                lblStVal.ForeColor = RGB(60, 179, 113)" & vbCrLf
     c = c & "                cmdInProgress.Enabled = False" & vbCrLf
     c = c & "                cmdComplete.Enabled = False" & vbCrLf
-    c = c & "            ElseIf st = " & q & "∞Ï¿Ì÷–" & q & " Then" & vbCrLf
+    c = c & "            ElseIf st = " & q & "ÂäûÁêÜ‰∏≠" & q & " Then" & vbCrLf
     c = c & "                lblStVal.ForeColor = RGB(255, 140, 0)" & vbCrLf
     c = c & "                cmdInProgress.Enabled = False" & vbCrLf
     c = c & "            Else" & vbCrLf
@@ -4965,14 +4965,14 @@ Private Sub CreateTripViewForm()
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdInProgress_Click()" & vbCrLf
-    c = c & "    UpdateTripStatus gViewTripID, " & q & "∞Ï¿Ì÷–" & q & vbCrLf
-    c = c & "    MsgBox " & q & "––≥Ã◊¥Ã¨“—∏¸–¬Œ™°æ∞Ï¿Ì÷–°ø£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    UpdateTripStatus gViewTripID, " & q & "ÂäûÁêÜ‰∏≠" & q & vbCrLf
+    c = c & "    MsgBox " & q & "Ë°åÁ®ãÁä∂ÊÄÅÂ∑≤Êõ¥Êñ∞‰∏∫„ÄêÂäûÁêÜ‰∏≠„ÄëÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdComplete_Click()" & vbCrLf
-    c = c & "    UpdateTripStatus gViewTripID, " & q & "“—ÕÍ≥…" & q & vbCrLf
-    c = c & "    MsgBox " & q & "––≥Ã“—±Íº«Œ™°æ“—ÕÍ≥…°ø£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    UpdateTripStatus gViewTripID, " & q & "Â∑≤ÂÆåÊàê" & q & vbCrLf
+    c = c & "    MsgBox " & q & "Ë°åÁ®ãÂ∑≤Ê†áËÆ∞‰∏∫„ÄêÂ∑≤ÂÆåÊàê„ÄëÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
@@ -4983,13 +4983,13 @@ Private Sub CreateTripViewForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ∏ˆ»À––≥Ã¥∞ÃÂœ‘ æ ----------
+' ---------- ‰∏™‰∫∫Ë°åÁ®ãÁ™ó‰ΩìÊòæÁ§∫ ----------
 
 Public Sub ShowTripManagerForm()
     Dim fName As String
     fName = GetConfigProp("TripManagerFormName")
     If fName = "" Or Not FormExists("TripManagerFormName") Then
-        MsgBox "∏ˆ»À––≥Ã¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "‰∏™‰∫∫Ë°åÁ®ãÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -5001,7 +5001,7 @@ Public Sub ShowTripEditForm()
     Dim fName As String
     fName = GetConfigProp("TripEditFormName")
     If fName = "" Or Not FormExists("TripEditFormName") Then
-        MsgBox "––≥Ã±‡º≠¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "Ë°åÁ®ãÁºñËæëÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -5013,7 +5013,7 @@ Public Sub ShowTripViewForm()
     Dim fName As String
     fName = GetConfigProp("TripViewFormName")
     If fName = "" Or Not FormExists("TripViewFormName") Then
-        MsgBox "––≥Ã≤Èø¥¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "Ë°åÁ®ãÊü•ÁúãÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -5021,11 +5021,11 @@ Public Sub ShowTripViewForm()
     frm.Show
 End Sub
 
-' ---------- ∏ˆ»À––≥Ã ˝æ›≤Ÿ◊˜∫Ø ˝ ----------
+' ---------- ‰∏™‰∫∫Ë°åÁ®ãÊï∞ÊçÆÊìç‰ΩúÂáΩÊï∞ ----------
 
 Private Function GenerateTripID() As String
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("∏ˆ»À––≥Ã")
+    Set ws = ThisWorkbook.Sheets("‰∏™‰∫∫Ë°åÁ®ã")
     Dim lr As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     Dim maxID As Long
@@ -5045,7 +5045,7 @@ End Function
 
 Public Sub AddTripRecord(sUser As String, sTitle As String, sContent As String, sStart As String, sEnd2 As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("∏ˆ»À––≥Ã")
+    Set ws = ThisWorkbook.Sheets("‰∏™‰∫∫Ë°åÁ®ã")
     Dim newRow As Long
     newRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row + 1
     ws.Cells(newRow, 1).Value = GenerateTripID()
@@ -5054,7 +5054,7 @@ Public Sub AddTripRecord(sUser As String, sTitle As String, sContent As String, 
     ws.Cells(newRow, 4).Value = sContent
     ws.Cells(newRow, 5).Value = sStart
     ws.Cells(newRow, 6).Value = sEnd2
-    ws.Cells(newRow, 7).Value = "¥˝∞Ï"
+    ws.Cells(newRow, 7).Value = "ÂæÖÂäû"
     ws.Cells(newRow, 8).Value = Format(Now, "yyyy-mm-dd hh:mm:ss")
     ws.Cells(newRow, 9).Value = ""
     ws.Columns("A:I").AutoFit
@@ -5062,7 +5062,7 @@ End Sub
 
 Public Sub UpdateTripRecord(tID As String, sTitle As String, sContent As String, sStart As String, sEnd2 As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("∏ˆ»À––≥Ã")
+    Set ws = ThisWorkbook.Sheets("‰∏™‰∫∫Ë°åÁ®ã")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -5079,13 +5079,13 @@ End Sub
 
 Public Sub UpdateTripStatus(tID As String, newStatus As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("∏ˆ»À––≥Ã")
+    Set ws = ThisWorkbook.Sheets("‰∏™‰∫∫Ë°åÁ®ã")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
         If CStr(ws.Cells(i, 1).Value) = tID Then
             ws.Cells(i, 7).Value = newStatus
-            If newStatus = "“—ÕÍ≥…" Then
+            If newStatus = "Â∑≤ÂÆåÊàê" Then
                 ws.Cells(i, 9).Value = Format(Now, "yyyy-mm-dd hh:mm:ss")
             End If
             Exit For
@@ -5095,7 +5095,7 @@ End Sub
 
 Public Sub DeleteTripByID(tID As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("∏ˆ»À––≥Ã")
+    Set ws = ThisWorkbook.Sheets("‰∏™‰∫∫Ë°åÁ®ã")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -5106,31 +5106,31 @@ Public Sub DeleteTripByID(tID As String)
     Next i
 End Sub
 
-' ---------- ¥¥Ω®øº«⁄π‹¿Ì±Ì ----------
+' ---------- ÂàõÂª∫ËÄÉÂã§ÁÆ°ÁêÜË°® ----------
 
 Private Sub CreateAttendSheet()
     Dim ws As Worksheet
-    If SheetExists("øº«⁄π‹¿Ì") Then
-        Set ws = ThisWorkbook.Sheets("øº«⁄π‹¿Ì")
+    If SheetExists("ËÄÉÂã§ÁÆ°ÁêÜ") Then
+        Set ws = ThisWorkbook.Sheets("ËÄÉÂã§ÁÆ°ÁêÜ")
     Else
         Set ws = ThisWorkbook.Sheets.Add( _
             After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.Count))
-        ws.Name = "øº«⁄π‹¿Ì"
+        ws.Name = "ËÄÉÂã§ÁÆ°ÁêÜ"
     End If
     With ws
-        .Range("A1").Value = "º«¬º±‡∫≈"
-        .Range("B1").Value = "”√ªß"
-        .Range("C1").Value = "»’∆⁄"
-        .Range("D1").Value = "«©µΩ ±º‰"
-        .Range("E1").Value = "«©ÕÀ ±º‰"
-        .Range("F1").Value = "øº«⁄◊¥Ã¨"
-        .Range("G1").Value = "±∏◊¢"
+        .Range("A1").Value = "ËÆ∞ÂΩïÁºñÂè∑"
+        .Range("B1").Value = "Áî®Êà∑"
+        .Range("C1").Value = "Êó•Êúü"
+        .Range("D1").Value = "Á≠æÂà∞Êó∂Èó¥"
+        .Range("E1").Value = "Á≠æÈÄÄÊó∂Èó¥"
+        .Range("F1").Value = "ËÄÉÂã§Áä∂ÊÄÅ"
+        .Range("G1").Value = "Â§áÊ≥®"
         .Range("A1:G1").Font.Bold = True
         .Columns("A:G").AutoFit
     End With
 End Sub
 
-' ---------- ¥¥Ω®øº«⁄¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫ËÄÉÂã§Á™ó‰Ωì ----------
 
 Private Sub CreateAttendForm()
     Dim oldForm As String
@@ -5146,7 +5146,7 @@ Private Sub CreateAttendForm()
     actualName = vbc.Name
     SetConfigProp "AttendFormName", actualName
 
-    vbc.Properties("Caption") = "∏ˆ»Àøº«⁄"
+    vbc.Properties("Caption") = "‰∏™‰∫∫ËÄÉÂã§"
     vbc.Properties("Width") = 650
     vbc.Properties("Height") = 500
     vbc.Properties("StartUpPosition") = 2
@@ -5155,21 +5155,21 @@ Private Sub CreateAttendForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' MultiPage - ¡Ω∏ˆ±Í«©“≥
+    ' MultiPage - ‰∏§‰∏™Ê†áÁ≠æÈ°µ
     Set ctl = dsg.Controls.Add("Forms.MultiPage.1")
     ctl.Name = "mpAttend"
     ctl.Left = 10: ctl.Top = 10: ctl.Width = 620: ctl.Height = 420
-    ctl.Pages(0).Caption = "«©µΩ/«©ÕÀ"
+    ctl.Pages(0).Caption = "Á≠æÂà∞/Á≠æÈÄÄ"
     ctl.Pages.Add
-    ctl.Pages(1).Caption = "øº«⁄Õ≥º∆≤È—Ø"
+    ctl.Pages(1).Caption = "ËÄÉÂã§ÁªüËÆ°Êü•ËØ¢"
 
-    ' --- µ⁄“ª“≥: «©µΩ/«©ÕÀ ---
+    ' --- Á¨¨‰∏ÄÈ°µ: Á≠æÂà∞/Á≠æÈÄÄ ---
     Dim pg As Object
     Set pg = ctl.Pages(0)
 
     Dim subCtl As Object
     Set subCtl = pg.Controls.Add("Forms.Label.1")
-    subCtl.Name = "lblDate": subCtl.Caption = "»’∆⁄º”‘ÿ÷–..."
+    subCtl.Name = "lblDate": subCtl.Caption = "Êó•ÊúüÂä†ËΩΩ‰∏≠..."
     subCtl.Left = 20: subCtl.Top = 20: subCtl.Width = 400: subCtl.Height = 24
     subCtl.Font.Size = 14: subCtl.Font.Bold = True
 
@@ -5179,37 +5179,37 @@ Private Sub CreateAttendForm()
     subCtl.Font.Size = 12
 
     Set subCtl = pg.Controls.Add("Forms.Label.1")
-    subCtl.Name = "lblSignInTime": subCtl.Caption = "«©µΩ ±º‰: --"
+    subCtl.Name = "lblSignInTime": subCtl.Caption = "Á≠æÂà∞Êó∂Èó¥: --"
     subCtl.Left = 20: subCtl.Top = 90: subCtl.Width = 250: subCtl.Height = 20
     subCtl.Font.Size = 11
 
     Set subCtl = pg.Controls.Add("Forms.Label.1")
-    subCtl.Name = "lblSignOutTime": subCtl.Caption = "«©ÕÀ ±º‰: --"
+    subCtl.Name = "lblSignOutTime": subCtl.Caption = "Á≠æÈÄÄÊó∂Èó¥: --"
     subCtl.Left = 20: subCtl.Top = 118: subCtl.Width = 250: subCtl.Height = 20
     subCtl.Font.Size = 11
 
     Set subCtl = pg.Controls.Add("Forms.Label.1")
-    subCtl.Name = "lblStatus": subCtl.Caption = "ΩÒ»’◊¥Ã¨: Œ¥«©µΩ"
+    subCtl.Name = "lblStatus": subCtl.Caption = "‰ªäÊó•Áä∂ÊÄÅ: Êú™Á≠æÂà∞"
     subCtl.Left = 20: subCtl.Top = 150: subCtl.Width = 300: subCtl.Height = 22
     subCtl.Font.Size = 11: subCtl.Font.Bold = True
 
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdSignIn": subCtl.Caption = "«© µΩ"
+    subCtl.Name = "cmdSignIn": subCtl.Caption = "Á≠æ Âà∞"
     subCtl.Left = 40: subCtl.Top = 200: subCtl.Width = 140: subCtl.Height = 50
     subCtl.BackColor = RGB(60, 179, 113)
     subCtl.Font.Size = 14: subCtl.Font.Bold = True
 
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdSignOut": subCtl.Caption = "«© ÕÀ"
+    subCtl.Name = "cmdSignOut": subCtl.Caption = "Á≠æ ÈÄÄ"
     subCtl.Left = 220: subCtl.Top = 200: subCtl.Width = 140: subCtl.Height = 50
     subCtl.BackColor = RGB(220, 80, 80)
     subCtl.Font.Size = 14: subCtl.Font.Bold = True
 
-    ' --- µ⁄∂˛“≥: øº«⁄Õ≥º∆≤È—Ø ---
+    ' --- Á¨¨‰∫åÈ°µ: ËÄÉÂã§ÁªüËÆ°Êü•ËØ¢ ---
     Set pg = ctl.Pages(1)
 
     Set subCtl = pg.Controls.Add("Forms.Label.1")
-    subCtl.Name = "lblQueryMonth": subCtl.Caption = "≤È—Ø‘¬∑›(yyyy-mm)£∫"
+    subCtl.Name = "lblQueryMonth": subCtl.Caption = "Êü•ËØ¢Êúà‰ªΩ(yyyy-mm)Ôºö"
     subCtl.Left = 10: subCtl.Top = 10: subCtl.Width = 130: subCtl.Height = 18
 
     Set subCtl = pg.Controls.Add("Forms.TextBox.1")
@@ -5217,11 +5217,11 @@ Private Sub CreateAttendForm()
     subCtl.Left = 145: subCtl.Top = 8: subCtl.Width = 80: subCtl.Height = 20
 
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdQuery": subCtl.Caption = "≤È—Ø"
+    subCtl.Name = "cmdQuery": subCtl.Caption = "Êü•ËØ¢"
     subCtl.Left = 235: subCtl.Top = 8: subCtl.Width = 60: subCtl.Height = 22
 
     Set subCtl = pg.Controls.Add("Forms.Label.1")
-    subCtl.Name = "lblSummary": subCtl.Caption = "Õ≥º∆: --"
+    subCtl.Name = "lblSummary": subCtl.Caption = "ÁªüËÆ°: --"
     subCtl.Left = 310: subCtl.Top = 10: subCtl.Width = 280: subCtl.Height = 18
     subCtl.Font.Bold = True
 
@@ -5232,19 +5232,19 @@ Private Sub CreateAttendForm()
     subCtl.ColumnWidths = "60;80;90;90;70;80"
 
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdEditRec": subCtl.Caption = "±‡º≠"
+    subCtl.Name = "cmdEditRec": subCtl.Caption = "ÁºñËæë"
     subCtl.Left = 10: subCtl.Top = 348: subCtl.Width = 70: subCtl.Height = 26
 
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdDeleteRec": subCtl.Caption = "…æ≥˝"
+    subCtl.Name = "cmdDeleteRec": subCtl.Caption = "Âà†Èô§"
     subCtl.Left = 90: subCtl.Top = 348: subCtl.Width = 70: subCtl.Height = 26
 
-    ' πÿ±’∞¥≈•
+    ' ÂÖ≥Èó≠ÊåâÈíÆ
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdClose": ctl.Caption = "πÿ±’"
+    ctl.Name = "cmdClose": ctl.Caption = "ÂÖ≥Èó≠"
     ctl.Left = 540: ctl.Top = 440: ctl.Width = 90: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -5255,8 +5255,8 @@ Private Sub CreateAttendForm()
     c = "Option Explicit" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
-    c = c & "    lblDate.Caption = " & q & "ΩÒÃÏ: " & q & " & Format(Date, " & q & "yyyyƒÍmm‘¬dd»’ (ddd)" & q & ")" & vbCrLf
-    c = c & "    lblTime.Caption = " & q & "µ±«∞ ±º‰: " & q & " & Format(Now, " & q & "hh:mm:ss" & q & ")" & vbCrLf
+    c = c & "    lblDate.Caption = " & q & "‰ªäÂ§©: " & q & " & Format(Date, " & q & "yyyyÂπ¥mmÊúàddÊó• (ddd)" & q & ")" & vbCrLf
+    c = c & "    lblTime.Caption = " & q & "ÂΩìÂâçÊó∂Èó¥: " & q & " & Format(Now, " & q & "hh:mm:ss" & q & ")" & vbCrLf
     c = c & "    txtMonth.Text = Format(Date, " & q & "yyyy-mm" & q & ")" & vbCrLf
     c = c & "    LoadTodayStatus" & vbCrLf
     c = c & "    QueryAttend" & vbCrLf
@@ -5264,7 +5264,7 @@ Private Sub CreateAttendForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub LoadTodayStatus()" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "øº«⁄π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "ËÄÉÂã§ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    Dim todayStr As String" & vbCrLf
@@ -5280,15 +5280,15 @@ Private Sub CreateAttendForm()
     c = c & "        End If" & vbCrLf
     c = c & "        If CStr(ws.Cells(i, 2).Value) = gCurrentUser And cellDate = todayStr Then" & vbCrLf
     c = c & "            found = True" & vbCrLf
-    c = c & "            lblSignInTime.Caption = " & q & "«©µΩ ±º‰: " & q & " & Format(ws.Cells(i, 4).Value, " & q & "hh:mm:ss" & q & ")" & vbCrLf
+    c = c & "            lblSignInTime.Caption = " & q & "Á≠æÂà∞Êó∂Èó¥: " & q & " & Format(ws.Cells(i, 4).Value, " & q & "hh:mm:ss" & q & ")" & vbCrLf
     c = c & "            If Trim(CStr(ws.Cells(i, 5).Value)) <> " & q & q & " Then" & vbCrLf
-    c = c & "                lblSignOutTime.Caption = " & q & "«©ÕÀ ±º‰: " & q & " & Format(ws.Cells(i, 5).Value, " & q & "hh:mm:ss" & q & ")" & vbCrLf
-    c = c & "                lblStatus.Caption = " & q & "ΩÒ»’◊¥Ã¨: " & q & " & ws.Cells(i, 6).Value" & vbCrLf
+    c = c & "                lblSignOutTime.Caption = " & q & "Á≠æÈÄÄÊó∂Èó¥: " & q & " & Format(ws.Cells(i, 5).Value, " & q & "hh:mm:ss" & q & ")" & vbCrLf
+    c = c & "                lblStatus.Caption = " & q & "‰ªäÊó•Áä∂ÊÄÅ: " & q & " & ws.Cells(i, 6).Value" & vbCrLf
     c = c & "                cmdSignIn.Enabled = False" & vbCrLf
     c = c & "                cmdSignOut.Enabled = False" & vbCrLf
     c = c & "            Else" & vbCrLf
-    c = c & "                lblSignOutTime.Caption = " & q & "«©ÕÀ ±º‰: --" & q & vbCrLf
-    c = c & "                lblStatus.Caption = " & q & "ΩÒ»’◊¥Ã¨: “—«©µΩ" & q & vbCrLf
+    c = c & "                lblSignOutTime.Caption = " & q & "Á≠æÈÄÄÊó∂Èó¥: --" & q & vbCrLf
+    c = c & "                lblStatus.Caption = " & q & "‰ªäÊó•Áä∂ÊÄÅ: Â∑≤Á≠æÂà∞" & q & vbCrLf
     c = c & "                cmdSignIn.Enabled = False" & vbCrLf
     c = c & "                cmdSignOut.Enabled = True" & vbCrLf
     c = c & "            End If" & vbCrLf
@@ -5296,9 +5296,9 @@ Private Sub CreateAttendForm()
     c = c & "        End If" & vbCrLf
     c = c & "    Next i" & vbCrLf
     c = c & "    If Not found Then" & vbCrLf
-    c = c & "        lblSignInTime.Caption = " & q & "«©µΩ ±º‰: --" & q & vbCrLf
-    c = c & "        lblSignOutTime.Caption = " & q & "«©ÕÀ ±º‰: --" & q & vbCrLf
-    c = c & "        lblStatus.Caption = " & q & "ΩÒ»’◊¥Ã¨: Œ¥«©µΩ" & q & vbCrLf
+    c = c & "        lblSignInTime.Caption = " & q & "Á≠æÂà∞Êó∂Èó¥: --" & q & vbCrLf
+    c = c & "        lblSignOutTime.Caption = " & q & "Á≠æÈÄÄÊó∂Èó¥: --" & q & vbCrLf
+    c = c & "        lblStatus.Caption = " & q & "‰ªäÊó•Áä∂ÊÄÅ: Êú™Á≠æÂà∞" & q & vbCrLf
     c = c & "        cmdSignIn.Enabled = True" & vbCrLf
     c = c & "        cmdSignOut.Enabled = False" & vbCrLf
     c = c & "    End If" & vbCrLf
@@ -5306,7 +5306,7 @@ Private Sub CreateAttendForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdSignIn_Click()" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "øº«⁄π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "ËÄÉÂã§ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim newRow As Long" & vbCrLf
     c = c & "    newRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row + 1" & vbCrLf
     c = c & "    ws.Cells(newRow, 1).Value = GenerateAttendID()" & vbCrLf
@@ -5314,23 +5314,23 @@ Private Sub CreateAttendForm()
     c = c & "    ws.Cells(newRow, 3).Value = Format(Date, " & q & "yyyy-mm-dd" & q & ")" & vbCrLf
     c = c & "    ws.Cells(newRow, 4).Value = Format(Now, " & q & "hh:mm:ss" & q & ")" & vbCrLf
     c = c & "    ws.Cells(newRow, 5).Value = " & q & q & vbCrLf
-    c = c & "    ws.Cells(newRow, 6).Value = " & q & "≥ˆ«⁄" & q & vbCrLf
+    c = c & "    ws.Cells(newRow, 6).Value = " & q & "Âá∫Âã§" & q & vbCrLf
     c = c & "    ws.Cells(newRow, 7).Value = " & q & q & vbCrLf
     c = c & "    Dim signTime As Date" & vbCrLf
     c = c & "    signTime = Now" & vbCrLf
     c = c & "    If Hour(signTime) >= 9 And Minute(signTime) > 0 Then" & vbCrLf
-    c = c & "        ws.Cells(newRow, 6).Value = " & q & "≥ŸµΩ" & q & vbCrLf
-    c = c & "        ws.Cells(newRow, 7).Value = " & q & "≥ŸµΩ«©µΩ" & q & vbCrLf
+    c = c & "        ws.Cells(newRow, 6).Value = " & q & "ËøüÂà∞" & q & vbCrLf
+    c = c & "        ws.Cells(newRow, 7).Value = " & q & "ËøüÂà∞Á≠æÂà∞" & q & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    ws.Columns(" & q & "A:G" & q & ").AutoFit" & vbCrLf
-    c = c & "    MsgBox " & q & "«©µΩ≥…π¶£° ±º‰: " & q & " & Format(Now, " & q & "hh:mm:ss" & q & "), vbInformation" & vbCrLf
+    c = c & "    MsgBox " & q & "Á≠æÂà∞ÊàêÂäüÔºÅÊó∂Èó¥: " & q & " & Format(Now, " & q & "hh:mm:ss" & q & "), vbInformation" & vbCrLf
     c = c & "    LoadTodayStatus" & vbCrLf
     c = c & "    QueryAttend" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdSignOut_Click()" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "øº«⁄π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "ËÄÉÂã§ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    Dim todayStr As String" & vbCrLf
@@ -5347,18 +5347,18 @@ Private Sub CreateAttendForm()
     c = c & "            Dim signOutTime As Date" & vbCrLf
     c = c & "            signOutTime = Now" & vbCrLf
     c = c & "            If Hour(signOutTime) < 18 Then" & vbCrLf
-    c = c & "                If ws.Cells(i, 6).Value = " & q & "≥ŸµΩ" & q & " Then" & vbCrLf
-    c = c & "                    ws.Cells(i, 7).Value = " & q & "≥ŸµΩ+‘ÁÕÀ" & q & vbCrLf
+    c = c & "                If ws.Cells(i, 6).Value = " & q & "ËøüÂà∞" & q & " Then" & vbCrLf
+    c = c & "                    ws.Cells(i, 7).Value = " & q & "ËøüÂà∞+Êó©ÈÄÄ" & q & vbCrLf
     c = c & "                Else" & vbCrLf
-    c = c & "                    ws.Cells(i, 6).Value = " & q & "‘ÁÕÀ" & q & vbCrLf
-    c = c & "                    ws.Cells(i, 7).Value = " & q & "‘ÁÕÀ«©ÕÀ" & q & vbCrLf
+    c = c & "                    ws.Cells(i, 6).Value = " & q & "Êó©ÈÄÄ" & q & vbCrLf
+    c = c & "                    ws.Cells(i, 7).Value = " & q & "Êó©ÈÄÄÁ≠æÈÄÄ" & q & vbCrLf
     c = c & "                End If" & vbCrLf
     c = c & "            End If" & vbCrLf
     c = c & "            Exit For" & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "    Next i" & vbCrLf
     c = c & "    ws.Columns(" & q & "A:G" & q & ").AutoFit" & vbCrLf
-    c = c & "    MsgBox " & q & "«©ÕÀ≥…π¶£° ±º‰: " & q & " & Format(Now, " & q & "hh:mm:ss" & q & "), vbInformation" & vbCrLf
+    c = c & "    MsgBox " & q & "Á≠æÈÄÄÊàêÂäüÔºÅÊó∂Èó¥: " & q & " & Format(Now, " & q & "hh:mm:ss" & q & "), vbInformation" & vbCrLf
     c = c & "    LoadTodayStatus" & vbCrLf
     c = c & "    QueryAttend" & vbCrLf
     c = c & "End Sub" & vbCrLf
@@ -5370,7 +5370,7 @@ Private Sub CreateAttendForm()
     c = c & "Private Sub QueryAttend()" & vbCrLf
     c = c & "    lstAttend.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "øº«⁄π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "ËÄÉÂã§ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    Dim qMonth As String" & vbCrLf
@@ -5398,30 +5398,30 @@ Private Sub CreateAttendForm()
     c = c & "                lstAttend.List(lstAttend.ListCount - 1, 5) = ws.Cells(i, 7).Value" & vbCrLf
     c = c & "                Dim aSt As String" & vbCrLf
     c = c & "                aSt = CStr(ws.Cells(i, 6).Value)" & vbCrLf
-    c = c & "                If aSt = " & q & "≥ˆ«⁄" & q & " Then cWork = cWork + 1" & vbCrLf
-    c = c & "                If aSt = " & q & "≥ŸµΩ" & q & " Then cLate = cLate + 1" & vbCrLf
-    c = c & "                If aSt = " & q & "‘ÁÕÀ" & q & " Then cEarly = cEarly + 1" & vbCrLf
-    c = c & "                If aSt = " & q & "«ÎºŸ" & q & " Then cLeave = cLeave + 1" & vbCrLf
-    c = c & "                If aSt = " & q & "»±«⁄" & q & " Then cAbsent = cAbsent + 1" & vbCrLf
+    c = c & "                If aSt = " & q & "Âá∫Âã§" & q & " Then cWork = cWork + 1" & vbCrLf
+    c = c & "                If aSt = " & q & "ËøüÂà∞" & q & " Then cLate = cLate + 1" & vbCrLf
+    c = c & "                If aSt = " & q & "Êó©ÈÄÄ" & q & " Then cEarly = cEarly + 1" & vbCrLf
+    c = c & "                If aSt = " & q & "ËØ∑ÂÅá" & q & " Then cLeave = cLeave + 1" & vbCrLf
+    c = c & "                If aSt = " & q & "Áº∫Âã§" & q & " Then cAbsent = cAbsent + 1" & vbCrLf
     c = c & "            End If" & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "    Next i" & vbCrLf
-    c = c & "    lblSummary.Caption = " & q & "≥ˆ«⁄:" & q & " & cWork & " & q & " ≥ŸµΩ:" & q & " & cLate & " & q & " ‘ÁÕÀ:" & q & " & cEarly & " & q & " «ÎºŸ:" & q & " & cLeave & " & q & " »±«⁄:" & q & " & cAbsent" & vbCrLf
+    c = c & "    lblSummary.Caption = " & q & "Âá∫Âã§:" & q & " & cWork & " & q & " ËøüÂà∞:" & q & " & cLate & " & q & " Êó©ÈÄÄ:" & q & " & cEarly & " & q & " ËØ∑ÂÅá:" & q & " & cLeave & " & q & " Áº∫Âã§:" & q & " & cAbsent" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdEditRec_Click()" & vbCrLf
     c = c & "    If lstAttend.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃıøº«⁄º«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°ËÄÉÂã§ËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If Not IsHighPrivilege(gCurrentRole) Then" & vbCrLf
-    c = c & "        MsgBox " & q & "÷ª”–π‹¿Ì‘±ªÚ÷˜π‹ø…“‘±‡º≠øº«⁄º«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "Âè™ÊúâÁÆ°ÁêÜÂëòÊàñ‰∏ªÁÆ°ÂèØ‰ª•ÁºñËæëËÄÉÂã§ËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Dim recID As String" & vbCrLf
     c = c & "    recID = lstAttend.List(lstAttend.ListIndex, 0)" & vbCrLf
     c = c & "    Dim newSt As String" & vbCrLf
-    c = c & "    newSt = InputBox(" & q & "«Î ‰»Î–¬µƒøº«⁄◊¥Ã¨(≥ˆ«⁄/≥ŸµΩ/‘ÁÕÀ/«ÎºŸ/»±«⁄):" & q & ", " & q & "±‡º≠øº«⁄" & q & ")" & vbCrLf
+    c = c & "    newSt = InputBox(" & q & "ËØ∑ËæìÂÖ•Êñ∞ÁöÑËÄÉÂã§Áä∂ÊÄÅ(Âá∫Âã§/ËøüÂà∞/Êó©ÈÄÄ/ËØ∑ÂÅá/Áº∫Âã§):" & q & ", " & q & "ÁºñËæëËÄÉÂã§" & q & ")" & vbCrLf
     c = c & "    If newSt <> " & q & q & " Then" & vbCrLf
     c = c & "        UpdateAttendStatus recID, newSt" & vbCrLf
     c = c & "        QueryAttend" & vbCrLf
@@ -5430,14 +5430,14 @@ Private Sub CreateAttendForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdDeleteRec_Click()" & vbCrLf
     c = c & "    If lstAttend.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃıøº«⁄º«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°ËÄÉÂã§ËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If Not IsHighPrivilege(gCurrentRole) Then" & vbCrLf
-    c = c & "        MsgBox " & q & "÷ª”–π‹¿Ì‘±ªÚ÷˜π‹ø…“‘…æ≥˝øº«⁄º«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "Âè™ÊúâÁÆ°ÁêÜÂëòÊàñ‰∏ªÁÆ°ÂèØ‰ª•Âà†Èô§ËÄÉÂã§ËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
-    c = c & "    If MsgBox(" & q & "»∑∂®…æ≥˝∏√øº«⁄º«¬º£ø" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
+    c = c & "    If MsgBox(" & q & "Á°ÆÂÆöÂà†Èô§ËØ•ËÄÉÂã§ËÆ∞ÂΩïÔºü" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
     c = c & "        DeleteAttendByID lstAttend.List(lstAttend.ListIndex, 0)" & vbCrLf
     c = c & "        QueryAttend" & vbCrLf
     c = c & "    End If" & vbCrLf
@@ -5450,13 +5450,13 @@ Private Sub CreateAttendForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- øº«⁄¥∞ÃÂœ‘ æ ----------
+' ---------- ËÄÉÂã§Á™ó‰ΩìÊòæÁ§∫ ----------
 
 Public Sub ShowAttendForm()
     Dim fName As String
     fName = GetConfigProp("AttendFormName")
     If fName = "" Or Not FormExists("AttendFormName") Then
-        MsgBox "øº«⁄¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "ËÄÉÂã§Á™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -5464,11 +5464,11 @@ Public Sub ShowAttendForm()
     frm.Show
 End Sub
 
-' ---------- øº«⁄ ˝æ›≤Ÿ◊˜∫Ø ˝ ----------
+' ---------- ËÄÉÂã§Êï∞ÊçÆÊìç‰ΩúÂáΩÊï∞ ----------
 
 Public Function GenerateAttendID() As String
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("øº«⁄π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("ËÄÉÂã§ÁÆ°ÁêÜ")
     Dim lr As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     Dim maxID As Long
@@ -5488,7 +5488,7 @@ End Function
 
 Public Sub UpdateAttendStatus(aID As String, newStatus As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("øº«⁄π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("ËÄÉÂã§ÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -5501,7 +5501,7 @@ End Sub
 
 Public Sub DeleteAttendByID(aID As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("øº«⁄π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("ËÄÉÂã§ÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -5512,36 +5512,36 @@ Public Sub DeleteAttendByID(aID As String)
     Next i
 End Sub
 
-' ---------- ¥¥Ω®±®–ﬁπ‹¿Ì±Ì ----------
+' ---------- ÂàõÂª∫Êä•‰øÆÁÆ°ÁêÜË°® ----------
 
 Private Sub CreateRepairSheet()
     Dim ws As Worksheet
-    If SheetExists("±®–ﬁπ‹¿Ì") Then
-        Set ws = ThisWorkbook.Sheets("±®–ﬁπ‹¿Ì")
+    If SheetExists("Êä•‰øÆÁÆ°ÁêÜ") Then
+        Set ws = ThisWorkbook.Sheets("Êä•‰øÆÁÆ°ÁêÜ")
     Else
         Set ws = ThisWorkbook.Sheets.Add( _
             After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.Count))
-        ws.Name = "±®–ﬁπ‹¿Ì"
+        ws.Name = "Êä•‰øÆÁÆ°ÁêÜ"
     End If
     With ws
-        .Range("A1").Value = "π§µ•±‡∫≈"
-        .Range("B1").Value = "¬•∂∞"
-        .Range("C1").Value = "∑ø∫≈"
-        .Range("D1").Value = "±®–ﬁ¿‡–Õ"
-        .Range("E1").Value = "Œ Ã‚√Ë ˆ"
-        .Range("F1").Value = "ΩÙº±≥Ã∂»"
-        .Range("G1").Value = "±®–ﬁ»À"
-        .Range("H1").Value = "Œ¨–ﬁ»À‘±"
-        .Range("I1").Value = "π§µ•◊¥Ã¨"
-        .Range("J1").Value = "Õº∆¨¬∑æ∂"
-        .Range("K1").Value = "¥¥Ω® ±º‰"
-        .Range("L1").Value = "ÕÍ≥… ±º‰"
+        .Range("A1").Value = "Â∑•ÂçïÁºñÂè∑"
+        .Range("B1").Value = "Ê•ºÊ†ã"
+        .Range("C1").Value = "ÊàøÂè∑"
+        .Range("D1").Value = "Êä•‰øÆÁ±ªÂûã"
+        .Range("E1").Value = "ÈóÆÈ¢òÊèèËø∞"
+        .Range("F1").Value = "Á¥ßÊÄ•Á®ãÂ∫¶"
+        .Range("G1").Value = "Êä•‰øÆ‰∫∫"
+        .Range("H1").Value = "Áª¥‰øÆ‰∫∫Âëò"
+        .Range("I1").Value = "Â∑•ÂçïÁä∂ÊÄÅ"
+        .Range("J1").Value = "ÂõæÁâáË∑ØÂæÑ"
+        .Range("K1").Value = "ÂàõÂª∫Êó∂Èó¥"
+        .Range("L1").Value = "ÂÆåÊàêÊó∂Èó¥"
         .Range("A1:L1").Font.Bold = True
         .Columns("A:L").AutoFit
     End With
 End Sub
 
-' ---------- ¥¥Ω®±®–ﬁπ‹¿Ì¥∞ÃÂ frmRepairs ----------
+' ---------- ÂàõÂª∫Êä•‰øÆÁÆ°ÁêÜÁ™ó‰Ωì frmRepairs ----------
 
 Private Sub CreateRepairsForm()
     Dim oldForm As String
@@ -5557,7 +5557,7 @@ Private Sub CreateRepairsForm()
     actualName = vbc.Name
     SetConfigProp "RepairsFormName", actualName
 
-    vbc.Properties("Caption") = "±®–ﬁπ‹¿Ì"
+    vbc.Properties("Caption") = "Êä•‰øÆÁÆ°ÁêÜ"
     vbc.Properties("Width") = 510
     vbc.Properties("Height") = 400
     vbc.Properties("StartUpPosition") = 2
@@ -5566,7 +5566,7 @@ Private Sub CreateRepairsForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' ±®–ﬁπ§µ•¡–±Ì
+    ' Êä•‰øÆÂ∑•ÂçïÂàóË°®
     Set ctl = dsg.Controls.Add("Forms.ListBox.1")
     ctl.Name = "lstRepairs"
     ctl.Left = 12: ctl.Top = 12: ctl.Width = 476: ctl.Height = 320
@@ -5574,28 +5574,28 @@ Private Sub CreateRepairsForm()
     ctl.ColumnWidths = "60;90;70;70;140"
     ctl.ColumnHeads = False
 
-    ' ∞¥≈•
+    ' ÊåâÈíÆ
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdNewRepair": ctl.Caption = "–¬Ω®±®–ﬁ"
+    ctl.Name = "cmdNewRepair": ctl.Caption = "Êñ∞Âª∫Êä•‰øÆ"
     ctl.Left = 12: ctl.Top = 340: ctl.Width = 100: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdProcess": ctl.Caption = "≤Èø¥/¥¶¿Ì"
+    ctl.Name = "cmdProcess": ctl.Caption = "Êü•Áúã/Â§ÑÁêÜ"
     ctl.Left = 120: ctl.Top = 340: ctl.Width = 100: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdDelete": ctl.Caption = "…æ≥˝"
+    ctl.Name = "cmdDelete": ctl.Caption = "Âà†Èô§"
     ctl.Left = 228: ctl.Top = 340: ctl.Width = 70: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdRefresh": ctl.Caption = "À¢–¬"
+    ctl.Name = "cmdRefresh": ctl.Caption = "Âà∑Êñ∞"
     ctl.Left = 306: ctl.Top = 340: ctl.Width = 70: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdBack": ctl.Caption = "∑µªÿ"
+    ctl.Name = "cmdBack": ctl.Caption = "ËøîÂõû"
     ctl.Left = 400: ctl.Top = 340: ctl.Width = 80: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -5612,7 +5612,7 @@ Private Sub CreateRepairsForm()
     c = c & "Private Sub LoadData()" & vbCrLf
     c = c & "    lstRepairs.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "±®–ﬁπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Êä•‰øÆÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -5634,7 +5634,7 @@ Private Sub CreateRepairsForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdProcess_Click()" & vbCrLf
     c = c & "    If lstRepairs.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃı±®–ﬁπ§µ•£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°Êä•‰øÆÂ∑•ÂçïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gViewRepairID = lstRepairs.List(lstRepairs.ListIndex, 0)" & vbCrLf
@@ -5644,7 +5644,7 @@ Private Sub CreateRepairsForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdDelete_Click()" & vbCrLf
     c = c & "    If lstRepairs.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃı±®–ﬁπ§µ•£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°Êä•‰øÆÂ∑•ÂçïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If Not IsHighPrivilege(gCurrentRole) Then" & vbCrLf
@@ -5652,7 +5652,7 @@ Private Sub CreateRepairsForm()
     c = c & "        Dim selID As String" & vbCrLf
     c = c & "        selID = lstRepairs.List(lstRepairs.ListIndex, 0)" & vbCrLf
     c = c & "        Dim wsC As Worksheet" & vbCrLf
-    c = c & "        Set wsC = ThisWorkbook.Sheets(" & q & "±®–ﬁπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "        Set wsC = ThisWorkbook.Sheets(" & q & "Êä•‰øÆÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "        Dim rr As Long" & vbCrLf
     c = c & "        For rr = 2 To wsC.Cells(wsC.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "            If CStr(wsC.Cells(rr, 1).Value) = selID Then" & vbCrLf
@@ -5661,11 +5661,11 @@ Private Sub CreateRepairsForm()
     c = c & "            End If" & vbCrLf
     c = c & "        Next rr" & vbCrLf
     c = c & "        If creator <> gCurrentUser Then" & vbCrLf
-    c = c & "            MsgBox " & q & "÷ªƒ‹…æ≥˝◊‘º∫¥¥Ω®µƒ±®–ﬁπ§µ•£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "            MsgBox " & q & "Âè™ËÉΩÂà†Èô§Ëá™Â∑±ÂàõÂª∫ÁöÑÊä•‰øÆÂ∑•ÂçïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "            Exit Sub" & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "    End If" & vbCrLf
-    c = c & "    If MsgBox(" & q & "»∑∂®…æ≥˝∏√±®–ﬁπ§µ•£ø" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
+    c = c & "    If MsgBox(" & q & "Á°ÆÂÆöÂà†Èô§ËØ•Êä•‰øÆÂ∑•ÂçïÔºü" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
     c = c & "        DeleteRepairByID lstRepairs.List(lstRepairs.ListIndex, 0)" & vbCrLf
     c = c & "        LoadData" & vbCrLf
     c = c & "    End If" & vbCrLf
@@ -5682,7 +5682,7 @@ Private Sub CreateRepairsForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®±®–ﬁ±‡º≠¥∞ÃÂ frmRepairEdit ----------
+' ---------- ÂàõÂª∫Êä•‰øÆÁºñËæëÁ™ó‰Ωì frmRepairEdit ----------
 
 Private Sub CreateRepairEditForm()
     Dim oldForm As String
@@ -5698,7 +5698,7 @@ Private Sub CreateRepairEditForm()
     actualName = vbc.Name
     SetConfigProp "RepairEditFormName", actualName
 
-    vbc.Properties("Caption") = "±®–ﬁ±‡º≠"
+    vbc.Properties("Caption") = "Êä•‰øÆÁºñËæë"
     vbc.Properties("Width") = 450
     vbc.Properties("Height") = 300
     vbc.Properties("StartUpPosition") = 2
@@ -5707,69 +5707,69 @@ Private Sub CreateRepairEditForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' ¬•∂∞
+    ' Ê•ºÊ†ã
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "Label1": ctl.Caption = "¬•∂∞£∫"
+    ctl.Name = "Label1": ctl.Caption = "Ê•ºÊ†ãÔºö"
     ctl.Left = 24: ctl.Top = 24: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboBuilding"
     ctl.Left = 84: ctl.Top = 24: ctl.Width = 120: ctl.Height = 24
     ctl.Style = 2
 
-    ' ∑ø∫≈
+    ' ÊàøÂè∑
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "Label2": ctl.Caption = "∑ø∫≈£∫"
+    ctl.Name = "Label2": ctl.Caption = "ÊàøÂè∑Ôºö"
     ctl.Left = 216: ctl.Top = 24: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboRoom"
     ctl.Left = 276: ctl.Top = 24: ctl.Width = 120: ctl.Height = 24
     ctl.Style = 0
 
-    ' ±®–ﬁ¿‡–Õ
+    ' Êä•‰øÆÁ±ªÂûã
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "Label3": ctl.Caption = "±®–ﬁ¿‡–Õ£∫"
+    ctl.Name = "Label3": ctl.Caption = "Êä•‰øÆÁ±ªÂûãÔºö"
     ctl.Left = 24: ctl.Top = 54: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboRepairType"
     ctl.Left = 84: ctl.Top = 54: ctl.Width = 150: ctl.Height = 24
     ctl.Style = 0
 
-    ' Œ Ã‚√Ë ˆ
+    ' ÈóÆÈ¢òÊèèËø∞
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "Label4": ctl.Caption = "Œ Ã‚√Ë ˆ£∫"
+    ctl.Name = "Label4": ctl.Caption = "ÈóÆÈ¢òÊèèËø∞Ôºö"
     ctl.Left = 24: ctl.Top = 84: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtDesc"
     ctl.Left = 84: ctl.Top = 84: ctl.Width = 300: ctl.Height = 80
     ctl.MultiLine = True: ctl.ScrollBars = 2
 
-    ' Õº∆¨¬∑æ∂
+    ' ÂõæÁâáË∑ØÂæÑ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "Label5": ctl.Caption = "Õº∆¨¬∑æ∂£∫"
+    ctl.Name = "Label5": ctl.Caption = "ÂõæÁâáË∑ØÂæÑÔºö"
     ctl.Left = 24: ctl.Top = 174: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtPicPath"
     ctl.Left = 84: ctl.Top = 174: ctl.Width = 250: ctl.Height = 24
     ctl.Enabled = False
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdBrowsePic": ctl.Caption = "—°‘ÒÕº∆¨"
+    ctl.Name = "cmdBrowsePic": ctl.Caption = "ÈÄâÊã©ÂõæÁâá"
     ctl.Left = 344: ctl.Top = 174: ctl.Width = 80: ctl.Height = 24
 
-    ' ΩÙº±±®–ﬁ
+    ' Á¥ßÊÄ•Êä•‰øÆ
     Set ctl = dsg.Controls.Add("Forms.CheckBox.1")
-    ctl.Name = "chkUrgent": ctl.Caption = "ΩÙº±±®–ﬁ"
+    ctl.Name = "chkUrgent": ctl.Caption = "Á¥ßÊÄ•Êä•‰øÆ"
     ctl.Left = 24: ctl.Top = 204: ctl.Width = 100: ctl.Height = 18
 
-    ' ±£¥Ê/»°œ˚
+    ' ‰øùÂ≠ò/ÂèñÊ∂à
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdSave": ctl.Caption = "±£¥Ê"
+    ctl.Name = "cmdSave": ctl.Caption = "‰øùÂ≠ò"
     ctl.Left = 100: ctl.Top = 240: ctl.Width = 80: ctl.Height = 28
     ctl.BackColor = RGB(60, 120, 216)
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdCancel": ctl.Caption = "»°œ˚"
+    ctl.Name = "cmdCancel": ctl.Caption = "ÂèñÊ∂à"
     ctl.Left = 200: ctl.Top = 240: ctl.Width = 80: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -5782,18 +5782,18 @@ Private Sub CreateRepairEditForm()
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
     c = c & "    Dim bk As Long" & vbCrLf
     c = c & "    For bk = 1 To 10" & vbCrLf
-    c = c & "        cboBuilding.AddItem bk & " & q & "∂∞" & q & vbCrLf
+    c = c & "        cboBuilding.AddItem bk & " & q & "Ê†ã" & q & vbCrLf
     c = c & "    Next bk" & vbCrLf
-    c = c & "    cboRepairType.AddItem " & q & "ÀÆπ‹" & q & vbCrLf
-    c = c & "    cboRepairType.AddItem " & q & "µÁ¬∑" & q & vbCrLf
-    c = c & "    cboRepairType.AddItem " & q & "µÁÃ›" & q & vbCrLf
-    c = c & "    cboRepairType.AddItem " & q & "√≈¥∞" & q & vbCrLf
-    c = c & "    cboRepairType.AddItem " & q & "∆‰À˚" & q & vbCrLf
+    c = c & "    cboRepairType.AddItem " & q & "Ê∞¥ÁÆ°" & q & vbCrLf
+    c = c & "    cboRepairType.AddItem " & q & "ÁîµË∑Ø" & q & vbCrLf
+    c = c & "    cboRepairType.AddItem " & q & "ÁîµÊ¢Ø" & q & vbCrLf
+    c = c & "    cboRepairType.AddItem " & q & "Èó®Á™ó" & q & vbCrLf
+    c = c & "    cboRepairType.AddItem " & q & "ÂÖ∂‰ªñ" & q & vbCrLf
     c = c & "    If gEditRepairID <> " & q & q & " Then" & vbCrLf
-    c = c & "        Me.Caption = " & q & "±‡º≠±®–ﬁπ§µ•" & q & vbCrLf
+    c = c & "        Me.Caption = " & q & "ÁºñËæëÊä•‰øÆÂ∑•Âçï" & q & vbCrLf
     c = c & "        LoadData" & vbCrLf
     c = c & "    Else" & vbCrLf
-    c = c & "        Me.Caption = " & q & "–¬Ω®±®–ﬁπ§µ•" & q & vbCrLf
+    c = c & "        Me.Caption = " & q & "Êñ∞Âª∫Êä•‰øÆÂ∑•Âçï" & q & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
@@ -5810,7 +5810,7 @@ Private Sub CreateRepairEditForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub LoadData()" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "±®–ﬁπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Êä•‰øÆÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -5819,7 +5819,7 @@ Private Sub CreateRepairEditForm()
     c = c & "            cboRoom.Text = ws.Cells(i, 3).Value" & vbCrLf
     c = c & "            cboRepairType.Text = ws.Cells(i, 4).Value" & vbCrLf
     c = c & "            txtDesc.Text = ws.Cells(i, 5).Value" & vbCrLf
-    c = c & "            chkUrgent.Value = (ws.Cells(i, 6).Value = " & q & "ΩÙº±" & q & ")" & vbCrLf
+    c = c & "            chkUrgent.Value = (ws.Cells(i, 6).Value = " & q & "Á¥ßÊÄ•" & q & ")" & vbCrLf
     c = c & "            txtPicPath.Text = ws.Cells(i, 10).Value" & vbCrLf
     c = c & "            Exit For" & vbCrLf
     c = c & "        End If" & vbCrLf
@@ -5829,9 +5829,9 @@ Private Sub CreateRepairEditForm()
     c = c & "Private Sub cmdBrowsePic_Click()" & vbCrLf
     c = c & "    Dim fd As Object" & vbCrLf
     c = c & "    Set fd = Application.FileDialog(1)" & vbCrLf
-    c = c & "    fd.Title = " & q & "—°‘Ò±®–ﬁÕº∆¨" & q & vbCrLf
+    c = c & "    fd.Title = " & q & "ÈÄâÊã©Êä•‰øÆÂõæÁâá" & q & vbCrLf
     c = c & "    fd.Filters.Clear" & vbCrLf
-    c = c & "    fd.Filters.Add " & q & "Õº∆¨Œƒº˛" & q & ", " & q & "*.jpg;*.jpeg;*.png;*.bmp;*.gif" & q & vbCrLf
+    c = c & "    fd.Filters.Add " & q & "ÂõæÁâáÊñá‰ª∂" & q & ", " & q & "*.jpg;*.jpeg;*.png;*.bmp;*.gif" & q & vbCrLf
     c = c & "    If fd.Show = -1 Then" & vbCrLf
     c = c & "        txtPicPath.Text = fd.SelectedItems(1)" & vbCrLf
     c = c & "    End If" & vbCrLf
@@ -5839,29 +5839,29 @@ Private Sub CreateRepairEditForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdSave_Click()" & vbCrLf
     c = c & "    If Trim(cboBuilding.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Ò¬•∂∞£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©Ê•ºÊ†ãÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If Trim(cboRoom.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘ÒªÚ ‰»Î∑ø∫≈£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©ÊàñËæìÂÖ•ÊàøÂè∑ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If Trim(cboRepairType.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Ò±®–ﬁ¿‡–Õ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©Êä•‰øÆÁ±ªÂûãÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If Trim(txtDesc.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«ÎÃÓ–¥Œ Ã‚√Ë ˆ£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑Â°´ÂÜôÈóÆÈ¢òÊèèËø∞ÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Dim urg As String" & vbCrLf
-    c = c & "    If chkUrgent.Value Then urg = " & q & "ΩÙº±" & q & " Else urg = " & q & "∆’Õ®" & q & vbCrLf
+    c = c & "    If chkUrgent.Value Then urg = " & q & "Á¥ßÊÄ•" & q & " Else urg = " & q & "ÊôÆÈÄö" & q & vbCrLf
     c = c & "    If gEditRepairID <> " & q & q & " Then" & vbCrLf
     c = c & "        UpdateRepairRecord gEditRepairID, cboBuilding.Text, cboRoom.Text, cboRepairType.Text, txtDesc.Text, urg, txtPicPath.Text" & vbCrLf
-    c = c & "        MsgBox " & q & "±®–ﬁπ§µ•“—∏¸–¬£°" & q & ", vbInformation" & vbCrLf
+    c = c & "        MsgBox " & q & "Êä•‰øÆÂ∑•ÂçïÂ∑≤Êõ¥Êñ∞ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Else" & vbCrLf
     c = c & "        AddRepairRecord cboBuilding.Text, cboRoom.Text, cboRepairType.Text, txtDesc.Text, urg, txtPicPath.Text" & vbCrLf
-    c = c & "        MsgBox " & q & "±®–ﬁπ§µ•“—¥¥Ω®£°" & q & ", vbInformation" & vbCrLf
+    c = c & "        MsgBox " & q & "Êä•‰øÆÂ∑•ÂçïÂ∑≤ÂàõÂª∫ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
@@ -5873,7 +5873,7 @@ Private Sub CreateRepairEditForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®±®–ﬁ≤Èø¥/¥¶¿Ì¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫Êä•‰øÆÊü•Áúã/Â§ÑÁêÜÁ™ó‰Ωì ----------
 
 Private Sub CreateRepairViewForm()
     Dim oldForm As String
@@ -5889,7 +5889,7 @@ Private Sub CreateRepairViewForm()
     actualName = vbc.Name
     SetConfigProp "RepairViewFormName", actualName
 
-    vbc.Properties("Caption") = "π§µ•œÍ«È"
+    vbc.Properties("Caption") = "Â∑•ÂçïËØ¶ÊÉÖ"
     vbc.Properties("Width") = 460
     vbc.Properties("Height") = 440
     vbc.Properties("StartUpPosition") = 2
@@ -5900,16 +5900,16 @@ Private Sub CreateRepairViewForm()
     Dim yy As Long
     yy = 18
 
-    ' π§µ•±‡∫≈
+    ' Â∑•ÂçïÁºñÂè∑
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblIDCap": ctl.Caption = "π§µ•±‡∫≈£∫"
+    ctl.Name = "lblIDCap": ctl.Caption = "Â∑•ÂçïÁºñÂè∑Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblIDVal": ctl.Caption = ""
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 120: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblUrgCap": ctl.Caption = "ΩÙº±≥Ã∂»£∫"
+    ctl.Name = "lblUrgCap": ctl.Caption = "Á¥ßÊÄ•Á®ãÂ∫¶Ôºö"
     ctl.Left = 240: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -5918,7 +5918,7 @@ Private Sub CreateRepairViewForm()
 
     yy = yy + 26
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblLocCap": ctl.Caption = "±®–ﬁŒª÷√£∫"
+    ctl.Name = "lblLocCap": ctl.Caption = "Êä•‰øÆ‰ΩçÁΩÆÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -5927,7 +5927,7 @@ Private Sub CreateRepairViewForm()
 
     yy = yy + 26
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblTypeCap": ctl.Caption = "±®–ﬁ¿‡–Õ£∫"
+    ctl.Name = "lblTypeCap": ctl.Caption = "Êä•‰øÆÁ±ªÂûãÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -5936,7 +5936,7 @@ Private Sub CreateRepairViewForm()
 
     yy = yy + 26
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblDescCap": ctl.Caption = "Œ Ã‚√Ë ˆ£∫"
+    ctl.Name = "lblDescCap": ctl.Caption = "ÈóÆÈ¢òÊèèËø∞Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
@@ -5946,14 +5946,14 @@ Private Sub CreateRepairViewForm()
 
     yy = yy + 68
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblReporterCap": ctl.Caption = "±®–ﬁ»À£∫"
+    ctl.Name = "lblReporterCap": ctl.Caption = "Êä•‰øÆ‰∫∫Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblReporterVal": ctl.Caption = ""
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 100: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblWorkerCap": ctl.Caption = "Œ¨–ﬁ»À‘±£∫"
+    ctl.Name = "lblWorkerCap": ctl.Caption = "Áª¥‰øÆ‰∫∫ÂëòÔºö"
     ctl.Left = 220: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -5962,7 +5962,7 @@ Private Sub CreateRepairViewForm()
 
     yy = yy + 26
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblStCap": ctl.Caption = "π§µ•◊¥Ã¨£∫"
+    ctl.Name = "lblStCap": ctl.Caption = "Â∑•ÂçïÁä∂ÊÄÅÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -5972,20 +5972,20 @@ Private Sub CreateRepairViewForm()
 
     yy = yy + 28
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblImgCap": ctl.Caption = "Õº∆¨¬∑æ∂£∫"
+    ctl.Name = "lblImgCap": ctl.Caption = "ÂõæÁâáË∑ØÂæÑÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblImgVal": ctl.Caption = ""
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 230: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdUploadPic": ctl.Caption = "…œ¥´Õº∆¨"
+    ctl.Name = "cmdUploadPic": ctl.Caption = "‰∏ä‰º†ÂõæÁâá"
     ctl.Left = 340: ctl.Top = yy - 2: ctl.Width = 80: ctl.Height = 22
 
-    ' ÷∏≈…Œ¨–ﬁ»À‘±«¯”Ú£®Ωˆ≤ø√≈÷˜π‹/π‹¿Ì‘±ø…”√£©
+    ' ÊåáÊ¥æÁª¥‰øÆ‰∫∫ÂëòÂå∫ÂüüÔºà‰ªÖÈÉ®Èó®‰∏ªÁÆ°/ÁÆ°ÁêÜÂëòÂèØÁî®Ôºâ
     yy = yy + 30
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblAssignCap": ctl.Caption = "÷∏≈…»À‘±£∫"
+    ctl.Name = "lblAssignCap": ctl.Caption = "ÊåáÊ¥æ‰∫∫ÂëòÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
@@ -5993,34 +5993,34 @@ Private Sub CreateRepairViewForm()
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 150: ctl.Height = 20
     ctl.Style = 0
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdAssign": ctl.Caption = "»∑»œ÷∏≈…"
+    ctl.Name = "cmdAssign": ctl.Caption = "Á°ÆËÆ§ÊåáÊ¥æ"
     ctl.Left = 260: ctl.Top = yy - 2: ctl.Width = 80: ctl.Height = 22
 
-    ' ≤Ÿ◊˜∞¥≈•
+    ' Êìç‰ΩúÊåâÈíÆ
     yy = yy + 40
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdProcessing"
-    ctl.Caption = "¥¶¿Ì÷–"
+    ctl.Caption = "Â§ÑÁêÜ‰∏≠"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 90: ctl.Height = 30
     ctl.BackColor = RGB(255, 165, 0)
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdComplete"
-    ctl.Caption = "π§µ•ÕÍ≥…"
+    ctl.Caption = "Â∑•ÂçïÂÆåÊàê"
     ctl.Left = 125: ctl.Top = yy: ctl.Width = 90: ctl.Height = 30
     ctl.BackColor = RGB(60, 179, 113)
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdEdit"
-    ctl.Caption = "±‡º≠"
+    ctl.Caption = "ÁºñËæë"
     ctl.Left = 230: ctl.Top = yy: ctl.Width = 80: ctl.Height = 30
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
     ctl.Name = "cmdClose"
-    ctl.Caption = "πÿ±’"
+    ctl.Caption = "ÂÖ≥Èó≠"
     ctl.Left = 340: ctl.Top = yy: ctl.Width = 80: ctl.Height = 30
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -6039,7 +6039,7 @@ Private Sub CreateRepairViewForm()
     c = c & "Private Sub LoadUsers()" & vbCrLf
     c = c & "    cboAssign.Clear" & vbCrLf
     c = c & "    Dim wsU As Worksheet" & vbCrLf
-    c = c & "    Set wsU = ThisWorkbook.Sheets(" & q & "”√ªßπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set wsU = ThisWorkbook.Sheets(" & q & "Áî®Êà∑ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = wsU.Cells(wsU.Rows.Count, 2).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -6049,7 +6049,7 @@ Private Sub CreateRepairViewForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub LoadDetail()" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "±®–ﬁπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Êä•‰øÆÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -6059,7 +6059,7 @@ Private Sub CreateRepairViewForm()
     c = c & "            lblTypeVal.Caption = ws.Cells(i, 4).Value" & vbCrLf
     c = c & "            txtDescV.Text = ws.Cells(i, 5).Value" & vbCrLf
     c = c & "            lblUrgVal.Caption = ws.Cells(i, 6).Value" & vbCrLf
-    c = c & "            If ws.Cells(i, 6).Value = " & q & "ΩÙº±" & q & " Then" & vbCrLf
+    c = c & "            If ws.Cells(i, 6).Value = " & q & "Á¥ßÊÄ•" & q & " Then" & vbCrLf
     c = c & "                lblUrgVal.ForeColor = RGB(220, 0, 0)" & vbCrLf
     c = c & "            Else" & vbCrLf
     c = c & "                lblUrgVal.ForeColor = RGB(0, 128, 0)" & vbCrLf
@@ -6070,15 +6070,15 @@ Private Sub CreateRepairViewForm()
     c = c & "            lblImgVal.Caption = ws.Cells(i, 10).Value" & vbCrLf
     c = c & "            Dim st As String" & vbCrLf
     c = c & "            st = ws.Cells(i, 9).Value" & vbCrLf
-    c = c & "            If st = " & q & "¥˝¥¶¿Ì" & q & " Then" & vbCrLf
+    c = c & "            If st = " & q & "ÂæÖÂ§ÑÁêÜ" & q & " Then" & vbCrLf
     c = c & "                lblStVal.ForeColor = RGB(180, 0, 0)" & vbCrLf
     c = c & "                cmdProcessing.Enabled = False" & vbCrLf
     c = c & "                cmdComplete.Enabled = False" & vbCrLf
-    c = c & "            ElseIf st = " & q & "“—÷∏≈…" & q & " Then" & vbCrLf
+    c = c & "            ElseIf st = " & q & "Â∑≤ÊåáÊ¥æ" & q & " Then" & vbCrLf
     c = c & "                lblStVal.ForeColor = RGB(30, 144, 255)" & vbCrLf
     c = c & "                cmdProcessing.Enabled = True" & vbCrLf
     c = c & "                cmdComplete.Enabled = False" & vbCrLf
-    c = c & "            ElseIf st = " & q & "¥¶¿Ì÷–" & q & " Then" & vbCrLf
+    c = c & "            ElseIf st = " & q & "Â§ÑÁêÜ‰∏≠" & q & " Then" & vbCrLf
     c = c & "                lblStVal.ForeColor = RGB(255, 140, 0)" & vbCrLf
     c = c & "                cmdProcessing.Enabled = False" & vbCrLf
     c = c & "                cmdComplete.Enabled = True" & vbCrLf
@@ -6090,7 +6090,7 @@ Private Sub CreateRepairViewForm()
     c = c & "            Dim isHigh As Boolean" & vbCrLf
     c = c & "            isHigh = IsHighPrivilege(gCurrentRole)" & vbCrLf
     c = c & "            cboAssign.Enabled = isHigh" & vbCrLf
-    c = c & "            cmdAssign.Enabled = isHigh And (st = " & q & "¥˝¥¶¿Ì" & q & " Or st = " & q & "“—÷∏≈…" & q & ")" & vbCrLf
+    c = c & "            cmdAssign.Enabled = isHigh And (st = " & q & "ÂæÖÂ§ÑÁêÜ" & q & " Or st = " & q & "Â∑≤ÊåáÊ¥æ" & q & ")" & vbCrLf
     c = c & "            If ws.Cells(i, 8).Value <> " & q & q & " Then" & vbCrLf
     c = c & "                cboAssign.Text = ws.Cells(i, 8).Value" & vbCrLf
     c = c & "            End If" & vbCrLf
@@ -6101,38 +6101,38 @@ Private Sub CreateRepairViewForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdAssign_Click()" & vbCrLf
     c = c & "    If Trim(cboAssign.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘ÒŒ¨–ﬁ»À‘±£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©Áª¥‰øÆ‰∫∫ÂëòÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    AssignRepairWorker gViewRepairID, cboAssign.Text" & vbCrLf
-    c = c & "    MsgBox " & q & "“—÷∏≈…Œ¨–ﬁ»À‘±: " & q & " & cboAssign.Text, vbInformation" & vbCrLf
+    c = c & "    MsgBox " & q & "Â∑≤ÊåáÊ¥æÁª¥‰øÆ‰∫∫Âëò: " & q & " & cboAssign.Text, vbInformation" & vbCrLf
     c = c & "    LoadDetail" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdProcessing_Click()" & vbCrLf
-    c = c & "    UpdateRepairStatus gViewRepairID, " & q & "¥¶¿Ì÷–" & q & vbCrLf
-    c = c & "    MsgBox " & q & "π§µ•◊¥Ã¨“—∏¸–¬Œ™°æ¥¶¿Ì÷–°ø£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    UpdateRepairStatus gViewRepairID, " & q & "Â§ÑÁêÜ‰∏≠" & q & vbCrLf
+    c = c & "    MsgBox " & q & "Â∑•ÂçïÁä∂ÊÄÅÂ∑≤Êõ¥Êñ∞‰∏∫„ÄêÂ§ÑÁêÜ‰∏≠„ÄëÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    LoadDetail" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdComplete_Click()" & vbCrLf
-    c = c & "    UpdateRepairStatus gViewRepairID, " & q & "“—ÕÍ≥…" & q & vbCrLf
-    c = c & "    MsgBox " & q & "π§µ•“—ÕÍ≥…£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    UpdateRepairStatus gViewRepairID, " & q & "Â∑≤ÂÆåÊàê" & q & vbCrLf
+    c = c & "    MsgBox " & q & "Â∑•ÂçïÂ∑≤ÂÆåÊàêÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    LoadDetail" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdUploadPic_Click()" & vbCrLf
     c = c & "    Dim fd As Object" & vbCrLf
     c = c & "    Set fd = Application.FileDialog(1)" & vbCrLf
-    c = c & "    fd.Title = " & q & "—°‘Ò±®–ﬁÕº∆¨" & q & vbCrLf
+    c = c & "    fd.Title = " & q & "ÈÄâÊã©Êä•‰øÆÂõæÁâá" & q & vbCrLf
     c = c & "    fd.Filters.Clear" & vbCrLf
-    c = c & "    fd.Filters.Add " & q & "Õº∆¨Œƒº˛" & q & ", " & q & "*.jpg;*.jpeg;*.png;*.bmp;*.gif" & q & vbCrLf
+    c = c & "    fd.Filters.Add " & q & "ÂõæÁâáÊñá‰ª∂" & q & ", " & q & "*.jpg;*.jpeg;*.png;*.bmp;*.gif" & q & vbCrLf
     c = c & "    If fd.Show = -1 Then" & vbCrLf
     c = c & "        Dim picPath As String" & vbCrLf
     c = c & "        picPath = fd.SelectedItems(1)" & vbCrLf
     c = c & "        UpdateRepairPic gViewRepairID, picPath" & vbCrLf
     c = c & "        lblImgVal.Caption = picPath" & vbCrLf
-    c = c & "        MsgBox " & q & "Õº∆¨“—…œ¥´£°" & q & ", vbInformation" & vbCrLf
+    c = c & "        MsgBox " & q & "ÂõæÁâáÂ∑≤‰∏ä‰º†ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
@@ -6149,13 +6149,13 @@ Private Sub CreateRepairViewForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ±®–ﬁπ‹¿Ì¥∞ÃÂœ‘ æ ----------
+' ---------- Êä•‰øÆÁÆ°ÁêÜÁ™ó‰ΩìÊòæÁ§∫ ----------
 
 Public Sub ShowRepairsForm()
     Dim fName As String
     fName = GetConfigProp("RepairsFormName")
     If fName = "" Or Not FormExists("RepairsFormName") Then
-        MsgBox "±®–ﬁπ‹¿Ì¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "Êä•‰øÆÁÆ°ÁêÜÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -6167,7 +6167,7 @@ Public Sub ShowRepairEditForm()
     Dim fName As String
     fName = GetConfigProp("RepairEditFormName")
     If fName = "" Or Not FormExists("RepairEditFormName") Then
-        MsgBox "±®–ﬁ±‡º≠¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "Êä•‰øÆÁºñËæëÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -6179,7 +6179,7 @@ Public Sub ShowRepairViewForm()
     Dim fName As String
     fName = GetConfigProp("RepairViewFormName")
     If fName = "" Or Not FormExists("RepairViewFormName") Then
-        MsgBox "±®–ﬁ≤Èø¥¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "Êä•‰øÆÊü•ÁúãÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -6187,11 +6187,11 @@ Public Sub ShowRepairViewForm()
     frm.Show
 End Sub
 
-' ---------- ±®–ﬁπ‹¿Ì ˝æ›≤Ÿ◊˜∫Ø ˝ ----------
+' ---------- Êä•‰øÆÁÆ°ÁêÜÊï∞ÊçÆÊìç‰ΩúÂáΩÊï∞ ----------
 
 Private Function GenerateRepairID() As String
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("±®–ﬁπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Êä•‰øÆÁÆ°ÁêÜ")
     Dim lr As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     Dim maxID As Long
@@ -6211,7 +6211,7 @@ End Function
 
 Public Sub AddRepairRecord(sBuilding As String, sRoom As String, sType As String, sDesc As String, sUrg As String, sPic As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("±®–ﬁπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Êä•‰øÆÁÆ°ÁêÜ")
     Dim newRow As Long
     newRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row + 1
     ws.Cells(newRow, 1).Value = GenerateRepairID()
@@ -6222,7 +6222,7 @@ Public Sub AddRepairRecord(sBuilding As String, sRoom As String, sType As String
     ws.Cells(newRow, 6).Value = sUrg
     ws.Cells(newRow, 7).Value = gCurrentUser
     ws.Cells(newRow, 8).Value = ""
-    ws.Cells(newRow, 9).Value = "¥˝¥¶¿Ì"
+    ws.Cells(newRow, 9).Value = "ÂæÖÂ§ÑÁêÜ"
     ws.Cells(newRow, 10).Value = sPic
     ws.Cells(newRow, 11).Value = Format(Now, "yyyy-mm-dd hh:mm:ss")
     ws.Cells(newRow, 12).Value = ""
@@ -6231,7 +6231,7 @@ End Sub
 
 Public Sub UpdateRepairRecord(rID As String, sBuilding As String, sRoom As String, sType As String, sDesc As String, sUrg As String, sPic As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("±®–ﬁπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Êä•‰øÆÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -6250,13 +6250,13 @@ End Sub
 
 Public Sub UpdateRepairStatus(rID As String, newStatus As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("±®–ﬁπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Êä•‰øÆÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
         If CStr(ws.Cells(i, 1).Value) = rID Then
             ws.Cells(i, 9).Value = newStatus
-            If newStatus = "“—ÕÍ≥…" Then
+            If newStatus = "Â∑≤ÂÆåÊàê" Then
                 ws.Cells(i, 12).Value = Format(Now, "yyyy-mm-dd hh:mm:ss")
             End If
             Exit For
@@ -6266,14 +6266,14 @@ End Sub
 
 Public Sub AssignRepairWorker(rID As String, worker As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("±®–ﬁπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Êä•‰øÆÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
         If CStr(ws.Cells(i, 1).Value) = rID Then
             ws.Cells(i, 8).Value = worker
-            If ws.Cells(i, 9).Value = "¥˝¥¶¿Ì" Then
-                ws.Cells(i, 9).Value = "“—÷∏≈…"
+            If ws.Cells(i, 9).Value = "ÂæÖÂ§ÑÁêÜ" Then
+                ws.Cells(i, 9).Value = "Â∑≤ÊåáÊ¥æ"
             End If
             Exit For
         End If
@@ -6282,7 +6282,7 @@ End Sub
 
 Public Sub UpdateRepairPic(rID As String, picPath As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("±®–ﬁπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Êä•‰øÆÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -6295,7 +6295,7 @@ End Sub
 
 Public Sub DeleteRepairByID(rID As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("±®–ﬁπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Êä•‰øÆÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -6306,34 +6306,34 @@ Public Sub DeleteRepairByID(rID As String)
     Next i
 End Sub
 
-' ---------- ¥¥Ω®Õ∂ÀﬂΩ®“È±Ì ----------
+' ---------- ÂàõÂª∫ÊäïËØâÂª∫ËÆÆË°® ----------
 
 Private Sub CreateComplaintSheet()
     Dim ws As Worksheet
-    If SheetExists("Õ∂ÀﬂΩ®“È") Then
-        Set ws = ThisWorkbook.Sheets("Õ∂ÀﬂΩ®“È")
+    If SheetExists("ÊäïËØâÂª∫ËÆÆ") Then
+        Set ws = ThisWorkbook.Sheets("ÊäïËØâÂª∫ËÆÆ")
     Else
         Set ws = ThisWorkbook.Sheets.Add( _
             After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.Count))
-        ws.Name = "Õ∂ÀﬂΩ®“È"
+        ws.Name = "ÊäïËØâÂª∫ËÆÆ"
     End If
     With ws
-        .Range("A1").Value = "º«¬º±‡∫≈"
-        .Range("B1").Value = "¿‡–Õ"
-        .Range("C1").Value = "◊”¿‡–Õ"
-        .Range("D1").Value = "Õ∂Àﬂƒ⁄»›"
-        .Range("E1").Value = "Ã·Ωª»À"
-        .Range("F1").Value = "¥¶¿Ì◊¥Ã¨"
-        .Range("G1").Value = "ªÿ∏¥ƒ⁄»›"
-        .Range("H1").Value = "∏Ωº˛¬∑æ∂"
-        .Range("I1").Value = "Ã·Ωª ±º‰"
-        .Range("J1").Value = "ªÿ∏¥ ±º‰"
+        .Range("A1").Value = "ËÆ∞ÂΩïÁºñÂè∑"
+        .Range("B1").Value = "Á±ªÂûã"
+        .Range("C1").Value = "Â≠êÁ±ªÂûã"
+        .Range("D1").Value = "ÊäïËØâÂÜÖÂÆπ"
+        .Range("E1").Value = "Êèê‰∫§‰∫∫"
+        .Range("F1").Value = "Â§ÑÁêÜÁä∂ÊÄÅ"
+        .Range("G1").Value = "ÂõûÂ§çÂÜÖÂÆπ"
+        .Range("H1").Value = "ÈôÑ‰ª∂Ë∑ØÂæÑ"
+        .Range("I1").Value = "Êèê‰∫§Êó∂Èó¥"
+        .Range("J1").Value = "ÂõûÂ§çÊó∂Èó¥"
         .Range("A1:J1").Font.Bold = True
         .Columns("A:J").AutoFit
     End With
 End Sub
 
-' ---------- ¥¥Ω®Õ∂ÀﬂΩ®“È¥∞ÃÂ frmComplaints ----------
+' ---------- ÂàõÂª∫ÊäïËØâÂª∫ËÆÆÁ™ó‰Ωì frmComplaints ----------
 
 Private Sub CreateComplaintsForm()
     Dim oldForm As String
@@ -6349,7 +6349,7 @@ Private Sub CreateComplaintsForm()
     actualName = vbc.Name
     SetConfigProp "ComplaintsFormName", actualName
 
-    vbc.Properties("Caption") = "Õ∂ÀﬂΩ®“È"
+    vbc.Properties("Caption") = "ÊäïËØâÂª∫ËÆÆ"
     vbc.Properties("Width") = 510
     vbc.Properties("Height") = 400
     vbc.Properties("StartUpPosition") = 2
@@ -6366,26 +6366,26 @@ Private Sub CreateComplaintsForm()
     ctl.ColumnHeads = False
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdNewComplaint": ctl.Caption = "–¬Ω®Õ∂Àﬂ"
+    ctl.Name = "cmdNewComplaint": ctl.Caption = "Êñ∞Âª∫ÊäïËØâ"
     ctl.Left = 12: ctl.Top = 340: ctl.Width = 100: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdReply": ctl.Caption = "ªÿ∏¥Õ∂Àﬂ"
+    ctl.Name = "cmdReply": ctl.Caption = "ÂõûÂ§çÊäïËØâ"
     ctl.Left = 120: ctl.Top = 340: ctl.Width = 100: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdDelete": ctl.Caption = "…æ≥˝"
+    ctl.Name = "cmdDelete": ctl.Caption = "Âà†Èô§"
     ctl.Left = 228: ctl.Top = 340: ctl.Width = 70: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdRefresh": ctl.Caption = "À¢–¬"
+    ctl.Name = "cmdRefresh": ctl.Caption = "Âà∑Êñ∞"
     ctl.Left = 306: ctl.Top = 340: ctl.Width = 70: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdBack": ctl.Caption = "∑µªÿ"
+    ctl.Name = "cmdBack": ctl.Caption = "ËøîÂõû"
     ctl.Left = 400: ctl.Top = 340: ctl.Width = 80: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -6402,7 +6402,7 @@ Private Sub CreateComplaintsForm()
     c = c & "Private Sub LoadData()" & vbCrLf
     c = c & "    lstComplaints.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Õ∂ÀﬂΩ®“È" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "ÊäïËØâÂª∫ËÆÆ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -6422,7 +6422,7 @@ Private Sub CreateComplaintsForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdReply_Click()" & vbCrLf
     c = c & "    If lstComplaints.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃıº«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°ËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gEditComplaintID = lstComplaints.List(lstComplaints.ListIndex, 0)" & vbCrLf
@@ -6432,26 +6432,26 @@ Private Sub CreateComplaintsForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdDelete_Click()" & vbCrLf
     c = c & "    If lstComplaints.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃıº«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°ËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If Not IsHighPrivilege(gCurrentRole) Then" & vbCrLf
     c = c & "        Dim selID As String" & vbCrLf
     c = c & "        selID = lstComplaints.List(lstComplaints.ListIndex, 0)" & vbCrLf
     c = c & "        Dim wsC As Worksheet" & vbCrLf
-    c = c & "        Set wsC = ThisWorkbook.Sheets(" & q & "Õ∂ÀﬂΩ®“È" & q & ")" & vbCrLf
+    c = c & "        Set wsC = ThisWorkbook.Sheets(" & q & "ÊäïËØâÂª∫ËÆÆ" & q & ")" & vbCrLf
     c = c & "        Dim rr As Long" & vbCrLf
     c = c & "        For rr = 2 To wsC.Cells(wsC.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "            If CStr(wsC.Cells(rr, 1).Value) = selID Then" & vbCrLf
     c = c & "                If wsC.Cells(rr, 5).Value <> gCurrentUser Then" & vbCrLf
-    c = c & "                    MsgBox " & q & "÷ªƒ‹…æ≥˝◊‘º∫Ã·Ωªµƒº«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "                    MsgBox " & q & "Âè™ËÉΩÂà†Èô§Ëá™Â∑±Êèê‰∫§ÁöÑËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "                    Exit Sub" & vbCrLf
     c = c & "                End If" & vbCrLf
     c = c & "                Exit For" & vbCrLf
     c = c & "            End If" & vbCrLf
     c = c & "        Next rr" & vbCrLf
     c = c & "    End If" & vbCrLf
-    c = c & "    If MsgBox(" & q & "»∑∂®…æ≥˝∏√º«¬º£ø" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
+    c = c & "    If MsgBox(" & q & "Á°ÆÂÆöÂà†Èô§ËØ•ËÆ∞ÂΩïÔºü" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
     c = c & "        DeleteComplaintByID lstComplaints.List(lstComplaints.ListIndex, 0)" & vbCrLf
     c = c & "        LoadData" & vbCrLf
     c = c & "    End If" & vbCrLf
@@ -6468,7 +6468,7 @@ Private Sub CreateComplaintsForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®Õ∂Àﬂ±‡º≠¥∞ÃÂ frmComplaintEdit ----------
+' ---------- ÂàõÂª∫ÊäïËØâÁºñËæëÁ™ó‰Ωì frmComplaintEdit ----------
 
 Private Sub CreateComplaintEditForm()
     Dim oldForm As String
@@ -6484,7 +6484,7 @@ Private Sub CreateComplaintEditForm()
     actualName = vbc.Name
     SetConfigProp "ComplaintEditFormName", actualName
 
-    vbc.Properties("Caption") = "Õ∂Àﬂ±‡º≠"
+    vbc.Properties("Caption") = "ÊäïËØâÁºñËæë"
     vbc.Properties("Width") = 430
     vbc.Properties("Height") = 380
     vbc.Properties("StartUpPosition") = 2
@@ -6493,18 +6493,18 @@ Private Sub CreateComplaintEditForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' Õ∂Àﬂ¿‡–Õ
+    ' ÊäïËØâÁ±ªÂûã
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "Label1": ctl.Caption = "Õ∂Àﬂ¿‡–Õ£∫"
+    ctl.Name = "Label1": ctl.Caption = "ÊäïËØâÁ±ªÂûãÔºö"
     ctl.Left = 24: ctl.Top = 24: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboType"
     ctl.Left = 84: ctl.Top = 24: ctl.Width = 150: ctl.Height = 24
     ctl.Style = 2
 
-    ' Õ∂Àﬂ◊”¿‡–Õ£®∂ØÃ¨œ‘ æ£©
+    ' ÊäïËØâÂ≠êÁ±ªÂûãÔºàÂä®ÊÄÅÊòæÁ§∫Ôºâ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblSubType": ctl.Caption = "Õ∂Àﬂ◊”¿‡£∫"
+    ctl.Name = "lblSubType": ctl.Caption = "ÊäïËØâÂ≠êÁ±ªÔºö"
     ctl.Left = 246: ctl.Top = 24: ctl.Width = 60: ctl.Height = 18
     ctl.Visible = False
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
@@ -6513,36 +6513,36 @@ Private Sub CreateComplaintEditForm()
     ctl.Style = 0
     ctl.Visible = False
 
-    ' µ±«∞◊¥Ã¨
+    ' ÂΩìÂâçÁä∂ÊÄÅ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "Label2": ctl.Caption = "µ±«∞◊¥Ã¨£∫"
+    ctl.Name = "Label2": ctl.Caption = "ÂΩìÂâçÁä∂ÊÄÅÔºö"
     ctl.Left = 24: ctl.Top = 54: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboStatus"
     ctl.Left = 84: ctl.Top = 54: ctl.Width = 120: ctl.Height = 24
     ctl.Style = 2
 
-    ' Õ∂Àﬂƒ⁄»›
+    ' ÊäïËØâÂÜÖÂÆπ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "Label3": ctl.Caption = "Õ∂Àﬂƒ⁄»›£∫"
+    ctl.Name = "Label3": ctl.Caption = "ÊäïËØâÂÜÖÂÆπÔºö"
     ctl.Left = 24: ctl.Top = 84: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtContent"
     ctl.Left = 84: ctl.Top = 84: ctl.Width = 300: ctl.Height = 80
     ctl.MultiLine = True: ctl.ScrollBars = 2
 
-    ' ªÿ∏¥ƒ⁄»›
+    ' ÂõûÂ§çÂÜÖÂÆπ
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "Label4": ctl.Caption = "ªÿ∏¥ƒ⁄»›£∫"
+    ctl.Name = "Label4": ctl.Caption = "ÂõûÂ§çÂÜÖÂÆπÔºö"
     ctl.Left = 24: ctl.Top = 174: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtReply"
     ctl.Left = 84: ctl.Top = 174: ctl.Width = 300: ctl.Height = 60
     ctl.MultiLine = True: ctl.ScrollBars = 2
 
-    ' ∏Ωº˛–≈œ¢ Frame
+    ' ÈôÑ‰ª∂‰ø°ÊÅØ Frame
     Set ctl = dsg.Controls.Add("Forms.Frame.1")
-    ctl.Name = "fraAttachment": ctl.Caption = "∏Ωº˛–≈œ¢£®ø…—°£©"
+    ctl.Name = "fraAttachment": ctl.Caption = "ÈôÑ‰ª∂‰ø°ÊÅØÔºàÂèØÈÄâÔºâ"
     ctl.Left = 24: ctl.Top = 240: ctl.Width = 360: ctl.Height = 50
 
     Dim frm As Object
@@ -6552,19 +6552,19 @@ Private Sub CreateComplaintEditForm()
     ctl.Left = 10: ctl.Top = 18: ctl.Width = 240: ctl.Height = 22
     ctl.Enabled = False
     Set ctl = frm.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdAttachFile": ctl.Caption = "—°‘ÒŒƒº˛"
+    ctl.Name = "cmdAttachFile": ctl.Caption = "ÈÄâÊã©Êñá‰ª∂"
     ctl.Left = 260: ctl.Top = 18: ctl.Width = 80: ctl.Height = 22
 
-    ' ±£¥Ê/»°œ˚
+    ' ‰øùÂ≠ò/ÂèñÊ∂à
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdSave": ctl.Caption = "±£¥Ê"
+    ctl.Name = "cmdSave": ctl.Caption = "‰øùÂ≠ò"
     ctl.Left = 100: ctl.Top = 300: ctl.Width = 80: ctl.Height = 28
     ctl.BackColor = RGB(60, 120, 216)
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdCancel": ctl.Caption = "»°œ˚"
+    ctl.Name = "cmdCancel": ctl.Caption = "ÂèñÊ∂à"
     ctl.Left = 200: ctl.Top = 300: ctl.Width = 80: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -6575,31 +6575,31 @@ Private Sub CreateComplaintEditForm()
     cc = "Option Explicit" & vbCrLf
     cc = cc & "" & vbCrLf
     cc = cc & "Private Sub UserForm_Initialize()" & vbCrLf
-    cc = cc & "    cboType.AddItem " & q & "Õ∂Àﬂ" & q & vbCrLf
-    cc = cc & "    cboType.AddItem " & q & "Ω®“È" & q & vbCrLf
-    cc = cc & "    cboType.AddItem " & q & "◊…—Ø" & q & vbCrLf
-    cc = cc & "    cboStatus.AddItem " & q & "Œ¥¥¶¿Ì" & q & vbCrLf
-    cc = cc & "    cboStatus.AddItem " & q & "¥¶¿Ì÷–" & q & vbCrLf
-    cc = cc & "    cboStatus.AddItem " & q & "“—Ω‚æˆ" & q & vbCrLf
-    cc = cc & "    cboStatus.AddItem " & q & "“—πÿ±’" & q & vbCrLf
+    cc = cc & "    cboType.AddItem " & q & "ÊäïËØâ" & q & vbCrLf
+    cc = cc & "    cboType.AddItem " & q & "Âª∫ËÆÆ" & q & vbCrLf
+    cc = cc & "    cboType.AddItem " & q & "Âí®ËØ¢" & q & vbCrLf
+    cc = cc & "    cboStatus.AddItem " & q & "Êú™Â§ÑÁêÜ" & q & vbCrLf
+    cc = cc & "    cboStatus.AddItem " & q & "Â§ÑÁêÜ‰∏≠" & q & vbCrLf
+    cc = cc & "    cboStatus.AddItem " & q & "Â∑≤Ëß£ÂÜ≥" & q & vbCrLf
+    cc = cc & "    cboStatus.AddItem " & q & "Â∑≤ÂÖ≥Èó≠" & q & vbCrLf
     cc = cc & "    cboStatus.ListIndex = 0" & vbCrLf
     cc = cc & "    If gEditComplaintID <> " & q & q & " Then" & vbCrLf
-    cc = cc & "        Me.Caption = " & q & "≤Èø¥/ªÿ∏¥Õ∂Àﬂ" & q & vbCrLf
+    cc = cc & "        Me.Caption = " & q & "Êü•Áúã/ÂõûÂ§çÊäïËØâ" & q & vbCrLf
     cc = cc & "        LoadData" & vbCrLf
     cc = cc & "    Else" & vbCrLf
-    cc = cc & "        Me.Caption = " & q & "–¬Ω®Õ∂Àﬂ/Ω®“È" & q & vbCrLf
+    cc = cc & "        Me.Caption = " & q & "Êñ∞Âª∫ÊäïËØâ/Âª∫ËÆÆ" & q & vbCrLf
     cc = cc & "    End If" & vbCrLf
     cc = cc & "End Sub" & vbCrLf
     cc = cc & "" & vbCrLf
     cc = cc & "Private Sub cboType_Change()" & vbCrLf
-    cc = cc & "    If cboType.Text = " & q & "Õ∂Àﬂ" & q & " Then" & vbCrLf
+    cc = cc & "    If cboType.Text = " & q & "ÊäïËØâ" & q & " Then" & vbCrLf
     cc = cc & "        lblSubType.Visible = True" & vbCrLf
     cc = cc & "        cboSubType.Visible = True" & vbCrLf
     cc = cc & "        cboSubType.Clear" & vbCrLf
-    cc = cc & "        cboSubType.AddItem " & q & "…Ë ©Œ Ã‚" & q & vbCrLf
-    cc = cc & "        cboSubType.AddItem " & q & "»≈√ÒŒ Ã‚" & q & vbCrLf
-    cc = cc & "        cboSubType.AddItem " & q & "∑˛ŒÒ÷ ¡ø" & q & vbCrLf
-    cc = cc & "        cboSubType.AddItem " & q & "∆‰À˚" & q & vbCrLf
+    cc = cc & "        cboSubType.AddItem " & q & "ËÆæÊñΩÈóÆÈ¢ò" & q & vbCrLf
+    cc = cc & "        cboSubType.AddItem " & q & "Êâ∞Ê∞ëÈóÆÈ¢ò" & q & vbCrLf
+    cc = cc & "        cboSubType.AddItem " & q & "ÊúçÂä°Ë¥®Èáè" & q & vbCrLf
+    cc = cc & "        cboSubType.AddItem " & q & "ÂÖ∂‰ªñ" & q & vbCrLf
     cc = cc & "    Else" & vbCrLf
     cc = cc & "        lblSubType.Visible = False" & vbCrLf
     cc = cc & "        cboSubType.Visible = False" & vbCrLf
@@ -6609,7 +6609,7 @@ Private Sub CreateComplaintEditForm()
     cc = cc & "" & vbCrLf
     cc = cc & "Private Sub LoadData()" & vbCrLf
     cc = cc & "    Dim ws As Worksheet" & vbCrLf
-    cc = cc & "    Set ws = ThisWorkbook.Sheets(" & q & "Õ∂ÀﬂΩ®“È" & q & ")" & vbCrLf
+    cc = cc & "    Set ws = ThisWorkbook.Sheets(" & q & "ÊäïËØâÂª∫ËÆÆ" & q & ")" & vbCrLf
     cc = cc & "    Dim lr As Long, i As Long" & vbCrLf
     cc = cc & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     cc = cc & "    For i = 2 To lr" & vbCrLf
@@ -6638,9 +6638,9 @@ Private Sub CreateComplaintEditForm()
     cc = cc & "Private Sub cmdAttachFile_Click()" & vbCrLf
     cc = cc & "    Dim fd As Object" & vbCrLf
     cc = cc & "    Set fd = Application.FileDialog(1)" & vbCrLf
-    cc = cc & "    fd.Title = " & q & "—°‘Ò∏Ωº˛" & q & vbCrLf
+    cc = cc & "    fd.Title = " & q & "ÈÄâÊã©ÈôÑ‰ª∂" & q & vbCrLf
     cc = cc & "    fd.Filters.Clear" & vbCrLf
-    cc = cc & "    fd.Filters.Add " & q & "À˘”–Œƒº˛" & q & ", " & q & "*.*" & q & vbCrLf
+    cc = cc & "    fd.Filters.Add " & q & "ÊâÄÊúâÊñá‰ª∂" & q & ", " & q & "*.*" & q & vbCrLf
     cc = cc & "    If fd.Show = -1 Then" & vbCrLf
     cc = cc & "        txtAttachPath.Text = fd.SelectedItems(1)" & vbCrLf
     cc = cc & "    End If" & vbCrLf
@@ -6648,11 +6648,11 @@ Private Sub CreateComplaintEditForm()
     cc = cc & "" & vbCrLf
     cc = cc & "Private Sub cmdSave_Click()" & vbCrLf
     cc = cc & "    If Trim(cboType.Text) = " & q & q & " Then" & vbCrLf
-    cc = cc & "        MsgBox " & q & "«Î—°‘ÒÕ∂Àﬂ¿‡–Õ£°" & q & ", vbExclamation" & vbCrLf
+    cc = cc & "        MsgBox " & q & "ËØ∑ÈÄâÊã©ÊäïËØâÁ±ªÂûãÔºÅ" & q & ", vbExclamation" & vbCrLf
     cc = cc & "        Exit Sub" & vbCrLf
     cc = cc & "    End If" & vbCrLf
     cc = cc & "    If Trim(txtContent.Text) = " & q & q & " Then" & vbCrLf
-    cc = cc & "        MsgBox " & q & "«ÎÃÓ–¥Õ∂Àﬂƒ⁄»›£°" & q & ", vbExclamation" & vbCrLf
+    cc = cc & "        MsgBox " & q & "ËØ∑Â°´ÂÜôÊäïËØâÂÜÖÂÆπÔºÅ" & q & ", vbExclamation" & vbCrLf
     cc = cc & "        Exit Sub" & vbCrLf
     cc = cc & "    End If" & vbCrLf
     cc = cc & "    If gEditComplaintID <> " & q & q & " Then" & vbCrLf
@@ -6660,14 +6660,14 @@ Private Sub CreateComplaintEditForm()
     cc = cc & "        replyChanged = (Trim(txtReply.Text) <> " & q & q & ")" & vbCrLf
     cc = cc & "        Dim finalStatus As String" & vbCrLf
     cc = cc & "        finalStatus = cboStatus.Text" & vbCrLf
-    cc = cc & "        If replyChanged And finalStatus <> " & q & "“—Ω‚æˆ" & q & " And finalStatus <> " & q & "“—πÿ±’" & q & " Then" & vbCrLf
-    cc = cc & "            finalStatus = " & q & "“—Ω‚æˆ" & q & vbCrLf
+    cc = cc & "        If replyChanged And finalStatus <> " & q & "Â∑≤Ëß£ÂÜ≥" & q & " And finalStatus <> " & q & "Â∑≤ÂÖ≥Èó≠" & q & " Then" & vbCrLf
+    cc = cc & "            finalStatus = " & q & "Â∑≤Ëß£ÂÜ≥" & q & vbCrLf
     cc = cc & "        End If" & vbCrLf
     cc = cc & "        UpdateComplaintRecord gEditComplaintID, cboType.Text, cboSubType.Text, txtContent.Text, finalStatus, txtReply.Text, txtAttachPath.Text" & vbCrLf
-    cc = cc & "        MsgBox " & q & "º«¬º“—∏¸–¬£°" & q & ", vbInformation" & vbCrLf
+    cc = cc & "        MsgBox " & q & "ËÆ∞ÂΩïÂ∑≤Êõ¥Êñ∞ÔºÅ" & q & ", vbInformation" & vbCrLf
     cc = cc & "    Else" & vbCrLf
     cc = cc & "        AddComplaintRecord cboType.Text, cboSubType.Text, txtContent.Text, txtAttachPath.Text" & vbCrLf
-    cc = cc & "        MsgBox " & q & "Õ∂Àﬂ/Ω®“È“—Ã·Ωª£°" & q & ", vbInformation" & vbCrLf
+    cc = cc & "        MsgBox " & q & "ÊäïËØâ/Âª∫ËÆÆÂ∑≤Êèê‰∫§ÔºÅ" & q & ", vbInformation" & vbCrLf
     cc = cc & "    End If" & vbCrLf
     cc = cc & "    Unload Me" & vbCrLf
     cc = cc & "End Sub" & vbCrLf
@@ -6679,13 +6679,13 @@ Private Sub CreateComplaintEditForm()
     cm.InsertLines 1, cc
 End Sub
 
-' ---------- Õ∂ÀﬂΩ®“È¥∞ÃÂœ‘ æ ----------
+' ---------- ÊäïËØâÂª∫ËÆÆÁ™ó‰ΩìÊòæÁ§∫ ----------
 
 Public Sub ShowComplaintsForm()
     Dim fName As String
     fName = GetConfigProp("ComplaintsFormName")
     If fName = "" Or Not FormExists("ComplaintsFormName") Then
-        MsgBox "Õ∂ÀﬂΩ®“È¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "ÊäïËØâÂª∫ËÆÆÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -6697,7 +6697,7 @@ Public Sub ShowComplaintEditForm()
     Dim fName As String
     fName = GetConfigProp("ComplaintEditFormName")
     If fName = "" Or Not FormExists("ComplaintEditFormName") Then
-        MsgBox "Õ∂Àﬂ±‡º≠¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "ÊäïËØâÁºñËæëÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -6705,11 +6705,11 @@ Public Sub ShowComplaintEditForm()
     frm.Show
 End Sub
 
-' ---------- Õ∂ÀﬂΩ®“È ˝æ›≤Ÿ◊˜∫Ø ˝ ----------
+' ---------- ÊäïËØâÂª∫ËÆÆÊï∞ÊçÆÊìç‰ΩúÂáΩÊï∞ ----------
 
 Private Function GenerateComplaintID() As String
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("Õ∂ÀﬂΩ®“È")
+    Set ws = ThisWorkbook.Sheets("ÊäïËØâÂª∫ËÆÆ")
     Dim lr As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     Dim maxID As Long
@@ -6729,7 +6729,7 @@ End Function
 
 Public Sub AddComplaintRecord(sType As String, sSub As String, sContent As String, sAttach As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("Õ∂ÀﬂΩ®“È")
+    Set ws = ThisWorkbook.Sheets("ÊäïËØâÂª∫ËÆÆ")
     Dim newRow As Long
     newRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row + 1
     ws.Cells(newRow, 1).Value = GenerateComplaintID()
@@ -6737,7 +6737,7 @@ Public Sub AddComplaintRecord(sType As String, sSub As String, sContent As Strin
     ws.Cells(newRow, 3).Value = sSub
     ws.Cells(newRow, 4).Value = sContent
     ws.Cells(newRow, 5).Value = gCurrentUser
-    ws.Cells(newRow, 6).Value = "Œ¥¥¶¿Ì"
+    ws.Cells(newRow, 6).Value = "Êú™Â§ÑÁêÜ"
     ws.Cells(newRow, 7).Value = ""
     ws.Cells(newRow, 8).Value = sAttach
     ws.Cells(newRow, 9).Value = Format(Now, "yyyy-mm-dd hh:mm:ss")
@@ -6747,7 +6747,7 @@ End Sub
 
 Public Sub UpdateComplaintRecord(cID As String, sType As String, sSub As String, sContent As String, sStatus As String, sReply As String, sAttach As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("Õ∂ÀﬂΩ®“È")
+    Set ws = ThisWorkbook.Sheets("ÊäïËØâÂª∫ËÆÆ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -6769,7 +6769,7 @@ End Sub
 
 Public Sub DeleteComplaintByID(cID As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("Õ∂ÀﬂΩ®“È")
+    Set ws = ThisWorkbook.Sheets("ÊäïËØâÂª∫ËÆÆ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -6780,33 +6780,33 @@ Public Sub DeleteComplaintByID(cID As String)
     Next i
 End Sub
 
-' ---------- ¥¥Ω®∑—”√π‹¿Ì±Ì ----------
+' ---------- ÂàõÂª∫Ë¥πÁî®ÁÆ°ÁêÜË°® ----------
 
 Private Sub CreateFeeSheet()
     Dim ws As Worksheet
-    If SheetExists("∑—”√π‹¿Ì") Then
-        Set ws = ThisWorkbook.Sheets("∑—”√π‹¿Ì")
+    If SheetExists("Ë¥πÁî®ÁÆ°ÁêÜ") Then
+        Set ws = ThisWorkbook.Sheets("Ë¥πÁî®ÁÆ°ÁêÜ")
     Else
         Set ws = ThisWorkbook.Sheets.Add( _
             After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.Count))
-        ws.Name = "∑—”√π‹¿Ì"
+        ws.Name = "Ë¥πÁî®ÁÆ°ÁêÜ"
     End If
     With ws
-        .Range("A1").Value = "¬•∫≈"
-        .Range("B1").Value = "«∑Ω…ŒÔ“µ∑—"
-        .Range("C1").Value = "”¶ ’ŒÔ“µ∑—"
-        .Range("D1").Value = "«∑Ω…π´ÃØ∑—"
-        .Range("E1").Value = "±æ‘¬π´ÃØ∑—"
-        .Range("F1").Value = "”¶ ’π´ÃØ∑—"
-        .Range("G1").Value = "ŒÔ“µ∑—«∑Ω…¬ "
-        .Range("H1").Value = "π´ÃØ∑—«∑Ω…¬ "
-        .Range("I1").Value = "Ω…∑—÷‹∆⁄"
+        .Range("A1").Value = "Ê•ºÂè∑"
+        .Range("B1").Value = "Ê¨†Áº¥Áâ©‰∏öË¥π"
+        .Range("C1").Value = "Â∫îÊî∂Áâ©‰∏öË¥π"
+        .Range("D1").Value = "Ê¨†Áº¥ÂÖ¨ÊëäË¥π"
+        .Range("E1").Value = "Êú¨ÊúàÂÖ¨ÊëäË¥π"
+        .Range("F1").Value = "Â∫îÊî∂ÂÖ¨ÊëäË¥π"
+        .Range("G1").Value = "Áâ©‰∏öË¥πÊ¨†Áº¥Áéá"
+        .Range("H1").Value = "ÂÖ¨ÊëäË¥πÊ¨†Áº¥Áéá"
+        .Range("I1").Value = "Áº¥Ë¥πÂë®Êúü"
         .Range("A1:I1").Font.Bold = True
         .Columns("A:I").AutoFit
     End With
 End Sub
 
-' ---------- ¥¥Ω®∑—”√π‹¿Ì¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫Ë¥πÁî®ÁÆ°ÁêÜÁ™ó‰Ωì ----------
 
 Private Sub CreateFeeManagerForm()
     Dim oldForm As String
@@ -6822,7 +6822,7 @@ Private Sub CreateFeeManagerForm()
     actualName = vbc.Name
     SetConfigProp "FeeManagerFormName", actualName
 
-    vbc.Properties("Caption") = "∑—”√π‹¿Ì"
+    vbc.Properties("Caption") = "Ë¥πÁî®ÁÆ°ÁêÜ"
     vbc.Properties("Width") = 780
     vbc.Properties("Height") = 600
     vbc.Properties("StartUpPosition") = 2
@@ -6831,10 +6831,10 @@ Private Sub CreateFeeManagerForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' ---- ∂•≤øÕ≥º∆ø®∆¨«¯”Ú ----
-    ' ø®∆¨1: ◊‹”¶ ’ŒÔ“µ∑—
+    ' ---- È°∂ÈÉ®ÁªüËÆ°Âç°ÁâáÂå∫Âüü ----
+    ' Âç°Áâá1: ÊÄªÂ∫îÊî∂Áâ©‰∏öË¥π
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblCard1Title": ctl.Caption = "◊‹”¶ ’ŒÔ“µ∑—"
+    ctl.Name = "lblCard1Title": ctl.Caption = "ÊÄªÂ∫îÊî∂Áâ©‰∏öË¥π"
     ctl.Left = 15: ctl.Top = 8: ctl.Width = 170: ctl.Height = 16
     ctl.Font.Bold = True: ctl.Font.Size = 9: ctl.TextAlign = 2
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -6843,9 +6843,9 @@ Private Sub CreateFeeManagerForm()
     ctl.Font.Size = 12: ctl.Font.Bold = True: ctl.TextAlign = 2
     ctl.ForeColor = RGB(30, 144, 255)
 
-    ' ø®∆¨2: ◊‹«∑Ω…ŒÔ“µ∑—
+    ' Âç°Áâá2: ÊÄªÊ¨†Áº¥Áâ©‰∏öË¥π
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblCard2Title": ctl.Caption = "◊‹«∑Ω…ŒÔ“µ∑—"
+    ctl.Name = "lblCard2Title": ctl.Caption = "ÊÄªÊ¨†Áº¥Áâ©‰∏öË¥π"
     ctl.Left = 200: ctl.Top = 8: ctl.Width = 170: ctl.Height = 16
     ctl.Font.Bold = True: ctl.Font.Size = 9: ctl.TextAlign = 2
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -6854,9 +6854,9 @@ Private Sub CreateFeeManagerForm()
     ctl.Font.Size = 12: ctl.Font.Bold = True: ctl.TextAlign = 2
     ctl.ForeColor = RGB(220, 80, 80)
 
-    ' ø®∆¨3: ◊‹”¶ ’π´ÃØ∑—
+    ' Âç°Áâá3: ÊÄªÂ∫îÊî∂ÂÖ¨ÊëäË¥π
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblCard3Title": ctl.Caption = "◊‹”¶ ’π´ÃØ∑—"
+    ctl.Name = "lblCard3Title": ctl.Caption = "ÊÄªÂ∫îÊî∂ÂÖ¨ÊëäË¥π"
     ctl.Left = 385: ctl.Top = 8: ctl.Width = 170: ctl.Height = 16
     ctl.Font.Bold = True: ctl.Font.Size = 9: ctl.TextAlign = 2
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -6865,9 +6865,9 @@ Private Sub CreateFeeManagerForm()
     ctl.Font.Size = 12: ctl.Font.Bold = True: ctl.TextAlign = 2
     ctl.ForeColor = RGB(30, 144, 255)
 
-    ' ø®∆¨4: ◊‹«∑Ω…π´ÃØ∑—
+    ' Âç°Áâá4: ÊÄªÊ¨†Áº¥ÂÖ¨ÊëäË¥π
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblCard4Title": ctl.Caption = "◊‹«∑Ω…π´ÃØ∑—"
+    ctl.Name = "lblCard4Title": ctl.Caption = "ÊÄªÊ¨†Áº¥ÂÖ¨ÊëäË¥π"
     ctl.Left = 570: ctl.Top = 8: ctl.Width = 170: ctl.Height = 16
     ctl.Font.Bold = True: ctl.Font.Size = 9: ctl.TextAlign = 2
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -6876,28 +6876,28 @@ Private Sub CreateFeeManagerForm()
     ctl.Font.Size = 12: ctl.Font.Bold = True: ctl.TextAlign = 2
     ctl.ForeColor = RGB(220, 80, 80)
 
-    ' ±»¬ ––
+    ' ÊØîÁéáË°å
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblRateInfo": ctl.Caption = "ŒÔ“µ∑—«∑Ω…¬ : 0%  |  π´ÃØ∑—«∑Ω…¬ : 0%"
+    ctl.Name = "lblRateInfo": ctl.Caption = "Áâ©‰∏öË¥πÊ¨†Áº¥Áéá: 0%  |  ÂÖ¨ÊëäË¥πÊ¨†Áº¥Áéá: 0%"
     ctl.Left = 15: ctl.Top = 50: ctl.Width = 740: ctl.Height = 16
     ctl.Font.Size = 9: ctl.Font.Bold = True: ctl.TextAlign = 2
 
-    ' ---- Ω…∑—÷‹∆⁄…∏—° ----
+    ' ---- Áº¥Ë¥πÂë®ÊúüÁ≠õÈÄâ ----
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblPeriod": ctl.Caption = "Ω…∑—÷‹∆⁄:"
+    ctl.Name = "lblPeriod": ctl.Caption = "Áº¥Ë¥πÂë®Êúü:"
     ctl.Left = 15: ctl.Top = 72: ctl.Width = 60: ctl.Height = 16
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboPeriod"
     ctl.Left = 78: ctl.Top = 70: ctl.Width = 90: ctl.Height = 20
     ctl.Style = 0
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdFilter": ctl.Caption = "≤È—Ø"
+    ctl.Name = "cmdFilter": ctl.Caption = "Êü•ËØ¢"
     ctl.Left = 175: ctl.Top = 70: ctl.Width = 50: ctl.Height = 20
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdChart": ctl.Caption = "÷˘◊¥Õº∑÷Œˆ"
+    ctl.Name = "cmdChart": ctl.Caption = "Êü±Áä∂ÂõæÂàÜÊûê"
     ctl.Left = 232: ctl.Top = 70: ctl.Width = 80: ctl.Height = 20
 
-    ' ---- ∑—”√¡–±Ì ----
+    ' ---- Ë¥πÁî®ÂàóË°® ----
     Set ctl = dsg.Controls.Add("Forms.ListBox.1")
     ctl.Name = "lstFee"
     ctl.Left = 15: ctl.Top = 96: ctl.Width = 740: ctl.Height = 400
@@ -6905,36 +6905,36 @@ Private Sub CreateFeeManagerForm()
     ctl.ColumnWidths = "45;80;80;80;80;80;70;70;70"
     ctl.ColumnHeads = False
 
-    ' ---- µ◊≤ø∞¥≈• ----
+    ' ---- Â∫ïÈÉ®ÊåâÈíÆ ----
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdNew": ctl.Caption = "–¬Ω®"
+    ctl.Name = "cmdNew": ctl.Caption = "Êñ∞Âª∫"
     ctl.Left = 15: ctl.Top = 505: ctl.Width = 70: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdEdit": ctl.Caption = "±‡º≠"
+    ctl.Name = "cmdEdit": ctl.Caption = "ÁºñËæë"
     ctl.Left = 92: ctl.Top = 505: ctl.Width = 70: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdDelete": ctl.Caption = "…æ≥˝"
+    ctl.Name = "cmdDelete": ctl.Caption = "Âà†Èô§"
     ctl.Left = 169: ctl.Top = 505: ctl.Width = 70: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdImport": ctl.Caption = "µº»Î"
+    ctl.Name = "cmdImport": ctl.Caption = "ÂØºÂÖ•"
     ctl.Left = 260: ctl.Top = 505: ctl.Width = 70: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdExport": ctl.Caption = "µº≥ˆ"
+    ctl.Name = "cmdExport": ctl.Caption = "ÂØºÂá∫"
     ctl.Left = 337: ctl.Top = 505: ctl.Width = 70: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdRefresh": ctl.Caption = "À¢–¬"
+    ctl.Name = "cmdRefresh": ctl.Caption = "Âà∑Êñ∞"
     ctl.Left = 414: ctl.Top = 505: ctl.Width = 70: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdClose": ctl.Caption = "πÿ±’"
+    ctl.Name = "cmdClose": ctl.Caption = "ÂÖ≥Èó≠"
     ctl.Left = 685: ctl.Top = 505: ctl.Width = 70: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -6953,7 +6953,7 @@ Private Sub CreateFeeManagerForm()
     c = c & "Private Sub LoadPeriods()" & vbCrLf
     c = c & "    cboPeriod.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "∑—”√π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Ë¥πÁî®ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    Dim dict As Object" & vbCrLf
@@ -6971,7 +6971,7 @@ Private Sub CreateFeeManagerForm()
     c = c & "Private Sub LoadData()" & vbCrLf
     c = c & "    lstFee.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "∑—”√π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Ë¥πÁî®ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    Dim filterP As String" & vbCrLf
@@ -7005,7 +7005,7 @@ Private Sub CreateFeeManagerForm()
     c = c & "    Dim rProp As String, rPub As String" & vbCrLf
     c = c & "    If sumRecv > 0 Then rProp = Format(sumOweProp / sumRecv * 100, " & q & "0.0" & q & ") & " & q & "%" & q & " Else rProp = " & q & "0%" & q & vbCrLf
     c = c & "    If sumRecvPub > 0 Then rPub = Format(sumOwePub / sumRecvPub * 100, " & q & "0.0" & q & ") & " & q & "%" & q & " Else rPub = " & q & "0%" & q & vbCrLf
-    c = c & "    lblRateInfo.Caption = " & q & "ŒÔ“µ∑—«∑Ω…¬ : " & q & " & rProp & " & q & "  |  π´ÃØ∑—«∑Ω…¬ : " & q & " & rPub" & vbCrLf
+    c = c & "    lblRateInfo.Caption = " & q & "Áâ©‰∏öË¥πÊ¨†Áº¥Áéá: " & q & " & rProp & " & q & "  |  ÂÖ¨ÊëäË¥πÊ¨†Áº¥Áéá: " & q & " & rPub" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdFilter_Click()" & vbCrLf
@@ -7021,7 +7021,7 @@ Private Sub CreateFeeManagerForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdEdit_Click()" & vbCrLf
     c = c & "    If lstFee.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃıº«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°ËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Dim selBld As String, selPrd As String" & vbCrLf
@@ -7037,17 +7037,17 @@ Private Sub CreateFeeManagerForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdDelete_Click()" & vbCrLf
     c = c & "    If lstFee.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃıº«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°ËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
-    c = c & "    If MsgBox(" & q & "»∑∂®…æ≥˝∏√∑—”√º«¬º£ø" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
+    c = c & "    If MsgBox(" & q & "Á°ÆÂÆöÂà†Èô§ËØ•Ë¥πÁî®ËÆ∞ÂΩïÔºü" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
     c = c & "        Dim selBld As String, selPrd As String" & vbCrLf
     c = c & "        selBld = lstFee.List(lstFee.ListIndex, 0)" & vbCrLf
     c = c & "        selPrd = lstFee.List(lstFee.ListIndex, 8)" & vbCrLf
     c = c & "        Dim rw As Long" & vbCrLf
     c = c & "        rw = FindFeeRow(selBld, selPrd)" & vbCrLf
     c = c & "        If rw > 0 Then" & vbCrLf
-    c = c & "            ThisWorkbook.Sheets(" & q & "∑—”√π‹¿Ì" & q & ").Rows(rw).Delete" & vbCrLf
+    c = c & "            ThisWorkbook.Sheets(" & q & "Ë¥πÁî®ÁÆ°ÁêÜ" & q & ").Rows(rw).Delete" & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "        LoadPeriods" & vbCrLf
     c = c & "        LoadData" & vbCrLf
@@ -7057,16 +7057,16 @@ Private Sub CreateFeeManagerForm()
     c = c & "Private Sub cmdImport_Click()" & vbCrLf
     c = c & "    Dim fd As Object" & vbCrLf
     c = c & "    Set fd = Application.FileDialog(1)" & vbCrLf
-    c = c & "    fd.Title = " & q & "—°‘Òµº»ÎŒƒº˛" & q & vbCrLf
+    c = c & "    fd.Title = " & q & "ÈÄâÊã©ÂØºÂÖ•Êñá‰ª∂" & q & vbCrLf
     c = c & "    fd.Filters.Clear" & vbCrLf
-    c = c & "    fd.Filters.Add " & q & "ExcelŒƒº˛" & q & ", " & q & "*.xlsm;*.xlsx;*.xls" & q & vbCrLf
+    c = c & "    fd.Filters.Add " & q & "ExcelÊñá‰ª∂" & q & ", " & q & "*.xlsm;*.xlsx;*.xls" & q & vbCrLf
     c = c & "    If fd.Show <> -1 Then Exit Sub" & vbCrLf
     c = c & "    Dim fPath As String" & vbCrLf
     c = c & "    fPath = fd.SelectedItems(1)" & vbCrLf
     c = c & "    ImportFeeData fPath" & vbCrLf
     c = c & "    LoadPeriods" & vbCrLf
     c = c & "    LoadData" & vbCrLf
-    c = c & "    MsgBox " & q & "µº»ÎÕÍ≥…£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    MsgBox " & q & "ÂØºÂÖ•ÂÆåÊàêÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdExport_Click()" & vbCrLf
@@ -7089,7 +7089,7 @@ Private Sub CreateFeeManagerForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®∑—”√±‡º≠¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫Ë¥πÁî®ÁºñËæëÁ™ó‰Ωì ----------
 
 Private Sub CreateFeeEditForm()
     Dim oldForm As String
@@ -7105,7 +7105,7 @@ Private Sub CreateFeeEditForm()
     actualName = vbc.Name
     SetConfigProp "FeeEditFormName", actualName
 
-    vbc.Properties("Caption") = "∑—”√±‡º≠"
+    vbc.Properties("Caption") = "Ë¥πÁî®ÁºñËæë"
     vbc.Properties("Width") = 380
     vbc.Properties("Height") = 300
     vbc.Properties("StartUpPosition") = 2
@@ -7116,77 +7116,77 @@ Private Sub CreateFeeEditForm()
     Dim yy As Long
     yy = 18
 
-    ' ¬•∫≈
+    ' Ê•ºÂè∑
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl1": ctl.Caption = "¬•∫≈£∫"
+    ctl.Name = "lbl1": ctl.Caption = "Ê•ºÂè∑Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 80: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboBuilding"
     ctl.Left = 110: ctl.Top = yy: ctl.Width = 100: ctl.Height = 20
     ctl.Style = 0
 
-    ' Ω…∑—÷‹∆⁄
+    ' Áº¥Ë¥πÂë®Êúü
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl9": ctl.Caption = "Ω…∑—÷‹∆⁄£∫"
+    ctl.Name = "lbl9": ctl.Caption = "Áº¥Ë¥πÂë®ÊúüÔºö"
     ctl.Left = 220: ctl.Top = yy: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtPeriod"
     ctl.Left = 285: ctl.Top = yy: ctl.Width = 70: ctl.Height = 20
 
     yy = yy + 30
-    ' ”¶ ’ŒÔ“µ∑—
+    ' Â∫îÊî∂Áâ©‰∏öË¥π
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl3": ctl.Caption = "”¶ ’ŒÔ“µ∑—£∫"
+    ctl.Name = "lbl3": ctl.Caption = "Â∫îÊî∂Áâ©‰∏öË¥πÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 80: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtRecvProp"
     ctl.Left = 110: ctl.Top = yy: ctl.Width = 100: ctl.Height = 20
 
     yy = yy + 30
-    ' «∑Ω…ŒÔ“µ∑—
+    ' Ê¨†Áº¥Áâ©‰∏öË¥π
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl2": ctl.Caption = "«∑Ω…ŒÔ“µ∑—£∫"
+    ctl.Name = "lbl2": ctl.Caption = "Ê¨†Áº¥Áâ©‰∏öË¥πÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 80: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtOweProp"
     ctl.Left = 110: ctl.Top = yy: ctl.Width = 100: ctl.Height = 20
 
     yy = yy + 30
-    ' ±æ‘¬π´ÃØ∑—
+    ' Êú¨ÊúàÂÖ¨ÊëäË¥π
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl5": ctl.Caption = "±æ‘¬π´ÃØ∑—£∫"
+    ctl.Name = "lbl5": ctl.Caption = "Êú¨ÊúàÂÖ¨ÊëäË¥πÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 80: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtMonthPub"
     ctl.Left = 110: ctl.Top = yy: ctl.Width = 100: ctl.Height = 20
 
     yy = yy + 30
-    ' «∑Ω…π´ÃØ∑—
+    ' Ê¨†Áº¥ÂÖ¨ÊëäË¥π
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl4": ctl.Caption = "«∑Ω…π´ÃØ∑—£∫"
+    ctl.Name = "lbl4": ctl.Caption = "Ê¨†Áº¥ÂÖ¨ÊëäË¥πÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 80: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtOwePub"
     ctl.Left = 110: ctl.Top = yy: ctl.Width = 100: ctl.Height = 20
 
     yy = yy + 30
-    ' ◊‘∂Øº∆À„Ã· æ
+    ' Ëá™Âä®ËÆ°ÁÆóÊèêÁ§∫
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblCalcInfo"
-    ctl.Caption = "* ”¶ ’π´ÃØ∑—°¢ŒÔ“µ«∑Ω…¬ °¢π´ÃØ«∑Ω…¬ ”…œµÕ≥◊‘∂Øº∆À„"
+    ctl.Caption = "* Â∫îÊî∂ÂÖ¨ÊëäË¥π„ÄÅÁâ©‰∏öÊ¨†Áº¥Áéá„ÄÅÂÖ¨ÊëäÊ¨†Áº¥ÁéáÁî±Á≥ªÁªüËá™Âä®ËÆ°ÁÆó"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 340: ctl.Height = 16
     ctl.ForeColor = RGB(128, 128, 128): ctl.Font.Size = 8
 
     yy = yy + 30
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdSave": ctl.Caption = "±£¥Ê"
+    ctl.Name = "cmdSave": ctl.Caption = "‰øùÂ≠ò"
     ctl.Left = 80: ctl.Top = yy: ctl.Width = 90: ctl.Height = 28
     ctl.BackColor = RGB(60, 120, 216)
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdCancel": ctl.Caption = "»°œ˚"
+    ctl.Name = "cmdCancel": ctl.Caption = "ÂèñÊ∂à"
     ctl.Left = 190: ctl.Top = yy: ctl.Width = 90: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -7199,13 +7199,13 @@ Private Sub CreateFeeEditForm()
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
     c = c & "    Dim bk As Long" & vbCrLf
     c = c & "    For bk = 1 To 10" & vbCrLf
-    c = c & "        cboBuilding.AddItem bk & " & q & "∂∞" & q & vbCrLf
+    c = c & "        cboBuilding.AddItem bk & " & q & "Ê†ã" & q & vbCrLf
     c = c & "    Next bk" & vbCrLf
     c = c & "    txtPeriod.Text = Format(Date, " & q & "yyyy-mm" & q & ")" & vbCrLf
     c = c & "    If gEditFeeRow > 0 Then" & vbCrLf
-    c = c & "        Me.Caption = " & q & "±‡º≠∑—”√º«¬º" & q & vbCrLf
+    c = c & "        Me.Caption = " & q & "ÁºñËæëË¥πÁî®ËÆ∞ÂΩï" & q & vbCrLf
     c = c & "        Dim ws As Worksheet" & vbCrLf
-    c = c & "        Set ws = ThisWorkbook.Sheets(" & q & "∑—”√π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "        Set ws = ThisWorkbook.Sheets(" & q & "Ë¥πÁî®ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "        cboBuilding.Text = ws.Cells(gEditFeeRow, 1).Value" & vbCrLf
     c = c & "        txtOweProp.Text = ws.Cells(gEditFeeRow, 2).Value" & vbCrLf
     c = c & "        txtRecvProp.Text = ws.Cells(gEditFeeRow, 3).Value" & vbCrLf
@@ -7213,19 +7213,19 @@ Private Sub CreateFeeEditForm()
     c = c & "        txtMonthPub.Text = ws.Cells(gEditFeeRow, 5).Value" & vbCrLf
     c = c & "        txtPeriod.Text = ws.Cells(gEditFeeRow, 9).Value" & vbCrLf
     c = c & "    Else" & vbCrLf
-    c = c & "        Me.Caption = " & q & "–¬Ω®∑—”√º«¬º" & q & vbCrLf
+    c = c & "        Me.Caption = " & q & "Êñ∞Âª∫Ë¥πÁî®ËÆ∞ÂΩï" & q & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdSave_Click()" & vbCrLf
     c = c & "    If Trim(cboBuilding.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Ò¬•∫≈£°" & q & ", vbExclamation: Exit Sub" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©Ê•ºÂè∑ÔºÅ" & q & ", vbExclamation: Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If Trim(txtPeriod.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«ÎÃÓ–¥Ω…∑—÷‹∆⁄£°" & q & ", vbExclamation: Exit Sub" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑Â°´ÂÜôÁº¥Ë¥πÂë®ÊúüÔºÅ" & q & ", vbExclamation: Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    SaveFeeRecord gEditFeeRow, cboBuilding.Text, Val(txtOweProp.Text), Val(txtRecvProp.Text), Val(txtOwePub.Text), Val(txtMonthPub.Text), txtPeriod.Text" & vbCrLf
-    c = c & "    MsgBox " & q & "∑—”√º«¬º“—±£¥Ê£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    MsgBox " & q & "Ë¥πÁî®ËÆ∞ÂΩïÂ∑≤‰øùÂ≠òÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
@@ -7236,13 +7236,13 @@ Private Sub CreateFeeEditForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ∑—”√π‹¿Ì¥∞ÃÂœ‘ æ ----------
+' ---------- Ë¥πÁî®ÁÆ°ÁêÜÁ™ó‰ΩìÊòæÁ§∫ ----------
 
 Public Sub ShowFeeManagerForm()
     Dim fName As String
     fName = GetConfigProp("FeeManagerFormName")
     If fName = "" Or Not FormExists("FeeManagerFormName") Then
-        MsgBox "∑—”√π‹¿Ì¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "Ë¥πÁî®ÁÆ°ÁêÜÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -7254,7 +7254,7 @@ Public Sub ShowFeeEditForm()
     Dim fName As String
     fName = GetConfigProp("FeeEditFormName")
     If fName = "" Or Not FormExists("FeeEditFormName") Then
-        MsgBox "∑—”√±‡º≠¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "Ë¥πÁî®ÁºñËæëÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -7262,11 +7262,11 @@ Public Sub ShowFeeEditForm()
     frm.Show
 End Sub
 
-' ---------- ∑—”√π‹¿Ì ˝æ›≤Ÿ◊˜∫Ø ˝ ----------
+' ---------- Ë¥πÁî®ÁÆ°ÁêÜÊï∞ÊçÆÊìç‰ΩúÂáΩÊï∞ ----------
 
 Public Function FindFeeRow(bld As String, prd As String) As Long
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("∑—”√π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Ë¥πÁî®ÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     FindFeeRow = 0
@@ -7280,7 +7280,7 @@ End Function
 
 Public Sub SaveFeeRecord(rowNum As Long, sBld As String, oweProp As Double, recvProp As Double, owePub As Double, monthPub As Double, sPeriod As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("∑—”√π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Ë¥πÁî®ÁÆ°ÁêÜ")
     Dim r As Long
     If rowNum > 0 Then
         r = rowNum
@@ -7292,13 +7292,13 @@ Public Sub SaveFeeRecord(rowNum As Long, sBld As String, oweProp As Double, recv
     ws.Cells(r, 3).Value = recvProp
     ws.Cells(r, 4).Value = owePub
     ws.Cells(r, 5).Value = monthPub
-    ' ◊‘∂Øº∆À„”¶ ’π´ÃØ∑— = …œ∆⁄±æ‘¬π´ÃØ∑— + ±æ∆⁄±æ‘¬π´ÃØ∑—
+    ' Ëá™Âä®ËÆ°ÁÆóÂ∫îÊî∂ÂÖ¨ÊëäË¥π = ‰∏äÊúüÊú¨ÊúàÂÖ¨ÊëäË¥π + Êú¨ÊúüÊú¨ÊúàÂÖ¨ÊëäË¥π
     Dim prevPub As Double
     prevPub = GetPrevMonthPub(sBld, sPeriod)
     Dim recvPub As Double
     recvPub = prevPub + monthPub
     ws.Cells(r, 6).Value = recvPub
-    ' ◊‘∂Øº∆À„«∑Ω…¬ 
+    ' Ëá™Âä®ËÆ°ÁÆóÊ¨†Áº¥Áéá
     If recvProp > 0 Then
         ws.Cells(r, 7).Value = Format(oweProp / recvProp * 100, "0.0") & "%"
     Else
@@ -7324,7 +7324,7 @@ Private Function GetPrevMonthPub(bld As String, curPeriod As String) As Double
     Dim prevP As String
     prevP = Format(yr, "0000") & "-" & Format(mo, "00")
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("∑—”√π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Ë¥πÁî®ÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -7342,12 +7342,12 @@ Public Sub ImportFeeData(fPath As String)
     Dim srcWs As Worksheet
     Set srcWs = srcWb.Sheets(1)
     Dim dstWs As Worksheet
-    Set dstWs = ThisWorkbook.Sheets("∑—”√π‹¿Ì")
+    Set dstWs = ThisWorkbook.Sheets("Ë¥πÁî®ÁÆ°ÁêÜ")
     Dim srcLr As Long, i As Long
     srcLr = srcWs.Cells(srcWs.Rows.Count, 1).End(xlUp).Row
     Dim startRow As Long
     startRow = 2
-    If CStr(srcWs.Cells(1, 1).Value) = "¬•∫≈" Then startRow = 2 Else startRow = 1
+    If CStr(srcWs.Cells(1, 1).Value) = "Ê•ºÂè∑" Then startRow = 2 Else startRow = 1
     For i = startRow To srcLr
         Dim bld As String
         bld = CStr(srcWs.Cells(i, 1).Value)
@@ -7371,14 +7371,14 @@ End Sub
 Public Sub ExportFeeData()
     Dim fd As Object
     Set fd = Application.FileDialog(2)
-    fd.Title = "—°‘Òµº≥ˆ¬∑æ∂"
-    fd.InitialFileName = "∑—”√π‹¿Ìµº≥ˆ_" & Format(Now, "yyyymmdd") & ".xlsx"
+    fd.Title = "ÈÄâÊã©ÂØºÂá∫Ë∑ØÂæÑ"
+    fd.InitialFileName = "Ë¥πÁî®ÁÆ°ÁêÜÂØºÂá∫_" & Format(Now, "yyyymmdd") & ".xlsx"
     fd.FilterIndex = 1
     If fd.Show <> -1 Then Exit Sub
     Dim savePath As String
     savePath = fd.SelectedItems(1)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("∑—”√π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Ë¥πÁî®ÁÆ°ÁêÜ")
     ws.Copy
     Dim newWb As Workbook
     Set newWb = ActiveWorkbook
@@ -7393,24 +7393,24 @@ Public Sub ExportFeeData()
     End If
     On Error GoTo 0
     newWb.Close False
-    MsgBox "µº≥ˆÕÍ≥…£°" & vbCrLf & savePath, vbInformation
+    MsgBox "ÂØºÂá∫ÂÆåÊàêÔºÅ" & vbCrLf & savePath, vbInformation
 End Sub
 
 Public Sub GenerateFeeChart()
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("∑—”√π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Ë¥πÁî®ÁÆ°ÁêÜ")
     Dim lr As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     If lr < 2 Then
-        MsgBox "√ª”–∑—”√ ˝æ›£¨Œﬁ∑®…˙≥…Õº±Ì£°", vbExclamation
+        MsgBox "Ê≤°ÊúâË¥πÁî®Êï∞ÊçÆÔºåÊó†Ê≥ïÁîüÊàêÂõæË°®ÔºÅ", vbExclamation
         Exit Sub
     End If
-    ' …æ≥˝æ…Õº±Ì
+    ' Âà†Èô§ÊóßÂõæË°®
     Dim co As ChartObject
     For Each co In ws.ChartObjects
         co.Delete
     Next co
-    ' ¥¥Ω®–¬÷˘◊¥Õº
+    ' ÂàõÂª∫Êñ∞Êü±Áä∂Âõæ
     Dim rng As Range
     Set rng = ws.Range("A1:I" & lr)
     Dim cht As ChartObject
@@ -7418,49 +7418,49 @@ Public Sub GenerateFeeChart()
     With cht.Chart
         .ChartType = xlColumnClustered
         .HasTitle = True
-        .ChartTitle.Text = "∏˜∂∞¬•«∑Ω…∑—”√∑÷Œˆ"
-        '  ÷∂ØππΩ® ˝æ›œµ¡–
+        .ChartTitle.Text = "ÂêÑÊ†ãÊ•ºÊ¨†Áº¥Ë¥πÁî®ÂàÜÊûê"
+        ' ÊâãÂä®ÊûÑÂª∫Êï∞ÊçÆÁ≥ªÂàó
         .SeriesCollection.NewSeries
-        .SeriesCollection(1).Name = "«∑Ω…ŒÔ“µ∑—"
+        .SeriesCollection(1).Name = "Ê¨†Áº¥Áâ©‰∏öË¥π"
         .SeriesCollection(1).Values = ws.Range("B2:B" & lr)
         .SeriesCollection(1).XValues = ws.Range("A2:A" & lr)
         .SeriesCollection.NewSeries
-        .SeriesCollection(2).Name = "«∑Ω…π´ÃØ∑—"
+        .SeriesCollection(2).Name = "Ê¨†Áº¥ÂÖ¨ÊëäË¥π"
         .SeriesCollection(2).Values = ws.Range("D2:D" & lr)
         .Axes(xlCategory).HasTitle = True
-        .Axes(xlCategory).AxisTitle.Text = "¬•∂∞/÷‹∆⁄"
+        .Axes(xlCategory).AxisTitle.Text = "Ê•ºÊ†ã/Âë®Êúü"
         .Axes(xlValue).HasTitle = True
-        .Axes(xlValue).AxisTitle.Text = "Ω∂Ó(‘™)"
+        .Axes(xlValue).AxisTitle.Text = "ÈáëÈ¢ù(ÂÖÉ)"
         .HasLegend = True
     End With
     ws.Activate
-    MsgBox "÷˘◊¥Õº“—…˙≥…£¨«Î≤Èø¥∑—”√π‹¿Ìπ§◊˜±Ì£°", vbInformation
+    MsgBox "Êü±Áä∂ÂõæÂ∑≤ÁîüÊàêÔºåËØ∑Êü•ÁúãË¥πÁî®ÁÆ°ÁêÜÂ∑•‰ΩúË°®ÔºÅ", vbInformation
 End Sub
 
-' ========== Õ£≥µπ‹¿Ìƒ£øÈ ==========
+' ========== ÂÅúËΩ¶ÁÆ°ÁêÜÊ®°Âùó ==========
 
-' ---------- ¥¥Ω®Õ£≥µπ‹¿Ìπ§◊˜±Ì ----------
+' ---------- ÂàõÂª∫ÂÅúËΩ¶ÁÆ°ÁêÜÂ∑•‰ΩúË°® ----------
 
 Private Sub CreateParkingSheet()
     Dim ws As Worksheet
-    If SheetExists("Õ£≥µπ‹¿Ì") Then
-        Set ws = ThisWorkbook.Sheets("Õ£≥µπ‹¿Ì")
+    If SheetExists("ÂÅúËΩ¶ÁÆ°ÁêÜ") Then
+        Set ws = ThisWorkbook.Sheets("ÂÅúËΩ¶ÁÆ°ÁêÜ")
     Else
         Set ws = ThisWorkbook.Sheets.Add( _
             After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.Count))
-        ws.Name = "Õ£≥µπ‹¿Ì"
+        ws.Name = "ÂÅúËΩ¶ÁÆ°ÁêÜ"
     End If
     With ws
-        .Range("A1").Value = "≥µŒª±‡∫≈"
-        .Range("B1").Value = "≥µŒªŒª÷√"
-        .Range("C1").Value = "◊¥Ã¨"
-        .Range("D1").Value = "¬•∫≈"
-        .Range("E1").Value = "∑ø∫≈"
-        .Range("F1").Value = "≥µ÷˜–’√˚"
-        .Range("G1").Value = "≥µ≈∆∫≈"
-        .Range("H1").Value = "¡™œµµÁª∞"
-        .Range("I1").Value = "‘¬◊‚∑—"
-        .Range("J1").Value = "¥¥Ω® ±º‰"
+        .Range("A1").Value = "ËΩ¶‰ΩçÁºñÂè∑"
+        .Range("B1").Value = "ËΩ¶‰Ωç‰ΩçÁΩÆ"
+        .Range("C1").Value = "Áä∂ÊÄÅ"
+        .Range("D1").Value = "Ê•ºÂè∑"
+        .Range("E1").Value = "ÊàøÂè∑"
+        .Range("F1").Value = "ËΩ¶‰∏ªÂßìÂêç"
+        .Range("G1").Value = "ËΩ¶ÁâåÂè∑"
+        .Range("H1").Value = "ËÅîÁ≥ªÁîµËØù"
+        .Range("I1").Value = "ÊúàÁßüË¥π"
+        .Range("J1").Value = "ÂàõÂª∫Êó∂Èó¥"
         .Range("A1:J1").Font.Bold = True
         .Range("A1:J1").Interior.Color = RGB(70, 130, 180)
         .Range("A1:J1").Font.Color = RGB(255, 255, 255)
@@ -7468,7 +7468,7 @@ Private Sub CreateParkingSheet()
     End With
 End Sub
 
-' ---------- ¥¥Ω®Õ£≥µπ‹¿Ì÷˜¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫ÂÅúËΩ¶ÁÆ°ÁêÜ‰∏ªÁ™ó‰Ωì ----------
 
 Private Sub CreateParkingManagerForm()
     Dim oldForm As String
@@ -7484,7 +7484,7 @@ Private Sub CreateParkingManagerForm()
     actualName = vbc.Name
     SetConfigProp "ParkingManagerFormName", actualName
 
-    vbc.Properties("Caption") = "Õ£≥µπ‹¿Ì"
+    vbc.Properties("Caption") = "ÂÅúËΩ¶ÁÆ°ÁêÜ"
     vbc.Properties("Width") = 780
     vbc.Properties("Height") = 560
     vbc.Properties("StartUpPosition") = 2
@@ -7493,9 +7493,9 @@ Private Sub CreateParkingManagerForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' ---- ∂•≤øÕ≥º∆ø®∆¨ ----
+    ' ---- È°∂ÈÉ®ÁªüËÆ°Âç°Áâá ----
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblCard1Title": ctl.Caption = "◊‹≥µŒª ˝"
+    ctl.Name = "lblCard1Title": ctl.Caption = "ÊÄªËΩ¶‰ΩçÊï∞"
     ctl.Left = 15: ctl.Top = 8: ctl.Width = 170: ctl.Height = 16
     ctl.Font.Bold = True: ctl.Font.Size = 9: ctl.TextAlign = 2
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -7505,7 +7505,7 @@ Private Sub CreateParkingManagerForm()
     ctl.ForeColor = RGB(30, 144, 255)
 
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblCard2Title": ctl.Caption = "ø’œ–≥µŒª"
+    ctl.Name = "lblCard2Title": ctl.Caption = "Á©∫Èó≤ËΩ¶‰Ωç"
     ctl.Left = 200: ctl.Top = 8: ctl.Width = 170: ctl.Height = 16
     ctl.Font.Bold = True: ctl.Font.Size = 9: ctl.TextAlign = 2
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -7515,7 +7515,7 @@ Private Sub CreateParkingManagerForm()
     ctl.ForeColor = RGB(46, 139, 87)
 
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblCard3Title": ctl.Caption = "“—’º”√≥µŒª"
+    ctl.Name = "lblCard3Title": ctl.Caption = "Â∑≤Âç†Áî®ËΩ¶‰Ωç"
     ctl.Left = 385: ctl.Top = 8: ctl.Width = 170: ctl.Height = 16
     ctl.Font.Bold = True: ctl.Font.Size = 9: ctl.TextAlign = 2
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -7525,7 +7525,7 @@ Private Sub CreateParkingManagerForm()
     ctl.ForeColor = RGB(220, 80, 80)
 
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblCard4Title": ctl.Caption = "‘¬◊‚Ω◊‹∂Ó"
+    ctl.Name = "lblCard4Title": ctl.Caption = "ÊúàÁßüÈáëÊÄªÈ¢ù"
     ctl.Left = 570: ctl.Top = 8: ctl.Width = 170: ctl.Height = 16
     ctl.Font.Bold = True: ctl.Font.Size = 9: ctl.TextAlign = 2
     Set ctl = dsg.Controls.Add("Forms.Label.1")
@@ -7534,9 +7534,9 @@ Private Sub CreateParkingManagerForm()
     ctl.Font.Size = 14: ctl.Font.Bold = True: ctl.TextAlign = 2
     ctl.ForeColor = RGB(255, 140, 0)
 
-    ' ---- …∏—°«¯”Ú ----
+    ' ---- Á≠õÈÄâÂå∫Âüü ----
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblFilterStatus": ctl.Caption = "◊¥Ã¨…∏—°:"
+    ctl.Name = "lblFilterStatus": ctl.Caption = "Áä∂ÊÄÅÁ≠õÈÄâ:"
     ctl.Left = 15: ctl.Top = 55: ctl.Width = 60: ctl.Height = 16
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboFilterStatus"
@@ -7544,17 +7544,17 @@ Private Sub CreateParkingManagerForm()
     ctl.Style = 2
 
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblFilterKey": ctl.Caption = "πÿº¸◊÷:"
+    ctl.Name = "lblFilterKey": ctl.Caption = "ÂÖ≥ÈîÆÂ≠ó:"
     ctl.Left = 170: ctl.Top = 55: ctl.Width = 50: ctl.Height = 16
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtFilterKey"
     ctl.Left = 222: ctl.Top = 53: ctl.Width = 120: ctl.Height = 20
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdFilter": ctl.Caption = "≤È—Ø"
+    ctl.Name = "cmdFilter": ctl.Caption = "Êü•ËØ¢"
     ctl.Left = 350: ctl.Top = 53: ctl.Width = 50: ctl.Height = 20
 
-    ' ---- ≥µŒª¡–±Ì ----
+    ' ---- ËΩ¶‰ΩçÂàóË°® ----
     Set ctl = dsg.Controls.Add("Forms.ListBox.1")
     ctl.Name = "lstParking"
     ctl.Left = 15: ctl.Top = 80: ctl.Width = 740: ctl.Height = 380
@@ -7562,40 +7562,40 @@ Private Sub CreateParkingManagerForm()
     ctl.ColumnWidths = "65;80;50;50;50;70;80;90;70"
     ctl.ColumnHeads = False
 
-    ' ---- µ◊≤ø∞¥≈• ----
+    ' ---- Â∫ïÈÉ®ÊåâÈíÆ ----
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdNew": ctl.Caption = "ÃÌº”≥µŒª"
+    ctl.Name = "cmdNew": ctl.Caption = "Ê∑ªÂä†ËΩ¶‰Ωç"
     ctl.Left = 15: ctl.Top = 470: ctl.Width = 80: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdView": ctl.Caption = "≤Èø¥"
+    ctl.Name = "cmdView": ctl.Caption = "Êü•Áúã"
     ctl.Left = 102: ctl.Top = 470: ctl.Width = 60: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdEdit": ctl.Caption = "±‡º≠"
+    ctl.Name = "cmdEdit": ctl.Caption = "ÁºñËæë"
     ctl.Left = 169: ctl.Top = 470: ctl.Width = 60: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdDelete": ctl.Caption = "…æ≥˝"
+    ctl.Name = "cmdDelete": ctl.Caption = "Âà†Èô§"
     ctl.Left = 236: ctl.Top = 470: ctl.Width = 60: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdImport": ctl.Caption = "µº»Î"
+    ctl.Name = "cmdImport": ctl.Caption = "ÂØºÂÖ•"
     ctl.Left = 330: ctl.Top = 470: ctl.Width = 60: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdExport": ctl.Caption = "µº≥ˆ"
+    ctl.Name = "cmdExport": ctl.Caption = "ÂØºÂá∫"
     ctl.Left = 397: ctl.Top = 470: ctl.Width = 60: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdRefresh": ctl.Caption = "À¢–¬"
+    ctl.Name = "cmdRefresh": ctl.Caption = "Âà∑Êñ∞"
     ctl.Left = 490: ctl.Top = 470: ctl.Width = 60: ctl.Height = 28
 
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdClose": ctl.Caption = "πÿ±’"
+    ctl.Name = "cmdClose": ctl.Caption = "ÂÖ≥Èó≠"
     ctl.Left = 685: ctl.Top = 470: ctl.Width = 70: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -7606,17 +7606,17 @@ Private Sub CreateParkingManagerForm()
     c = "Option Explicit" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
-    c = c & "    cboFilterStatus.AddItem " & q & "»´≤ø" & q & vbCrLf
-    c = c & "    cboFilterStatus.AddItem " & q & "ø’œ–" & q & vbCrLf
-    c = c & "    cboFilterStatus.AddItem " & q & "’º”√" & q & vbCrLf
-    c = c & "    cboFilterStatus.Text = " & q & "»´≤ø" & q & vbCrLf
+    c = c & "    cboFilterStatus.AddItem " & q & "ÂÖ®ÈÉ®" & q & vbCrLf
+    c = c & "    cboFilterStatus.AddItem " & q & "Á©∫Èó≤" & q & vbCrLf
+    c = c & "    cboFilterStatus.AddItem " & q & "Âç†Áî®" & q & vbCrLf
+    c = c & "    cboFilterStatus.Text = " & q & "ÂÖ®ÈÉ®" & q & vbCrLf
     c = c & "    LoadData" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub LoadData()" & vbCrLf
     c = c & "    lstParking.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Õ£≥µπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "ÂÅúËΩ¶ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    Dim filterSt As String" & vbCrLf
@@ -7630,14 +7630,14 @@ Private Sub CreateParkingManagerForm()
     c = c & "        Dim st As String" & vbCrLf
     c = c & "        st = CStr(ws.Cells(i, 3).Value)" & vbCrLf
     c = c & "        totalCnt = totalCnt + 1" & vbCrLf
-    c = c & "        If st = " & q & "ø’œ–" & q & " Then freeCnt = freeCnt + 1" & vbCrLf
-    c = c & "        If st = " & q & "’º”√" & q & " Then" & vbCrLf
+    c = c & "        If st = " & q & "Á©∫Èó≤" & q & " Then freeCnt = freeCnt + 1" & vbCrLf
+    c = c & "        If st = " & q & "Âç†Áî®" & q & " Then" & vbCrLf
     c = c & "            usedCnt = usedCnt + 1" & vbCrLf
     c = c & "            totalRent = totalRent + Val(ws.Cells(i, 9).Value)" & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "        Dim showRow As Boolean" & vbCrLf
     c = c & "        showRow = True" & vbCrLf
-    c = c & "        If filterSt <> " & q & "»´≤ø" & q & " And filterSt <> " & q & q & " Then" & vbCrLf
+    c = c & "        If filterSt <> " & q & "ÂÖ®ÈÉ®" & q & " And filterSt <> " & q & q & " Then" & vbCrLf
     c = c & "            If st <> filterSt Then showRow = False" & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "        If showRow And filterKey <> " & q & q & " Then" & vbCrLf
@@ -7675,7 +7675,7 @@ Private Sub CreateParkingManagerForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdView_Click()" & vbCrLf
     c = c & "    If lstParking.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃı≥µŒªº«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°ËΩ¶‰ΩçËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gViewParkingID = lstParking.List(lstParking.ListIndex, 0)" & vbCrLf
@@ -7685,7 +7685,7 @@ Private Sub CreateParkingManagerForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdEdit_Click()" & vbCrLf
     c = c & "    If lstParking.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃı≥µŒªº«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°ËΩ¶‰ΩçËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    Dim selID As String" & vbCrLf
@@ -7699,10 +7699,10 @@ Private Sub CreateParkingManagerForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdDelete_Click()" & vbCrLf
     c = c & "    If lstParking.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃı≥µŒªº«¬º£°" & q & ", vbExclamation" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°ËΩ¶‰ΩçËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation" & vbCrLf
     c = c & "        Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
-    c = c & "    If MsgBox(" & q & "»∑∂®…æ≥˝∏√≥µŒªº«¬º£ø" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
+    c = c & "    If MsgBox(" & q & "Á°ÆÂÆöÂà†Èô§ËØ•ËΩ¶‰ΩçËÆ∞ÂΩïÔºü" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
     c = c & "        DeleteParkingByID lstParking.List(lstParking.ListIndex, 0)" & vbCrLf
     c = c & "        LoadData" & vbCrLf
     c = c & "    End If" & vbCrLf
@@ -7711,15 +7711,15 @@ Private Sub CreateParkingManagerForm()
     c = c & "Private Sub cmdImport_Click()" & vbCrLf
     c = c & "    Dim fd As Object" & vbCrLf
     c = c & "    Set fd = Application.FileDialog(1)" & vbCrLf
-    c = c & "    fd.Title = " & q & "—°‘Òµº»ÎŒƒº˛" & q & vbCrLf
+    c = c & "    fd.Title = " & q & "ÈÄâÊã©ÂØºÂÖ•Êñá‰ª∂" & q & vbCrLf
     c = c & "    fd.Filters.Clear" & vbCrLf
-    c = c & "    fd.Filters.Add " & q & "ExcelŒƒº˛" & q & ", " & q & "*.xlsm;*.xlsx;*.xls" & q & vbCrLf
+    c = c & "    fd.Filters.Add " & q & "ExcelÊñá‰ª∂" & q & ", " & q & "*.xlsm;*.xlsx;*.xls" & q & vbCrLf
     c = c & "    If fd.Show <> -1 Then Exit Sub" & vbCrLf
     c = c & "    Dim fPath As String" & vbCrLf
     c = c & "    fPath = fd.SelectedItems(1)" & vbCrLf
     c = c & "    ImportParkingData fPath" & vbCrLf
     c = c & "    LoadData" & vbCrLf
-    c = c & "    MsgBox " & q & "µº»ÎÕÍ≥…£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    MsgBox " & q & "ÂØºÂÖ•ÂÆåÊàêÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdExport_Click()" & vbCrLf
@@ -7737,7 +7737,7 @@ Private Sub CreateParkingManagerForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®Õ£≥µ±‡º≠¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫ÂÅúËΩ¶ÁºñËæëÁ™ó‰Ωì ----------
 
 Private Sub CreateParkingEditForm()
     Dim oldForm As String
@@ -7753,7 +7753,7 @@ Private Sub CreateParkingEditForm()
     actualName = vbc.Name
     SetConfigProp "ParkingEditFormName", actualName
 
-    vbc.Properties("Caption") = "≥µŒª–≈œ¢±‡º≠"
+    vbc.Properties("Caption") = "ËΩ¶‰Ωç‰ø°ÊÅØÁºñËæë"
     vbc.Properties("Width") = 420
     vbc.Properties("Height") = 400
     vbc.Properties("StartUpPosition") = 2
@@ -7764,106 +7764,106 @@ Private Sub CreateParkingEditForm()
     Dim yy As Long
     yy = 18
 
-    ' ≥µŒª±‡∫≈
+    ' ËΩ¶‰ΩçÁºñÂè∑
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblParkID": ctl.Caption = "≥µŒª±‡∫≈£∫"
+    ctl.Name = "lblParkID": ctl.Caption = "ËΩ¶‰ΩçÁºñÂè∑Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 80: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtParkID"
     ctl.Left = 110: ctl.Top = yy: ctl.Width = 130: ctl.Height = 20
 
-    ' ≥µŒªŒª÷√
+    ' ËΩ¶‰Ωç‰ΩçÁΩÆ
     yy = yy + 30
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblLocation": ctl.Caption = "≥µŒªŒª÷√£∫"
+    ctl.Name = "lblLocation": ctl.Caption = "ËΩ¶‰Ωç‰ΩçÁΩÆÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 80: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtLocation"
     ctl.Left = 110: ctl.Top = yy: ctl.Width = 280: ctl.Height = 20
 
-    ' ◊¥Ã¨
+    ' Áä∂ÊÄÅ
     yy = yy + 30
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblStatus": ctl.Caption = "◊¥Ã¨£∫"
+    ctl.Name = "lblStatus": ctl.Caption = "Áä∂ÊÄÅÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 80: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboStatus"
     ctl.Left = 110: ctl.Top = yy: ctl.Width = 100: ctl.Height = 20
     ctl.Style = 2
 
-    ' ¬•∫≈
+    ' Ê•ºÂè∑
     yy = yy + 30
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblBuilding": ctl.Caption = "¬•∫≈£∫"
+    ctl.Name = "lblBuilding": ctl.Caption = "Ê•ºÂè∑Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 80: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboBuilding"
     ctl.Left = 110: ctl.Top = yy: ctl.Width = 100: ctl.Height = 20
     ctl.Style = 0
 
-    ' ∑ø∫≈
+    ' ÊàøÂè∑
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblRoom": ctl.Caption = "∑ø∫≈£∫"
+    ctl.Name = "lblRoom": ctl.Caption = "ÊàøÂè∑Ôºö"
     ctl.Left = 230: ctl.Top = yy: ctl.Width = 50: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtRoom"
     ctl.Left = 285: ctl.Top = yy: ctl.Width = 105: ctl.Height = 20
 
-    ' ≥µ÷˜–’√˚
+    ' ËΩ¶‰∏ªÂßìÂêç
     yy = yy + 30
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblOwner": ctl.Caption = "≥µ÷˜–’√˚£∫"
+    ctl.Name = "lblOwner": ctl.Caption = "ËΩ¶‰∏ªÂßìÂêçÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 80: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtOwner"
     ctl.Left = 110: ctl.Top = yy: ctl.Width = 130: ctl.Height = 20
 
-    ' ≥µ≈∆∫≈
+    ' ËΩ¶ÁâåÂè∑
     yy = yy + 30
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblPlate": ctl.Caption = "≥µ≈∆∫≈£∫"
+    ctl.Name = "lblPlate": ctl.Caption = "ËΩ¶ÁâåÂè∑Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 80: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtPlate"
     ctl.Left = 110: ctl.Top = yy: ctl.Width = 130: ctl.Height = 20
 
-    ' ¡™œµµÁª∞
+    ' ËÅîÁ≥ªÁîµËØù
     yy = yy + 30
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblPhone": ctl.Caption = "¡™œµµÁª∞£∫"
+    ctl.Name = "lblPhone": ctl.Caption = "ËÅîÁ≥ªÁîµËØùÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 80: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtPhone"
     ctl.Left = 110: ctl.Top = yy: ctl.Width = 130: ctl.Height = 20
 
-    ' ‘¬◊‚∑—
+    ' ÊúàÁßüË¥π
     yy = yy + 30
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lblRent": ctl.Caption = "‘¬◊‚∑—(‘™)£∫"
+    ctl.Name = "lblRent": ctl.Caption = "ÊúàÁßüË¥π(ÂÖÉ)Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 80: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtRent"
     ctl.Left = 110: ctl.Top = yy: ctl.Width = 130: ctl.Height = 20
 
-    ' Ã· æ–≈œ¢
+    ' ÊèêÁ§∫‰ø°ÊÅØ
     yy = yy + 30
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblTip"
-    ctl.Caption = "* ◊¥Ã¨Œ™ø’œ– ±£¨¬•∫≈/∑ø∫≈/≥µ÷˜/≥µ≈∆/µÁª∞/‘¬◊‚∑—ø…≤ªÃÓ"
+    ctl.Caption = "* Áä∂ÊÄÅ‰∏∫Á©∫Èó≤Êó∂ÔºåÊ•ºÂè∑/ÊàøÂè∑/ËΩ¶‰∏ª/ËΩ¶Áâå/ÁîµËØù/ÊúàÁßüË¥πÂèØ‰∏çÂ°´"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 380: ctl.Height = 16
     ctl.ForeColor = RGB(128, 128, 128): ctl.Font.Size = 8
 
-    ' ∞¥≈•
+    ' ÊåâÈíÆ
     yy = yy + 30
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdSave": ctl.Caption = "±£¥Ê"
+    ctl.Name = "cmdSave": ctl.Caption = "‰øùÂ≠ò"
     ctl.Left = 100: ctl.Top = yy: ctl.Width = 90: ctl.Height = 28
     ctl.BackColor = RGB(60, 120, 216)
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdCancel": ctl.Caption = "»°œ˚"
+    ctl.Name = "cmdCancel": ctl.Caption = "ÂèñÊ∂à"
     ctl.Left = 210: ctl.Top = yy: ctl.Width = 90: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -7874,17 +7874,17 @@ Private Sub CreateParkingEditForm()
     c = "Option Explicit" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
-    c = c & "    cboStatus.AddItem " & q & "ø’œ–" & q & vbCrLf
-    c = c & "    cboStatus.AddItem " & q & "’º”√" & q & vbCrLf
-    c = c & "    cboStatus.Text = " & q & "ø’œ–" & q & vbCrLf
+    c = c & "    cboStatus.AddItem " & q & "Á©∫Èó≤" & q & vbCrLf
+    c = c & "    cboStatus.AddItem " & q & "Âç†Áî®" & q & vbCrLf
+    c = c & "    cboStatus.Text = " & q & "Á©∫Èó≤" & q & vbCrLf
     c = c & "    Dim bk As Long" & vbCrLf
     c = c & "    For bk = 1 To 10" & vbCrLf
-    c = c & "        cboBuilding.AddItem bk & " & q & "∂∞" & q & vbCrLf
+    c = c & "        cboBuilding.AddItem bk & " & q & "Ê†ã" & q & vbCrLf
     c = c & "    Next bk" & vbCrLf
     c = c & "    If gEditParkingRow > 0 Then" & vbCrLf
-    c = c & "        Me.Caption = " & q & "±‡º≠≥µŒª–≈œ¢" & q & vbCrLf
+    c = c & "        Me.Caption = " & q & "ÁºñËæëËΩ¶‰Ωç‰ø°ÊÅØ" & q & vbCrLf
     c = c & "        Dim ws As Worksheet" & vbCrLf
-    c = c & "        Set ws = ThisWorkbook.Sheets(" & q & "Õ£≥µπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "        Set ws = ThisWorkbook.Sheets(" & q & "ÂÅúËΩ¶ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "        txtParkID.Text = ws.Cells(gEditParkingRow, 1).Value" & vbCrLf
     c = c & "        txtParkID.Enabled = False" & vbCrLf
     c = c & "        txtLocation.Text = ws.Cells(gEditParkingRow, 2).Value" & vbCrLf
@@ -7896,14 +7896,14 @@ Private Sub CreateParkingEditForm()
     c = c & "        txtPhone.Text = ws.Cells(gEditParkingRow, 8).Value" & vbCrLf
     c = c & "        txtRent.Text = ws.Cells(gEditParkingRow, 9).Value" & vbCrLf
     c = c & "    Else" & vbCrLf
-    c = c & "        Me.Caption = " & q & "ÃÌº”≥µŒª" & q & vbCrLf
+    c = c & "        Me.Caption = " & q & "Ê∑ªÂä†ËΩ¶‰Ωç" & q & vbCrLf
     c = c & "        txtParkID.Text = GenerateParkingID()" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cboStatus_Change()" & vbCrLf
     c = c & "    Dim isFree As Boolean" & vbCrLf
-    c = c & "    isFree = (cboStatus.Text = " & q & "ø’œ–" & q & ")" & vbCrLf
+    c = c & "    isFree = (cboStatus.Text = " & q & "Á©∫Èó≤" & q & ")" & vbCrLf
     c = c & "    If isFree Then" & vbCrLf
     c = c & "        cboBuilding.Text = " & q & q & vbCrLf
     c = c & "        txtRoom.Text = " & q & q & vbCrLf
@@ -7916,28 +7916,28 @@ Private Sub CreateParkingEditForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdSave_Click()" & vbCrLf
     c = c & "    If Trim(txtParkID.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«ÎÃÓ–¥≥µŒª±‡∫≈£°" & q & ", vbExclamation: Exit Sub" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑Â°´ÂÜôËΩ¶‰ΩçÁºñÂè∑ÔºÅ" & q & ", vbExclamation: Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If Trim(txtLocation.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«ÎÃÓ–¥≥µŒªŒª÷√£°" & q & ", vbExclamation: Exit Sub" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑Â°´ÂÜôËΩ¶‰Ωç‰ΩçÁΩÆÔºÅ" & q & ", vbExclamation: Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
-    c = c & "    If cboStatus.Text = " & q & "’º”√" & q & " Then" & vbCrLf
+    c = c & "    If cboStatus.Text = " & q & "Âç†Áî®" & q & " Then" & vbCrLf
     c = c & "        If Trim(txtOwner.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "            MsgBox " & q & "’º”√◊¥Ã¨«ÎÃÓ–¥≥µ÷˜–’√˚£°" & q & ", vbExclamation: Exit Sub" & vbCrLf
+    c = c & "            MsgBox " & q & "Âç†Áî®Áä∂ÊÄÅËØ∑Â°´ÂÜôËΩ¶‰∏ªÂßìÂêçÔºÅ" & q & ", vbExclamation: Exit Sub" & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "        If Trim(txtPlate.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "            MsgBox " & q & "’º”√◊¥Ã¨«ÎÃÓ–¥≥µ≈∆∫≈£°" & q & ", vbExclamation: Exit Sub" & vbCrLf
+    c = c & "            MsgBox " & q & "Âç†Áî®Áä∂ÊÄÅËØ∑Â°´ÂÜôËΩ¶ÁâåÂè∑ÔºÅ" & q & ", vbExclamation: Exit Sub" & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    If gEditParkingRow = 0 Then" & vbCrLf
     c = c & "        Dim chkRow As Long" & vbCrLf
     c = c & "        chkRow = FindParkingRow(Trim(txtParkID.Text))" & vbCrLf
     c = c & "        If chkRow > 0 Then" & vbCrLf
-    c = c & "            MsgBox " & q & "≥µŒª±‡∫≈“—¥Ê‘⁄£°" & q & ", vbExclamation: Exit Sub" & vbCrLf
+    c = c & "            MsgBox " & q & "ËΩ¶‰ΩçÁºñÂè∑Â∑≤Â≠òÂú®ÔºÅ" & q & ", vbExclamation: Exit Sub" & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    SaveParkingRecord gEditParkingRow, txtParkID.Text, txtLocation.Text, cboStatus.Text, cboBuilding.Text, txtRoom.Text, txtOwner.Text, txtPlate.Text, txtPhone.Text, Val(txtRent.Text)" & vbCrLf
-    c = c & "    MsgBox " & q & "≥µŒª–≈œ¢“—±£¥Ê£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    MsgBox " & q & "ËΩ¶‰Ωç‰ø°ÊÅØÂ∑≤‰øùÂ≠òÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
@@ -7948,7 +7948,7 @@ Private Sub CreateParkingEditForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®Õ£≥µ≤Èø¥¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫ÂÅúËΩ¶Êü•ÁúãÁ™ó‰Ωì ----------
 
 Private Sub CreateParkingViewForm()
     Dim oldForm As String
@@ -7964,7 +7964,7 @@ Private Sub CreateParkingViewForm()
     actualName = vbc.Name
     SetConfigProp "ParkingViewFormName", actualName
 
-    vbc.Properties("Caption") = "≥µŒªœÍ«È"
+    vbc.Properties("Caption") = "ËΩ¶‰ΩçËØ¶ÊÉÖ"
     vbc.Properties("Width") = 400
     vbc.Properties("Height") = 380
     vbc.Properties("StartUpPosition") = 2
@@ -7976,7 +7976,7 @@ Private Sub CreateParkingViewForm()
     yy = 18
 
     Dim labels As Variant
-    labels = Array("≥µŒª±‡∫≈£∫", "≥µŒªŒª÷√£∫", "◊¥Ã¨£∫", "¬•∫≈£∫", "∑ø∫≈£∫", "≥µ÷˜–’√˚£∫", "≥µ≈∆∫≈£∫", "¡™œµµÁª∞£∫", "‘¬◊‚∑—(‘™)£∫", "¥¥Ω® ±º‰£∫")
+    labels = Array("ËΩ¶‰ΩçÁºñÂè∑Ôºö", "ËΩ¶‰Ωç‰ΩçÁΩÆÔºö", "Áä∂ÊÄÅÔºö", "Ê•ºÂè∑Ôºö", "ÊàøÂè∑Ôºö", "ËΩ¶‰∏ªÂßìÂêçÔºö", "ËΩ¶ÁâåÂè∑Ôºö", "ËÅîÁ≥ªÁîµËØùÔºö", "ÊúàÁßüË¥π(ÂÖÉ)Ôºö", "ÂàõÂª∫Êó∂Èó¥Ôºö")
     Dim valNames As Variant
     valNames = Array("lblValID", "lblValLoc", "lblValSt", "lblValBld", "lblValRoom", "lblValOwner", "lblValPlate", "lblValPhone", "lblValRent", "lblValTime")
 
@@ -7997,10 +7997,10 @@ Private Sub CreateParkingViewForm()
 
     yy = yy + 10
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdClose": ctl.Caption = "πÿ±’"
+    ctl.Name = "cmdClose": ctl.Caption = "ÂÖ≥Èó≠"
     ctl.Left = 150: ctl.Top = yy: ctl.Width = 90: ctl.Height = 28
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -8013,7 +8013,7 @@ Private Sub CreateParkingViewForm()
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
     c = c & "    If gViewParkingID = " & q & q & " Then Unload Me: Exit Sub" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "Õ£≥µπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "ÂÅúËΩ¶ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -8021,7 +8021,7 @@ Private Sub CreateParkingViewForm()
     c = c & "            lblValID.Caption = ws.Cells(i, 1).Value" & vbCrLf
     c = c & "            lblValLoc.Caption = ws.Cells(i, 2).Value" & vbCrLf
     c = c & "            lblValSt.Caption = ws.Cells(i, 3).Value" & vbCrLf
-    c = c & "            If ws.Cells(i, 3).Value = " & q & "ø’œ–" & q & " Then" & vbCrLf
+    c = c & "            If ws.Cells(i, 3).Value = " & q & "Á©∫Èó≤" & q & " Then" & vbCrLf
     c = c & "                lblValSt.ForeColor = RGB(46, 139, 87)" & vbCrLf
     c = c & "            Else" & vbCrLf
     c = c & "                lblValSt.ForeColor = RGB(220, 80, 80)" & vbCrLf
@@ -8045,13 +8045,13 @@ Private Sub CreateParkingViewForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- Õ£≥µπ‹¿Ì¥∞ÃÂœ‘ æ ----------
+' ---------- ÂÅúËΩ¶ÁÆ°ÁêÜÁ™ó‰ΩìÊòæÁ§∫ ----------
 
 Public Sub ShowParkingManagerForm()
     Dim fName As String
     fName = GetConfigProp("ParkingManagerFormName")
     If fName = "" Or Not FormExists("ParkingManagerFormName") Then
-        MsgBox "Õ£≥µπ‹¿Ì¥∞ÃÂ≤ª¥Ê‘⁄£°«Î÷ÿ–¬‘À–– SetupOASystem", vbExclamation
+        MsgBox "ÂÅúËΩ¶ÁÆ°ÁêÜÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅËØ∑ÈáçÊñ∞ËøêË°å SetupOASystem", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -8063,7 +8063,7 @@ Public Sub ShowParkingEditForm()
     Dim fName As String
     fName = GetConfigProp("ParkingEditFormName")
     If fName = "" Or Not FormExists("ParkingEditFormName") Then
-        MsgBox "≥µŒª±‡º≠¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "ËΩ¶‰ΩçÁºñËæëÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -8075,7 +8075,7 @@ Public Sub ShowParkingViewForm()
     Dim fName As String
     fName = GetConfigProp("ParkingViewFormName")
     If fName = "" Or Not FormExists("ParkingViewFormName") Then
-        MsgBox "≥µŒª≤Èø¥¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "ËΩ¶‰ΩçÊü•ÁúãÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -8083,11 +8083,11 @@ Public Sub ShowParkingViewForm()
     frm.Show
 End Sub
 
-' ---------- Õ£≥µπ‹¿Ì ˝æ›≤Ÿ◊˜∫Ø ˝ ----------
+' ---------- ÂÅúËΩ¶ÁÆ°ÁêÜÊï∞ÊçÆÊìç‰ΩúÂáΩÊï∞ ----------
 
 Public Function GenerateParkingID() As String
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("Õ£≥µπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("ÂÅúËΩ¶ÁÆ°ÁêÜ")
     Dim lr As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     Dim maxID As Long
@@ -8107,7 +8107,7 @@ End Function
 
 Public Function FindParkingRow(parkID As String) As Long
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("Õ£≥µπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("ÂÅúËΩ¶ÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     FindParkingRow = 0
@@ -8121,7 +8121,7 @@ End Function
 
 Public Sub SaveParkingRecord(rowNum As Long, sID As String, sLoc As String, sSt As String, sBld As String, sRoom As String, sOwner As String, sPlate As String, sPhone As String, dRent As Double)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("Õ£≥µπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("ÂÅúËΩ¶ÁÆ°ÁêÜ")
     Dim r As Long
     If rowNum > 0 Then
         r = rowNum
@@ -8145,7 +8145,7 @@ End Sub
 
 Public Sub DeleteParkingByID(parkID As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("Õ£≥µπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("ÂÅúËΩ¶ÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -8162,11 +8162,11 @@ Public Sub ImportParkingData(fPath As String)
     Dim srcWs As Worksheet
     Set srcWs = srcWb.Sheets(1)
     Dim dstWs As Worksheet
-    Set dstWs = ThisWorkbook.Sheets("Õ£≥µπ‹¿Ì")
+    Set dstWs = ThisWorkbook.Sheets("ÂÅúËΩ¶ÁÆ°ÁêÜ")
     Dim srcLr As Long, i As Long
     srcLr = srcWs.Cells(srcWs.Rows.Count, 1).End(xlUp).Row
     Dim startRow As Long
-    If CStr(srcWs.Cells(1, 1).Value) = "≥µŒª±‡∫≈" Then startRow = 2 Else startRow = 1
+    If CStr(srcWs.Cells(1, 1).Value) = "ËΩ¶‰ΩçÁºñÂè∑" Then startRow = 2 Else startRow = 1
     For i = startRow To srcLr
         Dim sID As String
         sID = CStr(srcWs.Cells(i, 1).Value)
@@ -8191,14 +8191,14 @@ End Sub
 Public Sub ExportParkingData()
     Dim fd As Object
     Set fd = Application.FileDialog(2)
-    fd.Title = "—°‘Òµº≥ˆ¬∑æ∂"
-    fd.InitialFileName = "Õ£≥µπ‹¿Ìµº≥ˆ_" & Format(Now, "yyyymmdd") & ".xlsx"
+    fd.Title = "ÈÄâÊã©ÂØºÂá∫Ë∑ØÂæÑ"
+    fd.InitialFileName = "ÂÅúËΩ¶ÁÆ°ÁêÜÂØºÂá∫_" & Format(Now, "yyyymmdd") & ".xlsx"
     fd.FilterIndex = 1
     If fd.Show <> -1 Then Exit Sub
     Dim savePath As String
     savePath = fd.SelectedItems(1)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("Õ£≥µπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("ÂÅúËΩ¶ÁÆ°ÁêÜ")
     ws.Copy
     Dim newWb As Workbook
     Set newWb = ActiveWorkbook
@@ -8213,104 +8213,104 @@ Public Sub ExportParkingData()
     End If
     On Error GoTo 0
     newWb.Close False
-    MsgBox "µº≥ˆÕÍ≥…£°" & vbCrLf & savePath, vbInformation
+    MsgBox "ÂØºÂá∫ÂÆåÊàêÔºÅ" & vbCrLf & savePath, vbInformation
 End Sub
 
-' ========== »À¡¶◊ ‘¥ƒ£øÈ ==========
+' ========== ‰∫∫ÂäõËµÑÊ∫êÊ®°Âùó ==========
 
-' ---------- ¥¥Ω®øº«⁄…Û≈˙±Ì ----------
+' ---------- ÂàõÂª∫ËÄÉÂã§ÂÆ°ÊâπË°® ----------
 
 Private Sub CreateAttendApplySheet()
     Dim ws As Worksheet
-    If SheetExists("øº«⁄…Û≈˙") Then
-        Set ws = ThisWorkbook.Sheets("øº«⁄…Û≈˙")
+    If SheetExists("ËÄÉÂã§ÂÆ°Êâπ") Then
+        Set ws = ThisWorkbook.Sheets("ËÄÉÂã§ÂÆ°Êâπ")
     Else
         Set ws = ThisWorkbook.Sheets.Add( _
             After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.Count))
-        ws.Name = "øº«⁄…Û≈˙"
+        ws.Name = "ËÄÉÂã§ÂÆ°Êâπ"
     End If
     With ws
-        .Range("A1").Value = "…Í«Î±‡∫≈"
-        .Range("B1").Value = "…Í«Î»À"
-        .Range("C1").Value = "øº«⁄»’∆⁄"
-        .Range("D1").Value = "‘≠øº«⁄◊¥Ã¨"
-        .Range("E1").Value = "…Í«Î¿Ì”…"
-        .Range("F1").Value = "…Û≈˙◊¥Ã¨"
-        .Range("G1").Value = "…Û≈˙ªÿ∏¥"
-        .Range("H1").Value = "…Í«Î ±º‰"
+        .Range("A1").Value = "Áî≥ËØ∑ÁºñÂè∑"
+        .Range("B1").Value = "Áî≥ËØ∑‰∫∫"
+        .Range("C1").Value = "ËÄÉÂã§Êó•Êúü"
+        .Range("D1").Value = "ÂéüËÄÉÂã§Áä∂ÊÄÅ"
+        .Range("E1").Value = "Áî≥ËØ∑ÁêÜÁî±"
+        .Range("F1").Value = "ÂÆ°ÊâπÁä∂ÊÄÅ"
+        .Range("G1").Value = "ÂÆ°ÊâπÂõûÂ§ç"
+        .Range("H1").Value = "Áî≥ËØ∑Êó∂Èó¥"
         .Range("A1:H1").Font.Bold = True
         .Columns("A:H").AutoFit
     End With
 End Sub
 
-' ---------- ¥¥Ω®≈≈∞‡π‹¿Ì±Ì ----------
+' ---------- ÂàõÂª∫ÊéíÁè≠ÁÆ°ÁêÜË°® ----------
 
 Private Sub CreateScheduleSheet()
     Dim ws As Worksheet
-    If SheetExists("≈≈∞‡π‹¿Ì") Then
-        Set ws = ThisWorkbook.Sheets("≈≈∞‡π‹¿Ì")
+    If SheetExists("ÊéíÁè≠ÁÆ°ÁêÜ") Then
+        Set ws = ThisWorkbook.Sheets("ÊéíÁè≠ÁÆ°ÁêÜ")
     Else
         Set ws = ThisWorkbook.Sheets.Add( _
             After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.Count))
-        ws.Name = "≈≈∞‡π‹¿Ì"
+        ws.Name = "ÊéíÁè≠ÁÆ°ÁêÜ"
     End If
     With ws
-        .Range("A1").Value = "–’√˚"
-        .Range("B1").Value = "≈≈∞‡ ±º‰"
-        .Range("C1").Value = "π§◊˜µÿµ„"
-        .Range("D1").Value = "±∏◊¢"
-        .Range("E1").Value = "¥¥Ω® ±º‰"
+        .Range("A1").Value = "ÂßìÂêç"
+        .Range("B1").Value = "ÊéíÁè≠Êó∂Èó¥"
+        .Range("C1").Value = "Â∑•‰ΩúÂú∞ÁÇπ"
+        .Range("D1").Value = "Â§áÊ≥®"
+        .Range("E1").Value = "ÂàõÂª∫Êó∂Èó¥"
         .Range("A1:E1").Font.Bold = True
         .Columns("A:E").AutoFit
     End With
 End Sub
 
-' ---------- ¥¥Ω®»À ¬π‹¿Ì±Ì ----------
+' ---------- ÂàõÂª∫‰∫∫‰∫ãÁÆ°ÁêÜË°® ----------
 
 Private Sub CreatePersonnelSheet()
     Dim ws As Worksheet
-    If SheetExists("»À ¬π‹¿Ì") Then
-        Set ws = ThisWorkbook.Sheets("»À ¬π‹¿Ì")
+    If SheetExists("‰∫∫‰∫ãÁÆ°ÁêÜ") Then
+        Set ws = ThisWorkbook.Sheets("‰∫∫‰∫ãÁÆ°ÁêÜ")
     Else
         Set ws = ThisWorkbook.Sheets.Add( _
             After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.Count))
-        ws.Name = "»À ¬π‹¿Ì"
+        ws.Name = "‰∫∫‰∫ãÁÆ°ÁêÜ"
     End If
     With ws
-        .Range("A1").Value = "–’√˚"
-        .Range("B1").Value = "–‘±"
-        .Range("C1").Value = "ƒÍ¡‰"
-        .Range("D1").Value = "≤ø√≈"
-        .Range("E1").Value = "÷∞ŒÒ"
-        .Range("F1").Value = "»Î÷∞ ±º‰"
-        .Range("G1").Value = "‘⁄÷∞◊¥Ã¨"
-        .Range("H1").Value = "±∏◊¢"
+        .Range("A1").Value = "ÂßìÂêç"
+        .Range("B1").Value = "ÊÄßÂà´"
+        .Range("C1").Value = "Âπ¥ÈæÑ"
+        .Range("D1").Value = "ÈÉ®Èó®"
+        .Range("E1").Value = "ËÅåÂä°"
+        .Range("F1").Value = "ÂÖ•ËÅåÊó∂Èó¥"
+        .Range("G1").Value = "Âú®ËÅåÁä∂ÊÄÅ"
+        .Range("H1").Value = "Â§áÊ≥®"
         .Range("A1:H1").Font.Bold = True
         .Columns("A:H").AutoFit
     End With
 End Sub
 
-' ---------- ¥¥Ω®øº«⁄Õ≥º∆±Ì ----------
+' ---------- ÂàõÂª∫ËÄÉÂã§ÁªüËÆ°Ë°® ----------
 
 Private Sub CreateAttendStatsSheet()
     Dim ws As Worksheet
-    If SheetExists("øº«⁄Õ≥º∆") Then
-        Set ws = ThisWorkbook.Sheets("øº«⁄Õ≥º∆")
+    If SheetExists("ËÄÉÂã§ÁªüËÆ°") Then
+        Set ws = ThisWorkbook.Sheets("ËÄÉÂã§ÁªüËÆ°")
     Else
         Set ws = ThisWorkbook.Sheets.Add( _
             After:=ThisWorkbook.Sheets(ThisWorkbook.Sheets.Count))
-        ws.Name = "øº«⁄Õ≥º∆"
+        ws.Name = "ËÄÉÂã§ÁªüËÆ°"
     End If
     With ws
-        .Range("A1").Value = "»’∆⁄"
-        .Range("B1").Value = "–’√˚"
-        .Range("C1").Value = "Ω«…´"
-        .Range("D1").Value = "≥ˆ«⁄ÃÏ ˝"
-        .Range("E1").Value = "≥ŸµΩ"
-        .Range("F1").Value = "‘ÁÕÀ"
-        .Range("G1").Value = "«ÎºŸ"
-        .Range("H1").Value = "»±«⁄"
-        .Range("I1").Value = "±∏◊¢"
+        .Range("A1").Value = "Êó•Êúü"
+        .Range("B1").Value = "ÂßìÂêç"
+        .Range("C1").Value = "ËßíËâ≤"
+        .Range("D1").Value = "Âá∫Âã§Â§©Êï∞"
+        .Range("E1").Value = "ËøüÂà∞"
+        .Range("F1").Value = "Êó©ÈÄÄ"
+        .Range("G1").Value = "ËØ∑ÂÅá"
+        .Range("H1").Value = "Áº∫Âã§"
+        .Range("I1").Value = "Â§áÊ≥®"
         .Range("A1:I1").Font.Bold = True
         .Range("A1:I1").Interior.Color = RGB(70, 130, 180)
         .Range("A1:I1").Font.Color = RGB(255, 255, 255)
@@ -8318,29 +8318,29 @@ Private Sub CreateAttendStatsSheet()
     End With
 End Sub
 
-' ---------- À¢–¬øº«⁄Õ≥º∆ ˝æ› ----------
+' ---------- Âà∑Êñ∞ËÄÉÂã§ÁªüËÆ°Êï∞ÊçÆ ----------
 
 Public Sub RefreshAttendStats()
-    If Not SheetExists("øº«⁄π‹¿Ì") Then
-        MsgBox "Œ¥’“µΩøº«⁄π‹¿Ì±Ì!", vbExclamation
+    If Not SheetExists("ËÄÉÂã§ÁÆ°ÁêÜ") Then
+        MsgBox "Êú™ÊâæÂà∞ËÄÉÂã§ÁÆ°ÁêÜË°®!", vbExclamation
         Exit Sub
     End If
-    If Not SheetExists("øº«⁄Õ≥º∆") Then CreateAttendStatsSheet
+    If Not SheetExists("ËÄÉÂã§ÁªüËÆ°") Then CreateAttendStatsSheet
 
     Dim wsKQ As Worksheet, wsStat As Worksheet, wsUser As Worksheet
-    Set wsKQ = ThisWorkbook.Sheets("øº«⁄π‹¿Ì")
-    Set wsStat = ThisWorkbook.Sheets("øº«⁄Õ≥º∆")
+    Set wsKQ = ThisWorkbook.Sheets("ËÄÉÂã§ÁÆ°ÁêÜ")
+    Set wsStat = ThisWorkbook.Sheets("ËÄÉÂã§ÁªüËÆ°")
 
-    ' «Â≥˝æ… ˝æ›(±£¡Ù±ÌÕ∑)
+    ' Ê∏ÖÈô§ÊóßÊï∞ÊçÆ(‰øùÁïôË°®Â§¥)
     Dim lastClear As Long
     lastClear = wsStat.Cells(wsStat.Rows.Count, 1).End(xlUp).Row
     If lastClear >= 2 Then wsStat.Range("A2:I" & lastClear).ClearContents
 
-    ' ππΩ®”√ªßΩ«…´◊÷µ‰
+    ' ÊûÑÂª∫Áî®Êà∑ËßíËâ≤Â≠óÂÖ∏
     Dim roleDict As Object
     Set roleDict = CreateObject("Scripting.Dictionary")
-    If SheetExists("”√ªßπ‹¿Ì") Then
-        Set wsUser = ThisWorkbook.Sheets("”√ªßπ‹¿Ì")
+    If SheetExists("Áî®Êà∑ÁÆ°ÁêÜ") Then
+        Set wsUser = ThisWorkbook.Sheets("Áî®Êà∑ÁÆ°ÁêÜ")
         Dim ru As Long
         For ru = 2 To wsUser.Cells(wsUser.Rows.Count, 1).End(xlUp).Row
             Dim uKey As String
@@ -8351,7 +8351,7 @@ Public Sub RefreshAttendStats()
         Next ru
     End If
 
-    ' æ€∫œøº«⁄ ˝æ›: key = "‘¬∑›|–’√˚"
+    ' ËÅöÂêàËÄÉÂã§Êï∞ÊçÆ: key = "Êúà‰ªΩ|ÂßìÂêç"
     Dim dict As Object
     Set dict = CreateObject("Scripting.Dictionary")
     Dim lr As Long, i As Long
@@ -8369,23 +8369,23 @@ Public Sub RefreshAttendStats()
         Dim dKey As String
         dKey = recDate & "|" & uName
         If Not dict.Exists(dKey) Then
-            ' Array: ≥ˆ«⁄, ≥ŸµΩ, ‘ÁÕÀ, «ÎºŸ, »±«⁄
+            ' Array: Âá∫Âã§, ËøüÂà∞, Êó©ÈÄÄ, ËØ∑ÂÅá, Áº∫Âã§
             dict.Add dKey, Array(0, 0, 0, 0, 0)
         End If
         Dim arr As Variant
         arr = dict(dKey)
         Dim aSt As String
         aSt = Trim(CStr(wsKQ.Cells(i, 6).Value))
-        If aSt = "≥ˆ«⁄" Then arr(0) = arr(0) + 1
-        If aSt = "≥ŸµΩ" Then arr(1) = arr(1) + 1
-        If aSt = "‘ÁÕÀ" Then arr(2) = arr(2) + 1
-        If aSt = "«ÎºŸ" Then arr(3) = arr(3) + 1
-        If aSt = "»±«⁄" Then arr(4) = arr(4) + 1
+        If aSt = "Âá∫Âã§" Then arr(0) = arr(0) + 1
+        If aSt = "ËøüÂà∞" Then arr(1) = arr(1) + 1
+        If aSt = "Êó©ÈÄÄ" Then arr(2) = arr(2) + 1
+        If aSt = "ËØ∑ÂÅá" Then arr(3) = arr(3) + 1
+        If aSt = "Áº∫Âã§" Then arr(4) = arr(4) + 1
         dict(dKey) = arr
 NextRow:
     Next i
 
-    ' –¥»ÎÕ≥º∆±Ì
+    ' ÂÜôÂÖ•ÁªüËÆ°Ë°®
     Dim outRow As Long
     outRow = 2
     Dim k As Variant
@@ -8393,25 +8393,25 @@ NextRow:
         arr = dict(k)
         Dim parts As Variant
         parts = Split(CStr(k), "|")
-        wsStat.Cells(outRow, 1).Value = parts(0)  ' »’∆⁄(‘¬∑›)
-        wsStat.Cells(outRow, 2).Value = parts(1)  ' –’√˚
+        wsStat.Cells(outRow, 1).Value = parts(0)  ' Êó•Êúü(Êúà‰ªΩ)
+        wsStat.Cells(outRow, 2).Value = parts(1)  ' ÂßìÂêç
         If roleDict.Exists(parts(1)) Then
             wsStat.Cells(outRow, 3).Value = roleDict(parts(1))
         Else
             wsStat.Cells(outRow, 3).Value = ""
         End If
-        wsStat.Cells(outRow, 4).Value = arr(0)    ' ≥ˆ«⁄ÃÏ ˝
-        wsStat.Cells(outRow, 5).Value = arr(1)    ' ≥ŸµΩ
-        wsStat.Cells(outRow, 6).Value = arr(2)    ' ‘ÁÕÀ
-        wsStat.Cells(outRow, 7).Value = arr(3)    ' «ÎºŸ
-        wsStat.Cells(outRow, 8).Value = arr(4)    ' »±«⁄
-        wsStat.Cells(outRow, 9).Value = ""         ' ±∏◊¢
+        wsStat.Cells(outRow, 4).Value = arr(0)    ' Âá∫Âã§Â§©Êï∞
+        wsStat.Cells(outRow, 5).Value = arr(1)    ' ËøüÂà∞
+        wsStat.Cells(outRow, 6).Value = arr(2)    ' Êó©ÈÄÄ
+        wsStat.Cells(outRow, 7).Value = arr(3)    ' ËØ∑ÂÅá
+        wsStat.Cells(outRow, 8).Value = arr(4)    ' Áº∫Âã§
+        wsStat.Cells(outRow, 9).Value = ""         ' Â§áÊ≥®
         outRow = outRow + 1
     Next k
     wsStat.Columns("A:I").AutoFit
 End Sub
 
-' ---------- ¥¥Ω®»À¡¶◊ ‘¥÷˜¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫‰∫∫ÂäõËµÑÊ∫ê‰∏ªÁ™ó‰Ωì ----------
 
 Private Sub CreateHRMainForm()
     Dim oldForm As String
@@ -8427,7 +8427,7 @@ Private Sub CreateHRMainForm()
     actualName = vbc.Name
     SetConfigProp "HRMainFormName", actualName
 
-    vbc.Properties("Caption") = "»À¡¶◊ ‘¥"
+    vbc.Properties("Caption") = "‰∫∫ÂäõËµÑÊ∫ê"
     vbc.Properties("Width") = 780
     vbc.Properties("Height") = 560
     vbc.Properties("StartUpPosition") = 2
@@ -8436,32 +8436,32 @@ Private Sub CreateHRMainForm()
     Set dsg = vbc.Designer
     Dim ctl As Object
 
-    ' MultiPage: 4∏ˆ±Í«©“≥
+    ' MultiPage: 4‰∏™Ê†áÁ≠æÈ°µ
     Set ctl = dsg.Controls.Add("Forms.MultiPage.1")
     ctl.Name = "mpHR"
     ctl.Left = 5: ctl.Top = 5: ctl.Width = 760: ctl.Height = 490
-    ctl.Pages(0).Caption = "øº«⁄π‹¿Ì"
-    ctl.Pages.Add: ctl.Pages(1).Caption = "øº«⁄…Û≈˙"
-    ctl.Pages.Add: ctl.Pages(2).Caption = "≈≈∞‡π‹¿Ì"
-    ctl.Pages.Add: ctl.Pages(3).Caption = "»À ¬π‹¿Ì"
+    ctl.Pages(0).Caption = "ËÄÉÂã§ÁÆ°ÁêÜ"
+    ctl.Pages.Add: ctl.Pages(1).Caption = "ËÄÉÂã§ÂÆ°Êâπ"
+    ctl.Pages.Add: ctl.Pages(2).Caption = "ÊéíÁè≠ÁÆ°ÁêÜ"
+    ctl.Pages.Add: ctl.Pages(3).Caption = "‰∫∫‰∫ãÁÆ°ÁêÜ"
 
     Dim pg As Object, subCtl As Object
 
-    ' ==== µ⁄0“≥: øº«⁄π‹¿Ì ====
+    ' ==== Á¨¨0È°µ: ËÄÉÂã§ÁÆ°ÁêÜ ====
     Set pg = ctl.Pages(0)
 
     Set subCtl = pg.Controls.Add("Forms.Label.1")
-    subCtl.Name = "lblAttMonth": subCtl.Caption = "≤È—Ø‘¬∑›:"
+    subCtl.Name = "lblAttMonth": subCtl.Caption = "Êü•ËØ¢Êúà‰ªΩ:"
     subCtl.Left = 10: subCtl.Top = 8: subCtl.Width = 65: subCtl.Height = 16
     Set subCtl = pg.Controls.Add("Forms.TextBox.1")
     subCtl.Name = "txtAttMonth"
     subCtl.Left = 78: subCtl.Top = 6: subCtl.Width = 80: subCtl.Height = 20
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdAttQuery": subCtl.Caption = "≤È—Ø"
+    subCtl.Name = "cmdAttQuery": subCtl.Caption = "Êü•ËØ¢"
     subCtl.Left = 165: subCtl.Top = 6: subCtl.Width = 50: subCtl.Height = 20
 
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdRefreshStats": subCtl.Caption = "À¢–¬Õ≥º∆±Ì"
+    subCtl.Name = "cmdRefreshStats": subCtl.Caption = "Âà∑Êñ∞ÁªüËÆ°Ë°®"
     subCtl.Left = 225: subCtl.Top = 6: subCtl.Width = 90: subCtl.Height = 20
 
     Set subCtl = pg.Controls.Add("Forms.ListBox.1")
@@ -8470,7 +8470,7 @@ Private Sub CreateHRMainForm()
     subCtl.ColumnCount = 7
     subCtl.ColumnWidths = "80;80;80;80;60;60;60"
 
-    ' ==== µ⁄1“≥: øº«⁄…Û≈˙ ====
+    ' ==== Á¨¨1È°µ: ËÄÉÂã§ÂÆ°Êâπ ====
     Set pg = ctl.Pages(1)
 
     Set subCtl = pg.Controls.Add("Forms.ListBox.1")
@@ -8480,28 +8480,28 @@ Private Sub CreateHRMainForm()
     subCtl.ColumnWidths = "60;70;80;70;60;120"
 
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdNewApply": subCtl.Caption = "–¬Ω®…Í«Î"
+    subCtl.Name = "cmdNewApply": subCtl.Caption = "Êñ∞Âª∫Áî≥ËØ∑"
     subCtl.Left = 10: subCtl.Top = 378: subCtl.Width = 90: subCtl.Height = 26
 
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdViewApply": subCtl.Caption = "≤Èø¥/…Û≈˙"
+    subCtl.Name = "cmdViewApply": subCtl.Caption = "Êü•Áúã/ÂÆ°Êâπ"
     subCtl.Left = 110: subCtl.Top = 378: subCtl.Width = 90: subCtl.Height = 26
 
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdDelApply": subCtl.Caption = "…æ≥˝"
+    subCtl.Name = "cmdDelApply": subCtl.Caption = "Âà†Èô§"
     subCtl.Left = 210: subCtl.Top = 378: subCtl.Width = 70: subCtl.Height = 26
 
-    ' ==== µ⁄2“≥: ≈≈∞‡π‹¿Ì ====
+    ' ==== Á¨¨2È°µ: ÊéíÁè≠ÁÆ°ÁêÜ ====
     Set pg = ctl.Pages(2)
 
     Set subCtl = pg.Controls.Add("Forms.Label.1")
-    subCtl.Name = "lblSchQuery": subCtl.Caption = "≤È—Ø:"
+    subCtl.Name = "lblSchQuery": subCtl.Caption = "Êü•ËØ¢:"
     subCtl.Left = 10: subCtl.Top = 8: subCtl.Width = 35: subCtl.Height = 16
     Set subCtl = pg.Controls.Add("Forms.TextBox.1")
     subCtl.Name = "txtSchQuery"
     subCtl.Left = 48: subCtl.Top = 6: subCtl.Width = 100: subCtl.Height = 20
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdSchSearch": subCtl.Caption = "À—À˜"
+    subCtl.Name = "cmdSchSearch": subCtl.Caption = "ÊêúÁ¥¢"
     subCtl.Left = 155: subCtl.Top = 6: subCtl.Width = 50: subCtl.Height = 20
 
     Set subCtl = pg.Controls.Add("Forms.ListBox.1")
@@ -8511,16 +8511,16 @@ Private Sub CreateHRMainForm()
     subCtl.ColumnWidths = "100;120;150;150;120"
 
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdNewSch": subCtl.Caption = "–¬Ω®≈≈∞‡"
+    subCtl.Name = "cmdNewSch": subCtl.Caption = "Êñ∞Âª∫ÊéíÁè≠"
     subCtl.Left = 10: subCtl.Top = 400: subCtl.Width = 90: subCtl.Height = 26
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdEditSch": subCtl.Caption = "±‡º≠"
+    subCtl.Name = "cmdEditSch": subCtl.Caption = "ÁºñËæë"
     subCtl.Left = 110: subCtl.Top = 400: subCtl.Width = 70: subCtl.Height = 26
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdDelSch": subCtl.Caption = "…æ≥˝"
+    subCtl.Name = "cmdDelSch": subCtl.Caption = "Âà†Èô§"
     subCtl.Left = 190: subCtl.Top = 400: subCtl.Width = 70: subCtl.Height = 26
 
-    ' ==== µ⁄3“≥: »À ¬π‹¿Ì ====
+    ' ==== Á¨¨3È°µ: ‰∫∫‰∫ãÁÆ°ÁêÜ ====
     Set pg = ctl.Pages(3)
 
     Set subCtl = pg.Controls.Add("Forms.ListBox.1")
@@ -8530,21 +8530,21 @@ Private Sub CreateHRMainForm()
     subCtl.ColumnWidths = "70;40;40;80;70;80;60;120"
 
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdNewPers": subCtl.Caption = "–¬Ω®µµ∞∏"
+    subCtl.Name = "cmdNewPers": subCtl.Caption = "Êñ∞Âª∫Ê°£Ê°à"
     subCtl.Left = 10: subCtl.Top = 388: subCtl.Width = 90: subCtl.Height = 26
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdEditPers": subCtl.Caption = "±‡º≠"
+    subCtl.Name = "cmdEditPers": subCtl.Caption = "ÁºñËæë"
     subCtl.Left = 110: subCtl.Top = 388: subCtl.Width = 70: subCtl.Height = 26
     Set subCtl = pg.Controls.Add("Forms.CommandButton.1")
-    subCtl.Name = "cmdDelPers": subCtl.Caption = "…æ≥˝"
+    subCtl.Name = "cmdDelPers": subCtl.Caption = "Âà†Èô§"
     subCtl.Left = 190: subCtl.Top = 388: subCtl.Width = 70: subCtl.Height = 26
 
-    ' πÿ±’∞¥≈•
+    ' ÂÖ≥Èó≠ÊåâÈíÆ
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdClose": ctl.Caption = "πÿ±’"
+    ctl.Name = "cmdClose": ctl.Caption = "ÂÖ≥Èó≠"
     ctl.Left = 685: ctl.Top = 505: ctl.Width = 70: ctl.Height = 26
 
-    ' ◊¢»Î ¬º˛¥˙¬Î
+    ' Ê≥®ÂÖ•‰∫ã‰ª∂‰ª£Á†Å
     Dim cm As Object
     Set cm = vbc.CodeModule
     If cm.CountOfLines > 0 Then cm.DeleteLines 1, cm.CountOfLines
@@ -8562,11 +8562,11 @@ Private Sub CreateHRMainForm()
     c = c & "    LoadPersonnel" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
-    ' ---- øº«⁄π‹¿Ì ----
+    ' ---- ËÄÉÂã§ÁÆ°ÁêÜ ----
     c = c & "Private Sub LoadAttendMgr()" & vbCrLf
     c = c & "    lstAttMgr.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "øº«⁄π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "ËÄÉÂã§ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    Dim qm As String" & vbCrLf
@@ -8590,11 +8590,11 @@ Private Sub CreateHRMainForm()
     c = c & "            arr = dict(uName)" & vbCrLf
     c = c & "            Dim aSt As String" & vbCrLf
     c = c & "            aSt = CStr(ws.Cells(i, 6).Value)" & vbCrLf
-    c = c & "            If aSt = " & q & "≥ˆ«⁄" & q & " Then arr(0) = arr(0) + 1" & vbCrLf
-    c = c & "            If aSt = " & q & "≥ŸµΩ" & q & " Then arr(1) = arr(1) + 1" & vbCrLf
-    c = c & "            If aSt = " & q & "‘ÁÕÀ" & q & " Then arr(2) = arr(2) + 1" & vbCrLf
-    c = c & "            If aSt = " & q & "«ÎºŸ" & q & " Then arr(3) = arr(3) + 1" & vbCrLf
-    c = c & "            If aSt = " & q & "»±«⁄" & q & " Then arr(4) = arr(4) + 1" & vbCrLf
+    c = c & "            If aSt = " & q & "Âá∫Âã§" & q & " Then arr(0) = arr(0) + 1" & vbCrLf
+    c = c & "            If aSt = " & q & "ËøüÂà∞" & q & " Then arr(1) = arr(1) + 1" & vbCrLf
+    c = c & "            If aSt = " & q & "Êó©ÈÄÄ" & q & " Then arr(2) = arr(2) + 1" & vbCrLf
+    c = c & "            If aSt = " & q & "ËØ∑ÂÅá" & q & " Then arr(3) = arr(3) + 1" & vbCrLf
+    c = c & "            If aSt = " & q & "Áº∫Âã§" & q & " Then arr(4) = arr(4) + 1" & vbCrLf
     c = c & "            dict(uName) = arr" & vbCrLf
     c = c & "        End If" & vbCrLf
     c = c & "    Next i" & vbCrLf
@@ -8619,14 +8619,14 @@ Private Sub CreateHRMainForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdRefreshStats_Click()" & vbCrLf
     c = c & "    RefreshAttendStats" & vbCrLf
-    c = c & "    MsgBox " & q & "øº«⁄Õ≥º∆±Ì“—À¢–¬£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    MsgBox " & q & "ËÄÉÂã§ÁªüËÆ°Ë°®Â∑≤Âà∑Êñ∞ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
-    ' ---- øº«⁄…Û≈˙ ----
+    ' ---- ËÄÉÂã§ÂÆ°Êâπ ----
     c = c & "Private Sub LoadAttendApply()" & vbCrLf
     c = c & "    lstAttApply.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "øº«⁄…Û≈˙" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "ËÄÉÂã§ÂÆ°Êâπ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -8647,7 +8647,7 @@ Private Sub CreateHRMainForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdViewApply_Click()" & vbCrLf
     c = c & "    If lstAttApply.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃı…Í«Î£°" & q & ", vbExclamation: Exit Sub" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°Áî≥ËØ∑ÔºÅ" & q & ", vbExclamation: Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gViewAttendApplyID = lstAttApply.List(lstAttApply.ListIndex, 0)" & vbCrLf
     c = c & "    ShowAttendApplyViewForm" & vbCrLf
@@ -8657,19 +8657,19 @@ Private Sub CreateHRMainForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdDelApply_Click()" & vbCrLf
     c = c & "    If lstAttApply.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃı…Í«Î£°" & q & ", vbExclamation: Exit Sub" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°Áî≥ËØ∑ÔºÅ" & q & ", vbExclamation: Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
-    c = c & "    If MsgBox(" & q & "»∑∂®…æ≥˝£ø" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
+    c = c & "    If MsgBox(" & q & "Á°ÆÂÆöÂà†Èô§Ôºü" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
     c = c & "        DeleteAttendApplyByID lstAttApply.List(lstAttApply.ListIndex, 0)" & vbCrLf
     c = c & "        LoadAttendApply" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
-    ' ---- ≈≈∞‡π‹¿Ì ----
+    ' ---- ÊéíÁè≠ÁÆ°ÁêÜ ----
     c = c & "Private Sub LoadSchedule(keyword As String)" & vbCrLf
     c = c & "    lstSchedule.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "≈≈∞‡π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "ÊéíÁè≠ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -8702,7 +8702,7 @@ Private Sub CreateHRMainForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdEditSch_Click()" & vbCrLf
     c = c & "    If lstSchedule.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃı≈≈∞‡£°" & q & ", vbExclamation: Exit Sub" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°ÊéíÁè≠ÔºÅ" & q & ", vbExclamation: Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gEditScheduleRow = FindScheduleRow(lstSchedule.List(lstSchedule.ListIndex, 0), lstSchedule.List(lstSchedule.ListIndex, 1))" & vbCrLf
     c = c & "    If gEditScheduleRow > 0 Then ShowScheduleEditForm" & vbCrLf
@@ -8711,21 +8711,21 @@ Private Sub CreateHRMainForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdDelSch_Click()" & vbCrLf
     c = c & "    If lstSchedule.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃı≈≈∞‡£°" & q & ", vbExclamation: Exit Sub" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°ÊéíÁè≠ÔºÅ" & q & ", vbExclamation: Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
-    c = c & "    If MsgBox(" & q & "»∑∂®…æ≥˝£ø" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
+    c = c & "    If MsgBox(" & q & "Á°ÆÂÆöÂà†Èô§Ôºü" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
     c = c & "        Dim rw As Long" & vbCrLf
     c = c & "        rw = FindScheduleRow(lstSchedule.List(lstSchedule.ListIndex, 0), lstSchedule.List(lstSchedule.ListIndex, 1))" & vbCrLf
-    c = c & "        If rw > 0 Then ThisWorkbook.Sheets(" & q & "≈≈∞‡π‹¿Ì" & q & ").Rows(rw).Delete" & vbCrLf
+    c = c & "        If rw > 0 Then ThisWorkbook.Sheets(" & q & "ÊéíÁè≠ÁÆ°ÁêÜ" & q & ").Rows(rw).Delete" & vbCrLf
     c = c & "        LoadSchedule " & q & q & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
-    ' ---- »À ¬π‹¿Ì ----
+    ' ---- ‰∫∫‰∫ãÁÆ°ÁêÜ ----
     c = c & "Private Sub LoadPersonnel()" & vbCrLf
     c = c & "    lstPersonnel.Clear" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "»À ¬π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "‰∫∫‰∫ãÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -8748,7 +8748,7 @@ Private Sub CreateHRMainForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdEditPers_Click()" & vbCrLf
     c = c & "    If lstPersonnel.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃıº«¬º£°" & q & ", vbExclamation: Exit Sub" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°ËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation: Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    gEditPersonnelRow = lstPersonnel.ListIndex + 2" & vbCrLf
     c = c & "    ShowPersonnelEditForm" & vbCrLf
@@ -8757,10 +8757,10 @@ Private Sub CreateHRMainForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdDelPers_Click()" & vbCrLf
     c = c & "    If lstPersonnel.ListIndex < 0 Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Îœ»—°‘Ò“ªÃıº«¬º£°" & q & ", vbExclamation: Exit Sub" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÂÖàÈÄâÊã©‰∏ÄÊù°ËÆ∞ÂΩïÔºÅ" & q & ", vbExclamation: Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
-    c = c & "    If MsgBox(" & q & "»∑∂®…æ≥˝∏√»À ¬µµ∞∏£ø" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
-    c = c & "        ThisWorkbook.Sheets(" & q & "»À ¬π‹¿Ì" & q & ").Rows(lstPersonnel.ListIndex + 2).Delete" & vbCrLf
+    c = c & "    If MsgBox(" & q & "Á°ÆÂÆöÂà†Èô§ËØ•‰∫∫‰∫ãÊ°£Ê°àÔºü" & q & ", vbYesNo + vbQuestion) = vbYes Then" & vbCrLf
+    c = c & "        ThisWorkbook.Sheets(" & q & "‰∫∫‰∫ãÁÆ°ÁêÜ" & q & ").Rows(lstPersonnel.ListIndex + 2).Delete" & vbCrLf
     c = c & "        LoadPersonnel" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "End Sub" & vbCrLf
@@ -8772,7 +8772,7 @@ Private Sub CreateHRMainForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®øº«⁄…Û≈˙±‡º≠¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫ËÄÉÂã§ÂÆ°ÊâπÁºñËæëÁ™ó‰Ωì ----------
 
 Private Sub CreateAttendApplyEditForm()
     Dim oldForm As String
@@ -8788,7 +8788,7 @@ Private Sub CreateAttendApplyEditForm()
     actualName = vbc.Name
     SetConfigProp "AttendApplyEditFormName", actualName
 
-    vbc.Properties("Caption") = "øº«⁄“Ï≥£…Í«Î"
+    vbc.Properties("Caption") = "ËÄÉÂã§ÂºÇÂ∏∏Áî≥ËØ∑"
     vbc.Properties("Width") = 400
     vbc.Properties("Height") = 260
     vbc.Properties("StartUpPosition") = 2
@@ -8800,7 +8800,7 @@ Private Sub CreateAttendApplyEditForm()
     yy = 18
 
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl1": ctl.Caption = "øº«⁄»’∆⁄£∫"
+    ctl.Name = "lbl1": ctl.Caption = "ËÄÉÂã§Êó•ÊúüÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtDate"
@@ -8808,7 +8808,7 @@ Private Sub CreateAttendApplyEditForm()
 
     yy = yy + 30
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl2": ctl.Caption = "øº«⁄◊¥Ã¨£∫"
+    ctl.Name = "lbl2": ctl.Caption = "ËÄÉÂã§Áä∂ÊÄÅÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboStatus"
@@ -8817,7 +8817,7 @@ Private Sub CreateAttendApplyEditForm()
 
     yy = yy + 30
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl3": ctl.Caption = "…Í«Î¿Ì”…£∫"
+    ctl.Name = "lbl3": ctl.Caption = "Áî≥ËØ∑ÁêÜÁî±Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtReason"
@@ -8826,11 +8826,11 @@ Private Sub CreateAttendApplyEditForm()
 
     yy = yy + 80
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdSave": ctl.Caption = "Ã·Ωª…Í«Î"
+    ctl.Name = "cmdSave": ctl.Caption = "Êèê‰∫§Áî≥ËØ∑"
     ctl.Left = 80: ctl.Top = yy: ctl.Width = 100: ctl.Height = 28
     ctl.BackColor = RGB(60, 120, 216)
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdCancel": ctl.Caption = "»°œ˚"
+    ctl.Name = "cmdCancel": ctl.Caption = "ÂèñÊ∂à"
     ctl.Left = 200: ctl.Top = yy: ctl.Width = 100: ctl.Height = 28
 
     Dim cm As Object
@@ -8844,19 +8844,19 @@ Private Sub CreateAttendApplyEditForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
     c = c & "    txtDate.Text = Format(Date, " & q & "yyyy-mm-dd" & q & ")" & vbCrLf
-    c = c & "    cboStatus.AddItem " & q & "≥ŸµΩ" & q & vbCrLf
-    c = c & "    cboStatus.AddItem " & q & "‘ÁÕÀ" & q & vbCrLf
-    c = c & "    cboStatus.AddItem " & q & "»±«⁄" & q & vbCrLf
-    c = c & "    cboStatus.AddItem " & q & "«ÎºŸ" & q & vbCrLf
+    c = c & "    cboStatus.AddItem " & q & "ËøüÂà∞" & q & vbCrLf
+    c = c & "    cboStatus.AddItem " & q & "Êó©ÈÄÄ" & q & vbCrLf
+    c = c & "    cboStatus.AddItem " & q & "Áº∫Âã§" & q & vbCrLf
+    c = c & "    cboStatus.AddItem " & q & "ËØ∑ÂÅá" & q & vbCrLf
     c = c & "    cboStatus.ListIndex = 0" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdSave_Click()" & vbCrLf
     c = c & "    If Trim(txtReason.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«ÎÃÓ–¥…Í«Î¿Ì”…£°" & q & ", vbExclamation: Exit Sub" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑Â°´ÂÜôÁî≥ËØ∑ÁêÜÁî±ÔºÅ" & q & ", vbExclamation: Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    AddAttendApply gCurrentUser, txtDate.Text, cboStatus.Text, txtReason.Text" & vbCrLf
-    c = c & "    MsgBox " & q & "…Í«Î“—Ã·Ωª£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    MsgBox " & q & "Áî≥ËØ∑Â∑≤Êèê‰∫§ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
@@ -8867,7 +8867,7 @@ Private Sub CreateAttendApplyEditForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®øº«⁄…Û≈˙≤Èø¥¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫ËÄÉÂã§ÂÆ°ÊâπÊü•ÁúãÁ™ó‰Ωì ----------
 
 Private Sub CreateAttendApplyViewForm()
     Dim oldForm As String
@@ -8883,7 +8883,7 @@ Private Sub CreateAttendApplyViewForm()
     actualName = vbc.Name
     SetConfigProp "AttendApplyViewFormName", actualName
 
-    vbc.Properties("Caption") = "øº«⁄…Û≈˙œÍ«È"
+    vbc.Properties("Caption") = "ËÄÉÂã§ÂÆ°ÊâπËØ¶ÊÉÖ"
     vbc.Properties("Width") = 420
     vbc.Properties("Height") = 310
     vbc.Properties("StartUpPosition") = 2
@@ -8895,13 +8895,13 @@ Private Sub CreateAttendApplyViewForm()
     yy = 18
 
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lc1": ctl.Caption = "…Í«Î»À£∫"
+    ctl.Name = "lc1": ctl.Caption = "Áî≥ËØ∑‰∫∫Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 60: ctl.Height = 18: ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblApplicant": ctl.Caption = ""
     ctl.Left = 90: ctl.Top = yy: ctl.Width = 100: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lc2": ctl.Caption = "øº«⁄»’∆⁄£∫"
+    ctl.Name = "lc2": ctl.Caption = "ËÄÉÂã§Êó•ÊúüÔºö"
     ctl.Left = 200: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18: ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblDate": ctl.Caption = ""
@@ -8909,13 +8909,13 @@ Private Sub CreateAttendApplyViewForm()
 
     yy = yy + 26
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lc3": ctl.Caption = "øº«⁄◊¥Ã¨£∫"
+    ctl.Name = "lc3": ctl.Caption = "ËÄÉÂã§Áä∂ÊÄÅÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 60: ctl.Height = 18: ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblOldSt": ctl.Caption = ""
     ctl.Left = 90: ctl.Top = yy: ctl.Width = 100: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lc4": ctl.Caption = "…Û≈˙◊¥Ã¨£∫"
+    ctl.Name = "lc4": ctl.Caption = "ÂÆ°ÊâπÁä∂ÊÄÅÔºö"
     ctl.Left = 200: ctl.Top = yy: ctl.Width = 70: ctl.Height = 18: ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.Label.1")
     ctl.Name = "lblApprSt": ctl.Caption = ""
@@ -8924,7 +8924,7 @@ Private Sub CreateAttendApplyViewForm()
 
     yy = yy + 28
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lc5": ctl.Caption = "…Í«Î¿Ì”…£∫"
+    ctl.Name = "lc5": ctl.Caption = "Áî≥ËØ∑ÁêÜÁî±Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 60: ctl.Height = 18: ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtReasonV"
@@ -8933,7 +8933,7 @@ Private Sub CreateAttendApplyViewForm()
 
     yy = yy + 58
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lc6": ctl.Caption = "…Û≈˙ªÿ∏¥£∫"
+    ctl.Name = "lc6": ctl.Caption = "ÂÆ°ÊâπÂõûÂ§çÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 60: ctl.Height = 18: ctl.Font.Bold = True
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtReply"
@@ -8942,15 +8942,15 @@ Private Sub CreateAttendApplyViewForm()
 
     yy = yy + 60
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdApprove": ctl.Caption = "Õ¨“‚"
+    ctl.Name = "cmdApprove": ctl.Caption = "ÂêåÊÑè"
     ctl.Left = 30: ctl.Top = yy: ctl.Width = 90: ctl.Height = 28
     ctl.BackColor = RGB(60, 179, 113)
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdReject": ctl.Caption = "æ‹æ¯"
+    ctl.Name = "cmdReject": ctl.Caption = "ÊãíÁªù"
     ctl.Left = 140: ctl.Top = yy: ctl.Width = 90: ctl.Height = 28
     ctl.BackColor = RGB(220, 80, 80)
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdClose": ctl.Caption = "πÿ±’"
+    ctl.Name = "cmdClose": ctl.Caption = "ÂÖ≥Èó≠"
     ctl.Left = 280: ctl.Top = yy: ctl.Width = 90: ctl.Height = 28
 
     Dim cm As Object
@@ -8965,7 +8965,7 @@ Private Sub CreateAttendApplyViewForm()
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
     c = c & "    If gViewAttendApplyID = " & q & q & " Then Unload Me: Exit Sub" & vbCrLf
     c = c & "    Dim ws As Worksheet" & vbCrLf
-    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "øº«⁄…Û≈˙" & q & ")" & vbCrLf
+    c = c & "    Set ws = ThisWorkbook.Sheets(" & q & "ËÄÉÂã§ÂÆ°Êâπ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -8976,7 +8976,7 @@ Private Sub CreateAttendApplyViewForm()
     c = c & "            txtReasonV.Text = ws.Cells(i, 5).Value" & vbCrLf
     c = c & "            lblApprSt.Caption = ws.Cells(i, 6).Value" & vbCrLf
     c = c & "            txtReply.Text = ws.Cells(i, 7).Value" & vbCrLf
-    c = c & "            If ws.Cells(i, 6).Value <> " & q & "¥˝…Û≈˙" & q & " Then" & vbCrLf
+    c = c & "            If ws.Cells(i, 6).Value <> " & q & "ÂæÖÂÆ°Êâπ" & q & " Then" & vbCrLf
     c = c & "                cmdApprove.Enabled = False" & vbCrLf
     c = c & "                cmdReject.Enabled = False" & vbCrLf
     c = c & "                txtReply.Locked = True" & vbCrLf
@@ -8992,14 +8992,14 @@ Private Sub CreateAttendApplyViewForm()
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdApprove_Click()" & vbCrLf
-    c = c & "    ApproveAttendApply gViewAttendApplyID, " & q & "“—Õ¨“‚" & q & ", txtReply.Text" & vbCrLf
-    c = c & "    MsgBox " & q & "“—Õ¨“‚∏√…Í«Î£¨øº«⁄º«¬º“—–ﬁ∏ƒ£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    ApproveAttendApply gViewAttendApplyID, " & q & "Â∑≤ÂêåÊÑè" & q & ", txtReply.Text" & vbCrLf
+    c = c & "    MsgBox " & q & "Â∑≤ÂêåÊÑèËØ•Áî≥ËØ∑ÔºåËÄÉÂã§ËÆ∞ÂΩïÂ∑≤‰øÆÊîπÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdReject_Click()" & vbCrLf
-    c = c & "    ApproveAttendApply gViewAttendApplyID, " & q & "“—æ‹æ¯" & q & ", txtReply.Text" & vbCrLf
-    c = c & "    MsgBox " & q & "“—æ‹æ¯∏√…Í«Î£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    ApproveAttendApply gViewAttendApplyID, " & q & "Â∑≤ÊãíÁªù" & q & ", txtReply.Text" & vbCrLf
+    c = c & "    MsgBox " & q & "Â∑≤ÊãíÁªùËØ•Áî≥ËØ∑ÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
@@ -9010,7 +9010,7 @@ Private Sub CreateAttendApplyViewForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®≈≈∞‡±‡º≠¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫ÊéíÁè≠ÁºñËæëÁ™ó‰Ωì ----------
 
 Private Sub CreateScheduleEditForm()
     Dim oldForm As String
@@ -9026,7 +9026,7 @@ Private Sub CreateScheduleEditForm()
     actualName = vbc.Name
     SetConfigProp "ScheduleEditFormName", actualName
 
-    vbc.Properties("Caption") = "≈≈∞‡±‡º≠"
+    vbc.Properties("Caption") = "ÊéíÁè≠ÁºñËæë"
     vbc.Properties("Width") = 380
     vbc.Properties("Height") = 260
     vbc.Properties("StartUpPosition") = 2
@@ -9038,7 +9038,7 @@ Private Sub CreateScheduleEditForm()
     yy = 18
 
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl1": ctl.Caption = "–’√˚£∫"
+    ctl.Name = "lbl1": ctl.Caption = "ÂßìÂêçÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboName"
@@ -9047,7 +9047,7 @@ Private Sub CreateScheduleEditForm()
 
     yy = yy + 30
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl2": ctl.Caption = "≈≈∞‡ ±º‰£∫"
+    ctl.Name = "lbl2": ctl.Caption = "ÊéíÁè≠Êó∂Èó¥Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtTime"
@@ -9055,7 +9055,7 @@ Private Sub CreateScheduleEditForm()
 
     yy = yy + 30
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl3": ctl.Caption = "π§◊˜µÿµ„£∫"
+    ctl.Name = "lbl3": ctl.Caption = "Â∑•‰ΩúÂú∞ÁÇπÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtPlace"
@@ -9063,7 +9063,7 @@ Private Sub CreateScheduleEditForm()
 
     yy = yy + 30
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl4": ctl.Caption = "±∏◊¢£∫"
+    ctl.Name = "lbl4": ctl.Caption = "Â§áÊ≥®Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtRemark"
@@ -9072,11 +9072,11 @@ Private Sub CreateScheduleEditForm()
 
     yy = yy + 60
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdSave": ctl.Caption = "±£¥Ê"
+    ctl.Name = "cmdSave": ctl.Caption = "‰øùÂ≠ò"
     ctl.Left = 80: ctl.Top = yy: ctl.Width = 90: ctl.Height = 28
     ctl.BackColor = RGB(60, 120, 216)
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdCancel": ctl.Caption = "»°œ˚"
+    ctl.Name = "cmdCancel": ctl.Caption = "ÂèñÊ∂à"
     ctl.Left = 190: ctl.Top = yy: ctl.Width = 90: ctl.Height = 28
 
     Dim cm As Object
@@ -9090,7 +9090,7 @@ Private Sub CreateScheduleEditForm()
     c = c & "" & vbCrLf
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
     c = c & "    Dim wsU As Worksheet" & vbCrLf
-    c = c & "    Set wsU = ThisWorkbook.Sheets(" & q & "”√ªßπ‹¿Ì" & q & ")" & vbCrLf
+    c = c & "    Set wsU = ThisWorkbook.Sheets(" & q & "Áî®Êà∑ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "    Dim lr As Long, i As Long" & vbCrLf
     c = c & "    lr = wsU.Cells(wsU.Rows.Count, 2).End(xlUp).Row" & vbCrLf
     c = c & "    For i = 2 To lr" & vbCrLf
@@ -9098,24 +9098,24 @@ Private Sub CreateScheduleEditForm()
     c = c & "    Next i" & vbCrLf
     c = c & "    txtTime.Text = Format(Date, " & q & "yyyy-mm-dd" & q & ")" & vbCrLf
     c = c & "    If gEditScheduleRow > 0 Then" & vbCrLf
-    c = c & "        Me.Caption = " & q & "±‡º≠≈≈∞‡" & q & vbCrLf
+    c = c & "        Me.Caption = " & q & "ÁºñËæëÊéíÁè≠" & q & vbCrLf
     c = c & "        Dim ws As Worksheet" & vbCrLf
-    c = c & "        Set ws = ThisWorkbook.Sheets(" & q & "≈≈∞‡π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "        Set ws = ThisWorkbook.Sheets(" & q & "ÊéíÁè≠ÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "        cboName.Text = ws.Cells(gEditScheduleRow, 1).Value" & vbCrLf
     c = c & "        txtTime.Text = ws.Cells(gEditScheduleRow, 2).Value" & vbCrLf
     c = c & "        txtPlace.Text = ws.Cells(gEditScheduleRow, 3).Value" & vbCrLf
     c = c & "        txtRemark.Text = ws.Cells(gEditScheduleRow, 4).Value" & vbCrLf
     c = c & "    Else" & vbCrLf
-    c = c & "        Me.Caption = " & q & "–¬Ω®≈≈∞‡" & q & vbCrLf
+    c = c & "        Me.Caption = " & q & "Êñ∞Âª∫ÊéíÁè≠" & q & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdSave_Click()" & vbCrLf
     c = c & "    If Trim(cboName.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«Î—°‘Ò–’√˚£°" & q & ", vbExclamation: Exit Sub" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑ÈÄâÊã©ÂßìÂêçÔºÅ" & q & ", vbExclamation: Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    SaveScheduleRecord gEditScheduleRow, cboName.Text, txtTime.Text, txtPlace.Text, txtRemark.Text" & vbCrLf
-    c = c & "    MsgBox " & q & "≈≈∞‡“—±£¥Ê£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    MsgBox " & q & "ÊéíÁè≠Â∑≤‰øùÂ≠òÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
@@ -9126,7 +9126,7 @@ Private Sub CreateScheduleEditForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- ¥¥Ω®»À ¬π‹¿Ì±‡º≠¥∞ÃÂ ----------
+' ---------- ÂàõÂª∫‰∫∫‰∫ãÁÆ°ÁêÜÁºñËæëÁ™ó‰Ωì ----------
 
 Private Sub CreatePersonnelEditForm()
     Dim oldForm As String
@@ -9142,7 +9142,7 @@ Private Sub CreatePersonnelEditForm()
     actualName = vbc.Name
     SetConfigProp "PersonnelEditFormName", actualName
 
-    vbc.Properties("Caption") = "»À ¬µµ∞∏±‡º≠"
+    vbc.Properties("Caption") = "‰∫∫‰∫ãÊ°£Ê°àÁºñËæë"
     vbc.Properties("Width") = 380
     vbc.Properties("Height") = 340
     vbc.Properties("StartUpPosition") = 2
@@ -9154,13 +9154,13 @@ Private Sub CreatePersonnelEditForm()
     yy = 18
 
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl1": ctl.Caption = "–’√˚£∫"
+    ctl.Name = "lbl1": ctl.Caption = "ÂßìÂêçÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtName"
     ctl.Left = 90: ctl.Top = yy: ctl.Width = 120: ctl.Height = 20
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl2": ctl.Caption = "–‘±£∫"
+    ctl.Name = "lbl2": ctl.Caption = "ÊÄßÂà´Ôºö"
     ctl.Left = 220: ctl.Top = yy: ctl.Width = 40: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboGender"
@@ -9169,13 +9169,13 @@ Private Sub CreatePersonnelEditForm()
 
     yy = yy + 28
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl3": ctl.Caption = "ƒÍ¡‰£∫"
+    ctl.Name = "lbl3": ctl.Caption = "Âπ¥ÈæÑÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtAge"
     ctl.Left = 90: ctl.Top = yy: ctl.Width = 60: ctl.Height = 20
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl4": ctl.Caption = "≤ø√≈£∫"
+    ctl.Name = "lbl4": ctl.Caption = "ÈÉ®Èó®Ôºö"
     ctl.Left = 160: ctl.Top = yy: ctl.Width = 40: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboDept"
@@ -9184,7 +9184,7 @@ Private Sub CreatePersonnelEditForm()
 
     yy = yy + 28
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl5": ctl.Caption = "÷∞ŒÒ£∫"
+    ctl.Name = "lbl5": ctl.Caption = "ËÅåÂä°Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboPosition"
@@ -9193,7 +9193,7 @@ Private Sub CreatePersonnelEditForm()
 
     yy = yy + 28
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl6": ctl.Caption = "»Î÷∞ ±º‰£∫"
+    ctl.Name = "lbl6": ctl.Caption = "ÂÖ•ËÅåÊó∂Èó¥Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtJoinDate"
@@ -9201,7 +9201,7 @@ Private Sub CreatePersonnelEditForm()
 
     yy = yy + 28
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl7": ctl.Caption = "‘⁄÷∞◊¥Ã¨£∫"
+    ctl.Name = "lbl7": ctl.Caption = "Âú®ËÅåÁä∂ÊÄÅÔºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.ComboBox.1")
     ctl.Name = "cboJobStatus"
@@ -9210,7 +9210,7 @@ Private Sub CreatePersonnelEditForm()
 
     yy = yy + 28
     Set ctl = dsg.Controls.Add("Forms.Label.1")
-    ctl.Name = "lbl8": ctl.Caption = "±∏◊¢£∫"
+    ctl.Name = "lbl8": ctl.Caption = "Â§áÊ≥®Ôºö"
     ctl.Left = 20: ctl.Top = yy: ctl.Width = 60: ctl.Height = 18
     Set ctl = dsg.Controls.Add("Forms.TextBox.1")
     ctl.Name = "txtRemark"
@@ -9219,11 +9219,11 @@ Private Sub CreatePersonnelEditForm()
 
     yy = yy + 58
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdSave": ctl.Caption = "±£¥Ê"
+    ctl.Name = "cmdSave": ctl.Caption = "‰øùÂ≠ò"
     ctl.Left = 80: ctl.Top = yy: ctl.Width = 90: ctl.Height = 28
     ctl.BackColor = RGB(60, 120, 216)
     Set ctl = dsg.Controls.Add("Forms.CommandButton.1")
-    ctl.Name = "cmdCancel": ctl.Caption = "»°œ˚"
+    ctl.Name = "cmdCancel": ctl.Caption = "ÂèñÊ∂à"
     ctl.Left = 190: ctl.Top = yy: ctl.Width = 90: ctl.Height = 28
 
     Dim cm As Object
@@ -9236,30 +9236,30 @@ Private Sub CreatePersonnelEditForm()
     c = "Option Explicit" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub UserForm_Initialize()" & vbCrLf
-    c = c & "    cboGender.AddItem " & q & "ƒ–" & q & vbCrLf
-    c = c & "    cboGender.AddItem " & q & "≈Æ" & q & vbCrLf
-    c = c & "    cboDept.AddItem " & q & "ŒÔ“µπ‹¿Ì≤ø" & q & vbCrLf
-    c = c & "    cboDept.AddItem " & q & "π§≥ÃŒ¨–ﬁ≤ø" & q & vbCrLf
-    c = c & "    cboDept.AddItem " & q & "±£Ω‡¬ÃªØ≤ø" & q & vbCrLf
-    c = c & "    cboDept.AddItem " & q & "∞≤±£≤ø" & q & vbCrLf
-    c = c & "    cboDept.AddItem " & q & "øÕ∑˛≤ø" & q & vbCrLf
-    c = c & "    cboDept.AddItem " & q & "≤∆ŒÒ≤ø" & q & vbCrLf
-    c = c & "    cboDept.AddItem " & q & "––’˛≤ø" & q & vbCrLf
-    c = c & "    cboPosition.AddItem " & q & "æ≠¿Ì" & q & vbCrLf
-    c = c & "    cboPosition.AddItem " & q & "÷˜π‹" & q & vbCrLf
-    c = c & "    cboPosition.AddItem " & q & "÷˜»Œ" & q & vbCrLf
-    c = c & "    cboPosition.AddItem " & q & "‘±π§" & q & vbCrLf
-    c = c & "    cboPosition.AddItem " & q & " µœ∞…˙" & q & vbCrLf
-    c = c & "    cboJobStatus.AddItem " & q & "‘⁄÷∞" & q & vbCrLf
-    c = c & "    cboJobStatus.AddItem " & q & "¿Î÷∞" & q & vbCrLf
-    c = c & "    cboJobStatus.AddItem " & q & " ‘”√∆⁄" & q & vbCrLf
-    c = c & "    cboJobStatus.AddItem " & q & "–›ºŸ" & q & vbCrLf
+    c = c & "    cboGender.AddItem " & q & "Áî∑" & q & vbCrLf
+    c = c & "    cboGender.AddItem " & q & "Â•≥" & q & vbCrLf
+    c = c & "    cboDept.AddItem " & q & "Áâ©‰∏öÁÆ°ÁêÜÈÉ®" & q & vbCrLf
+    c = c & "    cboDept.AddItem " & q & "Â∑•Á®ãÁª¥‰øÆÈÉ®" & q & vbCrLf
+    c = c & "    cboDept.AddItem " & q & "‰øùÊ¥ÅÁªøÂåñÈÉ®" & q & vbCrLf
+    c = c & "    cboDept.AddItem " & q & "ÂÆâ‰øùÈÉ®" & q & vbCrLf
+    c = c & "    cboDept.AddItem " & q & "ÂÆ¢ÊúçÈÉ®" & q & vbCrLf
+    c = c & "    cboDept.AddItem " & q & "Ë¥¢Âä°ÈÉ®" & q & vbCrLf
+    c = c & "    cboDept.AddItem " & q & "Ë°åÊîøÈÉ®" & q & vbCrLf
+    c = c & "    cboPosition.AddItem " & q & "ÁªèÁêÜ" & q & vbCrLf
+    c = c & "    cboPosition.AddItem " & q & "‰∏ªÁÆ°" & q & vbCrLf
+    c = c & "    cboPosition.AddItem " & q & "‰∏ª‰ªª" & q & vbCrLf
+    c = c & "    cboPosition.AddItem " & q & "ÂëòÂ∑•" & q & vbCrLf
+    c = c & "    cboPosition.AddItem " & q & "ÂÆû‰π†Áîü" & q & vbCrLf
+    c = c & "    cboJobStatus.AddItem " & q & "Âú®ËÅå" & q & vbCrLf
+    c = c & "    cboJobStatus.AddItem " & q & "Á¶ªËÅå" & q & vbCrLf
+    c = c & "    cboJobStatus.AddItem " & q & "ËØïÁî®Êúü" & q & vbCrLf
+    c = c & "    cboJobStatus.AddItem " & q & "‰ºëÂÅá" & q & vbCrLf
     c = c & "    txtJoinDate.Text = Format(Date, " & q & "yyyy-mm-dd" & q & ")" & vbCrLf
     c = c & "    cboJobStatus.ListIndex = 0" & vbCrLf
     c = c & "    If gEditPersonnelRow > 0 Then" & vbCrLf
-    c = c & "        Me.Caption = " & q & "±‡º≠»À ¬µµ∞∏" & q & vbCrLf
+    c = c & "        Me.Caption = " & q & "ÁºñËæë‰∫∫‰∫ãÊ°£Ê°à" & q & vbCrLf
     c = c & "        Dim ws As Worksheet" & vbCrLf
-    c = c & "        Set ws = ThisWorkbook.Sheets(" & q & "»À ¬π‹¿Ì" & q & ")" & vbCrLf
+    c = c & "        Set ws = ThisWorkbook.Sheets(" & q & "‰∫∫‰∫ãÁÆ°ÁêÜ" & q & ")" & vbCrLf
     c = c & "        txtName.Text = ws.Cells(gEditPersonnelRow, 1).Value" & vbCrLf
     c = c & "        cboGender.Text = ws.Cells(gEditPersonnelRow, 2).Value" & vbCrLf
     c = c & "        txtAge.Text = ws.Cells(gEditPersonnelRow, 3).Value" & vbCrLf
@@ -9269,16 +9269,16 @@ Private Sub CreatePersonnelEditForm()
     c = c & "        cboJobStatus.Text = ws.Cells(gEditPersonnelRow, 7).Value" & vbCrLf
     c = c & "        txtRemark.Text = ws.Cells(gEditPersonnelRow, 8).Value" & vbCrLf
     c = c & "    Else" & vbCrLf
-    c = c & "        Me.Caption = " & q & "–¬Ω®»À ¬µµ∞∏" & q & vbCrLf
+    c = c & "        Me.Caption = " & q & "Êñ∞Âª∫‰∫∫‰∫ãÊ°£Ê°à" & q & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
     c = c & "Private Sub cmdSave_Click()" & vbCrLf
     c = c & "    If Trim(txtName.Text) = " & q & q & " Then" & vbCrLf
-    c = c & "        MsgBox " & q & "«ÎÃÓ–¥–’√˚£°" & q & ", vbExclamation: Exit Sub" & vbCrLf
+    c = c & "        MsgBox " & q & "ËØ∑Â°´ÂÜôÂßìÂêçÔºÅ" & q & ", vbExclamation: Exit Sub" & vbCrLf
     c = c & "    End If" & vbCrLf
     c = c & "    SavePersonnelRecord gEditPersonnelRow, txtName.Text, cboGender.Text, txtAge.Text, cboDept.Text, cboPosition.Text, txtJoinDate.Text, cboJobStatus.Text, txtRemark.Text" & vbCrLf
-    c = c & "    MsgBox " & q & "»À ¬µµ∞∏“—±£¥Ê£°" & q & ", vbInformation" & vbCrLf
+    c = c & "    MsgBox " & q & "‰∫∫‰∫ãÊ°£Ê°àÂ∑≤‰øùÂ≠òÔºÅ" & q & ", vbInformation" & vbCrLf
     c = c & "    Unload Me" & vbCrLf
     c = c & "End Sub" & vbCrLf
     c = c & "" & vbCrLf
@@ -9289,13 +9289,13 @@ Private Sub CreatePersonnelEditForm()
     cm.InsertLines 1, c
 End Sub
 
-' ---------- »À¡¶◊ ‘¥¥∞ÃÂœ‘ æ ----------
+' ---------- ‰∫∫ÂäõËµÑÊ∫êÁ™ó‰ΩìÊòæÁ§∫ ----------
 
 Public Sub ShowHRMainForm()
     Dim fName As String
     fName = GetConfigProp("HRMainFormName")
     If fName = "" Or Not FormExists("HRMainFormName") Then
-        MsgBox "»À¡¶◊ ‘¥¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "‰∫∫ÂäõËµÑÊ∫êÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -9307,7 +9307,7 @@ Public Sub ShowAttendApplyEditForm()
     Dim fName As String
     fName = GetConfigProp("AttendApplyEditFormName")
     If fName = "" Or Not FormExists("AttendApplyEditFormName") Then
-        MsgBox "øº«⁄…Í«Î¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "ËÄÉÂã§Áî≥ËØ∑Á™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -9319,7 +9319,7 @@ Public Sub ShowAttendApplyViewForm()
     Dim fName As String
     fName = GetConfigProp("AttendApplyViewFormName")
     If fName = "" Or Not FormExists("AttendApplyViewFormName") Then
-        MsgBox "øº«⁄…Û≈˙¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "ËÄÉÂã§ÂÆ°ÊâπÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -9331,7 +9331,7 @@ Public Sub ShowScheduleEditForm()
     Dim fName As String
     fName = GetConfigProp("ScheduleEditFormName")
     If fName = "" Or Not FormExists("ScheduleEditFormName") Then
-        MsgBox "≈≈∞‡±‡º≠¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "ÊéíÁè≠ÁºñËæëÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -9343,7 +9343,7 @@ Public Sub ShowPersonnelEditForm()
     Dim fName As String
     fName = GetConfigProp("PersonnelEditFormName")
     If fName = "" Or Not FormExists("PersonnelEditFormName") Then
-        MsgBox "»À ¬±‡º≠¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "‰∫∫‰∫ãÁºñËæëÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -9351,11 +9351,11 @@ Public Sub ShowPersonnelEditForm()
     frm.Show
 End Sub
 
-' ---------- »À¡¶◊ ‘¥ ˝æ›≤Ÿ◊˜∫Ø ˝ ----------
+' ---------- ‰∫∫ÂäõËµÑÊ∫êÊï∞ÊçÆÊìç‰ΩúÂáΩÊï∞ ----------
 
 Private Function GenerateAttendApplyID() As String
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("øº«⁄…Û≈˙")
+    Set ws = ThisWorkbook.Sheets("ËÄÉÂã§ÂÆ°Êâπ")
     Dim lr As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     Dim maxID As Long
@@ -9375,7 +9375,7 @@ End Function
 
 Public Sub AddAttendApply(sUser As String, sDate As String, sStatus As String, sReason As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("øº«⁄…Û≈˙")
+    Set ws = ThisWorkbook.Sheets("ËÄÉÂã§ÂÆ°Êâπ")
     Dim newRow As Long
     newRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row + 1
     ws.Cells(newRow, 1).Value = GenerateAttendApplyID()
@@ -9383,7 +9383,7 @@ Public Sub AddAttendApply(sUser As String, sDate As String, sStatus As String, s
     ws.Cells(newRow, 3).Value = sDate
     ws.Cells(newRow, 4).Value = sStatus
     ws.Cells(newRow, 5).Value = sReason
-    ws.Cells(newRow, 6).Value = "¥˝…Û≈˙"
+    ws.Cells(newRow, 6).Value = "ÂæÖÂÆ°Êâπ"
     ws.Cells(newRow, 7).Value = ""
     ws.Cells(newRow, 8).Value = Format(Now, "yyyy-mm-dd hh:mm:ss")
     ws.Columns("A:H").AutoFit
@@ -9391,21 +9391,21 @@ End Sub
 
 Public Sub ApproveAttendApply(aID As String, result As String, reply As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("øº«⁄…Û≈˙")
+    Set ws = ThisWorkbook.Sheets("ËÄÉÂã§ÂÆ°Êâπ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
         If CStr(ws.Cells(i, 1).Value) = aID Then
             ws.Cells(i, 6).Value = result
             ws.Cells(i, 7).Value = reply
-            ' »Áπ˚Õ¨“‚£¨–ﬁ∏ƒøº«⁄π‹¿Ì±Ì
-            If result = "“—Õ¨“‚" Then
+            ' Â¶ÇÊûúÂêåÊÑèÔºå‰øÆÊîπËÄÉÂã§ÁÆ°ÁêÜË°®
+            If result = "Â∑≤ÂêåÊÑè" Then
                 Dim applyUser As String
                 applyUser = ws.Cells(i, 2).Value
                 Dim applyDate As String
                 applyDate = ws.Cells(i, 3).Value
                 Dim wsA As Worksheet
-                Set wsA = ThisWorkbook.Sheets("øº«⁄π‹¿Ì")
+                Set wsA = ThisWorkbook.Sheets("ËÄÉÂã§ÁÆ°ÁêÜ")
                 Dim lr2 As Long, j As Long
                 lr2 = wsA.Cells(wsA.Rows.Count, 1).End(xlUp).Row
                 For j = 2 To lr2
@@ -9416,8 +9416,8 @@ Public Sub ApproveAttendApply(aID As String, result As String, reply As String)
                         recDate = CStr(wsA.Cells(j, 3).Value)
                     End If
                     If CStr(wsA.Cells(j, 2).Value) = applyUser And recDate = applyDate Then
-                        wsA.Cells(j, 6).Value = "≥ˆ«⁄"
-                        wsA.Cells(j, 7).Value = "øº«⁄…Û≈˙–ﬁ’˝"
+                        wsA.Cells(j, 6).Value = "Âá∫Âã§"
+                        wsA.Cells(j, 7).Value = "ËÄÉÂã§ÂÆ°Êâπ‰øÆÊ≠£"
                         Exit For
                     End If
                 Next j
@@ -9429,7 +9429,7 @@ End Sub
 
 Public Sub DeleteAttendApplyByID(aID As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("øº«⁄…Û≈˙")
+    Set ws = ThisWorkbook.Sheets("ËÄÉÂã§ÂÆ°Êâπ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -9442,7 +9442,7 @@ End Sub
 
 Public Function FindScheduleRow(sName As String, sTime As String) As Long
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("≈≈∞‡π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("ÊéíÁè≠ÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     FindScheduleRow = 0
@@ -9456,7 +9456,7 @@ End Function
 
 Public Sub SaveScheduleRecord(rowNum As Long, sName As String, sTime As String, sPlace As String, sRemark As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("≈≈∞‡π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("ÊéíÁè≠ÁÆ°ÁêÜ")
     Dim r As Long
     If rowNum > 0 Then
         r = rowNum
@@ -9475,7 +9475,7 @@ End Sub
 
 Public Sub SavePersonnelRecord(rowNum As Long, sName As String, sGender As String, sAge As String, sDept As String, sPos As String, sJoin As String, sJobSt As String, sRemark As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("»À ¬π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("‰∫∫‰∫ãÁÆ°ÁêÜ")
     Dim r As Long
     If rowNum > 0 Then
         r = rowNum
@@ -9493,14 +9493,14 @@ Public Sub SavePersonnelRecord(rowNum As Long, sName As String, sGender As Strin
     ws.Columns("A:H").AutoFit
 End Sub
 
-' ---------- »œ÷§∫Ø ˝ ----------
+' ---------- ËÆ§ËØÅÂáΩÊï∞ ----------
 
 Public Function AuthenticateUser(uName As String, uPass As String) As Boolean
     Dim ws As Worksheet
     Dim r As Long, lastRow As Long
     AuthenticateUser = False
-    If Not SheetExists("”√ªßπ‹¿Ì") Then Exit Function
-    Set ws = ThisWorkbook.Sheets("”√ªßπ‹¿Ì")
+    If Not SheetExists("Áî®Êà∑ÁÆ°ÁêÜ") Then Exit Function
+    Set ws = ThisWorkbook.Sheets("Áî®Êà∑ÁÆ°ÁêÜ")
     lastRow = ws.Cells(ws.Rows.Count, "B").End(xlUp).Row
     Dim i As Long
     For i = 2 To lastRow
@@ -9519,8 +9519,8 @@ Public Function GetUserRole(uName As String) As String
     Dim ws As Worksheet
     Dim i As Long, lastRow As Long
     GetUserRole = ""
-    If Not SheetExists("”√ªßπ‹¿Ì") Then Exit Function
-    Set ws = ThisWorkbook.Sheets("”√ªßπ‹¿Ì")
+    If Not SheetExists("Áî®Êà∑ÁÆ°ÁêÜ") Then Exit Function
+    Set ws = ThisWorkbook.Sheets("Áî®Êà∑ÁÆ°ÁêÜ")
     lastRow = ws.Cells(ws.Rows.Count, "B").End(xlUp).Row
     For i = 2 To lastRow
         If LCase(ws.Cells(i, 2).Value) = LCase(uName) Then
@@ -9531,18 +9531,18 @@ Public Function GetUserRole(uName As String) As String
 End Function
 
 Public Function IsHighPrivilege(role As String) As Boolean
-    IsHighPrivilege = (role = "π‹¿Ì‘±" Or role = "≤ø√≈÷˜π‹")
+    IsHighPrivilege = (role = "ÁÆ°ÁêÜÂëò" Or role = "ÈÉ®Èó®‰∏ªÁÆ°")
 End Function
 
 Public Function AdminExists() As Boolean
     Dim ws As Worksheet
     Dim i As Long, lastRow As Long
     AdminExists = False
-    If Not SheetExists("”√ªßπ‹¿Ì") Then Exit Function
-    Set ws = ThisWorkbook.Sheets("”√ªßπ‹¿Ì")
+    If Not SheetExists("Áî®Êà∑ÁÆ°ÁêÜ") Then Exit Function
+    Set ws = ThisWorkbook.Sheets("Áî®Êà∑ÁÆ°ÁêÜ")
     lastRow = ws.Cells(ws.Rows.Count, "D").End(xlUp).Row
     For i = 2 To lastRow
-        If ws.Cells(i, 4).Value = "π‹¿Ì‘±" Then
+        If ws.Cells(i, 4).Value = "ÁÆ°ÁêÜÂëò" Then
             AdminExists = True
             Exit Function
         End If
@@ -9553,8 +9553,8 @@ Public Function AccountExists(acct As String) As Boolean
     Dim ws As Worksheet
     Dim i As Long, lastRow As Long
     AccountExists = False
-    If Not SheetExists("”√ªßπ‹¿Ì") Then Exit Function
-    Set ws = ThisWorkbook.Sheets("”√ªßπ‹¿Ì")
+    If Not SheetExists("Áî®Êà∑ÁÆ°ÁêÜ") Then Exit Function
+    Set ws = ThisWorkbook.Sheets("Áî®Êà∑ÁÆ°ÁêÜ")
     lastRow = ws.Cells(ws.Rows.Count, "B").End(xlUp).Row
     For i = 2 To lastRow
         If LCase(ws.Cells(i, 2).Value) = LCase(acct) Then
@@ -9567,7 +9567,7 @@ End Function
 Public Sub RegisterNewUser(uName As String, uAcct As String, uPwd As String, uRole As String)
     Dim ws As Worksheet
     Dim newRow As Long
-    Set ws = ThisWorkbook.Sheets("”√ªßπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Áî®Êà∑ÁÆ°ÁêÜ")
     newRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row + 1
     ws.Cells(newRow, 1).Value = uName
     ws.Cells(newRow, 2).Value = uAcct
@@ -9577,17 +9577,17 @@ Public Sub RegisterNewUser(uName As String, uAcct As String, uPwd As String, uRo
     ws.Columns("A:E").AutoFit
 End Sub
 
-' ---------- ∆Ù∂ØœµÕ≥ ----------
+' ---------- ÂêØÂä®Á≥ªÁªü ----------
 
 Public Sub LaunchSystem()
     Dim fName As String
     fName = GetConfigProp("LoginFormName")
     If fName = "" Then
-        MsgBox "œµÕ≥Œ¥∞≤◊∞£¨«Îœ»‘À–– SetupOASystem£°", vbExclamation
+        MsgBox "Á≥ªÁªüÊú™ÂÆâË£ÖÔºåËØ∑ÂÖàËøêË°å SetupOASystemÔºÅ", vbExclamation
         Exit Sub
     End If
     If Not FormExists("LoginFormName") Then
-        MsgBox "µ«¬º¥∞ÃÂ≤ª¥Ê‘⁄£¨«Î÷ÿ–¬‘À–– SetupOASystem£°", vbExclamation
+        MsgBox "ÁôªÂΩïÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºåËØ∑ÈáçÊñ∞ËøêË°å SetupOASystemÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -9599,7 +9599,7 @@ Public Sub ShowRegForm()
     Dim fName As String
     fName = GetConfigProp("RegisterFormName")
     If fName = "" Or Not FormExists("RegisterFormName") Then
-        MsgBox "◊¢≤·¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "Ê≥®ÂÜåÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -9611,7 +9611,7 @@ Public Sub ShowDashForm()
     Dim fName As String
     fName = GetConfigProp("DashboardFormName")
     If fName = "" Or Not FormExists("DashboardFormName") Then
-        MsgBox "“«±Ì≈Ã¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "‰ª™Ë°®ÁõòÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -9623,7 +9623,7 @@ Public Sub ShowWorkManagerForm()
     Dim fName As String
     fName = GetConfigProp("WorkManagerFormName")
     If fName = "" Or Not FormExists("WorkManagerFormName") Then
-        MsgBox "π§◊˜π‹¿Ì¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "Â∑•‰ΩúÁÆ°ÁêÜÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -9635,7 +9635,7 @@ Public Sub ShowWorkEditForm()
     Dim fName As String
     fName = GetConfigProp("WorkEditFormName")
     If fName = "" Or Not FormExists("WorkEditFormName") Then
-        MsgBox "π§◊˜±‡º≠¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "Â∑•‰ΩúÁºñËæëÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -9647,7 +9647,7 @@ Public Sub ShowWorkViewForm()
     Dim fName As String
     fName = GetConfigProp("WorkViewFormName")
     If fName = "" Or Not FormExists("WorkViewFormName") Then
-        MsgBox "π§◊˜≤Èø¥¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "Â∑•‰ΩúÊü•ÁúãÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -9655,11 +9655,11 @@ Public Sub ShowWorkViewForm()
     frm.Show
 End Sub
 
-' ---------- π§◊˜π‹¿Ì ˝æ›≤Ÿ◊˜∫Ø ˝ ----------
+' ---------- Â∑•‰ΩúÁÆ°ÁêÜÊï∞ÊçÆÊìç‰ΩúÂáΩÊï∞ ----------
 
 Private Function GenerateWorkID() As String
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("π§◊˜π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Â∑•‰ΩúÁÆ°ÁêÜ")
     Dim lr As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     Dim maxID As Long
@@ -9679,7 +9679,7 @@ End Function
 
 Public Sub AddWorkRecord(sTitle As String, sDesc As String, sType As String, sPri As String, sAssignee As String, sDue As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("π§◊˜π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Â∑•‰ΩúÁÆ°ÁêÜ")
     Dim newRow As Long
     newRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row + 1
     ws.Cells(newRow, 1).Value = GenerateWorkID()
@@ -9689,7 +9689,7 @@ Public Sub AddWorkRecord(sTitle As String, sDesc As String, sType As String, sPr
     ws.Cells(newRow, 5).Value = sPri
     ws.Cells(newRow, 6).Value = sAssignee
     ws.Cells(newRow, 7).Value = gCurrentUser
-    ws.Cells(newRow, 8).Value = "¥˝∞Ï"
+    ws.Cells(newRow, 8).Value = "ÂæÖÂäû"
     ws.Cells(newRow, 9).Value = Format(Now, "yyyy-mm-dd hh:mm:ss")
     ws.Cells(newRow, 10).Value = sDue
     ws.Cells(newRow, 11).Value = ""
@@ -9698,7 +9698,7 @@ End Sub
 
 Public Sub UpdateWorkRecord(wID As String, sTitle As String, sDesc As String, sType As String, sPri As String, sAssignee As String, sDue As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("π§◊˜π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Â∑•‰ΩúÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -9717,13 +9717,13 @@ End Sub
 
 Public Sub UpdateWorkStatus(wID As String, newStatus As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("π§◊˜π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Â∑•‰ΩúÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
         If CStr(ws.Cells(i, 1).Value) = wID Then
             ws.Cells(i, 8).Value = newStatus
-            If newStatus = "“—ÕÍ≥…" Then
+            If newStatus = "Â∑≤ÂÆåÊàê" Then
                 ws.Cells(i, 11).Value = Format(Now, "yyyy-mm-dd hh:mm:ss")
             End If
             Exit For
@@ -9733,7 +9733,7 @@ End Sub
 
 Public Sub DeleteWorkByID(wID As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("π§◊˜π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Â∑•‰ΩúÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -9744,13 +9744,13 @@ Public Sub DeleteWorkByID(wID As String)
     Next i
 End Sub
 
-' ---------- –≈œ¢π‹¿Ì¥∞ÃÂœ‘ æ ----------
+' ---------- ‰ø°ÊÅØÁÆ°ÁêÜÁ™ó‰ΩìÊòæÁ§∫ ----------
 
 Public Sub ShowNoticesForm()
     Dim fName As String
     fName = GetConfigProp("NoticesFormName")
     If fName = "" Or Not FormExists("NoticesFormName") Then
-        MsgBox "π´∏Ê¡–±Ì¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "ÂÖ¨ÂëäÂàóË°®Á™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -9762,7 +9762,7 @@ Public Sub ShowNoticeEditForm()
     Dim fName As String
     fName = GetConfigProp("NoticeEditFormName")
     If fName = "" Or Not FormExists("NoticeEditFormName") Then
-        MsgBox "π´∏Ê±‡º≠¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "ÂÖ¨ÂëäÁºñËæëÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -9770,11 +9770,11 @@ Public Sub ShowNoticeEditForm()
     frm.Show
 End Sub
 
-' ---------- –≈œ¢π‹¿Ì ˝æ›≤Ÿ◊˜∫Ø ˝ ----------
+' ---------- ‰ø°ÊÅØÁÆ°ÁêÜÊï∞ÊçÆÊìç‰ΩúÂáΩÊï∞ ----------
 
 Private Function GenerateNoticeID() As String
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("–≈œ¢π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("‰ø°ÊÅØÁÆ°ÁêÜ")
     Dim lr As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     Dim maxID As Long
@@ -9794,7 +9794,7 @@ End Function
 
 Public Sub AddNoticeRecord(sTitle As String, sContent As String, sType As String, sDept As String, sTarget As String, stopp As String, sUrg As String, sStart As String, sEnd2 As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("–≈œ¢π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("‰ø°ÊÅØÁÆ°ÁêÜ")
     Dim newRow As Long
     newRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row + 1
     ws.Cells(newRow, 1).Value = GenerateNoticeID()
@@ -9814,7 +9814,7 @@ End Sub
 
 Public Sub UpdateNoticeRecord(nID As String, sTitle As String, sContent As String, sType As String, sDept As String, sTarget As String, stopp As String, sUrg As String, sStart As String, sEnd2 As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("–≈œ¢π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("‰ø°ÊÅØÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -9836,7 +9836,7 @@ End Sub
 
 Public Sub DeleteNoticeByID(nID As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("–≈œ¢π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("‰ø°ÊÅØÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -9847,13 +9847,13 @@ Public Sub DeleteNoticeByID(nID As String)
     Next i
 End Sub
 
-' ---------- …Û≈˙π‹¿Ì¥∞ÃÂœ‘ æ ----------
+' ---------- ÂÆ°ÊâπÁÆ°ÁêÜÁ™ó‰ΩìÊòæÁ§∫ ----------
 
 Public Sub ShowApprovalsForm()
     Dim fName As String
     fName = GetConfigProp("ApprovalsFormName")
     If fName = "" Or Not FormExists("ApprovalsFormName") Then
-        MsgBox "…Û≈˙÷––ƒ¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "ÂÆ°Êâπ‰∏≠ÂøÉÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -9865,7 +9865,7 @@ Public Sub ShowApprovalEditForm()
     Dim fName As String
     fName = GetConfigProp("ApprovalEditFormName")
     If fName = "" Or Not FormExists("ApprovalEditFormName") Then
-        MsgBox "…Û≈˙±‡º≠¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "ÂÆ°ÊâπÁºñËæëÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -9877,7 +9877,7 @@ Public Sub ShowApprovalViewForm()
     Dim fName As String
     fName = GetConfigProp("ApprovalViewFormName")
     If fName = "" Or Not FormExists("ApprovalViewFormName") Then
-        MsgBox "…Û≈˙≤Èø¥¥∞ÃÂ≤ª¥Ê‘⁄£°", vbExclamation
+        MsgBox "ÂÆ°ÊâπÊü•ÁúãÁ™ó‰Ωì‰∏çÂ≠òÂú®ÔºÅ", vbExclamation
         Exit Sub
     End If
     Dim frm As Object
@@ -9885,11 +9885,11 @@ Public Sub ShowApprovalViewForm()
     frm.Show
 End Sub
 
-' ---------- …Û≈˙π‹¿Ì ˝æ›≤Ÿ◊˜∫Ø ˝ ----------
+' ---------- ÂÆ°ÊâπÁÆ°ÁêÜÊï∞ÊçÆÊìç‰ΩúÂáΩÊï∞ ----------
 
 Private Function GenerateApprovalID() As String
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("…Û≈˙π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("ÂÆ°ÊâπÁÆ°ÁêÜ")
     Dim lr As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     Dim maxID As Long
@@ -9909,14 +9909,14 @@ End Function
 
 Public Function GetDefaultApprover() As String
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("”√ªßπ‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("Áî®Êà∑ÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 2).End(xlUp).Row
     GetDefaultApprover = ""
     For i = 2 To lr
         Dim r As String
         r = ws.Cells(i, 4).Value
-        If r = "π‹¿Ì‘±" Or r = "≤ø√≈÷˜π‹" Then
+        If r = "ÁÆ°ÁêÜÂëò" Or r = "ÈÉ®Èó®‰∏ªÁÆ°" Then
             GetDefaultApprover = ws.Cells(i, 2).Value
             Exit Function
         End If
@@ -9925,7 +9925,7 @@ End Function
 
 Public Sub AddApprovalRecord(sType As String, sSub As String, sApplicant As String, sApprover As String, sReason As String, sStart As String, sEnd2 As String, sDays As String, sAmt As String, sItem As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("…Û≈˙π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("ÂÆ°ÊâπÁÆ°ÁêÜ")
     Dim newRow As Long
     newRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row + 1
     ws.Cells(newRow, 1).Value = GenerateApprovalID()
@@ -9939,7 +9939,7 @@ Public Sub AddApprovalRecord(sType As String, sSub As String, sApplicant As Stri
     ws.Cells(newRow, 9).Value = sDays
     ws.Cells(newRow, 10).Value = sAmt
     ws.Cells(newRow, 11).Value = sItem
-    ws.Cells(newRow, 12).Value = "¥˝…Û≈˙"
+    ws.Cells(newRow, 12).Value = "ÂæÖÂÆ°Êâπ"
     ws.Cells(newRow, 13).Value = ""
     ws.Cells(newRow, 14).Value = Format(Now, "yyyy-mm-dd hh:mm:ss")
     ws.Cells(newRow, 15).Value = ""
@@ -9948,7 +9948,7 @@ End Sub
 
 Public Sub UpdateApprovalRecord(aID As String, sType As String, sSub As String, sReason As String, sStart As String, sEnd2 As String, sDays As String, sAmt As String, sItem As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("…Û≈˙π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("ÂÆ°ÊâπÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -9969,7 +9969,7 @@ End Sub
 
 Public Sub UpdateApprovalStatus(aID As String, newStatus As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("…Û≈˙π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("ÂÆ°ÊâπÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
@@ -9983,7 +9983,7 @@ End Sub
 
 Public Sub DeleteApprovalByID(aID As String)
     Dim ws As Worksheet
-    Set ws = ThisWorkbook.Sheets("…Û≈˙π‹¿Ì")
+    Set ws = ThisWorkbook.Sheets("ÂÆ°ÊâπÁÆ°ÁêÜ")
     Dim lr As Long, i As Long
     lr = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
     For i = 2 To lr
